@@ -1,0 +1,108 @@
+package Reports;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  dxCoreRS18,
+  cxLibraryRS18,
+  dxGDIPlusRS18,
+  dxThemeRS18,
+  cxDataRS18,
+  cxEditorsRS18,
+  dxSkinsCoreRS18,
+  dxSkinBlackRS18,
+  dxSkinBlueprintRS18,
+  dxSkinBlueRS18,
+  dxSkinCaramelRS18,
+  dxSkinCoffeeRS18,
+  dxSkinDarkRoomRS18,
+  dxSkinDarkSideRS18,
+  dxSkinDevExpressDarkStyleRS18,
+  dxSkinDevExpressStyleRS18,
+  dxSkinFoggyRS18,
+  dxSkinGlassOceansRS18,
+  dxSkinHighContrastRS18,
+  dxSkiniMaginaryRS18,
+  dxSkinLilianRS18,
+  dxSkinLiquidSkyRS18,
+  dxSkinLondonLiquidSkyRS18,
+  dxSkinMcSkinRS18,
+  dxSkinMoneyTwinsRS18,
+  dxSkinOffice2007BlackRS18,
+  dxSkinOffice2007BlueRS18,
+  dxSkinOffice2007GreenRS18,
+  dxSkinOffice2007PinkRS18,
+  dxSkinOffice2007SilverRS18,
+  dxSkinOffice2010BlackRS18,
+  dxSkinOffice2010BlueRS18,
+  dxSkinOffice2010SilverRS18,
+  dxSkinPumpkinRS18,
+  dxSkinSevenClassicRS18,
+  dxSkinSevenRS18,
+  dxSkinSharpPlusRS18,
+  dxSkinSharpRS18,
+  dxSkinSilverRS18,
+  dxSkinSpringTimeRS18,
+  dxSkinStardustRS18,
+  dxSkinSummer2008RS18,
+  dxSkinTheAsphaltWorldRS18,
+  dxSkinValentineRS18,
+  dxSkinVS2010RS18,
+  dxSkinWhiteprintRS18,
+  dxSkinXmas2008BlueRS18,
+  adortl,
+  cxPageControlRS18,
+  dxPSCoreRS18,
+  QR5RunNBDEDXE4,
+  Jcl,
+  JvCore,
+  JvStdCtrls,
+  cxGridRS18;
+
+contains
+  BaseForm in '..\Base\BaseForm.pas' {fBase},
+  ReportsDrawer in 'ReportsDrawer.pas' {fReportsDrawer},
+  BaseReportForm in '..\Base\BaseReportForm.pas' {fBaseReport},
+  BaseDataMod in '..\Base\BaseDataMod.pas' {dmBase: TDataModule},
+  ReportsAuxData in 'ReportsAuxData.pas' {dmReportsAux: TDataModule},
+  AttendanceReport in 'AttendanceReport.pas' {fAttendanceReport},
+  PrintInterface in 'PrintInterface.pas',
+  BasePrintForm in '..\Base\BasePrintForm.pas' {fBasePrintForm},
+  DtrProcessingReport in 'DtrProcessingReport.pas' {fDtrProcessingReport},
+  PersonnelMovementSummary in 'PersonnelMovementSummary.pas' {fPersonnelMovementSummary},
+  UndertimeReport in 'UndertimeReport.pas' {fUndertimeReport},
+  LeaveReport in 'LeaveReport.pas' {fLeaveReport},
+  ScheduleOfSalariesAndWages in 'ScheduleOfSalariesAndWages.pas' {fSchedOfSalariesAndWages},
+  PayrollRegister in 'PayrollRegister.pas' {fPayrollRegister},
+  BcfReport in 'BcfReport.pas' {fBcfReport};
+
+end.

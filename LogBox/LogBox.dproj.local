@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2013/05/16 08:55:30.000.396,=C:\Users\Bryan\Documents\RAD Studio\Projects\GroupedItems1.pas</Transaction>
+    <Transaction>2013/05/16 08:55:31.000.603,=C:\Users\Bryan\Documents\RAD Studio\Projects\ItemDetail1.pas</Transaction>
+    <Transaction>2013/06/01 20:41:09.000.834,=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/07/14 12:42:24.000.955,=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/07/14 12:43:43.000.876,=C:\Users\Bryan\Documents\RAD Studio\Projects\GroupedItems1.pas</Transaction>
+    <Transaction>2013/07/14 12:43:45.000.026,=C:\Users\Bryan\Documents\RAD Studio\Projects\SplitItemDetail1.pas</Transaction>
+    <Transaction>2013/07/27 12:43:22.000.757,=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2014/02/10 21:03:55.000.914,=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2014/02/10 21:04:49.000.348,C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.dfm=C:\_Projects\ASCC\LogBox\LogBoxMain.dfm</Transaction>
+    <Transaction>2014/02/10 21:04:49.000.348,C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas=C:\_Projects\ASCC\LogBox\LogBoxMain.pas</Transaction>
+    <Transaction>2014/02/10 21:05:31.000.676,C:\Users\Bryan\Documents\RAD Studio\Projects\Project1.dproj=C:\_Projects\ASCC\LogBox\LogBox.dproj</Transaction>
+    <Transaction>2014/02/15 11:07:54.000.259,=C:\_Projects\ASCC\Base\BaseDataMod.pas</Transaction>
+    <Transaction>2014/02/15 11:08:07.000.607,=C:\_Projects\ASCC\LogBox\Unit1.pas</Transaction>
+    <Transaction>2014/02/15 11:08:35.000.908,C:\_Projects\ASCC\LogBox\LogBoxDataMod.pas=C:\_Projects\ASCC\LogBox\Unit1.pas</Transaction>
+    <Transaction>2014/02/15 11:08:35.000.908,C:\_Projects\ASCC\LogBox\LogBoxDataMod.dfm=C:\_Projects\ASCC\LogBox\Unit1.dfm</Transaction>
+    <Transaction>2014/02/16 18:57:29.000.684,=C:\_Projects\ASCC\Base\BaseForm.pas</Transaction>
+    <Transaction>2014/02/16 18:57:50.000.764,=C:\_Projects\ASCC\LogBox\Unit1.pas</Transaction>
+    <Transaction>2014/02/16 18:59:21.000.452,C:\_Projects\ASCC\LogBox\Unit1.pas=C:\_Projects\ASCC\LogBox\TimeLog.pas</Transaction>
+    <Transaction>2014/02/16 18:59:21.000.453,C:\_Projects\ASCC\LogBox\Unit1.dfm=C:\_Projects\ASCC\LogBox\TimeLog.dfm</Transaction>
+    <Transaction>2014/04/26 21:17:26.000.291,C:\_Projects\_ASCC\LogBox\TimeLog.pas=</Transaction>
+    <Transaction>2014/04/26 21:17:33.000.402,C:\_Projects\_ASCC\LogBox\LogBoxDataMod.pas=</Transaction>
+    <Transaction>2014/04/27 09:14:50.000.409,C:\_Projects\_ASCC\Base\BaseDataMod.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

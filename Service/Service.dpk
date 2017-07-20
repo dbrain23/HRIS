@@ -1,0 +1,60 @@
+package Service;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  dbrtl,
+  adortl,
+  vcl,
+  vclimg,
+  vcldb,
+  dxCoreRS18,
+  cxLibraryRS18,
+  dxGDIPlusRS18,
+  dxThemeRS18,
+  cxDataRS18,
+  cxEditorsRS18,
+  cxPageControlRS18,
+  cxGridRS18;
+
+contains
+  SysConn in 'SysConn.pas',
+  DBUtil in 'DBUtil.pas',
+  AppConstant in 'AppConstant.pas',
+  DateUtil in 'DateUtil.pas',
+  FormUtil in 'FormUtil.pas',
+  ListBoxObj in 'ListBoxObj.pas',
+  Log in 'Log.pas',
+  ApplicationUtil in 'ApplicationUtil.pas',
+  ComboBoxObj in 'ComboBoxObj.pas',
+  RecordStatus in 'RecordStatus.pas' {fRecordStatus},
+  ServiceUtil in 'ServiceUtil.pas';
+
+end.

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2013/05/16 08:55:30.000.396,=C:\Users\Bryan\Documents\RAD Studio\Projects\GroupedItems1.pas</Transaction>
+    <Transaction>2013/05/16 08:55:31.000.603,=C:\Users\Bryan\Documents\RAD Studio\Projects\ItemDetail1.pas</Transaction>
+    <Transaction>2013/06/01 20:41:09.000.834,=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/07/14 12:42:24.000.955,=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/07/14 12:43:43.000.876,=C:\Users\Bryan\Documents\RAD Studio\Projects\GroupedItems1.pas</Transaction>
+    <Transaction>2013/07/14 12:43:45.000.026,=C:\Users\Bryan\Documents\RAD Studio\Projects\SplitItemDetail1.pas</Transaction>
+    <Transaction>2013/07/27 12:43:22.000.757,=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2014/06/09 11:58:05.000.013,=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2014/07/06 10:18:08.000.975,=C:\Users\Bryan\Documents\RAD Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2014/07/26 19:07:43.000.409,=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2014/07/27 16:05:05.000.920,=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2014/08/03 16:52:13.000.455,=C:\Users\Bryan\Documents\RAD Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2014/08/03 16:52:53.000.233,=C:\Users\Bryan\Documents\RAD Studio\Projects\SyncWebImpl.pas</Transaction>
+    <Transaction>2014/08/03 16:52:53.000.388,=C:\Users\Bryan\Documents\RAD Studio\Projects\SyncWebIntf.pas</Transaction>
+    <Transaction>2014/08/03 16:53:19.000.262,C:\_Projects\_ASCC\SyncWeb\SyncWebIntf.pas=C:\Users\Bryan\Documents\RAD Studio\Projects\SyncWebIntf.pas</Transaction>
+    <Transaction>2014/08/03 16:53:23.000.724,C:\_Projects\_ASCC\SyncWeb\SyncWebImpl.pas=C:\Users\Bryan\Documents\RAD Studio\Projects\SyncWebImpl.pas</Transaction>
+    <Transaction>2014/08/03 16:53:35.000.282,C:\_Projects\_ASCC\SyncWeb\SyncWebMod.dfm=C:\Users\Bryan\Documents\RAD Studio\Projects\WebModuleUnit1.dfm</Transaction>
+    <Transaction>2014/08/03 16:53:35.000.282,C:\_Projects\_ASCC\SyncWeb\SyncWebMod.pas=C:\Users\Bryan\Documents\RAD Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2014/08/03 16:53:44.000.467,C:\_Projects\_ASCC\SyncWeb\SyncWeb.dproj=C:\Users\Bryan\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2014/08/03 20:00:03.000.347,=C:\_Projects\_ASCC\SyncWeb\ISyncWeb1.pas</Transaction>
+    <Transaction>2014/08/03 20:04:45.000.301,C:\_Projects\_ASCC\SyncWeb\ISyncWebWSDL.pas=C:\_Projects\_ASCC\SyncWeb\ISyncWeb1.pas</Transaction>
+    <Transaction>2014/08/10 15:19:35.000.877,=C:\_Projects\_ASCC\SyncWeb\Unit1.pas</Transaction>
+    <Transaction>2014/08/10 15:28:55.000.698,C:\_Projects\_ASCC\SyncWeb\Unit1.pas=C:\_Projects\_ASCC\SyncWeb\SyncDataMod.pas</Transaction>
+    <Transaction>2014/08/10 15:28:55.000.698,C:\_Projects\_ASCC\SyncWeb\Unit1.dfm=C:\_Projects\_ASCC\SyncWeb\SyncDataMod.dfm</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="ISyncWebWSDL.pas"/>
+    <File Path="SyncDataMod.pas"/>
+    <File Path="SyncDataMod.dfm"/>
+    <File Path="SyncWebImpl.pas"/>
+    <File Path="SyncWebIntf.pas"/>
+    <File Path="SyncWebMod.pas"/>
+    <File Path="SyncWebMod.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

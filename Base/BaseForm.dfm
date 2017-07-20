@@ -1,0 +1,20 @@
+object fBase: TfBase
+  Left = 0
+  Top = 0
+  Align = alClient
+  Caption = 'fBase'
+  ClientHeight = 262
+  ClientWidth = 584
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  ExplicitWidth = 320
+  ExplicitHeight = 240
+  PixelsPerInch = 96
+  TextHeight = 14
+end
