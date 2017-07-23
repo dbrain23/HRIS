@@ -10,13 +10,13 @@
     <Transaction>2014/04/26 21:18:42.000.727,C:\_Projects\_ASCC\Dtr\DtrDataMod.pas=C:\_Projects\_ASCC\Dtr\LogBoxDataMod.pas</Transaction>
     <Transaction>2014/04/26 21:18:42.000.727,C:\_Projects\_ASCC\Dtr\DtrDataMod.dfm=C:\_Projects\_ASCC\Dtr\LogBoxDataMod.dfm</Transaction>
     <Transaction>2014/04/26 21:19:37.000.894,=C:\_Projects\_ASCC\Base\BaseDataMod.pas</Transaction>
-    <Transaction>2014/04/26 21:21:59.000.593,=dxSkinCaramelRS18.dcp</Transaction>
     <Transaction>2014/04/26 21:21:59.000.372,=dxSkinsCoreRS18.dcp</Transaction>
+    <Transaction>2014/04/26 21:21:59.000.593,=dxSkinCaramelRS18.dcp</Transaction>
     <Transaction>2014/04/26 21:21:59.000.670,=dxSkinDarkSideRS18.dcp</Transaction>
     <Transaction>2014/04/26 21:21:59.000.331,=cxPageControlRS18.dcp</Transaction>
     <Transaction>2014/04/26 21:21:59.000.775,=dxSkinGlassOceansRS18.dcp</Transaction>
-    <Transaction>2014/04/26 21:21:59.000.722,=dxSkinDevExpressStyleRS18.dcp</Transaction>
     <Transaction>2014/04/26 21:21:59.000.750,=dxSkinFoggyRS18.dcp</Transaction>
+    <Transaction>2014/04/26 21:21:59.000.722,=dxSkinDevExpressStyleRS18.dcp</Transaction>
     <Transaction>2014/04/26 21:21:59.000.945,=dxSkinMoneyTwinsRS18.dcp</Transaction>
     <Transaction>2014/04/26 21:21:59.000.197,=dxCoreRS18.dcp</Transaction>
     <Transaction>2014/04/26 21:21:59.000.696,=dxSkinDevExpressDarkStyleRS18.dcp</Transaction>
@@ -53,8 +53,8 @@
     <Transaction>2014/04/26 21:22:00.000.646,=dxSkinWhiteprintRS18.dcp</Transaction>
     <Transaction>2014/04/26 21:22:00.000.385,=dxSkinSpringTimeRS18.dcp</Transaction>
     <Transaction>2014/04/26 21:22:00.000.510,=dxSkinSummer2008RS18.dcp</Transaction>
-    <Transaction>2014/04/26 21:22:00.000.052,=dxSkinOffice2007PinkRS18.dcp</Transaction>
     <Transaction>2014/04/26 21:22:00.000.193,=dxSkinPumpkinRS18.dcp</Transaction>
+    <Transaction>2014/04/26 21:22:00.000.052,=dxSkinOffice2007PinkRS18.dcp</Transaction>
     <Transaction>2014/04/26 21:22:00.000.301,=dxSkinSharpRS18.dcp</Transaction>
     <Transaction>2014/04/26 21:22:00.000.592,=dxSkinValentineRS18.dcp</Transaction>
     <Transaction>2014/04/26 21:22:00.000.080,=dxSkinOffice2007SilverRS18.dcp</Transaction>

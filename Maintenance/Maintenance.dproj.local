@@ -66,7 +66,7 @@
     <Transaction>2013/09/01 09:36:48.000.671,=cxLibraryRS18.dcp</Transaction>
     <Transaction>2013/09/01 09:36:48.000.888,=dxSkinBlackRS18.dcp</Transaction>
     <Transaction>2013/09/01 09:36:49.000.245,=dxSkinLiquidSkyRS18.dcp</Transaction>
-    <Transaction>2013/09/01 09:36:49.000.788,=dxSkinSpringTimeRS18.dcp</Transaction>
+    <Transaction>2013/09/01 09:36:49.000.857,=dxSkinSummer2008RS18.dcp</Transaction>
     <Transaction>2013/09/01 09:36:49.000.384,=dxSkinOffice2007BlueRS18.dcp</Transaction>
     <Transaction>2013/09/01 09:36:49.000.060,=dxSkinDevExpressDarkStyleRS18.dcp</Transaction>
     <Transaction>2013/09/01 09:36:49.000.532,=dxSkinOffice2010BlueRS18.dcp</Transaction>
@@ -77,14 +77,14 @@
     <Transaction>2013/09/01 09:36:49.000.191,=dxSkiniMaginaryRS18.dcp</Transaction>
     <Transaction>2013/09/01 09:36:49.000.442,=dxSkinOffice2007PinkRS18.dcp</Transaction>
     <Transaction>2013/09/01 09:36:49.000.592,=dxSkinPumpkinRS18.dcp</Transaction>
-    <Transaction>2013/09/01 09:36:49.000.857,=dxSkinSummer2008RS18.dcp</Transaction>
+    <Transaction>2013/09/01 09:36:49.000.788,=dxSkinSpringTimeRS18.dcp</Transaction>
     <Transaction>2013/09/01 09:36:49.000.690,=dxSkinSharpPlusRS18.dcp</Transaction>
     <Transaction>2013/09/01 09:36:49.000.164,=dxSkinHighContrastRS18.dcp</Transaction>
     <Transaction>2013/09/01 09:36:49.000.300,=dxSkinMcSkinRS18.dcp</Transaction>
     <Transaction>2013/09/01 09:36:49.000.218,=dxSkinLilianRS18.dcp</Transaction>
-    <Transaction>2013/09/01 09:36:49.000.824,=dxSkinStardustRS18.dcp</Transaction>
-    <Transaction>2013/09/01 09:36:49.000.010,=dxSkinDarkRoomRS18.dcp</Transaction>
     <Transaction>2013/09/01 09:36:49.000.957,=dxSkinVS2010RS18.dcp</Transaction>
+    <Transaction>2013/09/01 09:36:49.000.010,=dxSkinDarkRoomRS18.dcp</Transaction>
+    <Transaction>2013/09/01 09:36:49.000.824,=dxSkinStardustRS18.dcp</Transaction>
     <Transaction>2013/09/01 09:36:49.000.561,=dxSkinOffice2010SilverRS18.dcp</Transaction>
     <Transaction>2013/09/01 09:36:49.000.991,=dxSkinWhiteprintRS18.dcp</Transaction>
     <Transaction>2013/09/01 09:36:49.000.659,=dxSkinSevenRS18.dcp</Transaction>
@@ -163,7 +163,7 @@
     <Transaction>2016/02/18 10:48:14.000.228,C:\_Projects\_ASCC\Maintenance\Unit1.pas=C:\_Projects\_ASCC\Maintenance\AccountType.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
-    <File Path="..\..\_ASCC"/>
+    <File Path="..\..\HRIS"/>
     <File Path="..\Base"/>
     <File Path="..\Base\BaseMainForm.pas"/>
     <File Path="..\Base\BaseMainForm.dfm"/>

@@ -1,0 +1,8 @@
+Logbox rules;
+
+1. If logged beyond 8AM and/or 1PM and not beyond 8:10AM and 1:10PM, considered late.
+2. If logged after 8:10AM and 1:10PM considered late and undertime.
+3. if logged before 12PM or 5PM - considered as undertime.
+4. Max number of hours for undertime is 2 hours...once in the am...and once in the pml
+5. Undertime must be approved at least 30minutes prior to undertime except if reason is emergency/sick
+6. Leave application must be filed before the date of absence with approval unless type of leave is sickness

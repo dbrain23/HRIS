@@ -90,6 +90,9 @@ type
     QRDBText15: TQRDBText;
     PageFooterBand1: TQRBand;
     QRExpr1: TQRExpr;
+    QRLabel17: TQRLabel;
+    QRDBText14: TQRDBText;
+    QRShape4: TQRShape;
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
   private

@@ -121,6 +121,10 @@ begin
   // generate payroll
   if cmbPayrollPeriod.ItemIndex > 0 then
   begin
+    // confirm before generation
+    if MessageDlg('Are you sure you want to generate this payroll period?',mtWarning,
+        [mbYes,mbNo],0,mbNo) <> mrYes then Exit;
+
     payrollCode := TComboBoxObj(cmbPayrollPeriod.ItemObject).Code;
     sql := 'exec dbo.pr_generate_payroll ''' + payrollCode + ''',' +
               IntToStr(Ord(cbxCopyDeductions.Checked)) + ',' +

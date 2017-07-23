@@ -37,7 +37,7 @@
     <Transaction>2013/08/28 21:50:47.000.721,=dxThemeRS18.dcp</Transaction>
     <Transaction>2013/08/28 21:50:47.000.685,=cxLibraryRS18.dcp</Transaction>
     <Transaction>2013/08/28 21:50:47.000.757,=cxEditorsRS18.dcp</Transaction>
-    <Transaction>2013/08/29 20:16:59.000.886,=dxSkinFoggyRS18.dcp</Transaction>
+    <Transaction>2013/08/29 20:16:59.000.865,=dxSkinDevExpressStyleRS18.dcp</Transaction>
     <Transaction>2013/08/29 20:16:59.000.844,=dxSkinDevExpressDarkStyleRS18.dcp</Transaction>
     <Transaction>2013/08/29 20:16:59.000.992,=dxSkinLiquidSkyRS18.dcp</Transaction>
     <Transaction>2013/08/29 20:16:59.000.705,=dxSkinBlackRS18.dcp</Transaction>
@@ -49,12 +49,12 @@
     <Transaction>2013/08/29 20:16:59.000.724,=dxSkinBlueprintRS18.dcp</Transaction>
     <Transaction>2013/08/29 20:16:59.000.743,=dxSkinBlueRS18.dcp</Transaction>
     <Transaction>2013/08/29 20:16:59.000.907,=dxSkinGlassOceansRS18.dcp</Transaction>
-    <Transaction>2013/08/29 20:16:59.000.865,=dxSkinDevExpressStyleRS18.dcp</Transaction>
+    <Transaction>2013/08/29 20:16:59.000.886,=dxSkinFoggyRS18.dcp</Transaction>
     <Transaction>2013/08/29 20:16:59.000.764,=dxSkinCaramelRS18.dcp</Transaction>
     <Transaction>2013/08/29 20:16:59.000.824,=dxSkinDarkSideRS18.dcp</Transaction>
     <Transaction>2013/08/29 20:16:59.000.685,=dxSkinsCoreRS18.dcp</Transaction>
     <Transaction>2013/08/29 20:17:00.000.278,=dxSkinPumpkinRS18.dcp</Transaction>
-    <Transaction>2013/08/29 20:17:00.000.446,=dxSkinSpringTimeRS18.dcp</Transaction>
+    <Transaction>2013/08/29 20:17:00.000.506,=dxSkinSummer2008RS18.dcp</Transaction>
     <Transaction>2013/08/29 20:17:00.000.153,=dxSkinOffice2007PinkRS18.dcp</Transaction>
     <Transaction>2013/08/29 20:17:00.000.414,=dxSkinSilverRS18.dcp</Transaction>
     <Transaction>2013/08/29 20:17:00.000.593,=dxSkinVS2010RS18.dcp</Transaction>
@@ -77,7 +77,7 @@
     <Transaction>2013/08/29 20:17:00.000.203,=dxSkinOffice2010BlackRS18.dcp</Transaction>
     <Transaction>2013/08/29 20:17:00.000.303,=dxSkinSevenClassicRS18.dcp</Transaction>
     <Transaction>2013/08/29 20:17:00.000.083,=dxSkinOffice2007BlackRS18.dcp</Transaction>
-    <Transaction>2013/08/29 20:17:00.000.506,=dxSkinSummer2008RS18.dcp</Transaction>
+    <Transaction>2013/08/29 20:17:00.000.446,=dxSkinSpringTimeRS18.dcp</Transaction>
     <Transaction>2013/08/30 22:07:35.000.835,=cxPageControlRS18.dcp</Transaction>
     <Transaction>2013/08/30 22:07:35.000.869,=cxGridRS18.dcp</Transaction>
     <Transaction>2013/08/30 22:07:35.000.900,=dxSkinscxPCPainterRS18.dcp</Transaction>

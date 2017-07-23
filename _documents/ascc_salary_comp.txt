@@ -1,0 +1,10 @@
+semi monthly = monthly / 2
+gross = semi monthly - leave_without_pay - undertime + adjustments + allowance
+
+for tax purposes:
+
+staff 8500 
+BM 11000 
+DH 12000 
+AM 13000 
+COO 15000

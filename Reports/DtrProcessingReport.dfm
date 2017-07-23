@@ -344,15 +344,15 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 FontSize = 8
               end
               object QRDBText2: TQRDBText
-                Left = 155
+                Left = 145
                 Top = 1
-                Width = 23
+                Width = 33
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  585.863095238095200000
+                  548.065476190476200000
                   3.779761904761905000
-                  86.934523809523810000)
+                  124.732142857142900000)
                 XLColumn = 0
                 Alignment = taRightJustify
                 AlignToBand = False
@@ -494,13 +494,13 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 FontSize = 8
               end
               object QRDBText8: TQRDBText
-                Left = 344
+                Left = 392
                 Top = 1
                 Width = 41
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  1300.238095238095000000
+                  1481.666666666667000000
                   3.779761904761905000
                   154.970238095238100000)
                 XLColumn = 0
@@ -524,13 +524,13 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 FontSize = 8
               end
               object QRDBText9: TQRDBText
-                Left = 398
+                Left = 446
                 Top = 1
                 Width = 33
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  1504.345238095238000000
+                  1685.773809523810000000
                   3.779761904761905000
                   124.732142857142900000)
                 XLColumn = 0
@@ -554,13 +554,13 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 FontSize = 8
               end
               object QRDBText10: TQRDBText
-                Left = 444
+                Left = 492
                 Top = 1
                 Width = 33
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  1678.214285714286000000
+                  1859.642857142857000000
                   3.779761904761905000
                   124.732142857142900000)
                 XLColumn = 0
@@ -584,13 +584,13 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 FontSize = 8
               end
               object QRDBText11: TQRDBText
-                Left = 490
+                Left = 538
                 Top = 1
                 Width = 32
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  1852.083333333333000000
+                  2033.511904761905000000
                   3.779761904761905000
                   120.952380952381000000)
                 XLColumn = 0
@@ -614,13 +614,13 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 FontSize = 8
               end
               object QRDBText12: TQRDBText
-                Left = 535
+                Left = 583
                 Top = 1
                 Width = 31
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  2022.172619047619000000
+                  2203.601190476190000000
                   3.779761904761905000
                   117.172619047619000000)
                 XLColumn = 0
@@ -644,13 +644,13 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 FontSize = 8
               end
               object QRDBText13: TQRDBText
-                Left = 579
+                Left = 627
                 Top = 1
                 Width = 33
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  2188.482142857143000000
+                  2369.910714285714000000
                   3.779761904761905000
                   124.732142857142900000)
                 XLColumn = 0
@@ -660,6 +660,36 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 Color = clWhite
                 DataSet = dstDtrProcessing
                 DataField = 'incomplete'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                ParentFont = False
+                Transparent = False
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FullJustify = False
+                MaxBreakChars = 0
+                FontSize = 8
+              end
+              object QRDBText14: TQRDBText
+                Left = 352
+                Top = 1
+                Width = 32
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  1330.476190476190000000
+                  3.779761904761905000
+                  120.952380952381000000)
+                XLColumn = 0
+                Alignment = taRightJustify
+                AlignToBand = False
+                AutoSize = False
+                Color = clWhite
+                DataSet = dstDtrProcessing
+                DataField = 'undertime_with_pay'
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
                 Font.Height = -11
@@ -731,13 +761,13 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 FontSize = 8
               end
               object QRLabel2: TQRLabel
-                Left = 622
+                Left = 670
                 Top = 26
                 Width = 107
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  2351.011904761905000000
+                  2532.440476190476000000
                   98.273809523809520000
                   404.434523809523800000)
                 XLColumn = 0
@@ -774,13 +804,13 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
               object QRShape5: TQRShape
                 Left = 151
                 Top = 13
-                Width = 470
+                Width = 519
                 Height = 3
                 Size.Values = (
                   11.339285714285710000
                   570.744047619047600000
                   49.136904761904760000
-                  1776.488095238095000000)
+                  1961.696428571429000000)
                 XLColumn = 0
                 Shape = qrsHorLine
                 VertAdjust = 0
@@ -788,13 +818,13 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
               object QRLabel3: TQRLabel
                 Left = 158
                 Top = 3
-                Width = 231
+                Width = 278
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   597.202380952381000000
                   11.339285714285710000
-                  873.125000000000000000)
+                  1050.773809523810000000)
                 XLColumn = 0
                 Alignment = taCenter
                 AlignToBand = False
@@ -813,13 +843,13 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 FontSize = 8
               end
               object QRLabel5: TQRLabel
-                Left = 398
+                Left = 446
                 Top = 3
                 Width = 219
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  1504.345238095238000000
+                  1685.773809523810000000
                   11.339285714285710000
                   827.767857142857100000)
                 XLColumn = 0
@@ -1045,27 +1075,27 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 FontSize = 8
               end
               object QRShape11: TQRShape
-                Left = 395
-                Top = 1
+                Left = 389
+                Top = 14
                 Width = 1
-                Height = 38
+                Height = 25
                 Size.Values = (
-                  143.630952380952400000
-                  1493.005952380952000000
-                  3.779761904761905000
+                  94.494047619047620000
+                  1470.327380952381000000
+                  52.916666666666670000
                   3.779761904761905000)
                 XLColumn = 0
                 Shape = qrsVertLine
                 VertAdjust = 0
               end
               object QRLabel11: TQRLabel
-                Left = 344
+                Left = 392
                 Top = 18
                 Width = 48
                 Height = 20
                 Size.Values = (
                   75.595238095238100000
-                  1300.238095238095000000
+                  1481.666666666667000000
                   68.035714285714290000
                   181.428571428571400000)
                 XLColumn = 0
@@ -1086,27 +1116,27 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 FontSize = 8
               end
               object QRShape3: TQRShape
-                Left = 441
-                Top = 14
+                Left = 442
+                Top = 1
                 Width = 1
-                Height = 25
+                Height = 38
                 Size.Values = (
-                  94.494047619047620000
-                  1666.875000000000000000
-                  52.916666666666670000
+                  143.630952380952400000
+                  1670.654761904762000000
+                  3.779761904761905000
                   3.779761904761905000)
                 XLColumn = 0
                 Shape = qrsVertLine
                 VertAdjust = 0
               end
               object QRLabel12: TQRLabel
-                Left = 399
+                Left = 447
                 Top = 18
                 Width = 38
                 Height = 20
                 Size.Values = (
                   75.595238095238100000
-                  1508.125000000000000000
+                  1689.553571428571000000
                   68.035714285714290000
                   143.630952380952400000)
                 XLColumn = 0
@@ -1141,13 +1171,13 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 VertAdjust = 0
               end
               object QRLabel13: TQRLabel
-                Left = 445
+                Left = 493
                 Top = 18
                 Width = 38
                 Height = 20
                 Size.Values = (
                   75.595238095238100000
-                  1681.994047619048000000
+                  1863.422619047619000000
                   68.035714285714290000
                   143.630952380952400000)
                 XLColumn = 0
@@ -1182,13 +1212,13 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 VertAdjust = 0
               end
               object QRLabel14: TQRLabel
-                Left = 490
+                Left = 538
                 Top = 18
                 Width = 38
                 Height = 20
                 Size.Values = (
                   75.595238095238100000
-                  1852.083333333333000000
+                  2033.511904761905000000
                   68.035714285714290000
                   143.630952380952400000)
                 XLColumn = 0
@@ -1209,13 +1239,13 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 FontSize = 8
               end
               object QRShape14: TQRShape
-                Left = 576
+                Left = 579
                 Top = 14
                 Width = 1
                 Height = 25
                 Size.Values = (
                   94.494047619047620000
-                  2177.142857142857000000
+                  2188.482142857143000000
                   52.916666666666670000
                   3.779761904761905000)
                 XLColumn = 0
@@ -1223,13 +1253,13 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 VertAdjust = 0
               end
               object QRLabel15: TQRLabel
-                Left = 535
+                Left = 583
                 Top = 18
                 Width = 38
                 Height = 20
                 Size.Values = (
                   75.595238095238100000
-                  2022.172619047619000000
+                  2203.601190476190000000
                   68.035714285714290000
                   143.630952380952400000)
                 XLColumn = 0
@@ -1250,13 +1280,13 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 FontSize = 8
               end
               object QRShape15: TQRShape
-                Left = 620
+                Left = 668
                 Top = 1
                 Width = 1
                 Height = 38
                 Size.Values = (
                   143.630952380952400000
-                  2343.452380952381000000
+                  2524.880952380952000000
                   3.779761904761905000
                   3.779761904761905000)
                 XLColumn = 0
@@ -1264,13 +1294,13 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 VertAdjust = 0
               end
               object QRLabel16: TQRLabel
-                Left = 579
+                Left = 627
                 Top = 18
                 Width = 38
                 Height = 20
                 Size.Values = (
                   75.595238095238100000
-                  2188.482142857143000000
+                  2369.910714285714000000
                   68.035714285714290000
                   143.630952380952400000)
                 XLColumn = 0
@@ -1289,6 +1319,47 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
+              end
+              object QRLabel17: TQRLabel
+                Left = 346
+                Top = 18
+                Width = 38
+                Height = 20
+                Size.Values = (
+                  75.595238095238100000
+                  1307.797619047619000000
+                  68.035714285714290000
+                  143.630952380952400000)
+                XLColumn = 0
+                Alignment = taCenter
+                AlignToBand = False
+                AutoSize = False
+                Caption = 'Undertime'
+                Color = clWhite
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                ParentFont = False
+                Transparent = False
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRShape4: TQRShape
+                Left = 624
+                Top = 14
+                Width = 1
+                Height = 25
+                Size.Values = (
+                  94.494047619047620000
+                  2358.571428571429000000
+                  52.916666666666670000
+                  3.779761904761905000)
+                XLColumn = 0
+                Shape = qrsVertLine
+                VertAdjust = 0
               end
             end
             object SummaryBand: TQRBand
