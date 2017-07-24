@@ -344,7 +344,7 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
               PreCaluculateBandHeight = False
               KeepOnOnePage = False
               Expression = 'location_name'
-              FooterBand = PageFooterBand1
+              FooterBand = GroupFooterBand
               Master = qrMain
               ReprintOnNewPage = False
               object QRDBText3: TQRDBText
@@ -378,7 +378,7 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
                 FontSize = 10
               end
             end
-            object PageFooterBand1: TQRBand
+            object GroupFooterBand: TQRBand
               Left = 24
               Top = 148
               Width = 894

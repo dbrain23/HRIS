@@ -34,7 +34,7 @@ type
     QRLabel2: TQRLabel;
     QRGroup1: TQRGroup;
     QRDBText3: TQRDBText;
-    PageFooterBand1: TQRBand;
+    GroupFooterBand: TQRBand;
     QRExpr1: TQRExpr;
     QRShape2: TQRShape;
     QRExpr2: TQRExpr;
@@ -75,7 +75,7 @@ const
 var
   columnHeader: TQRLabel;
   dataField: TQRDBText;
-  totalField: TQRExpr;
+  totalFieldSummary, totalFieldGroup: TQRExpr;
   i, colCnt: integer;
 begin
 
@@ -122,23 +122,42 @@ begin
         // font properties
         dataField.Font.Size := 6;
 
-        // total field
-        totalField := TQRExpr(SummaryBand.AddPrintable(TQRExpr));
-        totalField.Top := 7;
-        totalField.Left := ANCHOR + (colCnt * SPACE);
-        totalField.AutoSize := false;
-        totalField.AutoStretch := false;
-        totalField.WordWrap := true;
-        totalField.Height := 12;
-        totalField.Width := FIXEDWIDTH + 7;
-        totalField.Alignment := taRightJustify;
+        // total field - FOOTER
+        totalFieldGroup := TQRExpr(GroupFooterBand.AddPrintable(TQRExpr));
+        totalFieldGroup.Top := 7;
+        totalFieldGroup.Left := ANCHOR + (colCnt * SPACE) - 8;
+        totalFieldGroup.AutoSize := false;
+        totalFieldGroup.AutoStretch := false;
+        totalFieldGroup.WordWrap := true;
+        totalFieldGroup.Height := 12;
+        totalFieldGroup.Width := FIXEDWIDTH + 7;
+        totalFieldGroup.Alignment := taRightJustify;
+        totalFieldGroup.ResetAfterPrint := true;
 
         // expression
-        totalField.Expression := 'FORMATNUMERIC(''###,##0.00'',SUM(' +
+        totalFieldGroup.Expression := 'FORMATNUMERIC(''###,##0.00'',SUM(' +
           Fields[i].FieldName + '))';
 
         // font properties
-        totalField.Font.Size := 6;
+        totalFieldGroup.Font.Size := 6;
+
+        // total field - SUMMARY
+        totalFieldSummary := TQRExpr(SummaryBand.AddPrintable(TQRExpr));
+        totalFieldSummary.Top := 7;
+        totalFieldSummary.Left := ANCHOR + (colCnt * SPACE);
+        totalFieldSummary.AutoSize := false;
+        totalFieldSummary.AutoStretch := false;
+        totalFieldSummary.WordWrap := true;
+        totalFieldSummary.Height := 12;
+        totalFieldSummary.Width := FIXEDWIDTH + 7;
+        totalFieldSummary.Alignment := taRightJustify;
+
+        // expression
+        totalFieldSummary.Expression := 'FORMATNUMERIC(''###,##0.00'',SUM(' +
+          Fields[i].FieldName + '))';
+
+        // font properties
+        totalFieldSummary.Font.Size := 6;
 
         Application.ProcessMessages;
 
