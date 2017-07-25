@@ -41,11 +41,22 @@ type
     Label1: TLabel;
     cmbDeductionTypes: TcxComboBox;
     bSave: TcxButton;
+    csrDeductions: TcxStyleRepository;
+    csBackground: TcxStyle;
+    csContent: TcxStyle;
+    csNewRow: TcxStyle;
+    csTotalAmount: TcxStyle;
     procedure FormCreate(Sender: TObject);
     procedure cmbDeductionTypesClick(Sender: TObject);
     procedure bSaveClick(Sender: TObject);
     procedure vwDeductionEditing(Sender: TcxCustomGridTableView;
       AItem: TcxCustomGridTableItem; var AAllow: Boolean);
+    procedure vwDeductionCustomDrawFooterCell(Sender: TcxGridTableView;
+      ACanvas: TcxCanvas; AViewInfo: TcxGridColumnHeaderViewInfo;
+      var ADone: Boolean);
+    procedure vwDeductionTcxGridDBDataControllerTcxDataSummaryFooterSummaryItems0GetText(
+      Sender: TcxDataSummaryItem; const AValue: Variant; AIsFooter: Boolean;
+      var AText: string);
   private
     { Private declarations }
   public
@@ -95,12 +106,33 @@ begin
     'deductiontype_code','deductiontype_name');
 end;
 
+procedure TfPayrollDeductions.vwDeductionCustomDrawFooterCell(
+  Sender: TcxGridTableView; ACanvas: TcxCanvas;
+  AViewInfo: TcxGridColumnHeaderViewInfo; var ADone: Boolean);
+begin
+  inherited;
+  with AViewInfo do
+  begin
+    LookAndFeelPainter.DrawFooterCellContent(ACanvas, Bounds, AlignmentHorz, AlignmentVert, MultiLine, Text, Font, Params.TextColor, Params.Color);
+    ACanvas.FrameRect(Bounds, Params.Color);
+  end;
+  ADone := True;
+end;
+
 procedure TfPayrollDeductions.vwDeductionEditing(Sender: TcxCustomGridTableView;
   AItem: TcxCustomGridTableItem; var AAllow: Boolean);
 begin
   if ((AItem as TcxGridDBColumn).DataBinding.FieldName = 'bcf_amount')
     or ((AItem as TcxGridDBColumn).DataBinding.FieldName = 'bcf_sub_location_code') then
     AAllow := vwDeduction.DataController.DataSet.FieldByName('has_bcf').AsInteger = 1;
+end;
+
+procedure TfPayrollDeductions.vwDeductionTcxGridDBDataControllerTcxDataSummaryFooterSummaryItems0GetText(
+  Sender: TcxDataSummaryItem; const AValue: Variant; AIsFooter: Boolean;
+  var AText: string);
+begin
+  inherited;
+  AText := 'TOTAL DEDUCTION';
 end;
 
 end.

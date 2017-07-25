@@ -57,7 +57,6 @@ inherited fPayrollDeductions: TfPayrollDeductions
               LookAndFeel.Kind = lfFlat
               LookAndFeel.NativeStyle = False
               LookAndFeel.SkinName = 'DevExpressStyle'
-              ExplicitLeft = 2
               object vwDeduction: TcxGridDBTableView
                 Navigator.Buttons.CustomButtons = <>
                 Navigator.Buttons.First.Visible = False
@@ -77,7 +76,17 @@ inherited fPayrollDeductions: TfPayrollDeductions
                 OnEditing = vwDeductionEditing
                 DataController.DataSource = dmPayroll.dscDeductionsAll
                 DataController.Summary.DefaultGroupSummaryItems = <>
-                DataController.Summary.FooterSummaryItems = <>
+                DataController.Summary.FooterSummaryItems = <
+                  item
+                    OnGetText = vwDeductionTcxGridDBDataControllerTcxDataSummaryFooterSummaryItems0GetText
+                    Column = vwDeductionemployee
+                  end
+                  item
+                    Format = '###,###,##0.00'
+                    Kind = skSum
+                    FieldName = 'deduction_amount'
+                    Column = vwDeductiondeduction_amount
+                  end>
                 DataController.Summary.SummaryGroups = <>
                 OptionsBehavior.PostponedSynchronization = False
                 OptionsBehavior.FocusCellOnTab = True
@@ -98,12 +107,16 @@ inherited fPayrollDeductions: TfPayrollDeductions
                 OptionsView.FocusRect = False
                 OptionsView.NoDataToDisplayInfoText = 'No record found.'
                 OptionsView.ScrollBars = ssNone
+                OptionsView.Footer = True
+                OptionsView.FooterAutoHeight = True
                 OptionsView.GridLineColor = 8421440
                 OptionsView.GridLines = glNone
                 OptionsView.GroupByBox = False
                 OptionsView.Indicator = True
                 OptionsView.RowSeparatorColor = 12303291
                 OptionsView.RowSeparatorWidth = 1
+                Styles.Footer = csTotalAmount
+                OnCustomDrawFooterCell = vwDeductionCustomDrawFooterCell
                 object vwDeductionemployee: TcxGridDBColumn
                   Caption = 'Employee'
                   DataBinding.FieldName = 'employee'
@@ -130,7 +143,7 @@ inherited fPayrollDeductions: TfPayrollDeductions
                   Properties.EditFormat = '###,##0.00'
                   Properties.Nullable = False
                   Properties.UseLeftAlignmentOnEditing = False
-                  MinWidth = 62
+                  MinWidth = 100
                   Options.Filtering = False
                   Options.FilteringFilteredItemsList = False
                   Options.FilteringMRUItemsList = False
@@ -142,7 +155,7 @@ inherited fPayrollDeductions: TfPayrollDeductions
                   Options.Grouping = False
                   Options.HorzSizing = False
                   Options.Moving = False
-                  Width = 62
+                  Width = 100
                 end
                 object vwDeductionbcf_amount: TcxGridDBColumn
                   Caption = 'BCF'
@@ -236,5 +249,31 @@ inherited fPayrollDeductions: TfPayrollDeductions
   inherited ilBaseMain: TcxImageList
     FormatVersion = 1
     DesignInfo = 16253704
+  end
+  object csrDeductions: TcxStyleRepository
+    Left = 704
+    Top = 253
+    PixelsPerInch = 96
+    object csBackground: TcxStyle
+      AssignedValues = [svColor]
+      Color = clMenu
+    end
+    object csContent: TcxStyle
+      AssignedValues = [svColor, svTextColor]
+      Color = clMenu
+      TextColor = clDefault
+    end
+    object csNewRow: TcxStyle
+      AssignedValues = [svColor]
+      Color = clMoneyGreen
+    end
+    object csTotalAmount: TcxStyle
+      AssignedValues = [svFont]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGreen
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+    end
   end
 end
