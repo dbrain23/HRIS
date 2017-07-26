@@ -434,15 +434,15 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 FontSize = 8
               end
               object QRDBText6: TQRDBText
-                Left = 262
+                Left = 252
                 Top = 1
-                Width = 23
+                Width = 33
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  990.297619047619000000
+                  952.500000000000000000
                   3.779761904761905000
-                  86.934523809523810000)
+                  124.732142857142900000)
                 XLColumn = 0
                 Alignment = taRightJustify
                 AlignToBand = False
@@ -1650,6 +1650,9 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
             inherited bPrevious: TcxButton
               Left = 871
               ExplicitLeft = 871
+            end
+            inherited speZoom: TcxSpinEdit
+              ExplicitHeight = 22
             end
           end
         end
