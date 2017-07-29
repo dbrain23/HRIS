@@ -43,7 +43,10 @@ type
     QRShape3: TQRShape;
     QRExpr4: TQRExpr;
     QRLabel3: TQRLabel;
-    QRExpr5: TQRExpr;
+    PageFooterBand1: TQRBand;
+    QRExpr6: TQRExpr;
+    QRShape16: TQRShape;
+    QRExpr7: TQRExpr;
     procedure FormCreate(Sender: TObject);
     procedure ValuePrint(sender: TObject; var Value: string);
     procedure qrMainBeforePrint(Sender: TCustomQuickRep;

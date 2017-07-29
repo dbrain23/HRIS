@@ -1,20 +1,20 @@
 inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
   Caption = 'fSchedOfSalariesAndWages'
-  ClientWidth = 659
-  ExplicitWidth = 675
+  ClientWidth = 749
+  ExplicitWidth = 765
   PixelsPerInch = 96
   TextHeight = 14
   inherited pcMain: TJvPageControl
-    Width = 659
+    Width = 749
     ExplicitWidth = 659
     inherited tsMain: TTabSheet
       Caption = 'Schedule of Salaries and Wages'
       ExplicitWidth = 651
       inherited pnlMain: TPanel
-        Width = 651
+        Width = 741
         ExplicitWidth = 651
         inherited pnlLeft: TPanel
-          Width = 641
+          Width = 731
           ExplicitWidth = 641
           object lblPeriod: TLabel [0]
             Left = 8
@@ -24,11 +24,11 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
             Caption = 'Payroll period'
           end
           inherited btnPrint: TcxButton
-            Left = 528
+            Left = 618
             ExplicitLeft = 528
           end
           inherited bGenerate: TcxButton
-            Left = 409
+            Left = 499
             ExplicitLeft = 409
           end
           object cmbPayrollPeriod: TcxComboBox
@@ -40,12 +40,35 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
             TabOrder = 2
             Width = 177
           end
+          object cbxRegular: TcxCheckBox
+            Left = 287
+            Top = 6
+            Hint = 'Copy previous adjustments'
+            Caption = 'Regular '
+            ParentShowHint = False
+            ShowHint = True
+            State = cbsChecked
+            Style.Shadow = False
+            TabOrder = 3
+            Width = 66
+          end
+          object cbxProbationary: TcxCheckBox
+            Left = 375
+            Top = 6
+            Hint = 'Copy previous adjustments'
+            Caption = 'Probationary'
+            ParentShowHint = False
+            ShowHint = True
+            Style.Shadow = False
+            TabOrder = 4
+            Width = 106
+          end
         end
         inherited pnlReport: TPanel
-          Width = 641
+          Width = 731
           ExplicitWidth = 641
           inherited rvMain: TQRPreview
-            Width = 641
+            Width = 731
             ExplicitWidth = 641
           end
           inherited qrMain: TQuickRep
@@ -847,7 +870,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               ForceNewColumn = False
               ForceNewPage = False
               Size.Values = (
-                688.340000000000000000
+                687.916666666666700000
                 2029.732142857143000000)
               PreCaluculateBandHeight = False
               KeepOnOnePage = False
@@ -856,15 +879,15 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 AlignWithMargins = True
                 Left = 0
                 Top = 1
-                Width = 690
+                Width = 536
                 Height = 3
                 Size.Values = (
                   11.339285714285710000
                   0.000000000000000000
                   3.779761904761905000
-                  2608.035714285714000000)
+                  2025.952380952381000000)
                 XLColumn = 0
-                Shape = qrsTopAndBottom
+                Shape = qrsHorLine
                 VertAdjust = 0
               end
               object QRLabel19: TQRLabel
@@ -889,35 +912,6 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 Font.Style = [fsBold]
                 ParentFont = False
                 Transparent = False
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FontSize = 8
-              end
-              object QRExpr6: TQRExpr
-                Left = 3
-                Top = 5
-                Width = 262
-                Height = 12
-                Size.Values = (
-                  45.357142857142860000
-                  11.339285714285710000
-                  18.898809523809520000
-                  990.297619047619000000)
-                XLColumn = 0
-                Alignment = taLeftJustify
-                AlignToBand = False
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = -11
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                Color = clWhite
-                ParentFont = False
-                ResetAfterPrint = False
-                Transparent = False
-                Expression = 
-                  #39'Print date: '#39' + REFORMATDATE(DATE + TIME,'#39'mmm dd, yyyy hh:mm am' +
-                  '/pm'#39')'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
@@ -1159,33 +1153,173 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
               end
+              object QRExpr6: TQRExpr
+                Left = 487
+                Top = 6
+                Width = 48
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  1840.744047619048000000
+                  22.678571428571430000
+                  181.428571428571400000)
+                XLColumn = 0
+                Alignment = taRightJustify
+                AlignToBand = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = False
+                Transparent = False
+                Expression = 'PAGENUMBER'
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRExpr9: TQRExpr
+                Left = 3
+                Top = 5
+                Width = 262
+                Height = 12
+                Size.Values = (
+                  45.357142857142860000
+                  11.339285714285710000
+                  18.898809523809520000
+                  990.297619047619000000)
+                XLColumn = 0
+                Alignment = taLeftJustify
+                AlignToBand = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = False
+                Transparent = False
+                Expression = 
+                  #39'Print date: '#39' + REFORMATDATE(DATE + TIME,'#39'mmm dd, yyyy hh:mm am' +
+                  '/pm'#39')'
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+            end
+            object PageFooterBand1: TQRBand
+              Left = 17
+              Top = 313
+              Width = 537
+              Height = 19
+              AlignToBottom = False
+              Color = clWhite
+              TransparentBand = False
+              ForceNewColumn = False
+              ForceNewPage = False
+              Size.Values = (
+                72.760416666666670000
+                2029.732142857143000000)
+              PreCaluculateBandHeight = False
+              KeepOnOnePage = False
+              BandType = rbPageFooter
+              object QRExpr4: TQRExpr
+                Left = 487
+                Top = 6
+                Width = 48
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  1840.744047619048000000
+                  22.678571428571430000
+                  181.428571428571400000)
+                XLColumn = 0
+                Alignment = taRightJustify
+                AlignToBand = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = False
+                Transparent = False
+                Expression = 'PAGENUMBER'
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRShape16: TQRShape
+                AlignWithMargins = True
+                Left = 0
+                Top = 1
+                Width = 536
+                Height = 3
+                Size.Values = (
+                  11.339285714285710000
+                  0.000000000000000000
+                  3.779761904761905000
+                  2025.952380952381000000)
+                XLColumn = 0
+                Shape = qrsTopAndBottom
+                VertAdjust = 0
+              end
+              object QRExpr8: TQRExpr
+                Left = 3
+                Top = 5
+                Width = 262
+                Height = 12
+                Size.Values = (
+                  45.357142857142860000
+                  11.339285714285710000
+                  18.898809523809520000
+                  990.297619047619000000)
+                XLColumn = 0
+                Alignment = taLeftJustify
+                AlignToBand = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = False
+                Transparent = False
+                Expression = 
+                  #39'Print date: '#39' + REFORMATDATE(DATE + TIME,'#39'mmm dd, yyyy hh:mm am' +
+                  '/pm'#39')'
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
             end
           end
         end
-        inherited pStatus: TPanel
-          Top = 0
-          ExplicitTop = 0
-        end
         inherited p_ReportFooter: TPanel
-          Width = 641
+          Width = 731
           ExplicitWidth = 641
           inherited JvGroupBox1: TJvGroupBox
-            Width = 639
+            Width = 729
             ExplicitWidth = 639
             inherited bFirst: TcxButton
-              Left = 537
+              Left = 627
               ExplicitLeft = 537
             end
             inherited bLast: TcxButton
-              Left = 612
+              Left = 702
               ExplicitLeft = 612
             end
             inherited bNext: TcxButton
-              Left = 587
+              Left = 677
               ExplicitLeft = 587
             end
             inherited bPrevious: TcxButton
-              Left = 562
+              Left = 652
               ExplicitLeft = 562
             end
             inherited speZoom: TcxSpinEdit
@@ -1208,7 +1342,6 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
         DataType = ftInteger
         Direction = pdReturnValue
         Precision = 10
-        Value = 0
       end
       item
         Name = '@payroll_code'
@@ -1216,6 +1349,20 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
         DataType = ftString
         Size = 15
         Value = ''
+      end
+      item
+        Name = '@regular'
+        Attributes = [paNullable]
+        DataType = ftSmallint
+        Precision = 5
+        Value = 0
+      end
+      item
+        Name = '@probationary'
+        Attributes = [paNullable]
+        DataType = ftSmallint
+        Precision = 5
+        Value = 0
       end>
     Left = 599
     Top = 368

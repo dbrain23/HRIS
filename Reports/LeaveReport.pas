@@ -78,6 +78,11 @@ type
     QRShape4: TQRShape;
     cbxRegular: TcxCheckBox;
     cbxProbationary: TcxCheckBox;
+    PageFooterBand1: TQRBand;
+    QRExpr2: TQRExpr;
+    QRShape16: TQRShape;
+    QRExpr1: TQRExpr;
+    QRExpr4: TQRExpr;
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
   private

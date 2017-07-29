@@ -19,7 +19,7 @@ uses
   dxSkinXmas2008Blue, cxControls, cxContainer, cxEdit, cxTextEdit, cxMaskEdit,
   cxSpinEdit, Vcl.StdCtrls, JvExStdCtrls, JvGroupBox, Vcl.ExtCtrls, QuickRpt,
   QRPrntr, cxButtons, Vcl.ComCtrls, JvExComCtrls, JvComCtrls, QRCtrls, Data.DB,
-  Data.Win.ADODB, cxDropDownEdit;
+  Data.Win.ADODB, cxDropDownEdit, cxCheckBox;
 
 type
   TfSchedOfSalariesAndWages = class(TfBasePrintForm)
@@ -63,7 +63,6 @@ type
     SummaryBand: TQRBand;
     QRShape17: TQRShape;
     QRLabel19: TQRLabel;
-    QRExpr6: TQRExpr;
     QRLabel21: TQRLabel;
     QRLabel22: TQRLabel;
     QRLabel12: TQRLabel;
@@ -76,6 +75,14 @@ type
     QRLabel23: TQRLabel;
     QRDBText8: TQRDBText;
     QRExpr1: TQRExpr;
+    PageFooterBand1: TQRBand;
+    QRExpr4: TQRExpr;
+    QRShape16: TQRShape;
+    QRExpr8: TQRExpr;
+    QRExpr6: TQRExpr;
+    QRExpr9: TQRExpr;
+    cbxRegular: TcxCheckBox;
+    cbxProbationary: TcxCheckBox;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
@@ -117,6 +124,8 @@ begin
   begin
     ParamByName('@payroll_code').Value :=
           TComboBoxObj(cmbPayrollPeriod.ItemObject).Code;
+    ParamByName('@regular').Value := Ord(cbxRegular.Checked);
+    ParamByName('@probationary').Value := Ord(cbxProbationary.Checked);
   end;
 end;
 

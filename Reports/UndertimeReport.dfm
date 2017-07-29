@@ -72,8 +72,8 @@ inherited fUndertimeReport: TfUndertimeReport
             ExplicitWidth = 836
           end
           inherited qrMain: TQuickRep
-            Width = 816
-            Height = 1056
+            Width = 653
+            Height = 845
             DataSet = dstUndertime
             Functions.DATA = (
               '0'
@@ -87,31 +87,31 @@ inherited fUndertimeReport: TfUndertimeReport
               88.900000000000000000
               88.900000000000000000
               0.000000000000000000)
-            Zoom = 100
-            ExplicitWidth = 816
-            ExplicitHeight = 1056
+            Zoom = 80
+            ExplicitWidth = 653
+            ExplicitHeight = 845
             object TitleBand1: TQRBand
               AlignWithMargins = True
-              Left = 34
-              Top = 34
-              Width = 749
-              Height = 91
+              Left = 27
+              Top = 27
+              Width = 599
+              Height = 73
               AlignToBottom = False
               Color = clWhite
               TransparentBand = False
               ForceNewColumn = False
               ForceNewPage = False
               Size.Values = (
-                240.770833333333300000
-                1981.729166666667000000)
+                241.432291666666700000
+                1981.067708333333000000)
               PreCaluculateBandHeight = False
               KeepOnOnePage = False
               BandType = rbTitle
               object ReportTitle: TQRLabel
                 Left = 0
-                Top = 21
-                Width = 746
-                Height = 20
+                Top = 17
+                Width = 597
+                Height = 16
                 Size.Values = (
                   52.916666666666670000
                   0.000000000000000000
@@ -137,8 +137,8 @@ inherited fUndertimeReport: TfUndertimeReport
               object QRLabel4: TQRLabel
                 Left = 0
                 Top = 0
-                Width = 746
-                Height = 24
+                Width = 597
+                Height = 19
                 Size.Values = (
                   64.255952380952380000
                   0.000000000000000000
@@ -163,9 +163,9 @@ inherited fUndertimeReport: TfUndertimeReport
               end
               object QRExpr3: TQRExpr
                 Left = 0
-                Top = 37
-                Width = 746
-                Height = 17
+                Top = 30
+                Width = 597
+                Height = 14
                 Size.Values = (
                   45.357142857142860000
                   0.000000000000000000
@@ -191,28 +191,28 @@ inherited fUndertimeReport: TfUndertimeReport
               end
             end
             object QRGroup1: TQRGroup
-              Left = 34
-              Top = 184
-              Width = 749
-              Height = 23
+              Left = 27
+              Top = 147
+              Width = 599
+              Height = 18
               AlignToBottom = False
               Color = 15395562
               TransparentBand = False
               ForceNewColumn = False
               ForceNewPage = False
               Size.Values = (
-                60.854166666666670000
-                1981.729166666667000000)
+                59.531250000000000000
+                1981.067708333333000000)
               PreCaluculateBandHeight = False
               KeepOnOnePage = False
               Expression = 'location_name'
               Master = qrMain
               ReprintOnNewPage = False
               object QRDBText3: TQRDBText
-                Left = 4
-                Top = 3
-                Width = 737
-                Height = 17
+                Left = 3
+                Top = 2
+                Width = 590
+                Height = 14
                 Size.Values = (
                   44.979166666666670000
                   10.583333333333330000
@@ -240,26 +240,26 @@ inherited fUndertimeReport: TfUndertimeReport
               end
             end
             object ColumnHeaderBand: TQRBand
-              Left = 34
-              Top = 125
-              Width = 749
-              Height = 59
+              Left = 27
+              Top = 100
+              Width = 599
+              Height = 47
               AlignToBottom = False
               Color = clWhite
               TransparentBand = False
               ForceNewColumn = False
               ForceNewPage = False
               Size.Values = (
-                156.104166666666700000
-                1981.729166666667000000)
+                155.442708333333300000
+                1981.067708333333000000)
               PreCaluculateBandHeight = True
               KeepOnOnePage = False
               BandType = rbColumnHeader
               object QRShape1: TQRShape
                 Left = 0
                 Top = 1
-                Width = 749
-                Height = 54
+                Width = 599
+                Height = 43
                 Size.Values = (
                   142.875000000000000000
                   0.000000000000000000
@@ -270,15 +270,15 @@ inherited fUndertimeReport: TfUndertimeReport
                 VertAdjust = 0
               end
               object QRLabel1: TQRLabel
-                Left = 4
-                Top = 39
-                Width = 56
-                Height = 14
+                Left = 3
+                Top = 31
+                Width = 45
+                Height = 11
                 Size.Values = (
-                  37.041666666666670000
-                  10.583333333333330000
-                  103.187500000000000000
-                  148.166666666666700000)
+                  36.380208333333330000
+                  9.921875000000000000
+                  102.526041666666700000
+                  148.828125000000000000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
@@ -296,10 +296,10 @@ inherited fUndertimeReport: TfUndertimeReport
                 FontSize = 8
               end
               object QRLabel2: TQRLabel
-                Left = 560
-                Top = 39
-                Width = 153
-                Height = 14
+                Left = 448
+                Top = 31
+                Width = 122
+                Height = 11
                 Size.Values = (
                   37.041666666666670000
                   1481.666666666667000000
@@ -323,10 +323,10 @@ inherited fUndertimeReport: TfUndertimeReport
                 FontSize = 8
               end
               object QRLabel3: TQRLabel
-                Left = 327
-                Top = 4
-                Width = 138
-                Height = 14
+                Left = 262
+                Top = 3
+                Width = 110
+                Height = 11
                 Size.Values = (
                   37.041666666666670000
                   865.187500000000000000
@@ -350,10 +350,10 @@ inherited fUndertimeReport: TfUndertimeReport
                 FontSize = 8
               end
               object QRLabel6: TQRLabel
-                Left = 324
-                Top = 24
-                Width = 69
-                Height = 29
+                Left = 259
+                Top = 19
+                Width = 55
+                Height = 23
                 Size.Values = (
                   76.729166666666670000
                   857.250000000000000000
@@ -377,10 +377,10 @@ inherited fUndertimeReport: TfUndertimeReport
                 FontSize = 8
               end
               object QRShape7: TQRShape
-                Left = 317
+                Left = 254
                 Top = 1
                 Width = 1
-                Height = 54
+                Height = 43
                 Size.Values = (
                   142.875000000000000000
                   838.729166666666700000
@@ -391,10 +391,10 @@ inherited fUndertimeReport: TfUndertimeReport
                 VertAdjust = 0
               end
               object QRLabel8: TQRLabel
-                Left = 405
-                Top = 24
-                Width = 69
-                Height = 29
+                Left = 324
+                Top = 19
+                Width = 55
+                Height = 23
                 Size.Values = (
                   76.729166666666670000
                   1071.562500000000000000
@@ -418,10 +418,10 @@ inherited fUndertimeReport: TfUndertimeReport
                 FontSize = 8
               end
               object QRShape9: TQRShape
-                Left = 398
-                Top = 20
+                Left = 318
+                Top = 16
                 Width = 1
-                Height = 35
+                Height = 28
                 Size.Values = (
                   92.604166666666670000
                   1053.041666666667000000
@@ -432,10 +432,10 @@ inherited fUndertimeReport: TfUndertimeReport
                 VertAdjust = 0
               end
               object QRShape10: TQRShape
-                Left = 477
+                Left = 382
                 Top = 1
                 Width = 1
-                Height = 54
+                Height = 43
                 Size.Values = (
                   142.875000000000000000
                   1262.062500000000000000
@@ -446,10 +446,10 @@ inherited fUndertimeReport: TfUndertimeReport
                 VertAdjust = 0
               end
               object QRShape11: TQRShape
-                Left = 556
+                Left = 445
                 Top = 1
                 Width = 1
-                Height = 54
+                Height = 43
                 Size.Values = (
                   142.875000000000000000
                   1471.083333333333000000
@@ -460,10 +460,10 @@ inherited fUndertimeReport: TfUndertimeReport
                 VertAdjust = 0
               end
               object QRLabel5: TQRLabel
-                Left = 484
-                Top = 39
-                Width = 67
-                Height = 14
+                Left = 387
+                Top = 31
+                Width = 54
+                Height = 11
                 Size.Values = (
                   37.041666666666670000
                   1280.583333333333000000
@@ -487,9 +487,9 @@ inherited fUndertimeReport: TfUndertimeReport
                 FontSize = 8
               end
               object QRShape2: TQRShape
-                Left = 317
-                Top = 20
-                Width = 160
+                Left = 254
+                Top = 16
+                Width = 128
                 Height = 1
                 Size.Values = (
                   2.645833333333333000
@@ -502,26 +502,26 @@ inherited fUndertimeReport: TfUndertimeReport
               end
             end
             object DetailBand: TQRBand
-              Left = 34
-              Top = 207
-              Width = 749
-              Height = 17
+              Left = 27
+              Top = 165
+              Width = 599
+              Height = 14
               AlignToBottom = False
               Color = clWhite
               TransparentBand = False
               ForceNewColumn = False
               ForceNewPage = False
               Size.Values = (
-                44.979166666666670000
-                1981.729166666667000000)
+                46.302083333333330000
+                1981.067708333333000000)
               PreCaluculateBandHeight = False
               KeepOnOnePage = False
               BandType = rbDetail
               object QRDBText1: TQRDBText
-                Left = 4
+                Left = 3
                 Top = 1
-                Width = 290
-                Height = 14
+                Width = 232
+                Height = 11
                 Size.Values = (
                   37.041666666666670000
                   10.583333333333330000
@@ -548,10 +548,10 @@ inherited fUndertimeReport: TfUndertimeReport
                 FontSize = 8
               end
               object QRDBText5: TQRDBText
-                Left = 323
+                Left = 258
                 Top = 1
-                Width = 70
-                Height = 14
+                Width = 56
+                Height = 11
                 Size.Values = (
                   37.041666666666670000
                   854.604166666666700000
@@ -578,10 +578,10 @@ inherited fUndertimeReport: TfUndertimeReport
                 FontSize = 8
               end
               object QRDBText7: TQRDBText
-                Left = 405
+                Left = 324
                 Top = 1
-                Width = 60
-                Height = 14
+                Width = 48
+                Height = 11
                 Size.Values = (
                   37.041666666666670000
                   1071.562500000000000000
@@ -608,10 +608,10 @@ inherited fUndertimeReport: TfUndertimeReport
                 FontSize = 8
               end
               object QRDBText8: TQRDBText
-                Left = 484
+                Left = 387
                 Top = 1
-                Width = 53
-                Height = 14
+                Width = 42
+                Height = 11
                 Size.Values = (
                   37.041666666666670000
                   1280.583333333333000000
@@ -638,10 +638,10 @@ inherited fUndertimeReport: TfUndertimeReport
                 FontSize = 8
               end
               object QRDBText10: TQRDBText
-                Left = 560
+                Left = 448
                 Top = 1
-                Width = 185
-                Height = 14
+                Width = 148
+                Height = 11
                 Size.Values = (
                   37.041666666666670000
                   1481.666666666667000000
@@ -669,18 +669,18 @@ inherited fUndertimeReport: TfUndertimeReport
               end
             end
             object SummaryBand: TQRBand
-              Left = 34
-              Top = 224
-              Width = 749
-              Height = 109
+              Left = 27
+              Top = 179
+              Width = 599
+              Height = 87
               AlignToBottom = False
               Color = clWhite
               TransparentBand = False
               ForceNewColumn = False
               ForceNewPage = False
               Size.Values = (
-                288.395833333333300000
-                1981.729166666667000000)
+                287.734375000000000000
+                1981.067708333333000000)
               PreCaluculateBandHeight = False
               KeepOnOnePage = False
               BandType = rbSummary
@@ -688,22 +688,22 @@ inherited fUndertimeReport: TfUndertimeReport
                 AlignWithMargins = True
                 Left = 0
                 Top = 1
-                Width = 749
-                Height = 4
+                Width = 599
+                Height = 3
                 Size.Values = (
                   10.583333333333330000
                   0.000000000000000000
                   2.645833333333333000
                   1981.729166666667000000)
                 XLColumn = 0
-                Shape = qrsTopAndBottom
+                Shape = qrsHorLine
                 VertAdjust = 0
               end
               object QRLabel19: TQRLabel
-                Left = 238
-                Top = 71
-                Width = 244
-                Height = 17
+                Left = 190
+                Top = 57
+                Width = 195
+                Height = 14
                 Size.Values = (
                   44.979166666666670000
                   629.708333333333300000
@@ -726,44 +726,15 @@ inherited fUndertimeReport: TfUndertimeReport
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
               end
-              object QRExpr5: TQRExpr
-                Left = 4
-                Top = 7
-                Width = 374
-                Height = 17
-                Size.Values = (
-                  44.979166666666670000
-                  10.583333333333330000
-                  18.520833333333330000
-                  989.541666666666700000)
-                XLColumn = 0
-                Alignment = taLeftJustify
-                AlignToBand = False
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = -11
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                Color = clWhite
-                ParentFont = False
-                ResetAfterPrint = False
-                Transparent = False
-                Expression = 
-                  #39'Print date: '#39' + REFORMATDATE(DATE + TIME,'#39'mmm dd, yyyy hh:mm am' +
-                  '/pm'#39')'
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FontSize = 8
-              end
               object QRLabel20: TQRLabel
-                Left = 524
-                Top = 71
-                Width = 190
-                Height = 17
+                Left = 419
+                Top = 57
+                Width = 152
+                Height = 14
                 Size.Values = (
-                  44.979166666666670000
-                  1386.416666666667000000
-                  187.854166666666700000
+                  46.302083333333330000
+                  1385.755208333333000000
+                  188.515625000000000000
                   502.708333333333300000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -782,10 +753,10 @@ inherited fUndertimeReport: TfUndertimeReport
                 FontSize = 8
               end
               object QRLabel21: TQRLabel
-                Left = 309
-                Top = 86
-                Width = 173
-                Height = 17
+                Left = 247
+                Top = 69
+                Width = 138
+                Height = 14
                 Size.Values = (
                   44.979166666666670000
                   817.562500000000000000
@@ -809,10 +780,10 @@ inherited fUndertimeReport: TfUndertimeReport
                 FontSize = 8
               end
               object QRLabel22: TQRLabel
-                Left = 583
-                Top = 86
-                Width = 131
-                Height = 17
+                Left = 466
+                Top = 69
+                Width = 105
+                Height = 14
                 Size.Values = (
                   45.357142857142860000
                   1542.142857142857000000
@@ -836,15 +807,15 @@ inherited fUndertimeReport: TfUndertimeReport
                 FontSize = 8
               end
               object QRLabel7: TQRLabel
-                Left = 9
-                Top = 71
-                Width = 187
-                Height = 17
+                Left = 7
+                Top = 57
+                Width = 150
+                Height = 14
                 Size.Values = (
-                  44.979166666666670000
-                  23.812500000000000000
-                  187.854166666666700000
-                  494.770833333333300000)
+                  46.302083333333330000
+                  23.151041666666670000
+                  188.515625000000000000
+                  496.093750000000000000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
@@ -862,10 +833,10 @@ inherited fUndertimeReport: TfUndertimeReport
                 FontSize = 8
               end
               object QRLabel9: TQRLabel
-                Left = 87
-                Top = 86
-                Width = 109
-                Height = 17
+                Left = 70
+                Top = 69
+                Width = 87
+                Height = 14
                 Size.Values = (
                   45.357142857142860000
                   230.565476190476200000
@@ -884,6 +855,150 @@ inherited fUndertimeReport: TfUndertimeReport
                 Font.Style = []
                 ParentFont = False
                 Transparent = False
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRExpr4: TQRExpr
+                Left = 3
+                Top = 6
+                Width = 299
+                Height = 14
+                Size.Values = (
+                  46.302083333333330000
+                  9.921875000000000000
+                  19.843750000000000000
+                  988.880208333333300000)
+                XLColumn = 0
+                Alignment = taLeftJustify
+                AlignToBand = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = False
+                Transparent = False
+                Expression = 
+                  #39'Print date: '#39' + REFORMATDATE(DATE + TIME,'#39'mmm dd, yyyy hh:mm am' +
+                  '/pm'#39')'
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRExpr5: TQRExpr
+                Left = 543
+                Top = 7
+                Width = 54
+                Height = 11
+                Size.Values = (
+                  36.380208333333330000
+                  1795.859375000000000000
+                  23.151041666666670000
+                  178.593750000000000000)
+                XLColumn = 0
+                Alignment = taRightJustify
+                AlignToBand = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = False
+                Transparent = False
+                Expression = 'PAGENUMBER'
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+            end
+            object PageFooterBand1: TQRBand
+              Left = 27
+              Top = 266
+              Width = 599
+              Height = 22
+              AlignToBottom = False
+              Color = clWhite
+              TransparentBand = False
+              ForceNewColumn = False
+              ForceNewPage = False
+              Size.Values = (
+                72.760416666666670000
+                1981.067708333333000000)
+              PreCaluculateBandHeight = False
+              KeepOnOnePage = False
+              BandType = rbPageFooter
+              object QRExpr2: TQRExpr
+                Left = 543
+                Top = 7
+                Width = 54
+                Height = 11
+                Size.Values = (
+                  36.380208333333330000
+                  1795.859375000000000000
+                  23.151041666666670000
+                  178.593750000000000000)
+                XLColumn = 0
+                Alignment = taRightJustify
+                AlignToBand = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = False
+                Transparent = False
+                Expression = 'PAGENUMBER'
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRShape16: TQRShape
+                AlignWithMargins = True
+                Left = 0
+                Top = 1
+                Width = 599
+                Height = 3
+                Size.Values = (
+                  9.921875000000000000
+                  0.000000000000000000
+                  3.307291666666667000
+                  1981.067708333333000000)
+                XLColumn = 0
+                Shape = qrsTopAndBottom
+                VertAdjust = 0
+              end
+              object QRExpr1: TQRExpr
+                Left = 3
+                Top = 6
+                Width = 299
+                Height = 14
+                Size.Values = (
+                  46.302083333333330000
+                  9.921875000000000000
+                  19.843750000000000000
+                  988.880208333333300000)
+                XLColumn = 0
+                Alignment = taLeftJustify
+                AlignToBand = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = False
+                Transparent = False
+                Expression = 
+                  #39'Print date: '#39' + REFORMATDATE(DATE + TIME,'#39'mmm dd, yyyy hh:mm am' +
+                  '/pm'#39')'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
                 FontSize = 8

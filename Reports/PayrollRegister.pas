@@ -120,7 +120,6 @@ type
     SummaryBand: TQRBand;
     QRShape17: TQRShape;
     QRLabel19: TQRLabel;
-    QRExpr12: TQRExpr;
     QRLabel20: TQRLabel;
     QRLabel21: TQRLabel;
     QRLabel22: TQRLabel;
@@ -131,6 +130,12 @@ type
     cbxRegular: TcxCheckBox;
     cbxProbationary: TcxCheckBox;
     dstRegisterempstatus_code: TStringField;
+    QRBand1: TQRBand;
+    QRExpr13: TQRExpr;
+    QRShape16: TQRShape;
+    QRExpr14: TQRExpr;
+    QRExpr12: TQRExpr;
+    QRExpr15: TQRExpr;
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
   private

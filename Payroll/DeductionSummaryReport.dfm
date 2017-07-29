@@ -423,7 +423,7 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
                 Alignment = taRightJustify
                 AlignToBand = False
                 Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlue
+                Font.Color = clBlack
                 Font.Height = -11
                 Font.Name = 'Tahoma'
                 Font.Style = [fsBold]
@@ -464,7 +464,7 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
                   3.779761904761905000
                   3363.988095238095000000)
                 XLColumn = 0
-                Shape = qrsTopAndBottom
+                Shape = qrsHorLine
                 VertAdjust = 0
               end
               object QRExpr4: TQRExpr
@@ -481,7 +481,7 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
                 Alignment = taRightJustify
                 AlignToBand = False
                 Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlue
+                Font.Color = clBlack
                 Font.Height = -11
                 Font.Name = 'Tahoma'
                 Font.Style = [fsBold]
@@ -520,15 +520,74 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
               end
-              object QRExpr5: TQRExpr
-                Left = 6
-                Top = 25
+            end
+            object PageFooterBand1: TQRBand
+              Left = 24
+              Top = 209
+              Width = 894
+              Height = 19
+              AlignToBottom = False
+              Color = clWhite
+              TransparentBand = False
+              ForceNewColumn = False
+              ForceNewPage = False
+              Size.Values = (
+                71.815476190476190000
+                3379.107142857143000000)
+              PreCaluculateBandHeight = False
+              KeepOnOnePage = False
+              BandType = rbPageFooter
+              object QRExpr6: TQRExpr
+                Left = 845
+                Top = 7
+                Width = 48
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  3193.898809523810000000
+                  26.458333333333330000
+                  181.428571428571400000)
+                XLColumn = 0
+                Alignment = taRightJustify
+                AlignToBand = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = False
+                Transparent = False
+                Expression = 'PAGENUMBER'
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRShape16: TQRShape
+                AlignWithMargins = True
+                Left = 0
+                Top = 1
+                Width = 890
+                Height = 3
+                Size.Values = (
+                  11.339285714285710000
+                  0.000000000000000000
+                  3.779761904761905000
+                  3363.988095238095000000)
+                XLColumn = 0
+                Shape = qrsTopAndBottom
+                VertAdjust = 0
+              end
+              object QRExpr7: TQRExpr
+                Left = 3
+                Top = 5
                 Width = 262
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
-                  22.678571428571430000
-                  94.494047619047620000
+                  11.339285714285710000
+                  18.898809523809520000
                   990.297619047619000000)
                 XLColumn = 0
                 Alignment = taLeftJustify

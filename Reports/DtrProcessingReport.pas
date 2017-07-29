@@ -94,6 +94,8 @@ type
     QRExpr2: TQRExpr;
     QRShape16: TQRShape;
     QRExpr5: TQRExpr;
+    QRExpr1: TQRExpr;
+    QRExpr4: TQRExpr;
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
   private

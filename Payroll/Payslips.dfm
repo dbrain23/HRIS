@@ -10,16 +10,16 @@ inherited fPayslips: TfPayslips
     Width = 674
     Height = 833
     ExplicitWidth = 674
-    ExplicitHeight = 658
+    ExplicitHeight = 833
     inherited tsMain: TTabSheet
       Caption = 'Payslips'
       ExplicitWidth = 666
-      ExplicitHeight = 629
+      ExplicitHeight = 804
       inherited pnlMain: TPanel
         Width = 666
         Height = 804
         ExplicitWidth = 666
-        ExplicitHeight = 629
+        ExplicitHeight = 804
         inherited pnlLeft: TPanel
           Width = 656
           ExplicitWidth = 656
@@ -35,12 +35,12 @@ inherited fPayslips: TfPayslips
           Width = 656
           Height = 721
           ExplicitWidth = 656
-          ExplicitHeight = 546
+          ExplicitHeight = 721
           inherited rvMain: TQRPreview
             Width = 656
             Height = 721
             ExplicitWidth = 656
-            ExplicitHeight = 546
+            ExplicitHeight = 721
           end
           inherited qrMain: TQuickRep
             Left = 11
@@ -167,7 +167,7 @@ inherited fPayslips: TfPayslips
                 DataSet = dmPayroll.dstPayslips
                 DataField = 'employee_name'
                 Font.Charset = ANSI_CHARSET
-                Font.Color = clBlue
+                Font.Color = clBlack
                 Font.Height = -11
                 Font.Name = 'Tahoma'
                 Font.Style = [fsBold]
@@ -363,7 +363,7 @@ inherited fPayslips: TfPayslips
                 DataSet = dmPayroll.dstPayslips
                 DataField = 'net'
                 Font.Charset = ANSI_CHARSET
-                Font.Color = clBlue
+                Font.Color = clBlack
                 Font.Height = -11
                 Font.Name = 'Tahoma'
                 Font.Style = [fsBold]
@@ -1689,7 +1689,7 @@ inherited fPayslips: TfPayslips
         inherited p_ReportFooter: TPanel
           Top = 766
           Width = 656
-          ExplicitTop = 591
+          ExplicitTop = 766
           ExplicitWidth = 656
           inherited JvGroupBox1: TJvGroupBox
             Width = 654

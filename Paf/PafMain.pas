@@ -91,6 +91,8 @@ type
     csTotalAmount: TcxStyle;
     JvLabel11: TJvLabel;
     mmRemarks: TcxDBMemo;
+    vAllowanceexpiry_date: TcxGridDBColumn;
+    Panel3: TPanel;
     procedure bSearchClick(Sender: TObject);
     procedure miAddClick(Sender: TObject);
     procedure miRemoveClick(Sender: TObject);

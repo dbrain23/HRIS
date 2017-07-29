@@ -52,7 +52,6 @@ type
     SummaryBand: TQRBand;
     QRShape17: TQRShape;
     QRLabel19: TQRLabel;
-    QRExpr5: TQRExpr;
     QRLabel20: TQRLabel;
     QRLabel21: TQRLabel;
     QRLabel22: TQRLabel;
@@ -62,6 +61,12 @@ type
     QRShape2: TQRShape;
     cbxRegular: TcxCheckBox;
     cbxProbationary: TcxCheckBox;
+    PageFooterBand1: TQRBand;
+    QRExpr2: TQRExpr;
+    QRShape16: TQRShape;
+    QRExpr1: TQRExpr;
+    QRExpr4: TQRExpr;
+    QRExpr5: TQRExpr;
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
   private

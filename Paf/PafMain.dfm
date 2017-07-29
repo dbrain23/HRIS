@@ -1,11 +1,11 @@
 inherited fPafMain: TfPafMain
   Caption = 'fPafMain'
   ClientHeight = 497
-  ClientWidth = 822
+  ClientWidth = 919
   Position = poDefault
   OnCreate = FormCreate
   OnShow = FormShow
-  ExplicitWidth = 838
+  ExplicitWidth = 935
   ExplicitHeight = 536
   PixelsPerInch = 96
   TextHeight = 14
@@ -22,7 +22,7 @@ inherited fPafMain: TfPafMain
     OnClick = bNewClick
   end
   inherited pMaster: TJvPanel
-    Width = 822
+    Width = 919
     Height = 497
     BorderWidth = 1
     ExplicitWidth = 822
@@ -30,17 +30,19 @@ inherited fPafMain: TfPafMain
     object pcMaster: TJvPageControl
       Left = 1
       Top = 1
-      Width = 820
+      Width = 917
       Height = 495
       ActivePage = TabSheet1
       Align = alClient
       TabOrder = 0
+      ExplicitWidth = 820
       object TabSheet1: TTabSheet
         Caption = 'PAF Details'
+        ExplicitWidth = 812
         object pDetails: TJvPanel
           Left = 0
           Top = 0
-          Width = 812
+          Width = 909
           Height = 466
           HotTrackFont.Charset = DEFAULT_CHARSET
           HotTrackFont.Color = clWindowText
@@ -51,6 +53,7 @@ inherited fPafMain: TfPafMain
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 812
           object JvLabel8: TJvLabel
             Left = 414
             Top = 38
@@ -145,7 +148,7 @@ inherited fPafMain: TfPafMain
           object JvGroupHeader5: TJvGroupHeader
             Left = 397
             Top = 193
-            Width = 319
+            Width = 396
             Height = 18
             Caption = 'Allowance Summary'
             Font.Charset = DEFAULT_CHARSET
@@ -504,7 +507,7 @@ inherited fPafMain: TfPafMain
           object gAllowance: TcxGrid
             Left = 414
             Top = 232
-            Width = 302
+            Width = 379
             Height = 132
             BevelInner = bvNone
             BevelOuter = bvNone
@@ -588,7 +591,7 @@ inherited fPafMain: TfPafMain
                 Properties.ListOptions.GridLines = glNone
                 Properties.ListOptions.ShowHeader = False
                 Properties.ListSource = dmPaf.dscAllowanceTypes
-                MinWidth = 200
+                MinWidth = 185
                 Options.Filtering = False
                 Options.FilteringFilteredItemsList = False
                 Options.FilteringMRUItemsList = False
@@ -601,14 +604,14 @@ inherited fPafMain: TfPafMain
                 Options.HorzSizing = False
                 Options.Moving = False
                 Options.ShowCaption = False
-                Width = 200
+                Width = 185
               end
               object vAllowanceallowance_amount: TcxGridDBColumn
                 Caption = 'Amount'
                 DataBinding.FieldName = 'allowance_amount'
                 PropertiesClassName = 'TcxCurrencyEditProperties'
                 Properties.DisplayFormat = ',0.00;-,0.00'
-                MinWidth = 75
+                MinWidth = 90
                 Options.Filtering = False
                 Options.FilteringFilteredItemsList = False
                 Options.FilteringMRUItemsList = False
@@ -622,7 +625,28 @@ inherited fPafMain: TfPafMain
                 Options.Moving = False
                 Options.ShowCaption = False
                 Styles.Content = csAllowanceAmount
-                Width = 75
+                Width = 90
+              end
+              object vAllowanceexpiry_date: TcxGridDBColumn
+                DataBinding.FieldName = 'expiry_date'
+                PropertiesClassName = 'TcxDateEditProperties'
+                Properties.Alignment.Horz = taRightJustify
+                Properties.DisplayFormat = 'mm/dd/yyyy'
+                Properties.EditFormat = 'mm/dd/yyyy'
+                MinWidth = 104
+                Options.Filtering = False
+                Options.FilteringFilteredItemsList = False
+                Options.FilteringMRUItemsList = False
+                Options.FilteringPopup = False
+                Options.FilteringPopupMultiSelect = False
+                Options.IgnoreTimeForFiltering = False
+                Options.IncSearch = False
+                Options.GroupFooters = False
+                Options.Grouping = False
+                Options.HorzSizing = False
+                Options.Moving = False
+                Options.ShowCaption = False
+                Width = 104
               end
             end
             object lvlAllowance: TcxGridLevel
@@ -675,7 +699,7 @@ inherited fPafMain: TfPafMain
           object Panel1: TPanel
             Left = 414
             Top = 209
-            Width = 200
+            Width = 185
             Height = 17
             Caption = 'Allowance Type'
             Font.Charset = ANSI_CHARSET
@@ -687,9 +711,9 @@ inherited fPafMain: TfPafMain
             TabOrder = 19
           end
           object Panel2: TPanel
-            Left = 614
+            Left = 599
             Top = 209
-            Width = 102
+            Width = 90
             Height = 17
             Caption = 'Amount'
             Font.Charset = ANSI_CHARSET
@@ -777,6 +801,20 @@ inherited fPafMain: TfPafMain
             TabOrder = 16
             Height = 61
             Width = 214
+          end
+          object Panel3: TPanel
+            Left = 689
+            Top = 209
+            Width = 104
+            Height = 17
+            Caption = 'Expiry'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clGray
+            Font.Height = -12
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 23
           end
         end
       end
@@ -1025,7 +1063,7 @@ inherited fPafMain: TfPafMain
     Left = 16
     Top = 480
     Bitmap = {
-      494C010104000800F40110001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010104000800F80110001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

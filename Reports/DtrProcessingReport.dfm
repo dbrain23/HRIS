@@ -1553,6 +1553,62 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
               end
+              object QRExpr1: TQRExpr
+                Left = 3
+                Top = 4
+                Width = 262
+                Height = 12
+                Size.Values = (
+                  45.357142857142860000
+                  11.339285714285710000
+                  15.119047619047620000
+                  990.297619047619000000)
+                XLColumn = 0
+                Alignment = taLeftJustify
+                AlignToBand = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = False
+                Transparent = False
+                Expression = 
+                  #39'Print date: '#39' + REFORMATDATE(DATE + TIME,'#39'mmm dd, yyyy hh:mm am' +
+                  '/pm'#39')'
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRExpr4: TQRExpr
+                Left = 845
+                Top = 6
+                Width = 48
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  3193.898809523810000000
+                  22.678571428571430000
+                  181.428571428571400000)
+                XLColumn = 0
+                Alignment = taRightJustify
+                AlignToBand = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = False
+                Transparent = False
+                Expression = 'PAGENUMBER'
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
             end
             object PageFooterBand1: TQRBand
               Left = 24
