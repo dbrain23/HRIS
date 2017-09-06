@@ -36,14 +36,8 @@ type
     QRDBText1: TQRDBText;
     QRExpr2: TQRExpr;
     QRDBText2: TQRDBText;
-    QRDBText4: TQRDBText;
     QRLabel1: TQRLabel;
     QRLabel5: TQRLabel;
-    QRLabel6: TQRLabel;
-    QRDBText3: TQRDBText;
-    QRLabel7: TQRLabel;
-    QRLabel8: TQRLabel;
-    QRDBText6: TQRDBText;
     QRExpr5: TQRExpr;
     lblPeriod: TLabel;
     cmbPayrollPeriod: TcxComboBox;
@@ -54,10 +48,8 @@ type
     dstSchedOfSalariesundertime: TFMTBCDField;
     dstSchedOfSalariesstaff_benefits: TFMTBCDField;
     dstSchedOfSalariesadjustment_staff_benefits: TIntegerField;
-    QRLabel9: TQRLabel;
     QRLabel10: TQRLabel;
     QRLabel11: TQRLabel;
-    QRDBText5: TQRDBText;
     QRExpr7: TQRExpr;
     dstSchedOfSalariespayroll_period: TStringField;
     SummaryBand: TQRBand;
@@ -72,17 +64,24 @@ type
     QRLabel16: TQRLabel;
     QRLabel17: TQRLabel;
     QRLabel18: TQRLabel;
-    QRLabel23: TQRLabel;
-    QRDBText8: TQRDBText;
     QRExpr1: TQRExpr;
     PageFooterBand1: TQRBand;
     QRExpr4: TQRExpr;
     QRShape16: TQRShape;
     QRExpr8: TQRExpr;
-    QRExpr6: TQRExpr;
-    QRExpr9: TQRExpr;
     cbxRegular: TcxCheckBox;
     cbxProbationary: TcxCheckBox;
+    QRShape2: TQRShape;
+    QRLabel6: TQRLabel;
+    QRExpr10: TQRExpr;
+    QRExpr11: TQRExpr;
+    QRExpr12: TQRExpr;
+    QRExpr13: TQRExpr;
+    QRLabel7: TQRLabel;
+    QRLabel8: TQRLabel;
+    QRLabel9: TQRLabel;
+    QRLabel20: TQRLabel;
+    QRExpr6: TQRExpr;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }

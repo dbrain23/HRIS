@@ -81,7 +81,6 @@ type
     dstRegisterdaily_rate: TBCDField;
     dstRegisterallowance: TFMTBCDField;
     dstRegisteradjustment: TFMTBCDField;
-    dstRegisterundertime: TBCDField;
     dstRegisterlate: TFMTBCDField;
     dstRegisterdeduction: TFMTBCDField;
     dstRegistergross_pay: TFMTBCDField;
@@ -134,8 +133,27 @@ type
     QRExpr13: TQRExpr;
     QRShape16: TQRShape;
     QRExpr14: TQRExpr;
+    QRShape15: TQRShape;
+    QRLabel23: TQRLabel;
+    QRLabel24: TQRLabel;
+    QRLabel25: TQRLabel;
+    QRShape18: TQRShape;
+    QRShape19: TQRShape;
+    QRLabel26: TQRLabel;
+    QRLabel27: TQRLabel;
+    QRLabel28: TQRLabel;
+    QRShape20: TQRShape;
+    QRDBText15: TQRDBText;
+    QRDBText16: TQRDBText;
     QRExpr12: TQRExpr;
     QRExpr15: TQRExpr;
+    QRExpr16: TQRExpr;
+    QRExpr17: TQRExpr;
+    QRExpr18: TQRExpr;
+    QRExpr19: TQRExpr;
+    dstRegisterundertime_without_pay: TBCDField;
+    dstRegisterovertime: TIntegerField;
+    dstRegisterothers: TIntegerField;
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
   private

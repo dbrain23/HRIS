@@ -6,16 +6,16 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
   TextHeight = 14
   inherited pcMain: TJvPageControl
     Width = 749
-    ExplicitWidth = 659
+    ExplicitWidth = 749
     inherited tsMain: TTabSheet
       Caption = 'Schedule of Salaries and Wages'
-      ExplicitWidth = 651
+      ExplicitWidth = 741
       inherited pnlMain: TPanel
         Width = 741
-        ExplicitWidth = 651
+        ExplicitWidth = 741
         inherited pnlLeft: TPanel
           Width = 731
-          ExplicitWidth = 641
+          ExplicitWidth = 731
           object lblPeriod: TLabel [0]
             Left = 8
             Top = 12
@@ -25,11 +25,11 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
           end
           inherited btnPrint: TcxButton
             Left = 618
-            ExplicitLeft = 528
+            ExplicitLeft = 618
           end
           inherited bGenerate: TcxButton
             Left = 499
-            ExplicitLeft = 409
+            ExplicitLeft = 499
           end
           object cmbPayrollPeriod: TcxComboBox
             Left = 90
@@ -66,13 +66,14 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
         end
         inherited pnlReport: TPanel
           Width = 731
-          ExplicitWidth = 641
+          ExplicitWidth = 731
           inherited rvMain: TQRPreview
             Width = 731
-            ExplicitWidth = 641
+            ExplicitWidth = 731
           end
           inherited qrMain: TQuickRep
             Left = 11
+            Top = -30
             DataSet = dstSchedOfSalaries
             Functions.DATA = (
               '0'
@@ -88,6 +89,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               0.000000000000000000)
             Units = Inches
             ExplicitLeft = 11
+            ExplicitTop = -30
             object TitleBand1: TQRBand
               Left = 17
               Top = 24
@@ -244,20 +246,20 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 FontSize = 10
               end
               object QRLabel3: TQRLabel
-                Left = 284
+                Left = 277
                 Top = 7
-                Width = 50
+                Width = 57
                 Height = 20
                 Size.Values = (
                   75.595238095238100000
-                  1073.452380952381000000
+                  1046.994047619048000000
                   26.458333333333330000
-                  188.988095238095200000)
+                  215.446428571428600000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Bal. Salaries and Wages'
+                Caption = 'Total Salaries and Wages'
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
@@ -297,15 +299,15 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 FontSize = 8
               end
               object QRLabel5: TQRLabel
-                Left = 90
+                Left = 186
                 Top = 7
-                Width = 45
+                Width = 51
                 Height = 20
                 Size.Values = (
                   75.595238095238100000
-                  340.178571428571400000
+                  703.035714285714300000
                   26.458333333333330000
-                  170.089285714285700000)
+                  192.767857142857100000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
@@ -323,121 +325,14 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
               end
-              object QRLabel6: TQRLabel
-                Left = 140
-                Top = 17
-                Width = 48
-                Height = 10
-                Size.Values = (
-                  37.797619047619050000
-                  529.166666666666700000
-                  64.255952380952380000
-                  181.428571428571400000)
-                XLColumn = 0
-                Alignment = taLeftJustify
-                AlignToBand = False
-                AutoSize = False
-                Caption = 'Adjustment'
-                Color = clWhite
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -11
-                Font.Name = 'Tahoma'
-                Font.Style = [fsBold]
-                ParentFont = False
-                Transparent = False
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FontSize = 8
-              end
-              object QRLabel7: TQRLabel
-                Left = 198
-                Top = 8
-                Width = 34
-                Height = 19
-                Size.Values = (
-                  71.815476190476190000
-                  748.392857142857100000
-                  30.238095238095240000
-                  128.511904761904800000)
-                XLColumn = 0
-                Alignment = taLeftJustify
-                AlignToBand = False
-                AutoSize = False
-                Caption = 'Leaves w/o Pay'
-                Color = clWhite
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -11
-                Font.Name = 'Tahoma'
-                Font.Style = [fsBold]
-                ParentFont = False
-                Transparent = False
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FontSize = 8
-              end
-              object QRLabel8: TQRLabel
-                Left = 238
-                Top = 17
-                Width = 43
-                Height = 10
-                Size.Values = (
-                  37.797619047619050000
-                  899.583333333333300000
-                  64.255952380952380000
-                  162.529761904761900000)
-                XLColumn = 0
-                Alignment = taLeftJustify
-                AlignToBand = False
-                Caption = 'Undertime'
-                Color = clWhite
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -11
-                Font.Name = 'Tahoma'
-                Font.Style = [fsBold]
-                ParentFont = False
-                Transparent = False
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FontSize = 8
-              end
-              object QRLabel9: TQRLabel
-                Left = 383
-                Top = 17
-                Width = 48
-                Height = 10
-                Size.Values = (
-                  37.797619047619050000
-                  1447.648809523810000000
-                  64.255952380952380000
-                  181.428571428571400000)
-                XLColumn = 0
-                Alignment = taLeftJustify
-                AlignToBand = False
-                AutoSize = False
-                Caption = 'Adjustment'
-                Color = clWhite
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -11
-                Font.Name = 'Tahoma'
-                Font.Style = [fsBold]
-                ParentFont = False
-                Transparent = False
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FontSize = 8
-              end
               object QRLabel10: TQRLabel
-                Left = 436
+                Left = 356
                 Top = 7
                 Width = 44
                 Height = 20
                 Size.Values = (
                   75.595238095238100000
-                  1647.976190476190000000
+                  1345.595238095238000000
                   26.458333333333330000
                   166.309523809523800000)
                 XLColumn = 0
@@ -458,46 +353,19 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 FontSize = 8
               end
               object QRLabel11: TQRLabel
-                Left = 514
+                Left = 466
                 Top = 17
                 Width = 21
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  1942.797619047619000000
+                  1761.369047619048000000
                   64.255952380952380000
                   79.375000000000000000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
                 Caption = 'Total'
-                Color = clWhite
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -11
-                Font.Name = 'Tahoma'
-                Font.Style = [fsBold]
-                ParentFont = False
-                Transparent = False
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FontSize = 8
-              end
-              object QRLabel23: TQRLabel
-                Left = 337
-                Top = 7
-                Width = 43
-                Height = 20
-                Size.Values = (
-                  75.595238095238100000
-                  1273.779761904762000000
-                  26.458333333333330000
-                  162.529761904761900000)
-                XLColumn = 0
-                Alignment = taLeftJustify
-                AlignToBand = False
-                AutoSize = False
-                Caption = 'Employees Benefits'
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
@@ -530,13 +398,13 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               object QRDBText1: TQRDBText
                 Left = 1
                 Top = 2
-                Width = 83
+                Width = 176
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   3.779761904761905000
                   7.559523809523810000
-                  313.720238095238100000)
+                  665.238095238095200000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
@@ -585,15 +453,15 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 FontSize = 10
               end
               object QRDBText2: TQRDBText
-                Left = 87
+                Left = 183
                 Top = 2
-                Width = 48
+                Width = 54
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
-                  328.839285714285700000
+                  691.696428571428600000
                   7.559523809523810000
-                  181.428571428571400000)
+                  204.107142857142900000)
                 XLColumn = 0
                 Alignment = taRightJustify
                 AlignToBand = False
@@ -614,106 +482,16 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 MaxBreakChars = 0
                 FontSize = 8
               end
-              object QRDBText4: TQRDBText
-                Left = 189
-                Top = 2
-                Width = 43
-                Height = 12
-                Size.Values = (
-                  45.357142857142860000
-                  714.375000000000000000
-                  7.559523809523810000
-                  162.529761904761900000)
-                XLColumn = 0
-                Alignment = taRightJustify
-                AlignToBand = False
-                AutoSize = False
-                Color = clWhite
-                DataSet = dstSchedOfSalaries
-                DataField = 'leaves_without_pay'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -11
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                ParentFont = False
-                Transparent = False
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FullJustify = False
-                MaxBreakChars = 0
-                FontSize = 8
-              end
-              object QRDBText3: TQRDBText
-                Left = 143
-                Top = 2
-                Width = 45
-                Height = 12
-                Size.Values = (
-                  45.357142857142860000
-                  540.505952380952400000
-                  7.559523809523810000
-                  170.089285714285700000)
-                XLColumn = 0
-                Alignment = taRightJustify
-                AlignToBand = False
-                AutoSize = False
-                Color = clWhite
-                DataSet = dstSchedOfSalaries
-                DataField = 'adjustment'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -11
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                ParentFont = False
-                Transparent = False
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FullJustify = False
-                MaxBreakChars = 0
-                FontSize = 8
-              end
-              object QRDBText6: TQRDBText
-                Left = 237
-                Top = 2
-                Width = 44
-                Height = 12
-                Size.Values = (
-                  45.357142857142860000
-                  895.803571428571400000
-                  7.559523809523810000
-                  166.309523809523800000)
-                XLColumn = 0
-                Alignment = taRightJustify
-                AlignToBand = False
-                AutoSize = False
-                Color = clWhite
-                DataSet = dstSchedOfSalaries
-                DataField = 'undertime'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -11
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                ParentFont = False
-                Transparent = False
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FullJustify = False
-                MaxBreakChars = 0
-                FontSize = 8
-              end
               object QRExpr5: TQRExpr
-                Left = 283
+                Left = 259
                 Top = 2
-                Width = 51
+                Width = 75
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
-                  1069.672619047619000000
+                  978.958333333333300000
                   7.559523809523810000
-                  192.767857142857100000)
+                  283.482142857142900000)
                 XLColumn = 0
                 Alignment = taRightJustify
                 AlignToBand = False
@@ -735,46 +513,16 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
               end
-              object QRDBText5: TQRDBText
-                Left = 383
-                Top = 2
-                Width = 48
-                Height = 12
-                Size.Values = (
-                  45.357142857142860000
-                  1447.648809523810000000
-                  7.559523809523810000
-                  181.428571428571400000)
-                XLColumn = 0
-                Alignment = taRightJustify
-                AlignToBand = False
-                AutoSize = False
-                Color = clWhite
-                DataSet = dstSchedOfSalaries
-                DataField = 'adjustment_staff_benefits'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -11
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                ParentFont = False
-                Transparent = False
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FullJustify = False
-                MaxBreakChars = 0
-                FontSize = 8
-              end
               object QRExpr7: TQRExpr
-                Left = 489
+                Left = 425
                 Top = 2
-                Width = 46
+                Width = 62
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
-                  1848.303571428571000000
+                  1606.398809523810000000
                   7.559523809523810000
-                  173.869047619047600000)
+                  234.345238095238100000)
                 XLColumn = 0
                 Alignment = taRightJustify
                 AlignToBand = False
@@ -798,46 +546,16 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
               end
-              object QRDBText8: TQRDBText
-                Left = 335
-                Top = 2
-                Width = 45
-                Height = 12
-                Size.Values = (
-                  45.357142857142860000
-                  1266.220238095238000000
-                  7.559523809523810000
-                  170.089285714285700000)
-                XLColumn = 0
-                Alignment = taRightJustify
-                AlignToBand = False
-                AutoSize = False
-                Color = clWhite
-                DataSet = dstSchedOfSalaries
-                DataField = 'staff_benefits'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -11
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                ParentFont = False
-                Transparent = False
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FullJustify = False
-                MaxBreakChars = 0
-                FontSize = 8
-              end
               object QRExpr1: TQRExpr
-                Left = 436
+                Left = 340
                 Top = 2
-                Width = 47
+                Width = 60
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
-                  1647.976190476190000000
+                  1285.119047619048000000
                   7.559523809523810000
-                  177.648809523809500000)
+                  226.785714285714300000)
                 XLColumn = 0
                 Alignment = taRightJustify
                 AlignToBand = False
@@ -863,14 +581,14 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               Left = 17
               Top = 131
               Width = 537
-              Height = 182
+              Height = 230
               AlignToBottom = False
               Color = clWhite
               TransparentBand = False
               ForceNewColumn = False
               ForceNewPage = False
               Size.Values = (
-                687.916666666666700000
+                869.345238095238100000
                 2029.732142857143000000)
               PreCaluculateBandHeight = False
               KeepOnOnePage = False
@@ -892,13 +610,13 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               end
               object QRLabel19: TQRLabel
                 Left = 295
-                Top = 50
+                Top = 138
                 Width = 122
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   1115.029761904762000000
-                  188.988095238095200000
+                  521.607142857142900000
                   461.130952380952400000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -918,13 +636,13 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               end
               object QRLabel21: TQRLabel
                 Left = 296
-                Top = 60
+                Top = 148
                 Width = 121
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   1118.809523809524000000
-                  226.785714285714300000
+                  559.404761904761900000
                   457.351190476190500000)
                 XLColumn = 0
                 Alignment = taCenter
@@ -972,13 +690,13 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               end
               object QRLabel12: TQRLabel
                 Left = 6
-                Top = 50
+                Top = 138
                 Width = 140
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   22.678571428571430000
-                  188.988095238095200000
+                  521.607142857142900000
                   529.166666666666700000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -998,13 +716,13 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               end
               object QRLabel15: TQRLabel
                 Left = 61
-                Top = 60
+                Top = 148
                 Width = 76
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   230.565476190476200000
-                  226.785714285714300000
+                  559.404761904761900000
                   287.261904761904800000)
                 XLColumn = 0
                 Alignment = taCenter
@@ -1025,13 +743,13 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               end
               object QRLabel13: TQRLabel
                 Left = 6
-                Top = 106
+                Top = 194
                 Width = 28
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   22.678571428571430000
-                  400.654761904761900000
+                  733.273809523809500000
                   105.833333333333300000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -1051,13 +769,13 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               end
               object QRLabel14: TQRLabel
                 Left = 57
-                Top = 116
+                Top = 204
                 Width = 95
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   215.446428571428600000
-                  438.452380952381000000
+                  771.071428571428600000
                   359.077380952381000000)
                 XLColumn = 0
                 Alignment = taCenter
@@ -1077,13 +795,13 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               end
               object QRLabel16: TQRLabel
                 Left = 59
-                Top = 106
+                Top = 194
                 Width = 90
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   223.005952380952400000
-                  400.654761904761900000
+                  733.273809523809500000
                   340.178571428571400000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -1103,13 +821,13 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               end
               object QRLabel17: TQRLabel
                 Left = 59
-                Top = 154
+                Top = 234
                 Width = 78
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   223.005952380952400000
-                  582.083333333333300000
+                  884.464285714285700000
                   294.821428571428600000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -1129,13 +847,13 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               end
               object QRLabel18: TQRLabel
                 Left = 65
-                Top = 164
+                Top = 244
                 Width = 62
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   245.684523809523800000
-                  619.880952380952400000
+                  922.261904761904800000
                   234.345238095238100000)
                 XLColumn = 0
                 Alignment = taCenter
@@ -1153,58 +871,302 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
               end
-              object QRExpr6: TQRExpr
-                Left = 487
+              object QRShape2: TQRShape
+                AlignWithMargins = True
+                Left = 0
+                Top = 17
+                Width = 536
+                Height = 3
+                Size.Values = (
+                  11.339285714285710000
+                  0.000000000000000000
+                  64.255952380952380000
+                  2025.952380952381000000)
+                XLColumn = 0
+                Shape = qrsHorLine
+                VertAdjust = 0
+              end
+              object QRLabel6: TQRLabel
+                Left = 73
                 Top = 6
-                Width = 48
+                Width = 26
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  1840.744047619048000000
+                  275.922619047619000000
                   22.678571428571430000
-                  181.428571428571400000)
+                  98.273809523809520000)
                 XLColumn = 0
-                Alignment = taRightJustify
+                Alignment = taLeftJustify
                 AlignToBand = False
+                Caption = 'TOTAL'
+                Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
                 Font.Height = -11
                 Font.Name = 'Tahoma'
-                Font.Style = []
-                Color = clWhite
+                Font.Style = [fsBold]
                 ParentFont = False
-                ResetAfterPrint = False
                 Transparent = False
-                Expression = 'PAGENUMBER'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
               end
-              object QRExpr9: TQRExpr
-                Left = 3
-                Top = 5
-                Width = 262
-                Height = 12
+              object QRExpr10: TQRExpr
+                Left = 160
+                Top = 6
+                Width = 77
+                Height = 10
                 Size.Values = (
-                  45.357142857142860000
-                  11.339285714285710000
-                  18.898809523809520000
-                  990.297619047619000000)
+                  37.797619047619050000
+                  604.761904761904800000
+                  22.678571428571430000
+                  291.041666666666700000)
                 XLColumn = 0
-                Alignment = taLeftJustify
+                Alignment = taRightJustify
                 AlignToBand = False
+                AutoSize = False
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
                 Font.Height = -11
                 Font.Name = 'Tahoma'
-                Font.Style = []
+                Font.Style = [fsBold]
                 Color = clWhite
                 ParentFont = False
-                ResetAfterPrint = False
+                ResetAfterPrint = True
+                Transparent = False
+                Expression = 'FORMATNUMERIC('#39'###,##0.00'#39',SUM(salaries_and_wages))'
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRExpr11: TQRExpr
+                Left = 243
+                Top = 6
+                Width = 91
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  918.482142857142900000
+                  22.678571428571430000
+                  343.958333333333300000)
+                XLColumn = 0
+                Alignment = taRightJustify
+                AlignToBand = False
+                AutoSize = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = [fsBold]
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = True
                 Transparent = False
                 Expression = 
-                  #39'Print date: '#39' + REFORMATDATE(DATE + TIME,'#39'mmm dd, yyyy hh:mm am' +
-                  '/pm'#39')'
+                  'FORMATNUMERIC('#39'###,##0.00'#39',SUM((dstSchedOfSalaries.salaries_and_' +
+                  'wages + (dstSchedOfSalaries.adjustment + dstSchedOfSalaries.leav' +
+                  'es_without_pay +  dstSchedOfSalaries.undertime))))'
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRExpr12: TQRExpr
+                Left = 340
+                Top = 6
+                Width = 60
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  1285.119047619048000000
+                  22.678571428571430000
+                  226.785714285714300000)
+                XLColumn = 0
+                Alignment = taRightJustify
+                AlignToBand = False
+                AutoSize = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = [fsBold]
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = True
+                Transparent = False
+                Expression = 
+                  'FORMATNUMERIC('#39'###,##0.00'#39',SUM((dstSchedOfSalaries.staff_benefit' +
+                  's - dstSchedOfSalaries.adjustment_staff_benefits)))'
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRExpr13: TQRExpr
+                Left = 406
+                Top = 6
+                Width = 81
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  1534.583333333333000000
+                  22.678571428571430000
+                  306.160714285714300000)
+                XLColumn = 0
+                Alignment = taRightJustify
+                AlignToBand = False
+                AutoSize = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = [fsBold]
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = True
+                Transparent = False
+                Expression = 
+                  'FORMATNUMERIC('#39'###,##0.00'#39',SUM((dstSchedOfSalaries.salaries_and_' +
+                  'wages + (dstSchedOfSalaries.adjustment + dstSchedOfSalaries.leav' +
+                  'es_without_pay +  dstSchedOfSalaries.undertime)) + (dstSchedOfSa' +
+                  'laries.staff_benefits - dstSchedOfSalaries.adjustment_staff_bene' +
+                  'fits)))'
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRLabel7: TQRLabel
+                Left = 6
+                Top = 34
+                Width = 40
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  22.678571428571430000
+                  128.511904761904800000
+                  151.190476190476200000)
+                XLColumn = 0
+                Alignment = taLeftJustify
+                AlignToBand = False
+                Caption = 'NTHP-CIB:'
+                Color = clWhite
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = [fsBold]
+                ParentFont = False
+                Transparent = False
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRLabel8: TQRLabel
+                Left = 6
+                Top = 50
+                Width = 62
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  22.678571428571430000
+                  188.988095238095200000
+                  234.345238095238100000)
+                XLColumn = 0
+                Alignment = taLeftJustify
+                AlignToBand = False
+                Caption = 'On-Hold Salary:'
+                Color = clWhite
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = [fsBold]
+                ParentFont = False
+                Transparent = False
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRLabel9: TQRLabel
+                Left = 6
+                Top = 66
+                Width = 47
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  22.678571428571430000
+                  249.464285714285700000
+                  177.648809523809500000)
+                XLColumn = 0
+                Alignment = taLeftJustify
+                AlignToBand = False
+                Caption = 'Deductions:'
+                Color = clWhite
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = [fsBold]
+                ParentFont = False
+                Transparent = False
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRLabel20: TQRLabel
+                Left = 6
+                Top = 82
+                Width = 23
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  22.678571428571430000
+                  309.940476190476200000
+                  86.934523809523810000)
+                XLColumn = 0
+                Alignment = taLeftJustify
+                AlignToBand = False
+                Caption = 'Total:'
+                Color = clWhite
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = [fsBold]
+                ParentFont = False
+                Transparent = False
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRExpr6: TQRExpr
+                Left = 35
+                Top = 82
+                Width = 81
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  132.291666666666700000
+                  309.940476190476200000
+                  306.160714285714300000)
+                XLColumn = 0
+                Alignment = taLeftJustify
+                AlignToBand = False
+                AutoSize = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = [fsBold]
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = True
+                Transparent = False
+                Expression = 
+                  'FORMATNUMERIC('#39'###,##0.00'#39',SUM((dstSchedOfSalaries.salaries_and_' +
+                  'wages + (dstSchedOfSalaries.adjustment + dstSchedOfSalaries.leav' +
+                  'es_without_pay +  dstSchedOfSalaries.undertime)) + (dstSchedOfSa' +
+                  'laries.staff_benefits - dstSchedOfSalaries.adjustment_staff_bene' +
+                  'fits)))'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
@@ -1212,7 +1174,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
             end
             object PageFooterBand1: TQRBand
               Left = 17
-              Top = 313
+              Top = 361
               Width = 537
               Height = 19
               AlignToBottom = False
@@ -1221,7 +1183,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               ForceNewColumn = False
               ForceNewPage = False
               Size.Values = (
-                72.760416666666670000
+                71.815476190476190000
                 2029.732142857143000000)
               PreCaluculateBandHeight = False
               KeepOnOnePage = False
@@ -1300,27 +1262,31 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
             end
           end
         end
+        inherited pStatus: TPanel
+          Top = -100
+          ExplicitTop = -100
+        end
         inherited p_ReportFooter: TPanel
           Width = 731
-          ExplicitWidth = 641
+          ExplicitWidth = 731
           inherited JvGroupBox1: TJvGroupBox
             Width = 729
-            ExplicitWidth = 639
+            ExplicitWidth = 729
             inherited bFirst: TcxButton
               Left = 627
-              ExplicitLeft = 537
+              ExplicitLeft = 627
             end
             inherited bLast: TcxButton
               Left = 702
-              ExplicitLeft = 612
+              ExplicitLeft = 702
             end
             inherited bNext: TcxButton
               Left = 677
-              ExplicitLeft = 587
+              ExplicitLeft = 677
             end
             inherited bPrevious: TcxButton
               Left = 652
-              ExplicitLeft = 562
+              ExplicitLeft = 652
             end
             inherited speZoom: TcxSpinEdit
               ExplicitHeight = 22
@@ -1342,6 +1308,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
         DataType = ftInteger
         Direction = pdReturnValue
         Precision = 10
+        Value = Null
       end
       item
         Name = '@payroll_code'

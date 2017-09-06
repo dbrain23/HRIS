@@ -277,8 +277,8 @@ begin
     exit;
 
   if (ACol > ROWOBJ) and (ARow > MDATE) and
-    (NotASunday) and
-    (Assigned(grCalendar.Objects[ROWOBJ,ARow])) then
+    (NotASunday) then
+    // (Assigned(grCalendar.Objects[ROWOBJ,ARow])) then
     // (not CompleteOrLeave) then
     OpenDetail;
 end;
