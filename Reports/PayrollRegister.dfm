@@ -9,20 +9,20 @@ inherited fPayrollRegister: TfPayrollRegister
   inherited pcMain: TJvPageControl
     Width = 976
     Height = 483
-    ExplicitWidth = 786
-    ExplicitHeight = 457
+    ExplicitWidth = 976
+    ExplicitHeight = 483
     inherited tsMain: TTabSheet
       Caption = 'Payroll register'
-      ExplicitWidth = 778
-      ExplicitHeight = 428
+      ExplicitWidth = 968
+      ExplicitHeight = 454
       inherited pnlMain: TPanel
         Width = 968
         Height = 454
-        ExplicitWidth = 778
-        ExplicitHeight = 428
+        ExplicitWidth = 968
+        ExplicitHeight = 454
         inherited pnlLeft: TPanel
           Width = 958
-          ExplicitWidth = 768
+          ExplicitWidth = 958
           object lblPeriod: TLabel [0]
             Left = 8
             Top = 12
@@ -32,11 +32,11 @@ inherited fPayrollRegister: TfPayrollRegister
           end
           inherited btnPrint: TcxButton
             Left = 845
-            ExplicitLeft = 655
+            ExplicitLeft = 845
           end
           inherited bGenerate: TcxButton
             Left = 726
-            ExplicitLeft = 536
+            ExplicitLeft = 726
           end
           object cmbPayrollPeriod: TcxComboBox
             Left = 90
@@ -74,13 +74,13 @@ inherited fPayrollRegister: TfPayrollRegister
         inherited pnlReport: TPanel
           Width = 958
           Height = 371
-          ExplicitWidth = 768
-          ExplicitHeight = 345
+          ExplicitWidth = 958
+          ExplicitHeight = 371
           inherited rvMain: TQRPreview
             Width = 958
             Height = 371
-            ExplicitWidth = 768
-            ExplicitHeight = 345
+            ExplicitWidth = 958
+            ExplicitHeight = 371
           end
           inherited qrMain: TQuickRep
             Width = 941
@@ -708,7 +708,7 @@ inherited fPayrollRegister: TfPayrollRegister
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Others'
+                Caption = 'Adjustment'
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
@@ -1410,7 +1410,7 @@ inherited fPayrollRegister: TfPayrollRegister
                 AutoSize = False
                 Color = clWhite
                 DataSet = dstRegister
-                DataField = 'others'
+                DataField = 'adjustment'
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
                 Font.Height = -11
@@ -2306,26 +2306,26 @@ inherited fPayrollRegister: TfPayrollRegister
         inherited p_ReportFooter: TPanel
           Top = 416
           Width = 958
-          ExplicitTop = 390
-          ExplicitWidth = 768
+          ExplicitTop = 416
+          ExplicitWidth = 958
           inherited JvGroupBox1: TJvGroupBox
             Width = 956
-            ExplicitWidth = 766
+            ExplicitWidth = 956
             inherited bFirst: TcxButton
               Left = 853
-              ExplicitLeft = 663
+              ExplicitLeft = 853
             end
             inherited bLast: TcxButton
               Left = 928
-              ExplicitLeft = 738
+              ExplicitLeft = 928
             end
             inherited bNext: TcxButton
               Left = 903
-              ExplicitLeft = 713
+              ExplicitLeft = 903
             end
             inherited bPrevious: TcxButton
               Left = 878
-              ExplicitLeft = 688
+              ExplicitLeft = 878
             end
             inherited speZoom: TcxSpinEdit
               ExplicitHeight = 22
@@ -2556,7 +2556,6 @@ inherited fPayrollRegister: TfPayrollRegister
     object dstRegisterothers: TIntegerField
       FieldName = 'others'
       ReadOnly = True
-      DisplayFormat = '###,##0.00;(###,##0.00);-'
     end
   end
 end

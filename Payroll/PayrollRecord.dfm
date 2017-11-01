@@ -38,19 +38,6 @@ inherited fPayrollRecord: TfPayrollRecord
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
-          object JvGroupHeader1: TJvGroupHeader
-            Left = 27
-            Top = 15
-            Width = 319
-            Height = 18
-            Caption = 'Details'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clHighlight
-            Font.Height = -12
-            Font.Name = 'Tahoma'
-            Font.Style = []
-            ParentFont = False
-          end
           object ghAction: TJvGroupHeader
             Left = 16
             Top = 416
@@ -65,7 +52,7 @@ inherited fPayrollRecord: TfPayrollRecord
           end
           object Status: TJvLabel
             Left = 43
-            Top = 89
+            Top = 72
             Width = 27
             Height = 14
             Caption = 'Days'
@@ -99,7 +86,7 @@ inherited fPayrollRecord: TfPayrollRecord
           end
           object JvLabel1: TJvLabel
             Left = 43
-            Top = 38
+            Top = 21
             Width = 55
             Height = 14
             Caption = 'Employee'
@@ -112,7 +99,7 @@ inherited fPayrollRecord: TfPayrollRecord
           end
           object JvLabel2: TJvLabel
             Left = 43
-            Top = 64
+            Top = 47
             Width = 36
             Height = 14
             Caption = 'Period'
@@ -201,7 +188,7 @@ inherited fPayrollRecord: TfPayrollRecord
           end
           object JvLabel4: TJvLabel
             Left = 43
-            Top = 115
+            Top = 98
             Width = 90
             Height = 14
             Caption = 'Leaves with pay'
@@ -214,7 +201,7 @@ inherited fPayrollRecord: TfPayrollRecord
           end
           object JvLabel5: TJvLabel
             Left = 222
-            Top = 89
+            Top = 72
             Width = 59
             Height = 14
             Caption = 'Undertime'
@@ -248,7 +235,7 @@ inherited fPayrollRecord: TfPayrollRecord
           end
           object JvLabel10: TJvLabel
             Left = 222
-            Top = 115
+            Top = 98
             Width = 52
             Height = 14
             Caption = 'Overtime'
@@ -262,7 +249,7 @@ inherited fPayrollRecord: TfPayrollRecord
           end
           object JvLabel11: TJvLabel
             Left = 43
-            Top = 141
+            Top = 124
             Width = 100
             Height = 14
             Caption = 'Leaves w/out pay'
@@ -275,7 +262,7 @@ inherited fPayrollRecord: TfPayrollRecord
           end
           object JvLabel12: TJvLabel
             Left = 222
-            Top = 141
+            Top = 124
             Width = 44
             Height = 14
             Caption = 'Skeletal'
@@ -289,7 +276,7 @@ inherited fPayrollRecord: TfPayrollRecord
           end
           object JvLabel13: TJvLabel
             Left = 43
-            Top = 167
+            Top = 150
             Width = 69
             Height = 14
             Caption = 'Dependents'
@@ -346,6 +333,19 @@ inherited fPayrollRecord: TfPayrollRecord
             HotTrackFont.Charset = ANSI_CHARSET
             HotTrackFont.Color = clWindowText
             HotTrackFont.Height = -12
+            HotTrackFont.Name = 'Tahoma'
+            HotTrackFont.Style = []
+          end
+          object JvLabel16: TJvLabel
+            Left = 43
+            Top = 176
+            Width = 48
+            Height = 14
+            Caption = 'Location'
+            Transparent = True
+            HotTrackFont.Charset = DEFAULT_CHARSET
+            HotTrackFont.Color = clWindowText
+            HotTrackFont.Height = -11
             HotTrackFont.Name = 'Tahoma'
             HotTrackFont.Style = []
           end
@@ -417,7 +417,7 @@ inherited fPayrollRecord: TfPayrollRecord
           end
           object cxDBTextEdit1: TcxDBTextEdit
             Left = 155
-            Top = 31
+            Top = 14
             TabStop = False
             DataBinding.DataField = 'employee_name'
             DataBinding.DataSource = dmPayroll.dscPayroll
@@ -433,7 +433,7 @@ inherited fPayrollRecord: TfPayrollRecord
           end
           object cxDBTextEdit2: TcxDBTextEdit
             Left = 155
-            Top = 57
+            Top = 40
             TabStop = False
             DataBinding.DataField = 'period'
             DataBinding.DataSource = dmPayroll.dscPayroll
@@ -472,7 +472,7 @@ inherited fPayrollRecord: TfPayrollRecord
           end
           object cxDBCurrencyEdit3: TcxDBCurrencyEdit
             Left = 155
-            Top = 83
+            Top = 66
             TabStop = False
             DataBinding.DataField = 'number_of_days'
             DataBinding.DataSource = dmPayroll.dscPayroll
@@ -585,7 +585,7 @@ inherited fPayrollRecord: TfPayrollRecord
           end
           object cxDBCurrencyEdit6: TcxDBCurrencyEdit
             Left = 293
-            Top = 83
+            Top = 66
             TabStop = False
             DataBinding.DataField = 'undertime'
             DataBinding.DataSource = dmPayroll.dscPayroll
@@ -620,7 +620,7 @@ inherited fPayrollRecord: TfPayrollRecord
           end
           object cxDBCurrencyEdit8: TcxDBCurrencyEdit
             Left = 293
-            Top = 109
+            Top = 92
             TabStop = False
             DataBinding.DataField = 'undertime'
             DataBinding.DataSource = dmPayroll.dscPayroll
@@ -1230,7 +1230,7 @@ inherited fPayrollRecord: TfPayrollRecord
           end
           object cxDBCurrencyEdit10: TcxDBCurrencyEdit
             Left = 293
-            Top = 135
+            Top = 118
             TabStop = False
             DataBinding.DataField = 'undertime'
             DataBinding.DataSource = dmPayroll.dscPayroll
@@ -1242,20 +1242,20 @@ inherited fPayrollRecord: TfPayrollRecord
           end
           object cbxClaimDependents: TcxCheckBox
             Left = 219
-            Top = 165
+            Top = 148
             Caption = 'Claim dependents'
             TabOrder = 18
             Width = 121
           end
           object cxDBCurrencyEdit11: TcxDBCurrencyEdit
             Left = 155
-            Top = 161
+            Top = 144
             TabStop = False
             DataBinding.DataField = 'dependents'
             DataBinding.DataSource = dmPayroll.dscPayroll
             Enabled = False
             Properties.DisplayFormat = ',0.00;-,0.00'
-            TabOrder = 19
+            TabOrder = 20
             Width = 53
           end
           object cxDBCurrencyEdit12: TcxDBCurrencyEdit
@@ -1278,7 +1278,7 @@ inherited fPayrollRecord: TfPayrollRecord
             StyleDisabled.BorderStyle = ebsNone
             StyleDisabled.Color = clWhite
             StyleDisabled.TextColor = clRed
-            TabOrder = 20
+            TabOrder = 21
             Width = 65
           end
           object cxDBCurrencyEdit13: TcxDBCurrencyEdit
@@ -1301,12 +1301,12 @@ inherited fPayrollRecord: TfPayrollRecord
             StyleDisabled.BorderStyle = ebsNone
             StyleDisabled.Color = clWhite
             StyleDisabled.TextColor = clRed
-            TabOrder = 21
+            TabOrder = 22
             Width = 65
           end
           object btnPrevEmployee: TcxButton
             Left = 349
-            Top = 31
+            Top = 14
             Width = 20
             Height = 21
             Hint = 'Previous employee'
@@ -1317,12 +1317,12 @@ inherited fPayrollRecord: TfPayrollRecord
             ShowHint = True
             SpeedButtonOptions.CanBeFocused = False
             SpeedButtonOptions.Flat = True
-            TabOrder = 22
+            TabOrder = 23
             OnClick = btnPrevEmployeeClick
           end
           object btnNextEmployee: TcxButton
             Left = 369
-            Top = 31
+            Top = 14
             Width = 20
             Height = 21
             Hint = 'Next employee'
@@ -1333,16 +1333,16 @@ inherited fPayrollRecord: TfPayrollRecord
             ShowHint = True
             SpeedButtonOptions.CanBeFocused = False
             SpeedButtonOptions.Flat = True
-            TabOrder = 23
+            TabOrder = 24
             OnClick = btnNextEmployeeClick
           end
           object pStatus: TPanel
             Left = 10
-            Top = 10
+            Top = 554
             Width = 273
             Height = 83
             BevelOuter = bvNone
-            TabOrder = 24
+            TabOrder = 25
             Visible = False
             object shpStatus: TShape
               Left = 0
@@ -1394,7 +1394,7 @@ inherited fPayrollRecord: TfPayrollRecord
             StyleDisabled.BorderStyle = ebsNone
             StyleDisabled.Color = clWhite
             StyleDisabled.TextColor = clRed
-            TabOrder = 25
+            TabOrder = 26
             Width = 65
           end
           object cxDBCurrencyEdit15: TcxDBCurrencyEdit
@@ -1417,7 +1417,7 @@ inherited fPayrollRecord: TfPayrollRecord
             StyleDisabled.BorderStyle = ebsNone
             StyleDisabled.Color = clWhite
             StyleDisabled.TextColor = clRed
-            TabOrder = 26
+            TabOrder = 27
             Width = 65
           end
           object cbxCopyDeductions: TcxCheckBox
@@ -1429,7 +1429,7 @@ inherited fPayrollRecord: TfPayrollRecord
             ShowHint = True
             State = cbsChecked
             Style.Shadow = False
-            TabOrder = 27
+            TabOrder = 28
             Width = 176
           end
           object cbxCopyAdjustments: TcxCheckBox
@@ -1441,8 +1441,24 @@ inherited fPayrollRecord: TfPayrollRecord
             ShowHint = True
             State = cbsChecked
             Style.Shadow = False
-            TabOrder = 28
+            TabOrder = 29
             Width = 176
+          end
+          object dbluLocation: TcxDBLookupComboBox
+            Left = 155
+            Top = 170
+            DataBinding.DataField = 'credit_location'
+            DataBinding.DataSource = dmPayroll.dscPayroll
+            Properties.KeyFieldNames = 'location_code'
+            Properties.ListColumns = <
+              item
+                FieldName = 'location_name'
+              end>
+            Properties.ListOptions.GridLines = glNone
+            Properties.ListOptions.ShowHeader = False
+            Properties.ListSource = dmPayroll.dscLocations
+            TabOrder = 19
+            Width = 191
           end
         end
       end
@@ -1450,7 +1466,7 @@ inherited fPayrollRecord: TfPayrollRecord
   end
   object cxDBCurrencyEdit2: TcxDBCurrencyEdit [1]
     Left = 159
-    Top = 134
+    Top = 117
     TabStop = False
     DataBinding.DataField = 'leaves_with_pay'
     DataBinding.DataSource = dmPayroll.dscPayroll
@@ -1461,7 +1477,7 @@ inherited fPayrollRecord: TfPayrollRecord
   end
   object cxDBCurrencyEdit9: TcxDBCurrencyEdit [2]
     Left = 159
-    Top = 160
+    Top = 143
     TabStop = False
     DataBinding.DataField = 'leaves_without_pay'
     DataBinding.DataSource = dmPayroll.dscPayroll

@@ -32,7 +32,6 @@ type
     pcMaster: TJvPageControl;
     TabSheet1: TTabSheet;
     pDetails: TJvPanel;
-    JvGroupHeader1: TJvGroupHeader;
     ghAction: TJvGroupHeader;
     Status: TJvLabel;
     JvLabel6: TJvLabel;
@@ -129,6 +128,8 @@ type
     cxDBCurrencyEdit15: TcxDBCurrencyEdit;
     cbxCopyDeductions: TcxCheckBox;
     cbxCopyAdjustments: TcxCheckBox;
+    JvLabel16: TJvLabel;
+    dbluLocation: TcxDBLookupComboBox;
     procedure bBackClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure bSaveClick(Sender: TObject);
@@ -222,6 +223,10 @@ begin
       vwDeduction.DataController.DataSet.Open;
     end;
 
+    // update the payroll location
+    ExecuteSQL('exec dbo.pr_credit_location ' + QuotedStr(payrollCode) +
+       ',' + QuotedStr(idNum) +
+       ',' + QuotedStr(dbluLocation.EditValue));
 
     ceNet.DataBinding.DataSource.DataSet.Close;
     ceNet.DataBinding.DataSource.DataSet.Open;

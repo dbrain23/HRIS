@@ -7,7 +7,6 @@ object dmPayroll: TdmPayroll
   object dstPayroll: TADODataSet
     Connection = dmSecurity.acSecurity
     CursorType = ctStatic
-    LockType = ltReadOnly
     BeforeOpen = dstPayrollBeforeOpen
     CommandText = 'pr_get_payroll;1'
     CommandType = cmdStoredProc
