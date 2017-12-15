@@ -294,7 +294,7 @@ begin
     selCol := Col;
 
     // update the grid
-    cmbMonthPropertiesChange(self);
+    btnRefresh.Click;
 
     Row := selRow;
     Col := selCol;

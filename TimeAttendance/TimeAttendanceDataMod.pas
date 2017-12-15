@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Classes, BaseDataMod, Data.DB, Data.Win.ADODB, Dialogs,
   DateUtils, Variants, cxStyles, cxClasses, LeaveObj, Vcl.ImgList, Vcl.Controls,
-  cxGraphics, Forms, DtrObj, HolidayObj, ADOInt;
+  cxGraphics, Forms, DtrObj, HolidayObj, ADOInt, uCalendarParams;
 
 type
   TdmTimeAttendance = class(TdmBase)
@@ -86,6 +86,7 @@ type
     procedure dstDtrByDateAfterPost(DataSet: TDataSet);
   private
     { Private declarations }
+    FCalendarParams: TCalendarParams;
     fLocationCode: string;
     fDtr: TDtrObj;
     fHoliday: THoliday;
@@ -94,6 +95,7 @@ type
     { Public declarations }
     property LocationCode: string read fLocationCode;
     property Holiday: THoliday read fHoliday write fHoliday;
+    property CalendarParams: TCalendarParams read FCalendarParams write FCalendarParams;
   end;
 
 var

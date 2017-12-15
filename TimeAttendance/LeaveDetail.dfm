@@ -96,10 +96,12 @@ inherited fLeaveDetail: TfLeaveDetail
           object lblJustification: TJvLabel
             Left = 393
             Top = 32
-            Width = 65
-            Height = 14
-            Caption = 'Justification'
+            Width = 80
+            Height = 29
+            AutoSize = False
+            Caption = 'Justification for late filing'
             Transparent = True
+            WordWrap = True
             HotTrackFont.Charset = DEFAULT_CHARSET
             HotTrackFont.Color = clWindowText
             HotTrackFont.Height = -11
@@ -174,10 +176,12 @@ inherited fLeaveDetail: TfLeaveDetail
           object JvLabel6: TJvLabel
             Left = 393
             Top = 71
-            Width = 47
+            Width = 72
             Height = 14
-            Caption = 'Remarks'
+            AutoSize = False
+            Caption = 'BM'#39's remarks'
             Transparent = True
+            WordWrap = True
             HotTrackFont.Charset = DEFAULT_CHARSET
             HotTrackFont.Color = clWindowText
             HotTrackFont.Height = -11

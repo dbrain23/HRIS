@@ -3,7 +3,7 @@ inherited dmTimeAttendance: TdmTimeAttendance
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
   Height = 469
-  Width = 1055
+  Width = 1079
   inherited acBase: TADOConnection
     Provider = 'SQLNCLI10.1'
   end

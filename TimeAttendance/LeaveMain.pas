@@ -38,6 +38,7 @@ type
     procedure grCalendarDblClickCell(Sender: TObject; ARow, ACol: Integer);
     procedure FormCreate(Sender: TObject);
     procedure cbxShowPendingOnlyClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
     procedure UpdateRow;
@@ -80,7 +81,7 @@ implementation
 { TfLeaveMain }
 
 uses ComboBoxObj, LeaveDataMod, TimeAttendanceUtils, AppConstant,
-  LeaveDetail, User;
+  LeaveDetail, User, uCalendarParams;
 
 constructor TLeave.Create(const leaveId: Integer; locationCode: string);
 begin
@@ -98,6 +99,21 @@ procedure TfLeaveMain.cbxShowPendingOnlyClick(Sender: TObject);
 begin
   inherited;
   cmbMonth.Properties.OnChange(Sender);
+end;
+
+procedure TfLeaveMain.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  // persist search parameters
+  with dmLeave do
+  begin
+    if not Assigned(CalendarParams) then CalendarParams := TCalendarParams.Create;
+
+    CalendarParams.MonthIndex := cmbMonth.ItemIndex;
+    CalendarParams.YearIndex := cmbYear.ItemIndex;
+    CalendarParams.ResourceTypeIndex := cmbResourceTypes.ItemIndex;
+  end;
+
+  inherited;
 end;
 
 procedure TfLeaveMain.FormCreate(Sender: TObject);
@@ -146,6 +162,16 @@ begin
   cmbResourceTypes.Enabled := viewAll;
 
   SetResourceType;
+
+  with dmLeave do
+  begin
+    if Assigned(CalendarParams) then
+    begin
+      cmbMonth.ItemIndex := CalendarParams.MonthIndex;
+      cmbYear.ItemIndex := CalendarParams.YearIndex;
+      cmbResourceTypes.ItemIndex := CalendarParams.ResourceTypeIndex;
+    end;
+  end;
 end;
 
 procedure TfLeaveMain.GetGridData;
@@ -379,7 +405,7 @@ begin
     selCol := Col;
 
     // update the grid
-    cmbMonthPropertiesChange(self);
+    btnRefresh.Click;
 
     Row := selRow;
     Col := selCol;

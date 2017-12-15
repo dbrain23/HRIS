@@ -109,7 +109,7 @@ type
           IMAGE_PATH = 'images\';
           PASSWORDLENGTH = 6;
           DELIMITER = ';';
-          MAX_UNDERTIME = 2;
+          MAX_UNDERTIME = 2.5;
         end;
 
     type

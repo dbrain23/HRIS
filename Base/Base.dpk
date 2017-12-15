@@ -108,6 +108,7 @@ contains
   BaseInterface in 'BaseInterface.pas',
   BaseCalendarGridForm in 'BaseCalendarGridForm.pas' {fBaseCalendarGridForm},
   BasePrintForm in 'BasePrintForm.pas' {fBasePrintForm},
-  BasePopup in 'BasePopup.pas' {fBasePopup};
+  BasePopup in 'BasePopup.pas' {fBasePopup},
+  uCalendarParams in 'uCalendarParams.pas';
 
 end.

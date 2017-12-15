@@ -26,10 +26,6 @@ inherited fBaseCalendarGridForm: TfBaseCalendarGridForm
       object TabSheet1: TTabSheet
         Caption = 'Change Tabsheet Caption'
         ImageIndex = 1
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object pDetails: TJvPanel
           Left = 0
           Top = 0
@@ -246,7 +242,6 @@ inherited fBaseCalendarGridForm: TfBaseCalendarGridForm
               'October'
               'November'
               'December')
-            Properties.OnChange = cmbMonthPropertiesChange
             TabOrder = 1
             Width = 102
           end
@@ -264,7 +259,7 @@ inherited fBaseCalendarGridForm: TfBaseCalendarGridForm
               '')
             StyleDisabled.Color = clMenu
             TabOrder = 3
-            Width = 536
+            Width = 470
           end
           object btnPrevMonth: TcxButton
             Left = 833
@@ -297,6 +292,24 @@ inherited fBaseCalendarGridForm: TfBaseCalendarGridForm
             SpeedButtonOptions.Flat = True
             TabOrder = 5
             OnClick = btnNextMonthClick
+          end
+          object btnRefresh: TcxButton
+            Left = 769
+            Top = 26
+            Width = 58
+            Height = 21
+            Hint = 'Refresh calendar'
+            Caption = 'Refresh'
+            LookAndFeel.Kind = lfFlat
+            LookAndFeel.NativeStyle = False
+            LookAndFeel.SkinName = ''
+            OptionsImage.Images = ilBaseMain
+            ParentShowHint = False
+            ShowHint = True
+            SpeedButtonOptions.CanBeFocused = False
+            SpeedButtonOptions.Flat = True
+            TabOrder = 6
+            OnClick = btnRefreshClick
           end
         end
       end

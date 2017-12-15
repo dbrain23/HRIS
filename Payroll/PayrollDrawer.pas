@@ -121,6 +121,11 @@ begin
   // generate payroll
   if cmbPayrollPeriod.ItemIndex > 0 then
   begin
+    // show warning message to prevent regeneration of all records
+    // advise user to use the generate function in the payroll record window
+    // if processing a single employee only
+    MessageDlg('This function generates or updates payroll records for ALL employees. ' +
+      'Use the generate function in the payroll record instead when updating a SINGLE employee.',mtWarning,[mbOk],0);
     // confirm before generation
     if MessageDlg('Are you sure you want to generate this payroll period?',mtWarning,
         [mbYes,mbNo],0,mbNo) <> mrYes then Exit;

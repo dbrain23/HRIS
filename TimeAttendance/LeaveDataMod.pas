@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Classes, BaseDataMod, Data.DB, Data.Win.ADODB,
   cxStyles, cxClasses, LeaveObj,Dialogs, Vcl.ImgList, Vcl.Controls, cxGraphics,
-  StrUtils, DBUtil, DateUtils, System.Variants;
+  StrUtils, DBUtil, DateUtils, System.Variants, uCalendarParams;
 
 type
   TdmLeave = class(TdmBase)
@@ -49,11 +49,13 @@ type
     { Private declarations }
     fLeaveObj: TLeaveObj;
     fLocationCode: string;
+    FCalendarParams: TCalendarParams;
   public
     { Public declarations }
     procedure SetLeaveObj(const leaveId: integer; const locationCode: string);
     function RecordIsValid: boolean;
     property LeaveObj: TLeaveObj read fLeaveObj write fLeaveObj;
+    property CalendarParams: TCalendarParams read FCalendarParams write FCalendarParams;
   end;
 
 var

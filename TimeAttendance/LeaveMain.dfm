@@ -64,7 +64,7 @@ inherited fLeaveMain: TfLeaveMain
           inherited btnNextMonth: TcxButton
             LookAndFeel.SkinName = ''
           end
-          object btnNew: TcxButton
+          object btnNew: TcxButton [13]
             Left = 747
             Top = 424
             Width = 126
@@ -80,7 +80,7 @@ inherited fLeaveMain: TfLeaveMain
             TabOrder = 6
             OnClick = btnNewClick
           end
-          object Panel1: TPanel
+          object Panel1: TPanel [14]
             Left = 43
             Top = 439
             Width = 12
@@ -89,7 +89,7 @@ inherited fLeaveMain: TfLeaveMain
             ParentBackground = False
             TabOrder = 7
           end
-          object Panel2: TPanel
+          object Panel2: TPanel [15]
             Left = 129
             Top = 439
             Width = 12
@@ -98,7 +98,7 @@ inherited fLeaveMain: TfLeaveMain
             ParentBackground = False
             TabOrder = 8
           end
-          object Panel3: TPanel
+          object Panel3: TPanel [16]
             Left = 207
             Top = 439
             Width = 12
@@ -107,7 +107,7 @@ inherited fLeaveMain: TfLeaveMain
             ParentBackground = False
             TabOrder = 9
           end
-          object Panel4: TPanel
+          object Panel4: TPanel [17]
             Left = 279
             Top = 439
             Width = 12
@@ -116,13 +116,17 @@ inherited fLeaveMain: TfLeaveMain
             ParentBackground = False
             TabOrder = 10
           end
-          object cbxShowPendingOnly: TcxCheckBox
+          object cbxShowPendingOnly: TcxCheckBox [18]
             Left = 43
             Top = 388
             Caption = 'Show pending leaves only '
             TabOrder = 11
             OnClick = cbxShowPendingOnlyClick
             Width = 189
+          end
+          inherited btnRefresh: TcxButton
+            LookAndFeel.SkinName = ''
+            TabOrder = 12
           end
         end
       end

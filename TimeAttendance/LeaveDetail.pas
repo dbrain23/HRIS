@@ -407,9 +407,9 @@ procedure TfLeaveDetail.vwListEditing(Sender: TcxCustomGridTableView;
 var
   created: boolean;
 begin
-  created := not vwList.DataController.DataSet.FieldByName('created_date').IsNull;
+  //created := not vwList.DataController.DataSet.FieldByName('created_date').IsNull;
 
-  AAllow := not created;
+  //AAllow := not created;
 end;
 
 end.

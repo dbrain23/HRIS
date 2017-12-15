@@ -38,20 +38,10 @@ type
     QRDBText2: TQRDBText;
     QRLabel1: TQRLabel;
     QRLabel5: TQRLabel;
-    QRExpr5: TQRExpr;
     lblPeriod: TLabel;
     cmbPayrollPeriod: TcxComboBox;
-    dstSchedOfSalariesbranch: TStringField;
-    dstSchedOfSalariessalaries_and_wages: TFMTBCDField;
-    dstSchedOfSalariesadjustment: TFMTBCDField;
-    dstSchedOfSalariesleaves_without_pay: TFMTBCDField;
-    dstSchedOfSalariesundertime: TFMTBCDField;
-    dstSchedOfSalariesstaff_benefits: TFMTBCDField;
-    dstSchedOfSalariesadjustment_staff_benefits: TIntegerField;
     QRLabel10: TQRLabel;
     QRLabel11: TQRLabel;
-    QRExpr7: TQRExpr;
-    dstSchedOfSalariespayroll_period: TStringField;
     SummaryBand: TQRBand;
     QRShape17: TQRShape;
     QRLabel19: TQRLabel;
@@ -64,7 +54,6 @@ type
     QRLabel16: TQRLabel;
     QRLabel17: TQRLabel;
     QRLabel18: TQRLabel;
-    QRExpr1: TQRExpr;
     PageFooterBand1: TQRBand;
     QRExpr4: TQRExpr;
     QRShape16: TQRShape;
@@ -82,6 +71,19 @@ type
     QRLabel9: TQRLabel;
     QRLabel20: TQRLabel;
     QRExpr6: TQRExpr;
+    QRDBText3: TQRDBText;
+    QRDBText4: TQRDBText;
+    QRDBText5: TQRDBText;
+    dstSchedOfSalariesbranch: TStringField;
+    dstSchedOfSalariessalaries_and_wages: TFMTBCDField;
+    dstSchedOfSalariesadjustment: TFMTBCDField;
+    dstSchedOfSalariesleaves_without_pay: TFMTBCDField;
+    dstSchedOfSalariesundertime_without_pay: TFMTBCDField;
+    dstSchedOfSalariestotal_staff_benefits: TFMTBCDField;
+    dstSchedOfSalariesadjustment_staff_benefits: TIntegerField;
+    dstSchedOfSalariestotal_salaries_and_wages: TFMTBCDField;
+    dstSchedOfSalariestotal: TFMTBCDField;
+    dstSchedOfSalariespayroll_period: TStringField;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }

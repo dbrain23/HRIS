@@ -482,7 +482,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 MaxBreakChars = 0
                 FontSize = 8
               end
-              object QRExpr5: TQRExpr
+              object QRDBText3: TQRDBText
                 Left = 259
                 Top = 2
                 Width = 75
@@ -496,57 +496,23 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 Alignment = taRightJustify
                 AlignToBand = False
                 AutoSize = False
+                Color = clWhite
+                DataSet = dstSchedOfSalaries
+                DataField = 'total_salaries_and_wages'
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
                 Font.Height = -11
                 Font.Name = 'Tahoma'
                 Font.Style = []
-                Color = clWhite
                 ParentFont = False
-                ResetAfterPrint = False
                 Transparent = False
-                Expression = 
-                  'FORMATNUMERIC('#39'###,##0.00'#39',(dstSchedOfSalaries.salaries_and_wage' +
-                  's + (dstSchedOfSalaries.adjustment + dstSchedOfSalaries.leaves_w' +
-                  'ithout_pay +  dstSchedOfSalaries.undertime)))'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
+                FullJustify = False
+                MaxBreakChars = 0
                 FontSize = 8
               end
-              object QRExpr7: TQRExpr
-                Left = 425
-                Top = 2
-                Width = 62
-                Height = 12
-                Size.Values = (
-                  45.357142857142860000
-                  1606.398809523810000000
-                  7.559523809523810000
-                  234.345238095238100000)
-                XLColumn = 0
-                Alignment = taRightJustify
-                AlignToBand = False
-                AutoSize = False
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -11
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                Color = clWhite
-                ParentFont = False
-                ResetAfterPrint = False
-                Transparent = False
-                Expression = 
-                  'FORMATNUMERIC('#39'###,##0.00'#39',(dstSchedOfSalaries.salaries_and_wage' +
-                  's + (dstSchedOfSalaries.adjustment + dstSchedOfSalaries.leaves_w' +
-                  'ithout_pay +  dstSchedOfSalaries.undertime)) + (dstSchedOfSalari' +
-                  'es.staff_benefits - dstSchedOfSalaries.adjustment_staff_benefits' +
-                  '))'
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FontSize = 8
-              end
-              object QRExpr1: TQRExpr
+              object QRDBText4: TQRDBText
                 Left = 340
                 Top = 2
                 Width = 60
@@ -560,20 +526,50 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 Alignment = taRightJustify
                 AlignToBand = False
                 AutoSize = False
+                Color = clWhite
+                DataSet = dstSchedOfSalaries
+                DataField = 'total_staff_benefits'
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
                 Font.Height = -11
                 Font.Name = 'Tahoma'
                 Font.Style = []
-                Color = clWhite
                 ParentFont = False
-                ResetAfterPrint = False
                 Transparent = False
-                Expression = 
-                  'FORMATNUMERIC('#39'###,##0.00;(###,##0.00);-'#39',(dstSchedOfSalaries.st' +
-                  'aff_benefits - dstSchedOfSalaries.adjustment_staff_benefits))'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
+                FullJustify = False
+                MaxBreakChars = 0
+                FontSize = 8
+              end
+              object QRDBText5: TQRDBText
+                Left = 425
+                Top = 2
+                Width = 62
+                Height = 12
+                Size.Values = (
+                  45.357142857142860000
+                  1606.398809523810000000
+                  7.559523809523810000
+                  234.345238095238100000)
+                XLColumn = 0
+                Alignment = taRightJustify
+                AlignToBand = False
+                AutoSize = False
+                Color = clWhite
+                DataSet = dstSchedOfSalaries
+                DataField = 'total'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                ParentFont = False
+                Transparent = False
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FullJustify = False
+                MaxBreakChars = 0
                 FontSize = 8
               end
             end
@@ -1308,7 +1304,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
         DataType = ftInteger
         Direction = pdReturnValue
         Precision = 10
-        Value = Null
+        Value = 0
       end
       item
         Name = '@payroll_code'
@@ -1339,35 +1335,29 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
     end
     object dstSchedOfSalariessalaries_and_wages: TFMTBCDField
       FieldName = 'salaries_and_wages'
-      ReadOnly = True
       DisplayFormat = '###,##0.00;(###,##0.00);-'
       Precision = 38
       Size = 2
     end
     object dstSchedOfSalariesadjustment: TFMTBCDField
       FieldName = 'adjustment'
-      ReadOnly = True
-      DisplayFormat = '###,##0.00;(###,##0.00);-'
       Precision = 38
       Size = 2
     end
     object dstSchedOfSalariesleaves_without_pay: TFMTBCDField
       FieldName = 'leaves_without_pay'
       ReadOnly = True
-      DisplayFormat = '###,##0.00;(###,##0.00);-'
       Precision = 38
       Size = 6
     end
-    object dstSchedOfSalariesundertime: TFMTBCDField
-      FieldName = 'undertime'
+    object dstSchedOfSalariesundertime_without_pay: TFMTBCDField
+      FieldName = 'undertime_without_pay'
       ReadOnly = True
-      DisplayFormat = '###,##0.00;(###,##0.00);-'
       Precision = 38
       Size = 13
     end
-    object dstSchedOfSalariesstaff_benefits: TFMTBCDField
-      FieldName = 'staff_benefits'
-      ReadOnly = True
+    object dstSchedOfSalariestotal_staff_benefits: TFMTBCDField
+      FieldName = 'total_staff_benefits'
       DisplayFormat = '###,##0.00;(###,##0.00);-'
       Precision = 38
       Size = 2
@@ -1375,7 +1365,20 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
     object dstSchedOfSalariesadjustment_staff_benefits: TIntegerField
       FieldName = 'adjustment_staff_benefits'
       ReadOnly = True
+    end
+    object dstSchedOfSalariestotal_salaries_and_wages: TFMTBCDField
+      FieldName = 'total_salaries_and_wages'
+      ReadOnly = True
       DisplayFormat = '###,##0.00;(###,##0.00);-'
+      Precision = 38
+      Size = 2
+    end
+    object dstSchedOfSalariestotal: TFMTBCDField
+      FieldName = 'total'
+      ReadOnly = True
+      DisplayFormat = '###,##0.00;(###,##0.00);-'
+      Precision = 38
+      Size = 2
     end
     object dstSchedOfSalariespayroll_period: TStringField
       FieldName = 'payroll_period'

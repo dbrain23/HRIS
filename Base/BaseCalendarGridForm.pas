@@ -38,11 +38,12 @@ type
     pStatus: TPanel;
     shpStatus: TShape;
     lblStatus: TLabel;
+    btnRefresh: TcxButton;
     procedure FormCreate(Sender: TObject);
-    procedure cmbMonthPropertiesChange(Sender: TObject);
     procedure btnPrevMonthClick(Sender: TObject);
     procedure btnNextMonthClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure btnRefreshClick(Sender: TObject);
   private
     { Private declarations }
     procedure InitForm;
@@ -94,6 +95,7 @@ begin
       cmbYear.ItemIndex := cmbYear.ItemIndex - 1;
     end;
   end;
+  btnRefresh.Click;
 end;
 
 procedure TfBaseCalendarGridForm.btnPrevMonthClick(Sender: TObject);
@@ -110,9 +112,10 @@ begin
       cmbYear.ItemIndex := cmbYear.ItemIndex + 1;
     end;
   end;
+  btnRefresh.Click;
 end;
 
-procedure TfBaseCalendarGridForm.cmbMonthPropertiesChange(Sender: TObject);
+procedure TfBaseCalendarGridForm.btnRefreshClick(Sender: TObject);
 begin
   inherited;
   InitCalendarGrid;
@@ -129,11 +132,9 @@ end;
 procedure TfBaseCalendarGridForm.FormShow(Sender: TObject);
 begin
   inherited;
-  cmbMonth.Properties.OnChange := cmbMonthPropertiesChange;
-  cmbYear.Properties.OnChange := cmbMonthPropertiesChange;
-  cmbResourceTypes.Properties.OnChange := cmbMonthPropertiesChange;
-
-  cmbMonthPropertiesChange(Sender);
+  InitCalendarGrid;
+  GetGridData;
+  ConfigureCalendarGridReadOnly;
 end;
 
 function TfBaseCalendarGridForm.GetDate: TDate;

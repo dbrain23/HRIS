@@ -29,10 +29,15 @@ begin
 
   combo.Clear;
 
+  // when month is December, increment the year to the following year
+  // this ensures that the following month can be viewed
+  if mm = 12 then Inc(yy);
+
   for i := yy downto BASE_YEAR do
       combo.Properties.Items.Add(IntToStr(i));
 
-  combo.ItemIndex := 0;
+  if mm = 12 then combo.ItemIndex := 1
+  else combo.ItemIndex := 0;
 end;
 
 procedure GetDateParams(const year, month: integer; var fromDate, untilDate: TDate);

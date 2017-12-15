@@ -90,11 +90,24 @@ implementation
 { TfTimeLogMain }
 
 uses ComboBoxObj, TimeAttendanceDataMod, AppConstant,
-  User, TimeLogDetail, TimeLogEmployee, FormUtil, DuplicateTimeLogs;
+  User, TimeLogDetail, TimeLogEmployee, FormUtil, DuplicateTimeLogs,
+  uCalendarParams;
 
 procedure TfTimeLogMain.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   // DestroyObjects;
+
+  // persist search parameters
+  with dmTimeAttendance do
+  begin
+    if not Assigned(CalendarParams) then CalendarParams := TCalendarParams.Create;
+
+    CalendarParams.MonthIndex := cmbMonth.ItemIndex;
+    CalendarParams.YearIndex := cmbYear.ItemIndex;
+    CalendarParams.ResourceTypeIndex := cmbResourceTypes.ItemIndex;
+  end;
+
+
   inherited;
 end;
 
@@ -144,6 +157,17 @@ begin
   cmbResourceTypes.Enabled := viewAll;
 
   SetResourceType;
+
+  with dmTimeAttendance do
+  begin
+    if Assigned(CalendarParams) then
+    begin
+      cmbMonth.ItemIndex := CalendarParams.MonthIndex;
+      cmbYear.ItemIndex := CalendarParams.YearIndex;
+      cmbResourceTypes.ItemIndex := CalendarParams.ResourceTypeIndex;
+    end;
+  end;
+
 end;
 
 procedure TfTimeLogMain.GetGridData;
