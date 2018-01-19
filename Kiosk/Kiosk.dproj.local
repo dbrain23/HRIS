@@ -11,9 +11,9 @@
     <Transaction>2014/04/25 19:26:12.000.133,=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2014/04/25 19:27:48.000.919,=C:\_Projects\_ASCC\Base\BaseForm.pas</Transaction>
     <Transaction>2014/04/25 19:28:26.000.996,=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2014/04/25 19:28:42.000.034,C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.dfm=C:\_Projects\_ASCC\Kiosk\KioskMain.dfm</Transaction>
-    <Transaction>2014/04/25 19:28:42.000.034,C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas=C:\_Projects\_ASCC\Kiosk\KioskMain.pas</Transaction>
-    <Transaction>2014/04/25 19:28:57.000.618,C:\Users\Bryan\Documents\RAD Studio\Projects\Project1.dproj=C:\_Projects\_ASCC\Kiosk\Kiosk.dproj</Transaction>
+    <Transaction>2014/04/25 19:28:42.000.034,C:\_Projects\_ASCC\Kiosk\KioskMain.pas=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2014/04/25 19:28:42.000.034,C:\_Projects\_ASCC\Kiosk\KioskMain.dfm=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2014/04/25 19:28:57.000.618,C:\_Projects\_ASCC\Kiosk\Kiosk.dproj=C:\Users\Bryan\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2014/05/04 05:38:45.000.157,=C:\_Projects\_ASCC\Base\BaseMainForm.pas</Transaction>
   </Transactions>
 </BorlandProject>

@@ -21,13 +21,15 @@ uses
   Vcl.ImgList, Vcl.StdCtrls, cxButtons, cxGridLevel, cxClasses,
   cxGridCustomView, cxGridCustomTableView, cxGridTableView, cxGridDBTableView,
   cxGrid, JvExControls, JvGroupHeader, Vcl.ExtCtrls, JvExExtCtrls,
-  JvExtComponent, JvPanel, Vcl.ComCtrls, JvExComCtrls, JvComCtrls, cxTextEdit;
+  JvExtComponent, JvPanel, Vcl.ComCtrls, JvExComCtrls, JvComCtrls, cxTextEdit,
+  cxCheckBox;
 
 type
   TfUndertimeReason = class(TfBaseMaintenanceForm)
     vListundertime_reason_code: TcxGridDBColumn;
     vListundertime_reason_name: TcxGridDBColumn;
     vListundertime_reason_description: TcxGridDBColumn;
+    vListundertime_reason_is_active: TcxGridDBColumn;
   private
     { Private declarations }
   public

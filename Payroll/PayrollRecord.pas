@@ -126,8 +126,6 @@ type
     cxDBCurrencyEdit14: TcxDBCurrencyEdit;
     JvLabel15: TJvLabel;
     cxDBCurrencyEdit15: TcxDBCurrencyEdit;
-    cbxCopyDeductions: TcxCheckBox;
-    cbxCopyAdjustments: TcxCheckBox;
     JvLabel16: TJvLabel;
     dbluLocation: TcxDBLookupComboBox;
     procedure bBackClick(Sender: TObject);
@@ -165,7 +163,8 @@ implementation
 
 {$R *.dfm}
 
-uses PayrollDataMod, FormUtil, AppConstant, DBUtil;
+uses PayrollDataMod, FormUtil, AppConstant, DBUtil, GeneratePayroll,
+  PayrollGenerateParameters;
 
 procedure TfPayrollRecord.bBackClick(Sender: TObject);
 begin
@@ -341,40 +340,64 @@ end;
 
 procedure TfPayrollRecord.GeneratePayroll;
 var
-  payrollCode, idNum: string;
+  employee: TEmployee;
+  parameters: TPayrollGenerateParameters;
   sql: string;
 begin
   // generate payroll
   with dmPayroll do
   begin
-    payrollCode := dstPayroll.Parameters.ParamByName('@payroll_code').Value;
-    idNum := dstPayroll.Parameters.ParamByName('@id_num').Value;
+    parameters := TPayrollGenerateParameters.Create;
+    try
+      try
+        employee := TEmployee.Create;
+        employee.IdNum := dstPayroll.Parameters.ParamByName('@id_num').Value;
+        employee.Name := dstPayroll.FieldByName('employee_name').AsString;
 
-    sql := 'exec dbo.pr_generate_payroll ''' + payrollCode + ''',' +
-              IntToStr(Ord(cbxCopyDeductions.Checked)) + ',' +
-              IntToStr(Ord(cbxCopyAdjustments.Checked)) + ',' +
-              '''' + idNum + '''';
+        parameters.Code := dstPayroll.Parameters.ParamByName('@payroll_code').Value;;
+        parameters.Employee := employee;
 
-    Screen.Cursor := crHourglass;
+        with TfrmGeneratePayroll.Create(self,parameters) do
+        begin
+          ShowModal;
 
-    // show status panel
-    // set position relative to the dock panel
-    pStatus.Top := Round((self.Height/2) - (pStatus.Height/2));
-    pStatus.Left := Round((self.Width/2) - (pStatus.Width/2));
-    pStatus.Visible := true;
+          if ModalResult = mrOk then
+          begin
+            Screen.Cursor := crHourglass;
 
-    Application.ProcessMessages;
+            // show status panel
+            // set position relative to the dock panel
+            pStatus.Top := Round((self.Height/2) - (pStatus.Height/2));
+            pStatus.Left := Round((self.Width/2) - (pStatus.Width/2));
+            pStatus.Visible := true;
 
-    ExecuteSQL(sql);
+            Application.ProcessMessages;
 
-    // hide status panel
-    pStatus.Visible := false;
+            sql := 'exec dbo.pr_generate_payroll ''' + parameters.Code + ''',' +
+                    IntToStr(Ord(parameters.ComputeDeductions)) + ',' +
+                    IntToStr(Ord(parameters.CopyDeductions)) + ',' +
+                    IntToStr(Ord(parameters.CopyAdjustments)) + ',' +
+                    QuotedStr(parameters.Employee.IdNum);
 
-    Screen.Cursor := crDefault;
+            ExecuteSQL(sql);
 
-    Application.ProcessMessages;
+            // hide status panel
+            pStatus.Visible := false;
 
-    GetPayroll;
+            Screen.Cursor := crDefault;
+
+            Application.ProcessMessages;
+
+            GetPayroll;
+          end;
+        end;
+
+      except
+
+      end;
+    finally
+      parameters.Free;
+    end;
   end;
 end;
 
@@ -383,6 +406,7 @@ begin
   // close the main datasource to effectively refresh the display
   ceNet.DataBinding.DataSource.DataSet.Close;
   ceNet.DataBinding.DataSource.DataSet.Open;
+  OpenGridDataSources([grDeduction, grAllowance, grAdjustment],false);
   OpenGridDataSources([grDeduction, grAllowance, grAdjustment]);
   OpenDropdownDataSources(pDetails);
   InitControls;

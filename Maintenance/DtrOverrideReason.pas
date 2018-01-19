@@ -21,13 +21,15 @@ uses
   Vcl.Menus, Vcl.ImgList, Vcl.StdCtrls, cxButtons, cxGridLevel, cxClasses,
   cxGridCustomView, cxGridCustomTableView, cxGridTableView, cxGridDBTableView,
   cxGrid, JvExControls, JvGroupHeader, Vcl.ExtCtrls, JvExExtCtrls,
-  JvExtComponent, JvPanel, Vcl.ComCtrls, JvExComCtrls, JvComCtrls, cxTextEdit;
+  JvExtComponent, JvPanel, Vcl.ComCtrls, JvExComCtrls, JvComCtrls, cxTextEdit,
+  cxCheckBox;
 
 type
   TfDtrOverrideReason = class(TfBaseMaintenanceForm)
     vListoverride_reason_code: TcxGridDBColumn;
     vListoverride_reason_name: TcxGridDBColumn;
     vListoverride_reason_description: TcxGridDBColumn;
+    vListoverride_reason_is_active: TcxGridDBColumn;
   private
     { Private declarations }
   public

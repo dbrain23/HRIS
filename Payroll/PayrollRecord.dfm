@@ -1420,30 +1420,6 @@ inherited fPayrollRecord: TfPayrollRecord
             TabOrder = 27
             Width = 65
           end
-          object cbxCopyDeductions: TcxCheckBox
-            Left = 281
-            Top = 427
-            Hint = 'Copy previous adjustments'
-            Caption = 'Copy previous deductions'
-            ParentShowHint = False
-            ShowHint = True
-            State = cbsChecked
-            Style.Shadow = False
-            TabOrder = 28
-            Width = 176
-          end
-          object cbxCopyAdjustments: TcxCheckBox
-            Left = 463
-            Top = 427
-            Hint = 'Copy previous adjustments'
-            Caption = 'Copy previous adjustments'
-            ParentShowHint = False
-            ShowHint = True
-            State = cbsChecked
-            Style.Shadow = False
-            TabOrder = 29
-            Width = 176
-          end
           object dbluLocation: TcxDBLookupComboBox
             Left = 155
             Top = 170

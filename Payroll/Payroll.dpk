@@ -117,6 +117,9 @@ contains
   Payslips in 'Payslips.pas' {fPayslips},
   DeductionSummaryReport in 'DeductionSummaryReport.pas' {fDeductionSummaryReport},
   VarianceReport in 'VarianceReport.pas' {fVarianceReport},
-  PayrollDeductions in 'PayrollDeductions.pas' {fPayrollDeductions};
+  PayrollDeductions in 'PayrollDeductions.pas' {fPayrollDeductions},
+  PayrollGenerateParameters in 'PayrollGenerateParameters.pas',
+  BasePopup in '..\Base\BasePopup.pas' {fBasePopup},
+  GeneratePayroll in 'GeneratePayroll.pas' {frmGeneratePayroll};
 
 end.

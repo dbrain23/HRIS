@@ -36,9 +36,6 @@ type
     pStatus: TPanel;
     shpStatus: TShape;
     lblStatus: TLabel;
-    JvGroupHeader1: TJvGroupHeader;
-    cbxCopyDeductions: TcxCheckBox;
-    cbxCopyAdjustments: TcxCheckBox;
     lblEmployee: TLabel;
     cmbEmployee: TcxComboBox;
     procedure FormShow(Sender: TObject);
@@ -73,7 +70,7 @@ implementation
 
 uses
   PayrollUtil, AppConstant, ComboBoxObj, DBUtil, PayrollDataMod, FormUtil,
-  PrintInterface;
+  PrintInterface, PayrollGenerateParameters, GeneratePayroll;
 
 procedure TfPayrollDrawer.FormCreate(Sender: TObject);
 begin
@@ -116,11 +113,15 @@ end;
 procedure TfPayrollDrawer.GeneratePayroll;
 var
   payrollCode: string;
+  parameters: TPayrollGenerateParameters;
   sql: string;
 begin
   // generate payroll
   if cmbPayrollPeriod.ItemIndex > 0 then
   begin
+    // check pending paf
+    if PendingPafExists then Exit;
+
     // show warning message to prevent regeneration of all records
     // advise user to use the generate function in the payroll record window
     // if processing a single employee only
@@ -131,32 +132,51 @@ begin
         [mbYes,mbNo],0,mbNo) <> mrYes then Exit;
 
     payrollCode := TComboBoxObj(cmbPayrollPeriod.ItemObject).Code;
-    sql := 'exec dbo.pr_generate_payroll ''' + payrollCode + ''',' +
-              IntToStr(Ord(cbxCopyDeductions.Checked)) + ',' +
-              IntToStr(Ord(cbxCopyAdjustments.Checked));
 
-    if not PendingPafExists then
-    begin
-      Screen.Cursor := crHourglass;
+    parameters := TPayrollGenerateParameters.Create;
+    try
+      try
+        parameters.Code := payrollCode;
 
-      // show status panel
-      // set position relative to the dock panel
-      pStatus.Top := Round((self.Height/2) - (pStatus.Height/2));
-      pStatus.Left := Round((self.Width/2) - (pStatus.Width/2));
-      pStatus.Visible := true;
+        with TfrmGeneratePayroll.Create(self,parameters) do
+        begin
+          ShowModal;
 
-      Application.ProcessMessages;
+          if ModalResult = mrOk then
+          begin
+            Screen.Cursor := crHourglass;
 
-      ExecuteSQL(sql);
+            // show status panel
+            // set position relative to the dock panel
+            pStatus.Top := Round((self.Height/2) - (pStatus.Height/2));
+            pStatus.Left := Round((self.Width/2) - (pStatus.Width/2));
+            pStatus.Visible := true;
 
-      // hide status panel
-      pStatus.Visible := false;
+            Application.ProcessMessages;
 
-      Screen.Cursor := crDefault;
+            sql := 'exec dbo.pr_generate_payroll ''' + parameters.Code + ''',' +
+                    IntToStr(Ord(parameters.ComputeDeductions)) + ',' +
+                    IntToStr(Ord(parameters.CopyDeductions)) + ',' +
+                    IntToStr(Ord(parameters.CopyAdjustments));
 
-      Application.ProcessMessages;
+            ExecuteSQL(sql);
 
-      Retrieve;
+            // hide status panel
+            pStatus.Visible := false;
+
+            Screen.Cursor := crDefault;
+
+            Application.ProcessMessages;
+
+            Retrieve;
+          end;
+        end;
+
+      except
+
+      end;
+    finally
+      parameters.Free;
     end;
   end
   else

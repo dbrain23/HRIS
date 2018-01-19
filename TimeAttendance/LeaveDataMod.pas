@@ -284,8 +284,10 @@ var
   var
     clone: TADODataSet;
     leaveDate: string;
+    filter: string;
+    duplicatesFound, morning, arvo: boolean;
   begin
-    Result := true;
+    duplicatesFound := true;
 
     clone := TADODataSet.Create(nil);
 
@@ -294,8 +296,39 @@ var
     try
       clone.Clone(dstLeaveDetail, ltReadOnly);
       clone.Filtered := true;
-      clone.Filter := 'leave_date = ' + QuotedStr(leaveDate);
-      Result := clone.RecordCount > 1;
+
+      // clone.Filter := 'leave_date = ' + QuotedStr(leaveDate);
+      // include the am/pm and leave reason when checking
+      // leave can be of the same date but for different reasons
+      // i.e. morning leave can be reason 1 and arvo leave can be reason 2
+
+      filter := '(leave_date = ' + QuotedStr(leaveDate) + ')';
+
+      clone.Filter := filter;
+
+      if clone.RecordCount > 1 then
+      begin
+        if clone.RecordCount > 2 then duplicatesFound := true
+        else
+        begin
+
+          // check for morning
+          clone.Filter := filter + ' AND (' + 'am_pm = ''A''' + ')';
+          morning := clone.RecordCount = 1;
+
+          // check for arvo
+          clone.Filter := filter + ' AND (' + 'am_pm = ''P''' + ')';
+          arvo := clone.RecordCount = 1;
+
+          // ShowMessage(BoolToStr(morning));
+          // ShowMessage(BoolToStr(arvo));
+
+          duplicatesFound := (not morning) or (not arvo);
+        end;
+      end
+      else duplicatesFound := false;
+
+      Result := duplicatesFound;
     finally
       clone.Free;
     end;

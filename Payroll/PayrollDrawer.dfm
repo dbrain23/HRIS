@@ -96,19 +96,6 @@ inherited fPayrollDrawer: TfPayrollDrawer
           Height = 14
           Caption = 'Branch / Department'
         end
-        object JvGroupHeader1: TJvGroupHeader
-          Left = 9
-          Top = 150
-          Width = 176
-          Height = 18
-          Caption = 'Gen. options'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clHighlight
-          Font.Height = -12
-          Font.Name = 'Tahoma'
-          Font.Style = []
-          ParentFont = False
-        end
         object lblEmployee: TLabel
           Left = 8
           Top = 102
@@ -157,30 +144,6 @@ inherited fPayrollDrawer: TfPayrollDrawer
           TabOrder = 3
           OnClick = btnCloseClick
         end
-        object cbxCopyDeductions: TcxCheckBox
-          Left = 9
-          Top = 166
-          Hint = 'Copy previous adjustments'
-          Caption = 'Copy previous deductions'
-          ParentShowHint = False
-          ShowHint = True
-          State = cbsChecked
-          Style.Shadow = False
-          TabOrder = 4
-          Width = 176
-        end
-        object cbxCopyAdjustments: TcxCheckBox
-          Left = 9
-          Top = 185
-          Hint = 'Copy previous adjustments'
-          Caption = 'Copy previous adjustments'
-          ParentShowHint = False
-          ShowHint = True
-          State = cbsChecked
-          Style.Shadow = False
-          TabOrder = 5
-          Width = 176
-        end
         object cmbEmployee: TcxComboBox
           Left = 8
           Top = 122
@@ -189,7 +152,7 @@ inherited fPayrollDrawer: TfPayrollDrawer
             '')
           Properties.OnCloseUp = cmbResourceTypesPropertiesCloseUp
           StyleDisabled.Color = clMenu
-          TabOrder = 6
+          TabOrder = 4
           Width = 177
         end
       end

@@ -19,3 +19,5 @@
 *.bak
 *.ini
 *.dll
+*.identcache
+*.local
