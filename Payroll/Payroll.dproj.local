@@ -67,13 +67,13 @@
     <Transaction>2015/02/01 18:46:19.000.675,=dxSkinOffice2010SilverRS18.dcp</Transaction>
     <Transaction>2015/02/01 18:46:19.000.542,=dxSkinOffice2010BlackRS18.dcp</Transaction>
     <Transaction>2015/02/01 18:46:20.000.296,=dxSkinSummer2008RS18.dcp</Transaction>
-    <Transaction>2015/02/01 18:46:20.000.512,=dxSkinVS2010RS18.dcp</Transaction>
+    <Transaction>2015/02/01 18:46:20.000.226,=dxSkinStardustRS18.dcp</Transaction>
     <Transaction>2015/02/01 18:46:20.000.015,=dxSkinSharpRS18.dcp</Transaction>
     <Transaction>2015/02/01 18:46:20.000.083,=dxSkinSilverRS18.dcp</Transaction>
     <Transaction>2015/02/01 18:46:20.000.439,=dxSkinValentineRS18.dcp</Transaction>
     <Transaction>2015/02/01 18:46:20.000.660,=dxSkinXmas2008BlueRS18.dcp</Transaction>
     <Transaction>2015/02/01 18:46:20.000.585,=dxSkinWhiteprintRS18.dcp</Transaction>
-    <Transaction>2015/02/01 18:46:20.000.226,=dxSkinStardustRS18.dcp</Transaction>
+    <Transaction>2015/02/01 18:46:20.000.512,=dxSkinVS2010RS18.dcp</Transaction>
     <Transaction>2015/02/01 18:46:20.000.368,=dxSkinTheAsphaltWorldRS18.dcp</Transaction>
     <Transaction>2015/02/01 18:46:20.000.151,=dxSkinSpringTimeRS18.dcp</Transaction>
     <Transaction>2015/02/01 20:54:27.000.585,=C:\_Projects\_ASCC\Payroll\PayrollRecordMain.pas</Transaction>
@@ -141,16 +141,16 @@
     <Transaction>2016/12/02 11:28:39.000.525,C:\_Projects\_ASCC\Payroll\DtrProcessingReport.pas=C:\_Projects\_ASCC\Payroll\Unit1.pas</Transaction>
     <Transaction>2016/12/02 11:28:39.000.525,C:\_Projects\_ASCC\Payroll\DtrProcessingReport.dfm=C:\_Projects\_ASCC\Payroll\Unit1.dfm</Transaction>
     <Transaction>2016/12/05 06:46:46.000.348,C:\_Projects\_ASCC\Payroll\DtrProcessingReport.pas=</Transaction>
-    <Transaction>2018/01/19 07:42:11.194,=C:\Projects\HRIS\Payroll\Unit1.pas</Transaction>
-    <Transaction>2018/01/19 07:44:48.064,=C:\Projects\HRIS\Payroll\Unit1.pas</Transaction>
-    <Transaction>2018/01/19 07:45:55.636,C:\Projects\HRIS\Payroll\GeneratePayroll.pas=C:\Projects\HRIS\Payroll\Unit1.pas</Transaction>
-    <Transaction>2018/01/19 07:45:55.636,C:\Projects\HRIS\Payroll\GeneratePayroll.dfm=C:\Projects\HRIS\Payroll\Unit1.dfm</Transaction>
-    <Transaction>2018/01/19 07:52:12.661,=C:\Projects\HRIS\Payroll\Unit1.pas</Transaction>
-    <Transaction>2018/01/19 07:59:38.096,C:\Projects\HRIS\Payroll\PayrollGenerateParameters.pas=C:\Projects\HRIS\Payroll\Unit1.pas</Transaction>
-    <Transaction>2018/01/19 08:07:53.008,=C:\Projects\HRIS\Base\BasePopup.pas</Transaction>
-    <Transaction>2018/01/19 08:08:04.250,=C:\Projects\HRIS\Payroll\Unit1.pas</Transaction>
-    <Transaction>2018/01/19 08:09:00.773,C:\Projects\HRIS\Payroll\GeneratePayroll.pas=</Transaction>
-    <Transaction>2018/01/19 08:09:06.446,C:\Projects\HRIS\Payroll\GeneratePayroll.pas=C:\Projects\HRIS\Payroll\Unit1.pas</Transaction>
-    <Transaction>2018/01/19 08:09:06.446,C:\Projects\HRIS\Payroll\GeneratePayroll.dfm=C:\Projects\HRIS\Payroll\Unit1.dfm</Transaction>
+    <Transaction>2018/01/19 07:42:11.000.194,=C:\Projects\HRIS\Payroll\Unit1.pas</Transaction>
+    <Transaction>2018/01/19 07:44:48.000.064,=C:\Projects\HRIS\Payroll\Unit1.pas</Transaction>
+    <Transaction>2018/01/19 07:45:55.000.636,C:\Projects\HRIS\Payroll\GeneratePayroll.pas=C:\Projects\HRIS\Payroll\Unit1.pas</Transaction>
+    <Transaction>2018/01/19 07:45:55.000.636,C:\Projects\HRIS\Payroll\GeneratePayroll.dfm=C:\Projects\HRIS\Payroll\Unit1.dfm</Transaction>
+    <Transaction>2018/01/19 07:52:12.000.661,=C:\Projects\HRIS\Payroll\Unit1.pas</Transaction>
+    <Transaction>2018/01/19 07:59:38.000.096,C:\Projects\HRIS\Payroll\PayrollGenerateParameters.pas=C:\Projects\HRIS\Payroll\Unit1.pas</Transaction>
+    <Transaction>2018/01/19 08:07:53.000.008,=C:\Projects\HRIS\Base\BasePopup.pas</Transaction>
+    <Transaction>2018/01/19 08:08:04.000.250,=C:\Projects\HRIS\Payroll\Unit1.pas</Transaction>
+    <Transaction>2018/01/19 08:09:00.000.773,C:\Projects\HRIS\Payroll\GeneratePayroll.pas=</Transaction>
+    <Transaction>2018/01/19 08:09:06.000.446,C:\Projects\HRIS\Payroll\GeneratePayroll.pas=C:\Projects\HRIS\Payroll\Unit1.pas</Transaction>
+    <Transaction>2018/01/19 08:09:06.000.446,C:\Projects\HRIS\Payroll\GeneratePayroll.dfm=C:\Projects\HRIS\Payroll\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>

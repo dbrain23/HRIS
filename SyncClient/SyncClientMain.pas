@@ -95,7 +95,7 @@ begin
       // When adding a new task.. increment the TASKS constant in this procedure
 
       case Task of
-        1: SendClientMessage;
+        // 1: SendClientMessage;
         2: GetServerMessage;
         //3: SetServerMessageStatus;
         //4: GetServerMessageStatus;
