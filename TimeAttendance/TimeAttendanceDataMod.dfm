@@ -1069,4 +1069,152 @@ inherited dmTimeAttendance: TdmTimeAttendance
     Left = 288
     Top = 152
   end
+  object dscUndertimePrint: TDataSource
+    DataSet = dstUndertimePrint
+    Left = 912
+    Top = 240
+  end
+  object dstUndertimePrint: TADODataSet
+    AutoCalcFields = False
+    Connection = dmSecurity.acSecurity
+    CursorType = ctStatic
+    CommandText = 'dtr_get_undertime_am;1'
+    CommandType = cmdStoredProc
+    Parameters = <
+      item
+        Name = '@RETURN_VALUE'
+        DataType = ftInteger
+        Direction = pdReturnValue
+        Precision = 10
+        Value = 0
+      end
+      item
+        Name = '@dtr_date_from'
+        Attributes = [paNullable]
+        DataType = ftDateTime
+        Value = 0d
+      end
+      item
+        Name = '@dtr_date_until'
+        Attributes = [paNullable]
+        DataType = ftDateTime
+        Value = 0d
+      end
+      item
+        Name = '@id_num'
+        Attributes = [paNullable]
+        DataType = ftString
+        Size = 12
+        Value = ''
+      end>
+    Left = 1008
+    Top = 240
+    object dstUndertimePrintdtr_date: TWideStringField
+      FieldName = 'dtr_date'
+      Size = 10
+    end
+    object dstUndertimePrintid_num: TStringField
+      FieldName = 'id_num'
+      Size = 12
+    end
+    object dstUndertimePrinttime_from: TWideStringField
+      FieldName = 'time_from'
+      Size = 16
+    end
+    object dstUndertimePrinttime_until: TWideStringField
+      FieldName = 'time_until'
+      Size = 16
+    end
+    object dstUndertimePrintundertime_reason_code: TStringField
+      FieldName = 'undertime_reason_code'
+      FixedChar = True
+      Size = 3
+    end
+    object dstUndertimePrintcreated_by: TStringField
+      FieldName = 'created_by'
+      Size = 12
+    end
+    object dstUndertimePrintcreated_date: TDateTimeField
+      FieldName = 'created_date'
+      DisplayFormat = 'mm-dd-yyyy'
+    end
+    object dstUndertimePrintmodified_by: TStringField
+      FieldName = 'modified_by'
+      Size = 12
+    end
+    object dstUndertimePrintmodified_date: TDateTimeField
+      FieldName = 'modified_date'
+      DisplayFormat = 'mm-dd-yyyy'
+    end
+    object dstUndertimePrintsyncstatus_code: TStringField
+      FieldName = 'syncstatus_code'
+      FixedChar = True
+      Size = 3
+    end
+    object dstUndertimePrinttimestatus_code: TStringField
+      FieldName = 'timestatus_code'
+      FixedChar = True
+      Size = 3
+    end
+    object dstUndertimePrintstatus_changed_by: TStringField
+      FieldName = 'status_changed_by'
+      Size = 12
+    end
+    object dstUndertimePrintstatus_changed_date: TDateTimeField
+      FieldName = 'status_changed_date'
+    end
+    object dstUndertimePrintam_pm: TStringField
+      FieldName = 'am_pm'
+      FixedChar = True
+      Size = 1
+    end
+    object dstUndertimePrintis_paid: TSmallintField
+      FieldName = 'is_paid'
+    end
+    object dstUndertimePrintemployee_lastname: TStringField
+      FieldName = 'employee_lastname'
+      Size = 50
+    end
+    object dstUndertimePrintemployee_firstname: TStringField
+      FieldName = 'employee_firstname'
+      Size = 50
+    end
+    object dstUndertimePrintemployee_name: TStringField
+      FieldName = 'employee_name'
+      ReadOnly = True
+      Size = 101
+    end
+    object dstUndertimePrintpositiontype_name: TStringField
+      FieldName = 'positiontype_name'
+      Size = 25
+    end
+    object dstUndertimePrintundertime_reason_name: TStringField
+      FieldName = 'undertime_reason_name'
+      Size = 25
+    end
+    object dstUndertimePrintlocation_name: TStringField
+      FieldName = 'location_name'
+      Size = 50
+    end
+    object dstUndertimePrintdtr_date_f: TDateTimeField
+      FieldName = 'dtr_date_f'
+      ReadOnly = True
+      DisplayFormat = 'mm-dd-yyyy'
+    end
+    object dstUndertimePrinttime_from_f: TDateTimeField
+      FieldName = 'time_from_f'
+      ReadOnly = True
+      DisplayFormat = 'hh:mm am/pm'
+    end
+    object dstUndertimePrinttime_until_f: TDateTimeField
+      FieldName = 'time_until_f'
+      ReadOnly = True
+      DisplayFormat = 'hh:mm am/pm'
+    end
+    object dstUndertimePrintapproved_by: TStringField
+      FieldName = 'approved_by'
+      ReadOnly = True
+      Size = 101
+    end
+  end
 end

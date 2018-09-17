@@ -62,6 +62,33 @@ type
     dscDuplicateLogs: TDataSource;
     dstDtrByDate: TADODataSet;
     dscDtrByDate: TDataSource;
+    dscUndertimePrint: TDataSource;
+    dstUndertimePrint: TADODataSet;
+    dstUndertimePrintdtr_date: TWideStringField;
+    dstUndertimePrintid_num: TStringField;
+    dstUndertimePrinttime_from: TWideStringField;
+    dstUndertimePrinttime_until: TWideStringField;
+    dstUndertimePrintundertime_reason_code: TStringField;
+    dstUndertimePrintcreated_by: TStringField;
+    dstUndertimePrintcreated_date: TDateTimeField;
+    dstUndertimePrintmodified_by: TStringField;
+    dstUndertimePrintmodified_date: TDateTimeField;
+    dstUndertimePrintsyncstatus_code: TStringField;
+    dstUndertimePrinttimestatus_code: TStringField;
+    dstUndertimePrintstatus_changed_by: TStringField;
+    dstUndertimePrintstatus_changed_date: TDateTimeField;
+    dstUndertimePrintam_pm: TStringField;
+    dstUndertimePrintis_paid: TSmallintField;
+    dstUndertimePrintemployee_lastname: TStringField;
+    dstUndertimePrintemployee_firstname: TStringField;
+    dstUndertimePrintemployee_name: TStringField;
+    dstUndertimePrintpositiontype_name: TStringField;
+    dstUndertimePrintundertime_reason_name: TStringField;
+    dstUndertimePrintlocation_name: TStringField;
+    dstUndertimePrintdtr_date_f: TDateTimeField;
+    dstUndertimePrinttime_from_f: TDateTimeField;
+    dstUndertimePrinttime_until_f: TDateTimeField;
+    dstUndertimePrintapproved_by: TStringField;
     procedure DataModuleDestroy(Sender: TObject);
     procedure dstDtrOverrideAMNewRecord(DataSet: TDataSet);
     procedure DataModuleCreate(Sender: TObject);
@@ -354,7 +381,7 @@ end;
 
 procedure TdmTimeAttendance.dstDtrUndertimeAMAfterOpen(DataSet: TDataSet);
 begin
-  if DataSet.RecordCount = 0 then
+ if DataSet.RecordCount = 0 then
     DataSet.Append;
 end;
 

@@ -165,9 +165,7 @@
         <DCCReference Include="tmsdXE4.dcp"/>
         <DCCReference Include="dxBarRS18.dcp"/>
         <DCCReference Include="cxPageControldxBarPopupMenuRS18.dcp"/>
-        <DCCReference Include="..\Base\BaseForm.pas">
-            <Form>fBase</Form>
-        </DCCReference>
+        <DCCReference Include="QR5RunNBDEDXE4.dcp"/>
         <DCCReference Include="TimeAttendanceDataMod.pas">
             <Form>dmTimeAttendance</Form>
             <DesignClass>TDataModule</DesignClass>
@@ -222,6 +220,18 @@
         </DCCReference>
         <DCCReference Include="DuplicateTimelogs.pas">
             <Form>fDuplicateTimeLogs</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Base\BaseForm.pas">
+            <Form>fBase</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\Base\BasePrintForm.pas">
+            <Form>fBasePrintForm</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UndertimePrint.pas">
+            <Form>fUndertimePrint</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

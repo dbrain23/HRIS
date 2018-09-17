@@ -2,7 +2,6 @@ inherited fPafPrint: TfPafPrint
   Caption = 'fPafPrint'
   ClientHeight = 800
   ClientWidth = 611
-  ExplicitTop = -126
   ExplicitWidth = 627
   ExplicitHeight = 839
   PixelsPerInch = 96
@@ -2092,8 +2091,8 @@ inherited fPafPrint: TfPafPrint
           end
         end
         inherited pStatus: TPanel
-          Top = 100
-          ExplicitTop = 100
+          Top = 276
+          ExplicitTop = 276
           inherited lblStatus: TLabel
             Width = 207
             Caption = 'Preparing PAF printout. Please wait...'

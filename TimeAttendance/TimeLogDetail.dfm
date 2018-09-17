@@ -736,6 +736,38 @@ inherited fTimeLogDetail: TfTimeLogDetail
               ShowHint = True
               Visible = False
             end
+            object lblPrintAM: TLabel
+              Left = 261
+              Top = 118
+              Width = 25
+              Height = 14
+              Cursor = crHandPoint
+              Caption = 'Print'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clHighlight
+              Font.Height = -12
+              Font.Name = 'Tahoma'
+              Font.Style = [fsUnderline]
+              ParentFont = False
+              Visible = False
+              OnClick = lblPrintAMClick
+            end
+            object lblPrintPM: TLabel
+              Left = 261
+              Top = 270
+              Width = 25
+              Height = 14
+              Cursor = crHandPoint
+              Caption = 'Print'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clHighlight
+              Font.Height = -12
+              Font.Name = 'Tahoma'
+              Font.Style = [fsUnderline]
+              ParentFont = False
+              Visible = False
+              OnClick = lblPrintPMClick
+            end
             object dteUndertimeFromAM: TcxDBTimeEdit
               Left = 102
               Top = 3
@@ -872,7 +904,7 @@ inherited fTimeLogDetail: TfTimeLogDetail
               Properties.ValueGrayed = '0'
               TabOrder = 6
               Visible = False
-              Width = 249
+              Width = 186
             end
             object chbUndertimeAM: TcxCheckBox
               Left = 31
@@ -1029,7 +1061,7 @@ inherited fTimeLogDetail: TfTimeLogDetail
               Properties.ValueGrayed = '0'
               TabOrder = 15
               Visible = False
-              Width = 249
+              Width = 186
             end
           end
         end

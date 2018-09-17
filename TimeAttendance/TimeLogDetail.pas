@@ -83,6 +83,8 @@ type
     lblStatusPM: TcxLabel;
     dbluStatusPM: TcxDBLookupComboBox;
     chbPaidUndertimePM: TcxDBCheckBox;
+    lblPrintAM: TLabel;
+    lblPrintPM: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure chbOverrideClick(Sender: TObject);
@@ -97,6 +99,8 @@ type
     procedure chbUndertimeAMClick(Sender: TObject);
     procedure chbUndertimePMClick(Sender: TObject);
     procedure dteUndertimeFromPMEnter(Sender: TObject);
+    procedure lblPrintAMClick(Sender: TObject);
+    procedure lblPrintPMClick(Sender: TObject);
   private
     { Private declarations }
     procedure GetDetails;
@@ -111,18 +115,16 @@ type
     procedure SetDefaultUndertime;
     procedure SetDefaultUndertimePM;
     procedure ChangeStatusColour(const status: string; combo: TcxDBLookupComboBox);
+    procedure PrintUndertimeRequest(const morningPeriod: boolean = true);
   public
     { Public declarations }
   end;
-
-var
-  fTimeLogDetail: TfTimeLogDetail;
 
 implementation
 
 {$R *.dfm}
 
-uses TimeAttendanceDataMod, SecurityDataMod, AppConstant, FormUtil;
+uses TimeAttendanceDataMod, SecurityDataMod, AppConstant, FormUtil, UndertimePrint;
 
 procedure TfTimeLogDetail.bCancelClick(Sender: TObject);
 begin
@@ -558,6 +560,49 @@ begin
         MessageDlg(e.Message,mtError,[mbOK],0);
     end;
   end;
+end;
+
+procedure TfTimeLogDetail.lblPrintAMClick(Sender: TObject);
+begin
+  PrintUndertimeRequest;
+end;
+
+procedure TfTimeLogDetail.lblPrintPMClick(Sender: TObject);
+begin
+  inherited;
+  PrintUndertimeRequest(false);
+end;
+
+procedure TfTimeLogDetail.PrintUndertimeRequest(const morningPeriod: boolean);
+var
+  idNum: string;
+  dateFrom, dateUntil: TDateTime;
+  source: TADODataSet;
+begin
+  inherited;
+  with dmTimeAttendance do
+  begin
+    if morningPeriod then source := dstDtrUndertimeAM
+    else source := dstDtrUndertimePM;
+
+    idNum := dstDtrEmployee.Parameters.ParamByName('@id_num').Value;
+    dateFrom := dstDtrEmployee.Parameters.ParamByName('@dtr_date').Value;
+    dateUntil := dstDtrEmployee.Parameters.ParamByName('@dtr_date').Value;
+
+    dstUndertimePrint.Close;
+    dstUndertimePrint.CommandText := source.CommandText;
+
+    dstUndertimePrint.Parameters.Clear;
+    dstUndertimePrint.Parameters.CreateParameter('@dtr_date_from',ftDateTime,pdInput,0,dateFrom);
+    dstUndertimePrint.Parameters.CreateParameter('@dtr_date_until',ftDateTime,pdInput,0,dateUntil);
+    dstUndertimePrint.Parameters.CreateParameter('@id_num',ftString,pdInput,12,idNum);
+
+    //dstUndertimePrint.Parameters.ParamByName('@dtr_date_from').Value := dateFrom;
+    //dstUndertimePrint.Parameters.ParamByName('@dtr_date_until').Value := dateUntil;
+    //dstUndertimePrint.Parameters.ParamByName('@id_num').Value := idNum;
+  end;
+
+  DockForm(self,TfUndertimePrint.Create(self));
 end;
 
 procedure TfTimeLogDetail.SaveOverride;

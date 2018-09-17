@@ -96,10 +96,10 @@ requires
   JvXPCtrls,
   tmsdXE4,
   dxBarRS18,
-  cxPageControldxBarPopupMenuRS18;
+  cxPageControldxBarPopupMenuRS18,
+  QR5RunNBDEDXE4;
 
 contains
-  BaseForm in '..\Base\BaseForm.pas' {fBase},
   TimeAttendanceDataMod in 'TimeAttendanceDataMod.pas' {dmTimeAttendance: TDataModule},
   TimeLog in 'TimeLog.pas' {fTimeLog},
   BaseDataMod in '..\Base\BaseDataMod.pas' {dmBase: TDataModule},
@@ -120,7 +120,10 @@ contains
   TimeLogEmployee in 'TimeLogEmployee.pas' {fTimeLogEmployee},
   TimeLogInterface in 'TimeLogInterface.pas',
   BasePopup in '..\Base\BasePopup.pas' {fBasePopup},
-  DuplicateTimelogs in 'DuplicateTimelogs.pas' {fDuplicateTimeLogs};
+  DuplicateTimelogs in 'DuplicateTimelogs.pas' {fDuplicateTimeLogs},
+  BaseForm in '..\Base\BaseForm.pas' {fBase},
+  BasePrintForm in '..\Base\BasePrintForm.pas' {fBasePrintForm},
+  UndertimePrint in 'UndertimePrint.pas' {fUndertimePrint};
 
 end.
 
