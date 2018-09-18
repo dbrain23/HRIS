@@ -89,6 +89,7 @@ type
     dstUndertimePrinttime_from_f: TDateTimeField;
     dstUndertimePrinttime_until_f: TDateTimeField;
     dstUndertimePrintapproved_by: TStringField;
+    dstUndertimePrintapproved_date: TDateTimeField;
     procedure DataModuleDestroy(Sender: TObject);
     procedure dstDtrOverrideAMNewRecord(DataSet: TDataSet);
     procedure DataModuleCreate(Sender: TObject);

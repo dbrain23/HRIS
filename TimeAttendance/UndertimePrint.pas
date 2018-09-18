@@ -59,9 +59,10 @@ type
     QRShape7: TQRShape;
     QRShape8: TQRShape;
     bBack: TcxButton;
-    QRDBText10: TQRDBText;
     QRDBText11: TQRDBText;
     QRLabel12: TQRLabel;
+    QRExpr1: TQRExpr;
+    QRExpr2: TQRExpr;
     procedure bBackClick(Sender: TObject);
   private
     { Private declarations }

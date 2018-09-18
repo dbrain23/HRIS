@@ -1162,6 +1162,7 @@ inherited dmTimeAttendance: TdmTimeAttendance
     end
     object dstUndertimePrintstatus_changed_date: TDateTimeField
       FieldName = 'status_changed_date'
+      DisplayFormat = 'mm-dd-yyyy hh:mm am/pm'
     end
     object dstUndertimePrintam_pm: TStringField
       FieldName = 'am_pm'
@@ -1215,6 +1216,11 @@ inherited dmTimeAttendance: TdmTimeAttendance
       FieldName = 'approved_by'
       ReadOnly = True
       Size = 101
+    end
+    object dstUndertimePrintapproved_date: TDateTimeField
+      FieldName = 'approved_date'
+      ReadOnly = True
+      DisplayFormat = 'mm-dd-yyyy hh:mm am/pm'
     end
   end
 end

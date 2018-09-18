@@ -956,36 +956,6 @@ inherited fUndertimePrint: TfUndertimePrint
                 Shape = qrsHorLine
                 VertAdjust = 0
               end
-              object QRDBText10: TQRDBText
-                Left = 72
-                Top = 139
-                Width = 57
-                Height = 12
-                Size.Values = (
-                  45.357142857142860000
-                  272.142857142857100000
-                  525.386904761904800000
-                  215.446428571428600000)
-                XLColumn = 0
-                Alignment = taLeftJustify
-                AlignToBand = False
-                AutoSize = False
-                Color = clWhite
-                DataSet = dmTimeAttendance.dstUndertimePrint
-                DataField = 'modified_date'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -12
-                Font.Name = 'Tahoma'
-                Font.Style = [fsBold]
-                ParentFont = False
-                Transparent = False
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FullJustify = False
-                MaxBreakChars = 0
-                FontSize = 9
-              end
               object QRDBText11: TQRDBText
                 Left = 72
                 Top = 155
@@ -1042,6 +1012,62 @@ inherited fUndertimePrint: TfUndertimePrint
                 Font.Style = []
                 ParentFont = False
                 Transparent = False
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 9
+              end
+              object QRExpr1: TQRExpr
+                Left = 263
+                Top = 45
+                Width = 1051
+                Height = 41
+                Size.Values = (
+                  154.970238095238100000
+                  994.077380952381000000
+                  170.089285714285700000
+                  3972.529761904762000000)
+                XLColumn = 0
+                Alignment = taLeftJustify
+                AlignToBand = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = 15132390
+                Font.Height = -48
+                Font.Name = 'Tahoma'
+                Font.Style = [fsBold]
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = False
+                Transparent = False
+                Expression = 'IF(dstUndertimePrint.timestatus_code = '#39'APP'#39','#39'APPROVED'#39','#39#39')'
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 36
+              end
+              object QRExpr2: TQRExpr
+                Left = 72
+                Top = 139
+                Width = 361
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  272.142857142857100000
+                  525.386904761904800000
+                  1364.494047619048000000)
+                XLColumn = 0
+                Alignment = taLeftJustify
+                AlignToBand = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -12
+                Font.Name = 'Tahoma'
+                Font.Style = [fsBold]
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = False
+                Transparent = False
+                Expression = 
+                  'IF(dstUndertimePrint.timestatus_code = '#39'APP'#39',dstUndertimePrint.a' +
+                  'pproved_date,'#39#39')'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
                 FontSize = 9
