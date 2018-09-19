@@ -90,6 +90,7 @@ type
     dstUndertimePrinttime_until_f: TDateTimeField;
     dstUndertimePrintapproved_by: TStringField;
     dstUndertimePrintapproved_date: TDateTimeField;
+    dstUndertimePrinttimestatus_name: TStringField;
     procedure DataModuleDestroy(Sender: TObject);
     procedure dstDtrOverrideAMNewRecord(DataSet: TDataSet);
     procedure DataModuleCreate(Sender: TObject);
@@ -112,6 +113,8 @@ type
     procedure dstDuplicateLogsBeforeOpen(DataSet: TDataSet);
     procedure dstDuplicateLogsAfterScroll(DataSet: TDataSet);
     procedure dstDtrByDateAfterPost(DataSet: TDataSet);
+    procedure dstUndertimePrintapproved_dateGetText(Sender: TField;
+      var Text: string; DisplayText: Boolean);
   private
     { Private declarations }
     FCalendarParams: TCalendarParams;
@@ -669,6 +672,14 @@ begin
     FieldByName('created_by').AsString := UserIdNum;
     FieldByName('created_date').AsDateTime := Now;
   end;
+end;
+
+procedure TdmTimeAttendance.dstUndertimePrintapproved_dateGetText(
+  Sender: TField; var Text: string; DisplayText: Boolean);
+begin
+  inherited;
+  if Sender.AsDateTime = 0 then Text := ''
+  else Text := FormatDateTime('mm-dd-yyyy hh:mm am/pm',Sender.AsDateTime);
 end;
 
 procedure TdmTimeAttendance.GetConnectionObject;

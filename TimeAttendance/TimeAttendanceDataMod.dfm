@@ -1136,7 +1136,7 @@ inherited dmTimeAttendance: TdmTimeAttendance
     end
     object dstUndertimePrintcreated_date: TDateTimeField
       FieldName = 'created_date'
-      DisplayFormat = 'mm-dd-yyyy'
+      DisplayFormat = 'mm-dd-yyyy hh:mm am/pm'
     end
     object dstUndertimePrintmodified_by: TStringField
       FieldName = 'modified_by'
@@ -1220,7 +1220,11 @@ inherited dmTimeAttendance: TdmTimeAttendance
     object dstUndertimePrintapproved_date: TDateTimeField
       FieldName = 'approved_date'
       ReadOnly = True
-      DisplayFormat = 'mm-dd-yyyy hh:mm am/pm'
+      OnGetText = dstUndertimePrintapproved_dateGetText
+    end
+    object dstUndertimePrinttimestatus_name: TStringField
+      FieldName = 'timestatus_name'
+      Size = 25
     end
   end
 end
