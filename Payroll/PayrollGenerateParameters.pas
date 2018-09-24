@@ -14,6 +14,7 @@ type
 
   TPayrollGenerateParameters = class
   private
+    FUpdateAttendance: boolean;
     FComputeDeductions: boolean;
     FCopyDeductions: boolean;
     FCode: string;
@@ -25,6 +26,7 @@ type
     property CopyDeductions: boolean read FCopyDeductions write FCopyDeductions;
     property CopyAdjustments: boolean read FCopyAdjustments write FCopyAdjustments;
     property ComputeDeductions: boolean read FComputeDeductions write FComputeDeductions;
+    property UpdateAttendance: boolean read FUpdateAttendance write FUpdateAttendance;
   end;
 
 implementation

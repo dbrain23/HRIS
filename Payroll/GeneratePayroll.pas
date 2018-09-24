@@ -30,6 +30,10 @@ type
     lblEmployee: TLabel;
     btnGenerate: TcxButton;
     btnCancel: TcxButton;
+    cxRadioButton1: TcxRadioButton;
+    cxRadioButton2: TcxRadioButton;
+    JvGroupHeader3: TJvGroupHeader;
+    cbxUpdateAttendance: TcxRadioButton;
     procedure btnCancelClick(Sender: TObject);
     procedure btnGenerateClick(Sender: TObject);
   private
@@ -55,6 +59,7 @@ end;
 procedure TfrmGeneratePayroll.btnGenerateClick(Sender: TObject);
 begin
   // set the parameters
+  LParameters.UpdateAttendance :=  cbxUpdateAttendance.Checked;
   LParameters.CopyDeductions := cbxCopyDeductions.Checked;
   LParameters.ComputeDeductions := cbxComputeDeductions.Checked;
   LParameters.CopyAdjustments := cbxCopyAdjustments.Checked;

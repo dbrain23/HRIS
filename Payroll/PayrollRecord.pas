@@ -374,6 +374,7 @@ begin
             Application.ProcessMessages;
 
             sql := 'exec dbo.pr_generate_payroll ''' + parameters.Code + ''',' +
+                    IntToStr(Ord(parameters.UpdateAttendance)) + ',' +
                     IntToStr(Ord(parameters.ComputeDeductions)) + ',' +
                     IntToStr(Ord(parameters.CopyDeductions)) + ',' +
                     IntToStr(Ord(parameters.CopyAdjustments)) + ',' +
