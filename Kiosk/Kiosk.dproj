@@ -100,10 +100,10 @@
         <DCC_DebugInformation>false</DCC_DebugInformation>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
-        <VerInfo_Build>22</VerInfo_Build>
+        <VerInfo_Build>23</VerInfo_Build>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
         <VerInfo_PreRelease>true</VerInfo_PreRelease>
-        <VerInfo_Keys>CompanyName=ASCC Credit Corporation;FileDescription=Self-Service Kiosk;FileVersion=1.0.1.22;InternalName=Kiosk;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=ASCC Credit Corporation;FileDescription=Self-Service Kiosk;FileVersion=1.0.1.23;InternalName=Kiosk;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <Icon_MainIcon>..\_images\Kiosk.ico</Icon_MainIcon>
         <DCC_DcpOutput>..\_dcp</DCC_DcpOutput>
         <DCC_UnitSearchPath>..\_dcu;..\Base;..\Security;..\TimeAttendance;..\Employee;..\Paf;..\Leave;..\Payroll;..\Service;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>

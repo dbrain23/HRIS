@@ -475,20 +475,19 @@ begin
 
   // set modified date and modified by fields
   if ((DataSet as TADODataSet).State = dsEdit) and
-     (DataSet.Modified) and
-     (DataSet.FieldByName('timestatus_code').AsString =
-      TAppConstant.TTimeStatus.PENDING)then
+     (DataSet.Modified) then
   begin
-    DataSet.FieldByName('modified_date').AsDateTime := Now;
-    DataSet.FieldByName('modified_by').AsString := dmSecurity.User.UserIdNum;
-  end;
-
-  // set the status changed fields
-  if DataSet.FieldByName('timestatus_code').AsString <>
-    TAppConstant.TTimeStatus.PENDING then
-  begin
-    DataSet.FieldByName('status_changed_date').AsDateTime := Now;
-    DataSet.FieldByName('status_changed_by').AsString := dmSecurity.User.UserIdNum;
+    if DataSet.FieldByName('timestatus_code').CurValue <>
+       DataSet.FieldByName('timestatus_code').NewValue then
+    begin
+      DataSet.FieldByName('status_changed_date').AsDateTime := Now;
+      DataSet.FieldByName('status_changed_by').AsString := dmSecurity.User.UserIdNum;
+    end
+    else
+    begin
+      DataSet.FieldByName('modified_date').AsDateTime := Now;
+      DataSet.FieldByName('modified_by').AsString := dmSecurity.User.UserIdNum;
+    end;
   end;
 end;
 

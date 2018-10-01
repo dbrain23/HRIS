@@ -663,32 +663,6 @@ inherited fUndertimePrint: TfUndertimePrint
                 MaxBreakChars = 0
                 FontSize = 9
               end
-              object QRLabel10: TQRLabel
-                Left = 263
-                Top = 155
-                Width = 54
-                Height = 12
-                Size.Values = (
-                  45.357142857142860000
-                  994.077380952381000000
-                  585.863095238095200000
-                  204.107142857142900000)
-                XLColumn = 0
-                Alignment = taLeftJustify
-                AlignToBand = False
-                Caption = 'Requested by'
-                Color = clWhite
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -12
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                ParentFont = False
-                Transparent = False
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FontSize = 9
-              end
               object QRLabel11: TQRLabel
                 Left = 7
                 Top = 155
@@ -885,20 +859,6 @@ inherited fUndertimePrint: TfUndertimePrint
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
                 FontSize = 9
-              end
-              object QRShape2: TQRShape
-                Left = 323
-                Top = 158
-                Width = 100
-                Height = 9
-                Size.Values = (
-                  34.017857142857140000
-                  1220.863095238095000000
-                  597.202380952381000000
-                  377.976190476190500000)
-                XLColumn = 0
-                Shape = qrsHorLine
-                VertAdjust = 0
               end
               object QRShape5: TQRShape
                 Left = 79
