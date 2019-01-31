@@ -196,7 +196,7 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               Left = 24
               Top = 88
               Width = 692
-              Height = 86
+              Height = 96
               AlignToBottom = False
               Color = clWhite
               TransparentBand = False
@@ -209,7 +209,7 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               ForceNewPage = False
               ParentFont = False
               Size.Values = (
-                325.059523809523800000
+                362.857142857142900000
                 2615.595238095238000000)
               PreCaluculateBandHeight = False
               KeepOnOnePage = False
@@ -248,9 +248,9 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
                 Left = 3
                 Top = 30
                 Width = 108
-                Height = 49
+                Height = 59
                 Size.Values = (
-                  185.208333333333300000
+                  223.005952380952400000
                   11.339285714285710000
                   113.392857142857100000
                   408.214285714285700000)
@@ -276,13 +276,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRDBText5: TQRDBText
                 Left = 157
-                Top = 43
+                Top = 46
                 Width = 80
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   593.422619047619000000
-                  162.529761904761900000
+                  173.869047619047600000
                   302.380952380952400000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -306,13 +306,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRDBText6: TQRDBText
                 Left = 157
-                Top = 30
+                Top = 31
                 Width = 80
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   593.422619047619000000
-                  113.392857142857100000
+                  117.172619047619000000
                   302.380952380952400000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -366,13 +366,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRDBText8: TQRDBText
                 Left = 243
-                Top = 43
+                Top = 45
                 Width = 74
-                Height = 36
+                Height = 44
                 Size.Values = (
-                  136.071428571428600000
+                  166.309523809523800000
                   918.482142857142900000
-                  162.529761904761900000
+                  170.089285714285700000
                   279.702380952381000000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -396,13 +396,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRDBText9: TQRDBText
                 Left = 320
-                Top = 43
+                Top = 45
                 Width = 39
-                Height = 36
+                Height = 44
                 Size.Values = (
-                  136.071428571428600000
+                  166.309523809523800000
                   1209.523809523810000000
-                  162.529761904761900000
+                  170.089285714285700000
                   147.410714285714300000)
                 XLColumn = 0
                 Alignment = taRightJustify
@@ -426,13 +426,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRShape4: TQRShape
                 Left = 0
-                Top = 79
+                Top = 89
                 Width = 690
                 Height = 3
                 Size.Values = (
                   11.339285714285710000
                   0.000000000000000000
-                  298.601190476190500000
+                  336.398809523809500000
                   2608.035714285714000000)
                 XLColumn = 0
                 Shape = qrsHorLine
@@ -483,9 +483,9 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
                 Left = 115
                 Top = 15
                 Width = 1
-                Height = 66
+                Height = 76
                 Size.Values = (
-                  249.464285714285700000
+                  287.261904761904800000
                   434.672619047619000000
                   56.696428571428570000
                   3.779761904761905000)
@@ -497,9 +497,9 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
                 Left = 154
                 Top = 28
                 Width = 1
-                Height = 53
+                Height = 63
                 Size.Values = (
-                  200.327380952381000000
+                  238.125000000000000000
                   582.083333333333300000
                   105.833333333333300000
                   3.779761904761905000)
@@ -509,13 +509,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRLabel7: TQRLabel
                 Left = 118
-                Top = 30
+                Top = 31
                 Width = 28
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   446.011904761904800000
-                  113.392857142857100000
+                  117.172619047619000000
                   105.833333333333300000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -536,13 +536,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRLabel19: TQRLabel
                 Left = 118
-                Top = 43
+                Top = 46
                 Width = 28
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   446.011904761904800000
-                  162.529761904761900000
+                  173.869047619047600000
                   105.833333333333300000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -593,9 +593,9 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
                 Left = 361
                 Top = 15
                 Width = 1
-                Height = 66
+                Height = 76
                 Size.Values = (
-                  249.464285714285700000
+                  287.261904761904800000
                   1364.494047619048000000
                   56.696428571428570000
                   3.779761904761905000)
@@ -605,13 +605,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRLabel8: TQRLabel
                 Left = 118
-                Top = 56
+                Top = 61
                 Width = 34
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   446.011904761904800000
-                  211.666666666666700000
+                  230.565476190476200000
                   128.511904761904800000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -633,13 +633,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRDBText3: TQRDBText
                 Left = 157
-                Top = 56
+                Top = 61
                 Width = 80
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   593.422619047619000000
-                  211.666666666666700000
+                  230.565476190476200000
                   302.380952380952400000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -663,13 +663,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRShape8: TQRShape
                 Left = 116
-                Top = 41
+                Top = 43
                 Width = 492
                 Height = 1
                 Size.Values = (
                   3.779761904761905000
                   438.452380952381000000
-                  154.970238095238100000
+                  162.529761904761900000
                   1859.642857142857000000)
                 XLColumn = 0
                 Shape = qrsHorLine
@@ -677,13 +677,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRDBText4: TQRDBText
                 Left = 157
-                Top = 69
+                Top = 77
                 Width = 80
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   593.422619047619000000
-                  260.803571428571400000
+                  291.041666666666700000
                   302.380952380952400000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -707,13 +707,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRLabel9: TQRLabel
                 Left = 118
-                Top = 69
+                Top = 77
                 Width = 34
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   446.011904761904800000
-                  260.803571428571400000
+                  291.041666666666700000
                   128.511904761904800000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -735,13 +735,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRShape10: TQRShape
                 Left = 115
-                Top = 54
+                Top = 58
                 Width = 125
                 Height = 1
                 Size.Values = (
                   3.779761904761905000
                   434.672619047619000000
-                  204.107142857142900000
+                  219.226190476190500000
                   472.470238095238100000)
                 XLColumn = 0
                 Shape = qrsHorLine
@@ -749,13 +749,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRLabel11: TQRLabel
                 Left = 243
-                Top = 30
+                Top = 31
                 Width = 74
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   918.482142857142900000
-                  113.392857142857100000
+                  117.172619047619000000
                   279.702380952381000000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -775,13 +775,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRLabel13: TQRLabel
                 Left = 364
-                Top = 30
+                Top = 31
                 Width = 28
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   1375.833333333333000000
-                  113.392857142857100000
+                  117.172619047619000000
                   105.833333333333300000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -802,13 +802,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRLabel14: TQRLabel
                 Left = 364
-                Top = 43
+                Top = 46
                 Width = 28
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   1375.833333333333000000
-                  162.529761904761900000
+                  173.869047619047600000
                   105.833333333333300000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -829,13 +829,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRLabel15: TQRLabel
                 Left = 364
-                Top = 56
+                Top = 61
                 Width = 34
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   1375.833333333333000000
-                  211.666666666666700000
+                  230.565476190476200000
                   128.511904761904800000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -857,13 +857,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRLabel16: TQRLabel
                 Left = 364
-                Top = 69
+                Top = 77
                 Width = 34
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   1375.833333333333000000
-                  260.803571428571400000
+                  291.041666666666700000
                   128.511904761904800000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -885,13 +885,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRDBText10: TQRDBText
                 Left = 403
-                Top = 69
+                Top = 77
                 Width = 80
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   1523.244047619048000000
-                  260.803571428571400000
+                  291.041666666666700000
                   302.380952380952400000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -915,13 +915,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRDBText11: TQRDBText
                 Left = 403
-                Top = 56
+                Top = 61
                 Width = 80
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   1523.244047619048000000
-                  211.666666666666700000
+                  230.565476190476200000
                   302.380952380952400000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -945,13 +945,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRDBText12: TQRDBText
                 Left = 403
-                Top = 43
+                Top = 46
                 Width = 80
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   1523.244047619048000000
-                  162.529761904761900000
+                  173.869047619047600000
                   302.380952380952400000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -975,13 +975,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRDBText13: TQRDBText
                 Left = 403
-                Top = 30
+                Top = 31
                 Width = 80
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   1523.244047619048000000
-                  113.392857142857100000
+                  117.172619047619000000
                   302.380952380952400000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -1005,13 +1005,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRDBText15: TQRDBText
                 Left = 489
-                Top = 43
+                Top = 45
                 Width = 74
-                Height = 36
+                Height = 44
                 Size.Values = (
-                  136.071428571428600000
+                  166.309523809523800000
                   1848.303571428571000000
-                  162.529761904761900000
+                  170.089285714285700000
                   279.702380952381000000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -1035,13 +1035,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRDBText16: TQRDBText
                 Left = 566
-                Top = 43
+                Top = 45
                 Width = 39
-                Height = 36
+                Height = 44
                 Size.Values = (
-                  136.071428571428600000
+                  166.309523809523800000
                   2139.345238095238000000
-                  162.529761904761900000
+                  170.089285714285700000
                   147.410714285714300000)
                 XLColumn = 0
                 Alignment = taRightJustify
@@ -1107,13 +1107,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRDBText14: TQRDBText
                 Left = 610
-                Top = 30
+                Top = 31
                 Width = 78
-                Height = 49
+                Height = 58
                 Size.Values = (
-                  185.208333333333300000
+                  219.226190476190500000
                   2305.654761904762000000
-                  113.392857142857100000
+                  117.172619047619000000
                   294.821428571428600000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -1139,9 +1139,9 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
                 Left = 0
                 Top = 2
                 Width = 1
-                Height = 79
+                Height = 89
                 Size.Values = (
-                  298.601190476190500000
+                  336.398809523809500000
                   0.000000000000000000
                   7.559523809523810000
                   3.779761904761905000)
@@ -1178,13 +1178,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRShape1: TQRShape
                 Left = 115
-                Top = 67
+                Top = 73
                 Width = 125
                 Height = 1
                 Size.Values = (
                   3.779761904761905000
                   434.672619047619000000
-                  253.244047619047600000
+                  275.922619047619000000
                   472.470238095238100000)
                 XLColumn = 0
                 Shape = qrsHorLine
@@ -1194,9 +1194,9 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
                 Left = 239
                 Top = 28
                 Width = 1
-                Height = 53
+                Height = 63
                 Size.Values = (
-                  200.327380952381000000
+                  238.125000000000000000
                   903.363095238095200000
                   105.833333333333300000
                   3.779761904761905000)
@@ -1208,9 +1208,9 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
                 Left = 607
                 Top = 15
                 Width = 1
-                Height = 66
+                Height = 76
                 Size.Values = (
-                  249.464285714285700000
+                  287.261904761904800000
                   2294.315476190476000000
                   56.696428571428570000
                   3.779761904761905000)
@@ -1249,9 +1249,9 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
                 Left = 400
                 Top = 28
                 Width = 1
-                Height = 53
+                Height = 63
                 Size.Values = (
-                  200.327380952381000000
+                  238.125000000000000000
                   1511.904761904762000000
                   105.833333333333300000
                   3.779761904761905000)
@@ -1263,9 +1263,9 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
                 Left = 485
                 Top = 28
                 Width = 1
-                Height = 53
+                Height = 63
                 Size.Values = (
-                  200.327380952381000000
+                  238.125000000000000000
                   1833.184523809524000000
                   105.833333333333300000
                   3.779761904761905000)
@@ -1275,13 +1275,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRShape16: TQRShape
                 Left = 361
-                Top = 54
+                Top = 58
                 Width = 125
                 Height = 1
                 Size.Values = (
                   3.779761904761905000
                   1364.494047619048000000
-                  204.107142857142900000
+                  219.226190476190500000
                   472.470238095238100000)
                 XLColumn = 0
                 Shape = qrsHorLine
@@ -1289,13 +1289,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRShape19: TQRShape
                 Left = 361
-                Top = 67
+                Top = 73
                 Width = 125
                 Height = 1
                 Size.Values = (
                   3.779761904761905000
                   1364.494047619048000000
-                  253.244047619047600000
+                  275.922619047619000000
                   472.470238095238100000)
                 XLColumn = 0
                 Shape = qrsHorLine
@@ -1303,13 +1303,13 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               end
               object QRLabel5: TQRLabel
                 Left = 489
-                Top = 30
+                Top = 31
                 Width = 74
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
                   1848.303571428571000000
-                  113.392857142857100000
+                  117.172619047619000000
                   279.702380952381000000)
                 XLColumn = 0
                 Alignment = taLeftJustify
@@ -1358,9 +1358,9 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
                 Left = 689
                 Top = 2
                 Width = 1
-                Height = 79
+                Height = 89
                 Size.Values = (
-                  298.601190476190500000
+                  336.398809523809500000
                   2604.255952380952000000
                   7.559523809523810000
                   3.779761904761905000)
@@ -1398,7 +1398,7 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
             end
             object SummaryBand: TQRBand
               Left = 24
-              Top = 174
+              Top = 184
               Width = 692
               Height = 76
               AlignToBottom = False
@@ -1646,7 +1646,7 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
             end
             object PageFooterBand1: TQRBand
               Left = 24
-              Top = 250
+              Top = 260
               Width = 692
               Height = 19
               AlignToBottom = False

@@ -31,7 +31,6 @@ type
     QRShape1: TQRShape;
     QRLabel1: TQRLabel;
     QRLabel2: TQRLabel;
-    QRLabel6: TQRLabel;
     QRShape7: TQRShape;
     QRLabel7: TQRLabel;
     QRShape8: TQRShape;
@@ -47,12 +46,10 @@ type
     QRShape13: TQRShape;
     QRLabel14: TQRLabel;
     QRShape2: TQRShape;
-    QRShape4: TQRShape;
     QRGroup1: TQRGroup;
     QRDBText3: TQRDBText;
     DetailBand: TQRBand;
     QRDBText1: TQRDBText;
-    QRDBText2: TQRDBText;
     QRDBText4: TQRDBText;
     QRDBText5: TQRDBText;
     QRDBText6: TQRDBText;
@@ -146,7 +143,6 @@ type
     QRDBText15: TQRDBText;
     QRDBText16: TQRDBText;
     QRExpr12: TQRExpr;
-    QRExpr15: TQRExpr;
     QRExpr16: TQRExpr;
     QRExpr17: TQRExpr;
     QRExpr18: TQRExpr;
@@ -154,6 +150,10 @@ type
     dstRegisterundertime_without_pay: TBCDField;
     dstRegisterovertime: TIntegerField;
     dstRegisterothers: TIntegerField;
+    QRShape4: TQRShape;
+    QRLabel6: TQRLabel;
+    QRDBText2: TQRDBText;
+    QRExpr15: TQRExpr;
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
   private

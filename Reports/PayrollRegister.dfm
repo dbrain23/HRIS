@@ -284,41 +284,14 @@ inherited fPayrollRegister: TfPayrollRegister
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
               end
-              object QRLabel6: TQRLabel
-                Left = 132
-                Top = 28
-                Width = 40
-                Height = 18
-                Size.Values = (
-                  68.035714285714290000
-                  498.928571428571400000
-                  105.833333333333300000
-                  151.190476190476200000)
-                XLColumn = 0
-                Alignment = taCenter
-                AlignToBand = False
-                AutoSize = False
-                Caption = 'Monthly basic rate'
-                Color = clWhite
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -11
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                ParentFont = False
-                Transparent = False
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FontSize = 8
-              end
               object QRShape7: TQRShape
-                Left = 221
+                Left = 173
                 Top = 25
                 Width = 1
                 Height = 38
                 Size.Values = (
                   143.630952380952400000
-                  835.327380952381000000
+                  653.898809523809500000
                   94.494047619047620000
                   3.779761904761905000)
                 XLColumn = 0
@@ -326,13 +299,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 VertAdjust = 0
               end
               object QRLabel7: TQRLabel
-                Left = 179
+                Left = 131
                 Top = 36
                 Width = 40
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  676.577380952381000000
+                  495.148809523809500000
                   136.071428571428600000
                   151.190476190476200000)
                 XLColumn = 0
@@ -353,13 +326,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 FontSize = 8
               end
               object QRShape8: TQRShape
-                Left = 268
+                Left = 220
                 Top = 1
                 Width = 1
                 Height = 47
                 Size.Values = (
                   177.648809523809500000
-                  1012.976190476190000000
+                  831.547619047619000000
                   3.779761904761905000
                   3.779761904761905000)
                 XLColumn = 0
@@ -367,13 +340,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 VertAdjust = 0
               end
               object QRLabel8: TQRLabel
-                Left = 272
+                Left = 224
                 Top = 36
                 Width = 40
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  1028.095238095238000000
+                  846.666666666666700000
                   136.071428571428600000
                   151.190476190476200000)
                 XLColumn = 0
@@ -394,13 +367,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 FontSize = 8
               end
               object QRShape9: TQRShape
-                Left = 359
+                Left = 311
                 Top = 25
                 Width = 1
                 Height = 38
                 Size.Values = (
                   143.630952380952400000
-                  1356.934523809524000000
+                  1175.505952380952000000
                   94.494047619047620000
                   3.779761904761905000)
                 XLColumn = 0
@@ -408,13 +381,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 VertAdjust = 0
               end
               object QRLabel9: TQRLabel
-                Left = 318
+                Left = 270
                 Top = 36
                 Width = 40
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  1201.964285714286000000
+                  1020.535714285714000000
                   136.071428571428600000
                   151.190476190476200000)
                 XLColumn = 0
@@ -463,13 +436,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 VertAdjust = 0
               end
               object QRLabel11: TQRLabel
-                Left = 362
+                Left = 314
                 Top = 26
                 Width = 36
                 Height = 20
                 Size.Values = (
                   75.595238095238100000
-                  1368.273809523810000000
+                  1186.845238095238000000
                   98.273809523809520000
                   136.071428571428600000)
                 XLColumn = 0
@@ -504,13 +477,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 VertAdjust = 0
               end
               object QRLabel12: TQRLabel
-                Left = 402
+                Left = 354
                 Top = 36
                 Width = 43
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  1519.464285714286000000
+                  1338.035714285714000000
                   136.071428571428600000
                   162.529761904761900000)
                 XLColumn = 0
@@ -607,20 +580,6 @@ inherited fPayrollRegister: TfPayrollRegister
                   177.648809523809500000
                   487.589285714285700000
                   3.779761904761905000
-                  3.779761904761905000)
-                XLColumn = 0
-                Shape = qrsVertLine
-                VertAdjust = 0
-              end
-              object QRShape4: TQRShape
-                Left = 174
-                Top = 25
-                Width = 1
-                Height = 38
-                Size.Values = (
-                  143.630952380952400000
-                  657.678571428571400000
-                  94.494047619047620000
                   3.779761904761905000)
                 XLColumn = 0
                 Shape = qrsVertLine
@@ -791,15 +750,15 @@ inherited fPayrollRegister: TfPayrollRegister
                 FontSize = 8
               end
               object QRLabel24: TQRLabel
-                Left = 272
+                Left = 223
                 Top = 13
-                Width = 270
+                Width = 319
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  1028.095238095238000000
+                  842.886904761904800000
                   49.136904761904760000
-                  1020.535714285714000000)
+                  1205.744047619048000000)
                 XLColumn = 0
                 Alignment = taCenter
                 AlignToBand = False
@@ -927,13 +886,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 FontSize = 8
               end
               object QRLabel28: TQRLabel
-                Left = 225
+                Left = 177
                 Top = 28
                 Width = 40
                 Height = 18
                 Size.Values = (
                   68.035714285714290000
-                  850.446428571428600000
+                  669.017857142857100000
                   105.833333333333300000
                   151.190476190476200000)
                 XLColumn = 0
@@ -954,18 +913,59 @@ inherited fPayrollRegister: TfPayrollRegister
                 FontSize = 8
               end
               object QRShape20: TQRShape
-                Left = 314
+                Left = 266
                 Top = 25
                 Width = 1
                 Height = 38
                 Size.Values = (
                   143.630952380952400000
-                  1186.845238095238000000
+                  1005.416666666667000000
                   94.494047619047620000
                   3.779761904761905000)
                 XLColumn = 0
                 Shape = qrsVertLine
                 VertAdjust = 0
+              end
+              object QRShape4: TQRShape
+                Left = 351
+                Top = 25
+                Width = 1
+                Height = 38
+                Size.Values = (
+                  143.630952380952400000
+                  1326.696428571429000000
+                  94.494047619047620000
+                  3.779761904761905000)
+                XLColumn = 0
+                Shape = qrsVertLine
+                VertAdjust = 0
+              end
+              object QRLabel6: TQRLabel
+                Left = 402
+                Top = 36
+                Width = 43
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  1519.464285714286000000
+                  136.071428571428600000
+                  162.529761904761900000)
+                XLColumn = 0
+                Alignment = taCenter
+                AlignToBand = False
+                AutoSize = False
+                Caption = 'Late'
+                Color = clWhite
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                ParentFont = False
+                Transparent = False
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
               end
             end
             object QRGroup1: TQRGroup
@@ -1064,44 +1064,14 @@ inherited fPayrollRegister: TfPayrollRegister
                 MaxBreakChars = 0
                 FontSize = 8
               end
-              object QRDBText2: TQRDBText
-                Left = 131
-                Top = 1
-                Width = 41
-                Height = 10
-                Size.Values = (
-                  37.797619047619050000
-                  495.148809523809500000
-                  3.779761904761905000
-                  154.970238095238100000)
-                XLColumn = 0
-                Alignment = taRightJustify
-                AlignToBand = False
-                AutoSize = False
-                Color = clWhite
-                DataSet = dstRegister
-                DataField = 'monthly'
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindowText
-                Font.Height = -11
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                ParentFont = False
-                Transparent = False
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FullJustify = False
-                MaxBreakChars = 0
-                FontSize = 8
-              end
               object QRDBText4: TQRDBText
-                Left = 175
+                Left = 127
                 Top = 1
                 Width = 40
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  661.458333333333300000
+                  480.029761904761900000
                   3.779761904761905000
                   151.190476190476200000)
                 XLColumn = 0
@@ -1125,13 +1095,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 FontSize = 8
               end
               object QRDBText5: TQRDBText
-                Left = 272
+                Left = 224
                 Top = 1
                 Width = 40
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  1028.095238095238000000
+                  846.666666666666700000
                   3.779761904761905000
                   151.190476190476200000)
                 XLColumn = 0
@@ -1155,13 +1125,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 FontSize = 8
               end
               object QRDBText6: TQRDBText
-                Left = 318
+                Left = 270
                 Top = 1
                 Width = 40
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  1201.964285714286000000
+                  1020.535714285714000000
                   3.779761904761905000
                   151.190476190476200000)
                 XLColumn = 0
@@ -1185,13 +1155,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 FontSize = 8
               end
               object QRDBText7: TQRDBText
-                Left = 362
+                Left = 314
                 Top = 1
                 Width = 36
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  1368.273809523810000000
+                  1186.845238095238000000
                   3.779761904761905000
                   136.071428571428600000)
                 XLColumn = 0
@@ -1215,13 +1185,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 FontSize = 8
               end
               object QRDBText8: TQRDBText
-                Left = 402
+                Left = 354
                 Top = 1
                 Width = 43
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  1519.464285714286000000
+                  1338.035714285714000000
                   3.779761904761905000
                   162.529761904761900000)
                 XLColumn = 0
@@ -1425,13 +1395,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 FontSize = 8
               end
               object QRDBText15: TQRDBText
-                Left = 225
+                Left = 177
                 Top = 1
                 Width = 40
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  850.446428571428600000
+                  669.017857142857100000
                   3.779761904761905000
                   151.190476190476200000)
                 XLColumn = 0
@@ -1512,6 +1482,36 @@ inherited fPayrollRegister: TfPayrollRegister
                   '_allow)'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRDBText2: TQRDBText
+                Left = 402
+                Top = 1
+                Width = 43
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  1519.464285714286000000
+                  3.779761904761905000
+                  162.529761904761900000)
+                XLColumn = 0
+                Alignment = taRightJustify
+                AlignToBand = False
+                AutoSize = False
+                Color = clWhite
+                DataSet = dstRegister
+                DataField = 'late'
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                ParentFont = False
+                Transparent = False
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FullJustify = False
+                MaxBreakChars = 0
                 FontSize = 8
               end
             end
@@ -1686,13 +1686,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 FontSize = 8
               end
               object QRExpr7: TQRExpr
-                Left = 220
+                Left = 172
                 Top = 5
                 Width = 45
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
-                  831.547619047619000000
+                  650.119047619047600000
                   18.898809523809520000
                   170.089285714285700000)
                 XLColumn = 0
@@ -1714,13 +1714,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 FontSize = 8
               end
               object QRExpr8: TQRExpr
-                Left = 315
+                Left = 267
                 Top = 5
                 Width = 43
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
-                  1190.625000000000000000
+                  1009.196428571429000000
                   18.898809523809520000
                   162.529761904761900000)
                 XLColumn = 0
@@ -1742,13 +1742,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 FontSize = 8
               end
               object QRExpr9: TQRExpr
-                Left = 360
+                Left = 312
                 Top = 5
                 Width = 38
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
-                  1360.714285714286000000
+                  1179.285714285714000000
                   18.898809523809520000
                   143.630952380952400000)
                 XLColumn = 0
@@ -1770,13 +1770,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 FontSize = 8
               end
               object QRExpr10: TQRExpr
-                Left = 400
+                Left = 352
                 Top = 5
                 Width = 45
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
-                  1511.904761904762000000
+                  1330.476190476190000000
                   18.898809523809520000
                   170.089285714285700000)
                 XLColumn = 0
@@ -1826,13 +1826,13 @@ inherited fPayrollRegister: TfPayrollRegister
                 FontSize = 8
               end
               object QRExpr12: TQRExpr
-                Left = 170
+                Left = 122
                 Top = 5
                 Width = 45
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
-                  642.559523809523800000
+                  461.130952380952400000
                   18.898809523809520000
                   170.089285714285700000)
                 XLColumn = 0
@@ -1853,42 +1853,14 @@ inherited fPayrollRegister: TfPayrollRegister
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
               end
-              object QRExpr15: TQRExpr
-                Left = 127
-                Top = 5
-                Width = 45
-                Height = 12
-                Size.Values = (
-                  45.357142857142860000
-                  480.029761904761900000
-                  18.898809523809520000
-                  170.089285714285700000)
-                XLColumn = 0
-                Alignment = taRightJustify
-                AlignToBand = False
-                AutoSize = False
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clBlack
-                Font.Height = -11
-                Font.Name = 'Tahoma'
-                Font.Style = []
-                Color = clWhite
-                ParentFont = False
-                ResetAfterPrint = True
-                Transparent = False
-                Expression = 'FORMATNUMERIC('#39'###,##0.00'#39',SUM(monthly))'
-                ExportAs = exptText
-                WrapStyle = BreakOnSpaces
-                FontSize = 8
-              end
               object QRExpr17: TQRExpr
-                Left = 269
+                Left = 221
                 Top = 5
                 Width = 43
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
-                  1016.755952380952000000
+                  835.327380952381000000
                   18.898809523809520000
                   162.529761904761900000)
                 XLColumn = 0
@@ -1963,6 +1935,34 @@ inherited fPayrollRegister: TfPayrollRegister
                 Expression = 
                   'FORMATNUMERIC('#39'###,##0.00;(###,##0.00);-'#39',SUM(allowance - adjust' +
                   'ment_allow))'
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 8
+              end
+              object QRExpr15: TQRExpr
+                Left = 402
+                Top = 5
+                Width = 43
+                Height = 12
+                Size.Values = (
+                  45.357142857142860000
+                  1519.464285714286000000
+                  18.898809523809520000
+                  162.529761904761900000)
+                XLColumn = 0
+                Alignment = taRightJustify
+                AlignToBand = False
+                AutoSize = False
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -11
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                Color = clWhite
+                ParentFont = False
+                ResetAfterPrint = True
+                Transparent = False
+                Expression = 'FORMATNUMERIC('#39'###,##0.00;(###,##0.00);-'#39',SUM(late))'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
@@ -2457,6 +2457,7 @@ inherited fPayrollRegister: TfPayrollRegister
     object dstRegisterlate: TFMTBCDField
       FieldName = 'late'
       ReadOnly = True
+      DisplayFormat = '###,##0.00;(###,##0.00);-'
       Precision = 34
       Size = 15
     end
