@@ -94,13 +94,13 @@ implementation
 
 function GetISyncWeb(UseWSDL: Boolean; Addr: string; HTTPRIO: THTTPRIO): ISyncWeb;
 const
-  //defWSDL = 'http://vserver275.3essentials.com/cgi-bin/SyncWeb.exe/wsdl/ISyncWeb';
-  //defURL  = 'http://vserver275.3essentials.com/cgi-bin/SyncWeb.exe/soap/ISyncWeb';
+  defWSDL = 'http://vserver275.3essentials.com/cgi-bin/SyncWeb.exe/wsdl/ISyncWeb';
+  defURL  = 'http://vserver275.3essentials.com/cgi-bin/SyncWeb.exe/soap/ISyncWeb';
   //defWSDL = 'http://localhost/SyncService/cgi-bin/SyncWeb.exe/wsdl/ISyncWeb';
   //defURL  = 'http://localhost/SyncService/cgi-bin/SyncWeb.exe/soap/ISyncWeb';
 
-  defWSDL = 'http://localhost/SyncWeb.exe/wsdl/ISyncWeb';
-  defURL  = 'http://localhost/SyncWeb.exe/soap/ISyncWeb';
+  //defWSDL = 'http://localhost/SyncWeb.exe/wsdl/ISyncWeb';
+  //defURL  = 'http://localhost/SyncWeb.exe/soap/ISyncWeb';
 
   //defWSDL = 'http://localhost/SyncService/cgi-bin/SyncWeb.exe/wsdl/ISyncWeb';
   //defURL  = 'http://localhost/SyncService/cgi-bin/SyncWeb.exe/soap/ISyncWeb';

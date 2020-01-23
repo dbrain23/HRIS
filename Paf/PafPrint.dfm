@@ -100,6 +100,7 @@ inherited fPafPrint: TfPafPrint
           end
           inherited qrMain: TQuickRep
             Left = 20
+            Top = -10
             DataSet = dmPaf.dstPafPrint
             Functions.DATA = (
               '0'
@@ -114,6 +115,7 @@ inherited fPafPrint: TfPafPrint
               88.900000000000000000
               0.000000000000000000)
             ExplicitLeft = 20
+            ExplicitTop = -10
             object SummaryBand1: TQRBand
               Left = 24
               Top = 69
@@ -2015,6 +2017,36 @@ inherited fPafPrint: TfPafPrint
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
+              end
+              object QRLabel17: TQRLabel
+                Left = 209
+                Top = 580
+                Width = 310
+                Height = 29
+                Size.Values = (
+                  109.613095238095200000
+                  789.970238095238100000
+                  2192.261904761905000000
+                  1171.726190476190000000)
+                XLColumn = 0
+                Alignment = taRightJustify
+                AlignToBand = False
+                AutoSize = False
+                Caption = 
+                  'Note: This is a system-generated form and is electronically-appr' +
+                  'oved by the authorized officer. Signature of the approving offic' +
+                  'er is no longer required.'
+                Color = clWhite
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -12
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                ParentFont = False
+                Transparent = False
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 9
               end
             end
             object TitleBand1: TQRBand

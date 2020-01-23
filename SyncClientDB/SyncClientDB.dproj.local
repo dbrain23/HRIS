@@ -12,11 +12,11 @@
     <Transaction>2014/07/06 10:18:08.000.975,=C:\Users\Bryan\Documents\RAD Studio\Projects\WebModuleUnit1.pas</Transaction>
     <Transaction>2014/07/26 19:07:43.000.409,=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2014/07/26 19:08:15.000.566,=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2014/07/26 19:11:35.000.880,C:\_Projects\_ASCC\SyncClient\SyncClientMain.dfm=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2014/07/26 19:11:35.000.880,C:\_Projects\_ASCC\SyncClient\SyncClientMain.pas=C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2014/07/26 19:11:44.000.477,C:\_Projects\_ASCC\SyncClient\SyncClient.dproj=C:\Users\Bryan\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2014/09/16 20:35:47.000.516,C:\_Projects\_ASCC\SyncClient\SyncClient.dproj=C:\_Projects\_ASCC\SyncClientDB\SyncClientDB.dproj</Transaction>
-    <Transaction>2014/09/16 20:37:27.000.121,C:\_Projects\_ASCC\SyncClientDB\SyncClientDBMain.dfm=C:\_Projects\_ASCC\SyncClient\SyncClientMain.dfm</Transaction>
-    <Transaction>2014/09/16 20:37:27.000.121,C:\_Projects\_ASCC\SyncClientDB\SyncClientDBMain.pas=C:\_Projects\_ASCC\SyncClient\SyncClientMain.pas</Transaction>
+    <Transaction>2014/07/26 19:11:35.000.880,C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.dfm=C:\_Projects\_ASCC\SyncClient\SyncClientMain.dfm</Transaction>
+    <Transaction>2014/07/26 19:11:35.000.880,C:\Users\Bryan\Documents\RAD Studio\Projects\Unit1.pas=C:\_Projects\_ASCC\SyncClient\SyncClientMain.pas</Transaction>
+    <Transaction>2014/07/26 19:11:44.000.477,C:\Users\Bryan\Documents\RAD Studio\Projects\Project1.dproj=C:\_Projects\_ASCC\SyncClient\SyncClient.dproj</Transaction>
+    <Transaction>2014/09/16 20:35:47.000.516,C:\_Projects\_ASCC\SyncClientDB\SyncClientDB.dproj=C:\_Projects\_ASCC\SyncClient\SyncClient.dproj</Transaction>
+    <Transaction>2014/09/16 20:37:27.000.121,C:\_Projects\_ASCC\SyncClient\SyncClientMain.pas=C:\_Projects\_ASCC\SyncClientDB\SyncClientDBMain.pas</Transaction>
+    <Transaction>2014/09/16 20:37:27.000.121,C:\_Projects\_ASCC\SyncClient\SyncClientMain.dfm=C:\_Projects\_ASCC\SyncClientDB\SyncClientDBMain.dfm</Transaction>
   </Transactions>
 </BorlandProject>

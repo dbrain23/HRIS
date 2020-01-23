@@ -118,6 +118,7 @@ type
     Label2: TLabel;
     cmbAreaManager: TcxComboBox;
     lblAreaManager: TQRLabel;
+    QRLabel17: TQRLabel;
     procedure bBackClick(Sender: TObject);
     procedure btnSignatoriesClick(Sender: TObject);
     procedure btnBranchManagerClick(Sender: TObject);
