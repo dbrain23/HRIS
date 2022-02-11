@@ -142,6 +142,8 @@ begin
 
     Application.ProcessMessages;
 
+    qrMain.DataSet.DisableControls;
+
     qrMain.DataSet.Close;
     qrMain.DataSet.Open;
 
@@ -164,6 +166,7 @@ begin
 
   finally
     Screen.Cursor := crDefault;
+    qrMain.DataSet.EnableControls;
   end;
 end;
 

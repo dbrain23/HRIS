@@ -155,9 +155,7 @@ begin
   begin
     dt := dmTimeAttendance.dstDtrEmployee.FieldByName('dtr_date').AsDateTime;
 
-    if DayOfTheWeek(dt) = 6 then minTime := EncodeTime(8,0,0,0)
-    else minTime := EncodeTime(8,30,0,0);
-
+    minTime := EncodeTime(8,0,0,0);
     maxTime := EncodeTime(12,0,0,0);
 
     dteOverrideTimeInAM.EditValue := minTime;
@@ -166,7 +164,7 @@ begin
   else if (Sender as TcxButton).Name = 'btnOverridePMDefault' then
   begin
     minTime := EncodeTime(13,0,0,0);
-    maxTime := EncodeTime(17,30,0,0);
+    maxTime := EncodeTime(17,0,0,0);
 
     dteOverrideTimeInPM.EditValue := minTime;
     dteOverrideTimeOutPM.EditValue := maxTime;
@@ -679,8 +677,8 @@ var
   defaultTimeStart, defaultTimeEnd: TDateTime;
 begin
   inherited;
-  defaultTimeStart := EncodeTime(8,30,0,0);
-  defaultTimeEnd := EncodeTime(9,0,0,0);
+  defaultTimeStart := EncodeTime(8,0,0,0);
+  defaultTimeEnd := EncodeTime(8,30,0,0);
 
   if dteUnderTimeFromAM.Text = '' then
     dteUnderTimeFromAM.EditValue := defaultTimeStart;

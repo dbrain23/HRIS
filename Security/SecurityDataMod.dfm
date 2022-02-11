@@ -5,12 +5,13 @@ object dmSecurity: TdmSecurity
   Height = 369
   Width = 572
   object acSecurity: TADOConnection
+    CommandTimeout = 120
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
-      'fo=False;User ID=sa;Initial Catalog=HRIS;Data Source=BRYAN\DEVEL' +
-      'OPMENT;Use Procedure for Prepare=1;Auto Translate=True;Packet Si' +
-      'ze=4096;Workstation ID=BRYAN-ULTRA;Use Encryption for Data=False' +
-      ';Tag with column collation when possible=False;'
+      'fo=False;User ID=sa;Initial Catalog=HRIS_Live;Data Source=BRYAN\' +
+      'DEVELOPMENT;Use Procedure for Prepare=1;Auto Translate=True;Pack' +
+      'et Size=4096;Workstation ID=BRYAN-ULTRA;Use Encryption for Data=' +
+      'False;Tag with column collation when possible=False;'
     LoginPrompt = False
     Provider = 'SQLOLEDB.1'
     BeforeConnect = acSecurityBeforeConnect

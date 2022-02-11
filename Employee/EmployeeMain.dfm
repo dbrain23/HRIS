@@ -399,6 +399,32 @@ inherited fEmployeeMain: TfEmployeeMain
             HotTrackFont.Name = 'Tahoma'
             HotTrackFont.Style = []
           end
+          object JvGroupHeader2: TJvGroupHeader
+            Left = 406
+            Top = 320
+            Width = 319
+            Height = 18
+            Caption = 'Bank Account No'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clHighlight
+            Font.Height = -12
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+          end
+          object JvLabel4: TJvLabel
+            Left = 422
+            Top = 342
+            Width = 71
+            Height = 14
+            Caption = 'Account No.'
+            Transparent = True
+            HotTrackFont.Charset = DEFAULT_CHARSET
+            HotTrackFont.Color = clWindowText
+            HotTrackFont.Height = -11
+            HotTrackFont.Name = 'Tahoma'
+            HotTrackFont.Style = []
+          end
           object edIdNum: TcxDBTextEdit
             Left = 138
             Top = 17
@@ -650,6 +676,15 @@ inherited fEmployeeMain: TfEmployeeMain
             Properties.ValueUnchecked = '0'
             TabOrder = 0
             Width = 75
+          end
+          object cxDBTextEdit1: TcxDBTextEdit
+            Left = 517
+            Top = 336
+            DataBinding.DataField = 'bank_account_no'
+            DataBinding.DataSource = dmEmployee.dscEmployee
+            Properties.MaxLength = 0
+            TabOrder = 22
+            Width = 165
           end
         end
       end

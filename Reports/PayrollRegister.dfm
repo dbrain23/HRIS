@@ -2,6 +2,7 @@ inherited fPayrollRegister: TfPayrollRegister
   Caption = 'fPayrollRegister'
   ClientHeight = 483
   ClientWidth = 976
+  ExplicitLeft = -43
   ExplicitWidth = 992
   ExplicitHeight = 522
   PixelsPerInch = 96
@@ -1478,7 +1479,7 @@ inherited fPayrollRegister: TfPayrollRegister
                 ResetAfterPrint = True
                 Transparent = False
                 Expression = 
-                  'FORMATNUMERIC('#39'###,##0.00;(###,##0.00);-'#39',allowance - adjustment' +
+                  'FORMATNUMERIC('#39'###,##0.00;(###,##0.00);-'#39',allowance + adjustment' +
                   '_allow)'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
@@ -1820,7 +1821,7 @@ inherited fPayrollRegister: TfPayrollRegister
                 ParentFont = False
                 ResetAfterPrint = True
                 Transparent = False
-                Expression = 'FORMATNUMERIC('#39'###,##0.00;(###,##0.00);-'#39',SUM(others))'
+                Expression = 'FORMATNUMERIC('#39'###,##0.00;(###,##0.00);-'#39',SUM(adjustment))'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
@@ -1933,7 +1934,7 @@ inherited fPayrollRegister: TfPayrollRegister
                 ResetAfterPrint = True
                 Transparent = False
                 Expression = 
-                  'FORMATNUMERIC('#39'###,##0.00;(###,##0.00);-'#39',SUM(allowance - adjust' +
+                  'FORMATNUMERIC('#39'###,##0.00;(###,##0.00);-'#39',SUM(allowance + adjust' +
                   'ment_allow))'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
@@ -2527,11 +2528,6 @@ inherited fPayrollRegister: TfPayrollRegister
       Precision = 38
       Size = 2
     end
-    object dstRegisteradjustment_allow: TIntegerField
-      FieldName = 'adjustment_allow'
-      ReadOnly = True
-      DisplayFormat = '###,##0.00;(###,##0.00);-'
-    end
     object dstRegistergross_salary: TFMTBCDField
       FieldName = 'gross_salary'
       ReadOnly = True
@@ -2557,6 +2553,12 @@ inherited fPayrollRegister: TfPayrollRegister
     object dstRegisterothers: TIntegerField
       FieldName = 'others'
       ReadOnly = True
+    end
+    object dstRegisteradjustment_allow: TFMTBCDField
+      FieldName = 'adjustment_allow'
+      DisplayFormat = '###,##0.00;(###,##0.00);-'
+      Precision = 38
+      Size = 2
     end
   end
 end

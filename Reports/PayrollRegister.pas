@@ -98,7 +98,6 @@ type
     QRShape6: TQRShape;
     QRShape12: TQRShape;
     dstRegistergross_allowance: TFMTBCDField;
-    dstRegisteradjustment_allow: TIntegerField;
     QRDBText13: TQRDBText;
     dstRegistergross_salary: TFMTBCDField;
     PageFooterBand1: TQRBand;
@@ -154,6 +153,7 @@ type
     QRLabel6: TQRLabel;
     QRDBText2: TQRDBText;
     QRExpr15: TQRExpr;
+    dstRegisteradjustment_allow: TFMTBCDField;
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
   private

@@ -30,6 +30,7 @@ type
     vListadjustmenttype_name: TcxGridDBColumn;
     vListadjustmenttype_description: TcxGridDBColumn;
     vListis_deduction: TcxGridDBColumn;
+    vListis_allowance_adjustment: TcxGridDBColumn;
   private
     { Private declarations }
   public

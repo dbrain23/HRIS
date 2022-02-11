@@ -2,6 +2,7 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
   Caption = 'fDeductionSummaryReport'
   ClientHeight = 586
   ClientWidth = 994
+  ExplicitLeft = -78
   ExplicitWidth = 1010
   ExplicitHeight = 625
   PixelsPerInch = 96
@@ -301,23 +302,23 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
                 FontSize = 8
               end
               object QRExpr2: TQRExpr
-                Left = 690
+                Left = 763
                 Top = 1
-                Width = 196
+                Width = 123
                 Height = 10
                 Size.Values = (
                   37.797619047619050000
-                  2608.035714285714000000
+                  2883.958333333333000000
                   3.779761904761905000
-                  740.833333333333300000)
+                  464.910714285714300000)
                 XLColumn = 0
                 Alignment = taRightJustify
                 AlignToBand = False
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clWindowText
-                Font.Height = -11
+                Font.Height = -8
                 Font.Name = 'Tahoma'
-                Font.Style = [fsBold]
+                Font.Style = []
                 Color = clWhite
                 ParentFont = False
                 ResetAfterPrint = False
@@ -325,7 +326,7 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
                 Expression = 'FORMATNUMERIC('#39'###,##0.00'#39',total_deduction)'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
-                FontSize = 8
+                FontSize = 6
               end
             end
             object QRGroup1: TQRGroup
@@ -410,23 +411,23 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
                 VertAdjust = 0
               end
               object QRExpr1: TQRExpr
-                Left = 665
-                Top = 3
-                Width = 221
+                Left = 748
+                Top = 7
+                Width = 138
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
-                  2513.541666666667000000
-                  11.339285714285710000
-                  835.327380952381000000)
+                  2827.261904761905000000
+                  26.458333333333330000
+                  521.607142857142900000)
                 XLColumn = 0
                 Alignment = taRightJustify
                 AlignToBand = False
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
-                Font.Height = -11
+                Font.Height = -8
                 Font.Name = 'Tahoma'
-                Font.Style = [fsBold]
+                Font.Style = []
                 Color = clWhite
                 ParentFont = False
                 ResetAfterPrint = True
@@ -434,7 +435,7 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
                 Expression = 'FORMATNUMERIC('#39'###,##0.00'#39',SUM(total_deduction))'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
-                FontSize = 8
+                FontSize = 6
               end
             end
             object SummaryBand: TQRBand
@@ -468,23 +469,23 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
                 VertAdjust = 0
               end
               object QRExpr4: TQRExpr
-                Left = 665
+                Left = 748
                 Top = 7
-                Width = 221
+                Width = 138
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
-                  2513.541666666667000000
+                  2827.261904761905000000
                   26.458333333333330000
-                  835.327380952381000000)
+                  521.607142857142900000)
                 XLColumn = 0
                 Alignment = taRightJustify
                 AlignToBand = False
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
-                Font.Height = -11
+                Font.Height = -8
                 Font.Name = 'Tahoma'
-                Font.Style = [fsBold]
+                Font.Style = []
                 Color = clWhite
                 ParentFont = False
                 ResetAfterPrint = False
@@ -492,7 +493,7 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
                 Expression = 'FORMATNUMERIC('#39'###,##0.00'#39',SUM(total_deduction))'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
-                FontSize = 8
+                FontSize = 6
               end
               object QRLabel3: TQRLabel
                 Left = 6

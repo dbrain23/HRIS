@@ -18,8 +18,11 @@ var
 begin
   queryObj := TADOQuery.Create(nil);
   queryObj.ConnectionString := TSysConn.Create.ConnString;
+  //queryObj.CommandTimeout := 60;
+  queryObj.DisableControls;
   queryObj.SQL.Add(sql);
   queryObj.ExecSQL;
+  queryObj.EnableControls;
   queryObj.Free;
 end;
 

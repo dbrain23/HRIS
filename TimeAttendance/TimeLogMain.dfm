@@ -15,6 +15,8 @@ inherited fTimeLogMain: TfTimeLogMain
       ExplicitHeight = 538
       inherited TabSheet1: TTabSheet
         Caption = 'Timelog Management'
+        ExplicitLeft = 4
+        ExplicitTop = 25
         ExplicitWidth = 1014
         ExplicitHeight = 509
         inherited pDetails: TJvPanel
@@ -215,13 +217,23 @@ inherited fTimeLogMain: TfTimeLogMain
             URLUnderlineOnHover = True
           end
           inherited cmbMonth: TcxComboBox
-            Properties.OnChange = nil
+            ExplicitHeight = 22
+          end
+          inherited cmbYear: TcxComboBox
+            ExplicitHeight = 22
+          end
+          inherited cmbResourceTypes: TcxComboBox
+            ExplicitHeight = 22
           end
           inherited btnPrevMonth: TcxButton
             LookAndFeel.SkinName = ''
           end
           inherited btnNextMonth: TcxButton
             LookAndFeel.SkinName = ''
+          end
+          inherited btnRefresh: TcxButton
+            LookAndFeel.SkinName = ''
+            TabOrder = 21
           end
           object Panel1: TPanel
             Left = 43

@@ -196,25 +196,15 @@ begin
     if DataSet.Name = 'dstDtrOverrideAM' then
     begin
       // dt := DataSet.FieldByName('dtr_date').AsDateTime;
-
-      if DayOfTheWeek(dstDtrEmployee.Parameters.ParamByName('@dtr_date').Value) = 6 then
-      begin
-        minTime := EncodeTime(8,0,0,0);
-        maxTime := EncodeTime(12,0,0,0);
-        validityStr := 'Valid value is from 8:00 AM to 12:00 PM.'
-      end
-      else
-      begin
-        minTime := EncodeTime(8,30,0,0);
-        maxTime := EncodeTime(12,0,0,0);
-        validityStr := 'Valid value is from 8:30 AM to 12:00 PM.'
-      end;
+      minTime := EncodeTime(8,0,0,0);
+      maxTime := EncodeTime(12,0,0,0);
+      validityStr := 'Valid value is from 8:00 AM to 12:00 PM.'
     end
     else if DataSet.Name = 'dstDtrOverridePM' then
     begin
       minTime := EncodeTime(13,0,0,0);
-      maxTime := EncodeTime(17,30,0,0);
-      validityStr := 'Valid value is from 1:00 PM to 5:30 PM.'
+      maxTime := EncodeTime(17,0,0,0);
+      validityStr := 'Valid value is from 1:00 PM to 5:00 PM.'
     end;
 
     // check if time in and/or time out is valid..
@@ -414,8 +404,7 @@ begin
     Abort;
   end;
 
-  // For Saturdays.. time is between 8:00am and 12:00pm
-  if DayOfTheWeek(dstDtrEmployee.Parameters.ParamByName('@dtr_date').Value) = 6 then
+  if DataSet.Name = 'dstDtrUndertimeAM' then
   begin
     if ((CompareTime(DataSet.FieldByName('time_from').AsDateTime,
           EncodeTime(8,0,0,0)) = -1) or
@@ -427,25 +416,12 @@ begin
       Abort;
     end;
   end
-  // For weekdays AM.. regular time is 8:30 to 12pm
-  else if DataSet.Name = 'dstDtrUndertimeAM' then
-  begin
-    if ((CompareTime(DataSet.FieldByName('time_from').AsDateTime,
-          EncodeTime(8,30,0,0)) = -1) or
-          (CompareTime(DataSet.FieldByName('time_from').AsDateTime,
-          EncodeTime(12,0,0,0)) = 1)) then
-    begin
-      MessageDlg('Invalid value for start time. Value should be between 8:30 AM to 12:00 PM.',
-          mtError,[mbOk],0);
-      Abort;
-    end;
-  end
   else if (CompareTime(DataSet.FieldByName('time_from').AsDateTime,
     EncodeTime(13,00,0,0)) = -1) or
     (CompareTime(DataSet.FieldByName('time_from').AsDateTime,
-    EncodeTime(17,30,0,0)) = 1) then
+    EncodeTime(17,0,0,0)) = 1) then
   begin
-    MessageDlg('Invalid value for start time. Value should be between 1:00 PM to 5:30 PM.',
+    MessageDlg('Invalid value for start time. Value should be between 1:00 PM to 5:00 PM.',
         mtError,[mbOk],0);
     Abort;
   end;

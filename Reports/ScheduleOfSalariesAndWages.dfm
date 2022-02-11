@@ -959,10 +959,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 ParentFont = False
                 ResetAfterPrint = True
                 Transparent = False
-                Expression = 
-                  'FORMATNUMERIC('#39'###,##0.00'#39',SUM((dstSchedOfSalaries.salaries_and_' +
-                  'wages + (dstSchedOfSalaries.adjustment + dstSchedOfSalaries.leav' +
-                  'es_without_pay +  dstSchedOfSalaries.undertime))))'
+                Expression = 'FORMATNUMERIC('#39'###,###,##0.00'#39',SUM(total_salaries_and_wages))'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
@@ -990,9 +987,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 ParentFont = False
                 ResetAfterPrint = True
                 Transparent = False
-                Expression = 
-                  'FORMATNUMERIC('#39'###,##0.00'#39',SUM((dstSchedOfSalaries.staff_benefit' +
-                  's - dstSchedOfSalaries.adjustment_staff_benefits)))'
+                Expression = 'FORMATNUMERIC('#39'###,###,##0.00'#39',SUM(total_staff_benefits))'
                 ExportAs = exptText
                 WrapStyle = BreakOnSpaces
                 FontSize = 8

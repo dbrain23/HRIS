@@ -52,7 +52,7 @@ inherited fAdjustmentType: TfAdjustmentType
             object vListadjustmenttype_description: TcxGridDBColumn
               Caption = 'Description'
               DataBinding.FieldName = 'adjustmenttype_description'
-              MinWidth = 350
+              MinWidth = 250
               Options.Filtering = False
               Options.FilteringFilteredItemsList = False
               Options.FilteringMRUItemsList = False
@@ -64,7 +64,7 @@ inherited fAdjustmentType: TfAdjustmentType
               Options.Grouping = False
               Options.HorzSizing = False
               Options.Moving = False
-              Width = 350
+              Width = 250
             end
             object vListis_deduction: TcxGridDBColumn
               Caption = 'Deduction'
@@ -74,7 +74,7 @@ inherited fAdjustmentType: TfAdjustmentType
               Properties.ValueChecked = '1'
               Properties.ValueGrayed = '0'
               Properties.ValueUnchecked = 0
-              MinWidth = 64
+              MinWidth = 74
               Options.Filtering = False
               Options.FilteringFilteredItemsList = False
               Options.FilteringMRUItemsList = False
@@ -86,6 +86,17 @@ inherited fAdjustmentType: TfAdjustmentType
               Options.Grouping = False
               Options.HorzSizing = False
               Options.Moving = False
+            end
+            object vListis_allowance_adjustment: TcxGridDBColumn
+              Caption = 'Allowance only'
+              DataBinding.FieldName = 'is_allowance_adjustment'
+              PropertiesClassName = 'TcxCheckBoxProperties'
+              Properties.DisplayChecked = 'true'
+              Properties.DisplayGrayed = 'false'
+              Properties.ImmediatePost = True
+              Properties.NullStyle = nssUnchecked
+              Properties.ValueGrayed = '0'
+              Width = 90
             end
           end
         end
