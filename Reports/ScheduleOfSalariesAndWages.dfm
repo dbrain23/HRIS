@@ -1380,5 +1380,10 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
       ReadOnly = True
       Size = 23
     end
+    object dstSchedOfSalariesadjustment_allowance: TFMTBCDField
+      FieldName = 'adjustment_allowance'
+      Precision = 38
+      Size = 2
+    end
   end
 end

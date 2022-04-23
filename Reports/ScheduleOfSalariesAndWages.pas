@@ -84,6 +84,7 @@ type
     dstSchedOfSalariestotal_salaries_and_wages: TFMTBCDField;
     dstSchedOfSalariestotal: TFMTBCDField;
     dstSchedOfSalariespayroll_period: TStringField;
+    dstSchedOfSalariesadjustment_allowance: TFMTBCDField;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }

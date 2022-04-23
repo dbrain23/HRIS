@@ -46,13 +46,13 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <VerInfo_Release>3</VerInfo_Release>
-        <VerInfo_Build>17</VerInfo_Build>
+        <VerInfo_Release>9</VerInfo_Release>
+        <VerInfo_Build>53</VerInfo_Build>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_MajorVer>3</VerInfo_MajorVer>
         <Manifest_File>None</Manifest_File>
         <VerInfo_Locale>3081</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=ASCC;FileDescription=;FileVersion=3.0.3.17;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=HRIS.exe;ProductName=Human Resource Integrated System;ProductVersion=3.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=ASCC;FileDescription=;FileVersion=3.0.9.53;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=HRIS.exe;ProductName=Human Resource Integrated System;ProductVersion=3.0.0.0;Comments=</VerInfo_Keys>
         <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
         <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
@@ -113,7 +113,7 @@
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
         <VerInfo_Release>9</VerInfo_Release>
-        <VerInfo_Build>52</VerInfo_Build>
+        <VerInfo_Build>53</VerInfo_Build>
         <Icon_MainIcon>..\_images\HRIS.ico</Icon_MainIcon>
         <DCC_ExeOutput>..\_bin</DCC_ExeOutput>
         <DCC_BplOutput>..\_bpl</DCC_BplOutput>
@@ -121,7 +121,7 @@
         <DCC_DcpOutput>..\_dcp</DCC_DcpOutput>
         <DCC_DcuOutput>..\_dcu</DCC_DcuOutput>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=Alano and Sons Credit Corporation;FileDescription=;FileVersion=3.0.9.52;InternalName=Human Resource Integrated System;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=3.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=Alano and Sons Credit Corporation;FileDescription=;FileVersion=3.0.9.53;InternalName=Human Resource Integrated System;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=3.0.0.0;Comments=</VerInfo_Keys>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
