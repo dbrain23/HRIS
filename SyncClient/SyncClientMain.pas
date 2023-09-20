@@ -61,7 +61,8 @@ begin
     Reg.RootKey := HKEY_LOCAL_MACHINE;
     if Reg.OpenKey('\SYSTEM\CurrentControlSet\Services\' + Name, false) then
     begin
-      Reg.WriteString('Description', 'ASCC client database synchronization service.');
+      //Reg.WriteString('Description', 'ASCC client database synchronization service.');
+      Reg.WriteString('Description', 'Seven Grand client database synchronization service.');
       Reg.CloseKey;
     end;
   finally
@@ -96,9 +97,9 @@ begin
 
       case Task of
         1: SendClientMessage;
-        //2: GetServerMessage;
-        //3: SetServerMessageStatus;
-        //4: GetServerMessageStatus;
+        2: GetServerMessage;
+        3: SetServerMessageStatus;
+        4: GetServerMessageStatus;
       end;
 
       if Task = TASKS then
@@ -228,6 +229,7 @@ var
   path: string;
   dstMessageIn: TADODataSet;
   wsMessage: ISyncWebWSDL.TWSMessage;
+  res: string;
 begin
   CoInitialize(nil);
 
@@ -238,8 +240,8 @@ begin
 
       wsMessage := GetISyncWeb.GetMessage(FLocationCode);
 
-      //LogSync(TSysConn.Create(path).ConnString, path);
-      //LogSync(wsMessage.WSMessage, path);
+      // LogSync(TSysConn.Create(path).ConnString, path);
+      // LogSync(wsMessage.WSMessage, path);
 
       dstMessageIn := TADODataSet.Create(nil);
       dstMessageIn.ConnectionString := TSysConn.Create(path).ConnString;

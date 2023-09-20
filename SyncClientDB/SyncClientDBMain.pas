@@ -59,7 +59,8 @@ begin
     Reg.RootKey := HKEY_LOCAL_MACHINE;
     if Reg.OpenKey('\SYSTEM\CurrentControlSet\Services\' + Name, false) then
     begin
-      Reg.WriteString('Description', 'ASCC client database synchronization service.');
+      // Reg.WriteString('Description', 'ASCC client database synchronization service.');
+      Reg.WriteString('Description', 'Seven Grand client database synchronization service.');
       Reg.CloseKey;
     end;
   finally
@@ -125,7 +126,8 @@ begin
 
       FLocationCode := dstBranch.FieldByName(dstBranch.Fields[0].FieldName).AsString;
 
-      LogSyncDB('Alano and Sons database synchronisation service.', path);
+      // LogSyncDB('Alano and Sons database synchronisation service.', path);
+      LogSyncDB('Seven Grand database synchronisation service.', path);
       LogSyncDB('Service has started successfully.', path);
       LogSyncDB('Location code is ' + FLocationCode + '.', path);
 

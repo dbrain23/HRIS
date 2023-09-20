@@ -1,0 +1,81 @@
+Unit SyncDataMod;
+
+interface
+
+uses SysUtils, Classes, InvokeRegistry, Midas, SOAPMidas, SOAPDm, Data.DB,
+  Data.Win.ADODB, Datasnap.Provider, SysConn, Log;
+
+type
+  ISyncDataMod = interface(IAppServerSOAP)
+    ['{87EB79FD-B85B-4A03-95B0-DF319B48A06E}']
+  end;
+
+  TdmSync = class(TSoapDataModule, ISyncDataMod, IAppServerSOAP, IAppServer)
+    dspMessage: TDataSetProvider;
+    dstMessage: TADODataSet;
+    acSync: TADOConnection;
+    dstMessageOut: TADODataSet;
+    dspMessageOut: TDataSetProvider;
+    dspMessageStatus: TDataSetProvider;
+    dstMessageStatus: TADODataSet;
+    procedure SoapDataModuleCreate(Sender: TObject);
+    procedure acSyncBeforeConnect(Sender: TObject);
+    procedure acSyncConnectComplete(Connection: TADOConnection;
+      const Error: Error; var EventStatus: TEventStatus);
+  private
+  
+  public
+
+  end;
+
+implementation
+
+{$R *.DFM}
+
+procedure TSyncDataModCreateInstance(out obj: TObject);
+begin
+ obj := TdmSync.Create(nil);
+end;
+
+procedure TdmSync.acSyncBeforeConnect(Sender: TObject);
+begin
+
+//  acSync.ConnectionString := 'Provider=SQLOLEDB.1;Password=cnn;' +
+//                'Persist Security Info=False;' +
+//                'User ID=sa;Initial Catalog=HRISWeb' +
+//                ';Data Source=BRYAN\DEVELOPMENT' +
+//                ';Use Procedure for Prepare=1;' +
+//                'Auto Translate=True;Packet Size=4096;' +
+//                ';Use Encryption for Data=False;' +
+//                'Tag with column collation when possible=False;' +
+//                'MARS Connection=False;DataTypeCompatibility=0;' +
+//                'Trust Server Certificate=False';
+
+
+  acSync.ConnectionString := 'Provider=SQLOLEDB.1;Password=Genius!1@2#3;' +
+                'Persist Security Info=False;' +
+                'User ID=dev;Initial Catalog=SGStaging' +
+                ';Data Source=50.59.99.249' +
+                ';Use Procedure for Prepare=1;' +
+                'Auto Translate=True;Packet Size=4096;' +
+                ';Use Encryption for Data=False;' +
+                'Tag with column collation when possible=False;' +
+                'MARS Connection=False;DataTypeCompatibility=0;' +
+                'Trust Server Certificate=False';
+end;
+
+procedure TdmSync.acSyncConnectComplete(Connection: TADOConnection;
+  const Error: Error; var EventStatus: TEventStatus);
+begin
+  LogSync('Connection successful.', '');
+end;
+
+procedure TdmSync.SoapDataModuleCreate(Sender: TObject);
+begin
+  acSync.Open;
+end;
+
+initialization
+   InvRegistry.RegisterInvokableClass(TdmSync, TSyncDataModCreateInstance);
+   InvRegistry.RegisterInterface(TypeInfo(ISyncDataMod));
+end.

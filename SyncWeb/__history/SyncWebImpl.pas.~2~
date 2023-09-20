@@ -1,0 +1,216 @@
+{ Invokable implementation File for TSyncWeb which implements ISyncWeb }
+
+unit SyncWebImpl;
+
+interface
+
+uses Soap.InvokeRegistry, System.Types, Soap.XSBuiltIns, SyncWebIntf, SyncDataMod,
+  System.SysUtils;
+
+type
+
+  { TSyncWeb }
+  TSyncWeb = class(TInvokableClass, ISyncWeb)
+  public
+    function SendMessage(const wsMessage: TWSMessage): string; stdcall;
+    function GetMessage(const destinationLocation: string): TWSMessage; stdcall;
+
+    function SetMessageStatus(const eventObject: string;
+      const pkEventObject: string; const status: string;
+      const sourceLocation, destinationLocation: string): string; stdcall;
+
+    function GetMessageStatus(const eventObject: string;
+      const pkEventObject: string;
+      const sourceLocation, destinationLocation: string): string; stdcall;
+
+    function ConnectDB: string; stdcall;
+  end;
+
+implementation
+
+function TSyncWeb.SendMessage(const wsMessage: TWSMessage): string; stdcall;
+var
+  dm: TdmSync;
+  sql: string;
+begin
+  // this function calls the stored proc "dbo.sync_generate_xml"
+  // instantiates the WSMessage object
+  // and sends it to the web service
+
+  Result := '';
+
+  dm := TdmSync.Create(nil);
+
+  try
+    try
+      sql := 'select * from wsmessage where ' +
+              ' source_location = ''' + wsMessage.SourceLocation + '''' +
+              ' and destination_location = ''' + wsMessage.DestinationLocation + '''' +
+              ' and event_object = ''' + wsMessage.EventObject + '''' +
+              ' and pk_event_object = ''' + (wsMessage.PkEventObject) + '''';
+
+      dm.dstMessage.CommandText := sql;
+
+      dm.dstMessage.Open;
+
+      // the SQL above simply checks if the record already exists
+      // append or edit accordingly
+
+      if dm.dstMessage.RecordCount = 0 then
+        dm.dstMessage.Append
+      else
+        dm.dstMessage.Edit;
+
+      dm.dstMessage.FieldByName('event_object').AsString :=
+        wsMessage.EventObject;
+      dm.dstMessage.FieldByName('pk_event_object').AsString :=
+        wsMessage.PkEventObject;
+      dm.dstMessage.FieldByName('ws_message').AsString :=
+        wsMessage.WSMessage;
+      dm.dstMessage.FieldByName('ws_message_date').AsDateTime :=
+        wsMessage.WSMessageDate;
+      dm.dstMessage.FieldByName('priority').AsInteger :=
+        wsMessage.Priority;
+      dm.dstMessage.FieldByName('source_location').AsString :=
+        wsMessage.SourceLocation;
+      dm.dstMessage.FieldByName('destination_location').AsString :=
+        wsMessage.DestinationLocation;
+      dm.dstMessage.FieldByName('messagetype_code').AsString :=
+        wsMessage.MessageTypeCode;
+      dm.dstMessage.FieldByName('messagestatus_code').AsString :=
+        wsMessage.MessageStatusCode;
+
+      dm.dstMessage.Post;
+
+    except
+      on e: exception do
+        Result := e.Message;
+    end;
+  finally
+    dm.dstMessage.Close;
+    dm.Free;
+  end;
+end;
+
+function TSyncWeb.GetMessage(const destinationLocation: string): TWSMessage; stdcall;
+var
+  dm: TdmSync;
+  wsMessage: TWSMessage;
+  sql: string;
+begin
+  Result := nil;
+
+  dm := TdmSync.Create(nil);
+
+  try
+    try
+      sql := 'exec dbo.sync_get_wsmessage ''' + destinationLocation + '''';
+      dm.dstMessageOut.CommandText := sql;
+      dm.dstMessageOut.Open;
+
+      wsMessage := TWSMessage.Create;
+
+      // the condition has been commented out as the
+      // sp always returns a single record
+      // however the ws_message field is checked to
+      // ensure that there is a message returned
+      // an empty ws_message field means there is no data received
+      // and hence the returned object can just be discarded
+
+      // if dm.dstMessageOut.RecordCount = 1 then
+      begin
+        wsMessage.EventObject :=
+          dm.dstMessageOut.FieldByName('event_object').AsString;
+        wsMessage.PkEventObject :=
+          dm.dstMessageOut.FieldByName('pk_event_object').AsString;
+        wsMessage.WSMessage :=
+          dm.dstMessageOut.FieldByName('ws_message').AsString;
+        wsMessage.WSMessageDate :=
+          dm.dstMessageOut.FieldByName('ws_message_date').AsDateTime;
+        wsMessage.Priority :=
+          dm.dstMessageOut.FieldByName('priority').AsInteger;
+        wsMessage.SourceLocation :=
+          dm.dstMessageOut.FieldByName('source_location').AsString;
+        wsMessage.DestinationLocation :=
+          dm.dstMessageOut.FieldByName('destination_location').AsString;
+        wsMessage.MessageTypeCode :=
+          dm.dstMessageOut.FieldByName('messagetype_code').AsString;
+        wsMessage.MessageStatusCode :=
+          dm.dstMessageOut.FieldByName('messagestatus_code').AsString;
+      end;
+
+      Result := wsMessage;
+    except
+      wsMessage.Free;
+    end;
+  finally
+    dm.dstMessageOut.Close;
+    dm.Free;
+  end;
+end;
+
+function TSyncWeb.SetMessageStatus(const eventObject: string;
+  const pkEventObject: string; const status: string;
+  const sourceLocation, destinationLocation: string): string; stdcall;
+var
+  dm: TdmSync;
+  sql: string;
+begin
+  Result := '';
+
+  try
+    try
+      dm := TdmSync.Create(nil);
+
+      sql := 'exec dbo.sync_set_wsmessage_status ''' + eventObject +
+        ''',''' + pkEventObject + ''',''' + status + ''', ''' +
+        sourceLocation + ''',''' + destinationLocation + '''';
+
+      dm.acSync.Execute(sql);
+
+    except
+      on e: exception do
+        Result := e.Message;
+    end;
+  finally
+    dm.Free;
+  end;
+end;
+
+function TSyncWeb.GetMessageStatus(const eventObject: string;
+  const pkEventObject: string;
+  const sourceLocation, destinationLocation: string): string; stdcall;
+var
+  dm: TdmSync;
+  sql: string;
+begin
+  Result := '';
+
+  try
+    try
+      dm := TdmSync.Create(nil);
+
+      sql := 'exec dbo.sync_get_wsmessage_status ''' + eventObject +
+        ''',''' + pkEventObject + ''',''' + sourceLocation + ''',''' +
+        destinationLocation + '''';
+
+      dm.dstMessageStatus.CommandText := sql;
+      dm.dstMessageStatus.Open;
+
+      Result := dm.dstMessageStatus.FieldByName('messagestatus_code').AsString;
+
+    except
+      on e: exception do
+        Result := e.Message;
+    end;
+  finally
+    dm.dstMessageStatus.Close;
+    dm.Free;
+  end;
+end;
+
+initialization
+{ Invokable classes must be registered }
+   InvRegistry.RegisterInvokableClass(TSyncWeb);
+end.
+

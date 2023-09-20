@@ -86,6 +86,9 @@ begin
 
   sql := 'select e.id_num, ' +
           ' e.is_inactive, ' +
+          ' e.employee_firstname, ' +
+          ' e.employee_lastname, ' +
+          ' e.employee_middlename, ' +
           ' password, ' +
           ' location_code, ' +
           ' department_code ' +
@@ -281,6 +284,9 @@ begin
   user.Username := userName;
   user.LocationCode := locationCode;
   user.DepartmentCode := departmentCode;
+  user.FirstName := dmSecurity.dstLogin.FieldByName('employee_firstname').AsString;
+  user.LastName := dmSecurity.dstLogin.FieldByName('employee_lastname').AsString;
+  user.MiddleName := dmSecurity.dstLogin.FieldByName('employee_middlename').AsString;
 
   user.SetPrivileges(dmSecurity.dstUserRights);
 

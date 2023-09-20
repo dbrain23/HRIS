@@ -1,0 +1,73 @@
+Unit SyncDataMod;
+
+interface
+
+uses SysUtils, Classes, InvokeRegistry, Midas, SOAPMidas, SOAPDm, Data.DB,
+  Data.Win.ADODB, Datasnap.Provider, SysConn;
+
+type
+  ISyncDataMod = interface(IAppServerSOAP)
+    ['{87EB79FD-B85B-4A03-95B0-DF319B48A06E}']
+  end;
+
+  TdmSync = class(TSoapDataModule, ISyncDataMod, IAppServerSOAP, IAppServer)
+    dspMessage: TDataSetProvider;
+    dstMessage: TADODataSet;
+    acSync: TADOConnection;
+    dstMessageOut: TADODataSet;
+    dspMessageOut: TDataSetProvider;
+    dspMessageStatus: TDataSetProvider;
+    dstMessageStatus: TADODataSet;
+    procedure SoapDataModuleCreate(Sender: TObject);
+    procedure acSyncBeforeConnect(Sender: TObject);
+  private
+  
+  public
+
+  end;
+
+implementation
+
+{$R *.DFM}
+
+procedure TSyncDataModCreateInstance(out obj: TObject);
+begin
+ obj := TdmSync.Create(nil);
+end;
+
+procedure TdmSync.acSyncBeforeConnect(Sender: TObject);
+begin
+
+  acSync.ConnectionString := 'Provider=SQLOLEDB.1;Password=cnn;' +
+                'Persist Security Info=False;' +
+                'User ID=sa;Initial Catalog=HRISWeb' +
+                ';Data Source=BRYAN\DEVELOPMENT' +
+                ';Use Procedure for Prepare=1;' +
+                'Auto Translate=True;Packet Size=4096;' +
+                ';Use Encryption for Data=False;' +
+                'Tag with column collation when possible=False;' +
+                'MARS Connection=False;DataTypeCompatibility=0;' +
+                'Trust Server Certificate=False';
+
+
+//  acSync.ConnectionString := 'Provider=SQLOLEDB.1;Password=Dijd5?78;' +
+//                'Persist Security Info=False;' +
+//                'User ID=hris;Initial Catalog=HRISWeb' +
+//                ';Data Source=localhost' +
+//                ';Use Procedure for Prepare=1;' +
+//                'Auto Translate=True;Packet Size=4096;' +
+//                ';Use Encryption for Data=False;' +
+//                'Tag with column collation when possible=False;' +
+//                'MARS Connection=False;DataTypeCompatibility=0;' +
+//                'Trust Server Certificate=False';
+end;
+
+procedure TdmSync.SoapDataModuleCreate(Sender: TObject);
+begin
+  acSync.Open;
+end;
+
+initialization
+   InvRegistry.RegisterInvokableClass(TdmSync, TSyncDataModCreateInstance);
+   InvRegistry.RegisterInterface(TypeInfo(ISyncDataMod));
+end.

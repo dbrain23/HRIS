@@ -1,0 +1,219 @@
+unit SyncClientDBMain;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.SvcMgr, Vcl.Dialogs, Registry, Data.DB, Data.Win.ADODB,
+  ActiveX, IniFiles, DBUtil;
+
+type
+  TASCCClientDBSyncService = class(TService)
+    procedure ServiceAfterInstall(Sender: TService);
+    procedure ServiceExecute(Sender: TService);
+    procedure ServiceStart(Sender: TService; var Started: Boolean);
+  private
+    { Private declarations }
+    FLocationCode: string;
+    function GetApplicationPath: string;
+    procedure SyncMessage;
+    procedure QueRecord;
+  public
+    function GetServiceController: TServiceController; override;
+    { Public declarations }
+  end;
+
+var
+  ASCCClientDBSyncService: TASCCClientDBSyncService;
+
+implementation
+
+{$R *.DFM}
+
+uses SysConn, Log, SyncWebIntf;
+
+function TASCCClientDBSyncService.GetApplicationPath: String;
+var
+   szFileName: array[0..MAX_PATH] of Char;
+begin
+   GetModuleFileName(hInstance, szFileName, MAX_PATH);
+   Result := ExtractFilePath(szFileName);
+end;
+
+procedure ServiceController(CtrlCode: DWord); stdcall;
+begin
+  ASCCClientDBSyncService.Controller(CtrlCode);
+end;
+
+function TASCCClientDBSyncService.GetServiceController: TServiceController;
+begin
+  Result := ServiceController;
+end;
+
+procedure TASCCClientDBSyncService.ServiceAfterInstall(Sender: TService);
+var
+  Reg: TRegistry;
+begin
+  Reg := TRegistry.Create(KEY_READ or KEY_WRITE);
+  try
+    Reg.RootKey := HKEY_LOCAL_MACHINE;
+    if Reg.OpenKey('\SYSTEM\CurrentControlSet\Services\' + Name, false) then
+    begin
+      // Reg.WriteString('Description', 'ASCC client database synchronization service.');
+      Reg.WriteString('Description', 'Seven Grand client database synchronization service.');
+      Reg.CloseKey;
+    end;
+  finally
+    Reg.Free;
+  end;
+end;
+
+procedure TASCCClientDBSyncService.ServiceExecute(Sender: TService);
+const
+  SecBetweenRuns = 3;
+  TASKS = 2;
+var
+  Count, Task: Integer;
+begin
+  Count := 0;
+  Task := 0;
+
+  while not Terminated do
+  begin
+    Inc(Count);
+    if Count >= SecBetweenRuns then
+    begin
+      Count := 0;
+      Inc(Task);
+
+      { place your service code here }
+      { this is where the action happens }
+      //
+      // LogName;
+      // SendClientMessage;
+      case Task of
+        1: QueRecord;
+        2: SyncMessage;
+      end;
+
+      if Task = TASKS then
+        Task := 0;
+
+    end;
+
+    Sleep(1000);
+    ServiceThread.ProcessRequests(False);
+  end;
+end;
+
+procedure TASCCClientDBSyncService.ServiceStart(Sender: TService;
+  var Started: Boolean);
+var
+  sql, path: string;
+  dstBranch: TADODataSet;
+begin
+  CoInitialize(nil);
+
+  try
+    try
+      sql := 'select dbo.fn_get_sysconfig_value(''LOCATION_CODE'')';
+      path := GetApplicationPath;
+
+      dstBranch := TADODataSet.Create(nil);
+      dstBranch.ConnectionString := TSysConn.Create(path).ConnString;
+      dstBranch.CommandText := sql;
+      dstBranch.Open;
+
+      FLocationCode := dstBranch.FieldByName(dstBranch.Fields[0].FieldName).AsString;
+
+      LogSyncDB('Alano and Sons database synchronisation service.', path);
+      LogSyncDB('Service has started successfully.', path);
+      LogSyncDB('Location code is ' + FLocationCode + '.', path);
+
+    except
+      on e: Exception do
+      begin
+        LogSyncDB(e.Message, path, true);
+      end;
+    end;
+  finally
+    dstBranch.Free;
+    CoUninitialize;
+  end;
+end;
+
+procedure TASCCClientDBSyncService.QueRecord;
+var
+  sql, path: string;
+  queryObj: TADOQuery;
+begin
+  CoInitialize(nil);
+  try
+    try
+      // inserts a record in the wsmessageout table
+      // the record will then be called by the
+      // SyncClient windows service which generates
+      // the XML to be sent as a parameter when calling
+      // the sync web service
+      sql := 'exec dbo.sync_que_record';
+      path := GetApplicationPath;
+
+      queryObj := TADOQuery.Create(nil);
+      queryObj.ConnectionString := TSysConn.Create(path).ConnString;
+      queryObj.SQL.Text := sql;
+
+      LogSyncDB('Sending to que...', path);
+
+      if queryObj.ExecSQL > 0 then
+        LogSyncDB('Sent successfully.', path)
+      else
+        LogSyncDB('No record to send.', path, true);
+
+    except
+      on e : exception do
+        LogSyncDB(e.Message, path, true);
+    end;
+  finally
+    queryObj.Free;
+    CoUninitialize;
+  end;
+end;
+
+procedure TASCCClientDBSyncService.SyncMessage;
+var
+  sql, path: string;
+  queryObj: TADOQuery;
+begin
+  CoInitialize(nil);
+  try
+    try
+      // apply the received XML to the db
+      // each record is received from the
+      // call by the SyncClient windows service
+      // to the sync web service
+      sql := 'exec dbo.sync_xml_to_db';
+      path := GetApplicationPath;
+
+      queryObj := TADOQuery.Create(nil);
+      queryObj.ConnectionString := TSysConn.Create(path).ConnString;
+      queryObj.SQL.Text := sql;
+
+      LogSyncDB('Syncing to db...', path);
+
+      if queryObj.ExecSQL > 0 then
+        LogSyncDB('Record has been synced successfully.', path)
+      else
+        LogSyncDB('No record to sync.', path, true)
+
+    except
+      on e : exception do
+        LogSyncDB(e.Message, path, true);
+    end;
+  finally
+    queryObj.Free;
+    CoUninitialize;
+  end;
+end;
+
+
+end.

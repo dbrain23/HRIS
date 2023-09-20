@@ -73,7 +73,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
           end
           inherited qrMain: TQuickRep
             Left = 11
-            Top = -30
+            Top = -62
             DataSet = dstSchedOfSalaries
             Functions.DATA = (
               '0'
@@ -89,7 +89,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               0.000000000000000000)
             Units = Inches
             ExplicitLeft = 11
-            ExplicitTop = -30
+            ExplicitTop = -62
             object TitleBand1: TQRBand
               Left = 17
               Top = 24
@@ -607,17 +607,17 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               object QRLabel19: TQRLabel
                 Left = 295
                 Top = 138
-                Width = 122
+                Width = 43
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   1115.029761904762000000
                   521.607142857142900000
-                  461.130952380952400000)
+                  162.529761904761900000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
-                Caption = 'Approved: MA. NOVA S. FERRER'
+                Caption = 'Approved: '
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
@@ -687,23 +687,24 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               object QRLabel12: TQRLabel
                 Left = 6
                 Top = 138
-                Width = 140
+                Width = 53
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   22.678571428571430000
                   521.607142857142900000
-                  529.166666666666700000)
+                  200.327380952381000000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
-                Caption = 'Prepared by: KAREN GAY M. GALEZA'
+                Caption = 'Prepared by: '
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
                 Font.Height = -11
                 Font.Name = 'Tahoma'
                 Font.Style = [fsBold]
+                OnPrint = QRLabel12Print
                 ParentFont = False
                 Transparent = False
                 ExportAs = exptText
@@ -724,7 +725,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Accountant III'
+                Caption = ''
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
@@ -792,17 +793,17 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               object QRLabel16: TQRLabel
                 Left = 59
                 Top = 194
-                Width = 90
+                Width = 1
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   223.005952380952400000
                   733.273809523809500000
-                  340.178571428571400000)
+                  3.779761904761905000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
-                Caption = 'MARIBETH A. BORLAZA'
+                Caption = ''
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
@@ -818,17 +819,17 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               object QRLabel17: TQRLabel
                 Left = 59
                 Top = 234
-                Width = 78
+                Width = 1
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   223.005952380952400000
                   884.464285714285700000
-                  294.821428571428600000)
+                  3.779761904761905000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
-                Caption = 'ARLENE J. LUCRECIA'
+                Caption = ''
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack

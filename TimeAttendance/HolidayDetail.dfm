@@ -292,6 +292,7 @@ inherited fHolidayDetail: TfHolidayDetail
             Height = 369
             TabStop = False
             Columns = 2
+            EditValueFormat = cvfIndices
             Items = <>
             Style.BorderColor = clBtnFace
             Style.BorderStyle = cbsNone

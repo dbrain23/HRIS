@@ -2029,7 +2029,7 @@ inherited fPayrollRegister: TfPayrollRegister
                 Alignment = taLeftJustify
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Noted: MARIBETH BORLAZA'
+                Caption = 'Noted: '
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
@@ -2045,17 +2045,17 @@ inherited fPayrollRegister: TfPayrollRegister
               object QRLabel20: TQRLabel
                 Left = 367
                 Top = 234
-                Width = 143
+                Width = 39
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   1387.172619047619000000
                   884.464285714285700000
-                  540.505952380952400000)
+                  147.410714285714300000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
-                Caption = 'Checked: MARIA ELVIE M. OPERARIO'
+                Caption = 'Checked: '
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
@@ -2125,23 +2125,24 @@ inherited fPayrollRegister: TfPayrollRegister
               object QRLabel10: TQRLabel
                 Left = 30
                 Top = 234
-                Width = 128
+                Width = 41
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   113.392857142857100000
                   884.464285714285700000
-                  483.809523809523800000)
+                  154.970238095238100000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
-                Caption = 'Prepared: KAREN GAY M. GALEZA'
+                Caption = 'Prepared: '
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
                 Font.Height = -11
                 Font.Name = 'Tahoma'
                 Font.Style = [fsBold]
+                OnPrint = QRLabel10Print
                 ParentFont = False
                 Transparent = False
                 ExportAs = exptText
@@ -2162,7 +2163,7 @@ inherited fPayrollRegister: TfPayrollRegister
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Accountant III'
+                Caption = ''
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
@@ -2178,17 +2179,17 @@ inherited fPayrollRegister: TfPayrollRegister
               object QRLabel17: TQRLabel
                 Left = 535
                 Top = 234
-                Width = 133
+                Width = 43
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   2022.172619047619000000
                   884.464285714285700000
-                  502.708333333333300000)
+                  162.529761904761900000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
-                Caption = 'Approved: MA. NOVA F. CELICIOUS'
+                Caption = 'Approved: '
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack

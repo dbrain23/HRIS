@@ -22,6 +22,8 @@ type
     function GetMessageStatus(const eventObject: string;
       const pkEventObject: string;
       const sourceLocation, destinationLocation: string): string; stdcall;
+
+    function ConnectDB: string; stdcall;
   end;
 
 implementation
@@ -87,6 +89,18 @@ begin
   finally
     dm.dstMessage.Close;
     dm.Free;
+  end;
+end;
+
+function TSyncWeb.ConnectDB: string;
+var
+  dm: TdmSync;
+begin
+  try
+    //dm := TdmSync.Create(nil);
+    result := 'Connected';
+  except
+    on E: Exception do Result := E.Message;
   end;
 end;
 

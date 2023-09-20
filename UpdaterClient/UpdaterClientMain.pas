@@ -61,7 +61,8 @@ begin
     Reg.RootKey := HKEY_LOCAL_MACHINE;
     if Reg.OpenKey('\SYSTEM\CurrentControlSet\Services\' + Name, false) then
     begin
-      Reg.WriteString('Description', 'ASCC update service.');
+      //Reg.WriteString('Description', 'ASCC update service.');
+      Reg.WriteString('Description', 'Seven Grand update service.');
       Reg.CloseKey;
     end;
   finally
@@ -142,7 +143,7 @@ begin
       FUpdaterPassword := dstBranch.FieldByName(dstBranch.Fields[2].FieldName).AsString;
       FUpdaterConnString := TSysConn.Create(path, FUpdaterUserName, FUpdaterPassword).ConnString;
 
-      LogUpdate('Alano and Sons update listener service.', path);
+      LogUpdate('Seven Grand update listener service.', path);
       LogUpdate('Service has started successfully.', path);
       LogUpdate('Location code is ' + FLocationCode + '.', path);
 

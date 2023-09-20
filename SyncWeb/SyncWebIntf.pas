@@ -49,6 +49,8 @@ type
     function GetMessageStatus(const eventObject: string;
       const pkEventObject: string;
       const sourceLocation, destinationLocation: string): string; stdcall;
+
+    function ConnectDB: string; stdcall;
   end;
 
 implementation

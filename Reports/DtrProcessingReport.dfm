@@ -1394,20 +1394,20 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 VertAdjust = 0
               end
               object QRLabel19: TQRLabel
-                Left = 237
+                Left = 236
                 Top = 50
                 Width = 171
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
-                  895.803571428571400000
+                  892.023809523809500000
                   188.988095238095200000
                   646.339285714285700000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Checked by: HONEYLAINE O. RONQUILLO'
+                Caption = 'Checked by:'
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
@@ -1423,17 +1423,17 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
               object QRLabel20: TQRLabel
                 Left = 532
                 Top = 50
-                Width = 133
+                Width = 40
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   2010.833333333333000000
                   188.988095238095200000
-                  502.708333333333300000)
+                  151.190476190476200000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
-                Caption = 'Noted by: HAIDEE O. DIAGMEL, DM'
+                Caption = 'Noted by: '
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
@@ -1500,26 +1500,27 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
               end
-              object QRLabel23: TQRLabel
+              object UserLabel: TQRLabel
                 Left = 6
                 Top = 50
-                Width = 131
+                Width = 51
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   22.678571428571430000
                   188.988095238095200000
-                  495.148809523809500000)
+                  192.767857142857100000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
-                Caption = 'Prepared by: JESSA A. GUDMALIN'
+                Caption = 'Prepared by:'
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
                 Font.Height = -11
                 Font.Name = 'Tahoma'
                 Font.Style = [fsBold]
+                OnPrint = UserLabelPrint
                 ParentFont = False
                 Transparent = False
                 ExportAs = exptText
@@ -1540,7 +1541,7 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Recruitment Staff'
+                Caption = ''
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack

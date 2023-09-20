@@ -86,6 +86,7 @@ type
     dstSchedOfSalariespayroll_period: TStringField;
     dstSchedOfSalariesadjustment_allowance: TFMTBCDField;
     procedure FormCreate(Sender: TObject);
+    procedure QRLabel12Print(sender: TObject; var Value: string);
   private
     { Private declarations }
   public
@@ -102,7 +103,7 @@ implementation
 {$R *.dfm}
 
 uses
-  ReportsAuxData, FormUtil, ComboBoxObj;
+  ReportsAuxData, FormUtil, ComboBoxObj, User;
 
 
 
@@ -118,6 +119,13 @@ begin
   end;
 
   inherited;
+end;
+
+procedure TfSchedOfSalariesAndWages.QRLabel12Print(sender: TObject;
+  var Value: string);
+begin
+  inherited;
+  Value := 'Prepared by: ' + SystemUser.FullName;
 end;
 
 procedure TfSchedOfSalariesAndWages.SetParams;

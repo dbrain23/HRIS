@@ -1441,7 +1441,7 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
                 Alignment = taLeftJustify
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Checked by: HONEYLAINE O. RONQUILLO'
+                Caption = 'Checked by:'
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
@@ -1457,17 +1457,17 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               object QRLabel20: TQRLabel
                 Left = 532
                 Top = 50
-                Width = 133
+                Width = 40
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   2010.833333333333000000
                   188.988095238095200000
-                  502.708333333333300000)
+                  151.190476190476200000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
-                Caption = 'Noted by: HAIDEE O. DIAGMEL, DM'
+                Caption = 'Noted by: '
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
@@ -1494,7 +1494,7 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'HRD Assistant'
+                Caption = ''
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
@@ -1521,7 +1521,7 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'HRD Manager'
+                Caption = ''
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
@@ -1537,23 +1537,24 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               object QRLabel17: TQRLabel
                 Left = 6
                 Top = 50
-                Width = 120
+                Width = 53
                 Height = 12
                 Size.Values = (
                   45.357142857142860000
                   22.678571428571430000
                   188.988095238095200000
-                  453.571428571428600000)
+                  200.327380952381000000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
-                Caption = 'Prepared by: JENNY A. CANGAS'
+                Caption = 'Prepared by: '
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
                 Font.Height = -11
                 Font.Name = 'Tahoma'
                 Font.Style = [fsBold]
+                OnPrint = QRLabel17Print
                 ParentFont = False
                 Transparent = False
                 ExportAs = exptText
@@ -1574,7 +1575,7 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Employment Officer'
+                Caption = ''
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack

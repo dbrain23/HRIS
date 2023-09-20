@@ -81,7 +81,7 @@ type
     QRLabel20: TQRLabel;
     QRLabel21: TQRLabel;
     QRLabel22: TQRLabel;
-    QRLabel23: TQRLabel;
+    UserLabel: TQRLabel;
     QRLabel24: TQRLabel;
     cbxRegular: TcxCheckBox;
     cbxProbationary: TcxCheckBox;
@@ -98,6 +98,7 @@ type
     QRExpr4: TQRExpr;
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
+    procedure UserLabelPrint(sender: TObject; var Value: string);
   private
     { Private declarations }
     procedure FilterReport;
@@ -115,7 +116,7 @@ implementation
 {$R *.dfm}
 
 uses
-  ReportsAuxData, FormUtil, ComboBoxObj;
+  ReportsAuxData, FormUtil, ComboBoxObj, User;
 
 procedure TfDtrProcessingReport.SetParams;
 begin
@@ -124,6 +125,13 @@ begin
     ParamByName('@payroll_code').Value :=
           TComboBoxObj(cmbPayrollPeriod.ItemObject).Code;
   end;
+end;
+
+procedure TfDtrProcessingReport.UserLabelPrint(sender: TObject;
+  var Value: string);
+begin
+  inherited;
+  Value := 'Prepared by: ' + SystemUser.FullName;
 end;
 
 procedure TfDtrProcessingReport.bGenerateClick(Sender: TObject);

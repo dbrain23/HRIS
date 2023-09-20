@@ -1,7 +1,5 @@
 inherited fHolidayMain: TfHolidayMain
   Caption = 'fHolidayMain'
-  ExplicitWidth = 320
-  ExplicitHeight = 240
   PixelsPerInch = 96
   TextHeight = 14
   inherited pMaster: TJvPanel

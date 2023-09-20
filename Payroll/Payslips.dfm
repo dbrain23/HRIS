@@ -45,6 +45,7 @@ inherited fPayslips: TfPayslips
           inherited qrMain: TQuickRep
             Left = 11
             Height = 874
+            BeforePrint = qrMainBeforePrint
             Functions.DATA = (
               '0'
               '0'
@@ -1460,19 +1461,19 @@ inherited fPayslips: TfPayslips
               end
               object QRLabel22: TQRLabel
                 Left = 5
-                Top = 388
+                Top = 398
                 Width = 121
-                Height = 20
+                Height = 10
                 Size.Values = (
-                  75.595238095238100000
+                  37.797619047619050000
                   18.898809523809520000
-                  1466.547619047619000000
+                  1504.345238095238000000
                   457.351190476190500000)
                 XLColumn = 0
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'KAREN GAY M. GALEZA Accountant III'
+                Caption = 'Payroll Accountant'
                 Color = clWhite
                 Font.Charset = ANSI_CHARSET
                 Font.Color = clWindowText
@@ -1671,6 +1672,33 @@ inherited fPayslips: TfPayslips
                 FullJustify = False
                 MaxBreakChars = 0
                 FontSize = 8
+              end
+              object lblPreparedName: TQRLabel
+                Left = 5
+                Top = 386
+                Width = 121
+                Height = 10
+                Size.Values = (
+                  37.797619047619050000
+                  18.898809523809520000
+                  1458.988095238095000000
+                  457.351190476190500000)
+                XLColumn = 0
+                Alignment = taCenter
+                AlignToBand = False
+                AutoSize = False
+                Caption = 'xxxxx'
+                Color = clWhite
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -12
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                ParentFont = False
+                Transparent = False
+                ExportAs = exptText
+                WrapStyle = BreakOnSpaces
+                FontSize = 9
               end
             end
           end

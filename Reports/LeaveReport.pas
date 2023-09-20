@@ -85,6 +85,7 @@ type
     QRExpr4: TQRExpr;
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
+    procedure QRLabel10Print(sender: TObject; var Value: string);
   private
     { Private declarations }
     procedure FilterReport;
@@ -102,7 +103,7 @@ implementation
 {$R *.dfm}
 
 uses
-  ReportsAuxData, FormUtil, ComboBoxObj;
+  ReportsAuxData, FormUtil, ComboBoxObj, User;
 
 procedure TfLeaveReport.FormCreate(Sender: TObject);
 begin
@@ -116,6 +117,12 @@ begin
   end;
 
   inherited;
+end;
+
+procedure TfLeaveReport.QRLabel10Print(sender: TObject; var Value: string);
+begin
+  inherited;
+  Value := 'Prepared by: ' + SystemUser.FullName;
 end;
 
 procedure TfLeaveReport.SetParams;

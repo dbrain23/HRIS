@@ -1,6 +1,6 @@
 object ASCCClientDBSyncService: TASCCClientDBSyncService
   OldCreateOrder = False
-  DisplayName = 'ASCC Client DB Sync Service'
+  DisplayName = 'Seven Grand Client DB Sync Service'
   AfterInstall = ServiceAfterInstall
   OnExecute = ServiceExecute
   OnStart = ServiceStart

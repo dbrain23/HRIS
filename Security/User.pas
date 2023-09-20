@@ -12,7 +12,12 @@ type
     fUsername: string;
     fLocationCode: string;
     fDepartmentCode: string;
+    FLastName: string;
+    FMiddleName: string;
+    FFirstName: string;
+
     function GetLocDeptCode: string;
+    function GetFullName: string;
   public
     function SetPrivileges(DataSet: TADODataSet): integer;
     function HasPrivileges(const privilege: array of string;
@@ -22,6 +27,10 @@ type
     property LocationCode: string read fLocationCode write fLocationCode;
     property DepartmentCode: string read fDepartmentCode write fDepartmentCode;
     property LocDeptCode: string read GetLocDeptCode;
+    property FirstName: string read FFirstName write FFirstName;
+    property LastName: string read FLastName write FLastName;
+    property MiddleName: string read FMiddleName write FMiddleName;
+    property FullName: string read GetFullName;
   end;
 
   function SystemUser: TUser;
@@ -56,6 +65,11 @@ end;
 function SystemUser: TUser;
 begin
   Result := dmSecurity.User;
+end;
+
+function TUser.GetFullName: string;
+begin
+  Result := FFirstName  + ' ' + FLastName;
 end;
 
 function TUser.GetLocDeptCode: string;

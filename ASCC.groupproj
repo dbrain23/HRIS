@@ -57,6 +57,9 @@
         <Projects Include="UpdaterClient\UpdaterClient.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="SyncWeb\SevenGrandSyncService.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -227,14 +230,23 @@
     <Target Name="UpdaterClient:Make">
         <MSBuild Projects="UpdaterClient\UpdaterClient.dproj" Targets="Make"/>
     </Target>
+    <Target Name="SevenGrandSyncService">
+        <MSBuild Projects="SyncWeb\SevenGrandSyncService.dproj"/>
+    </Target>
+    <Target Name="SevenGrandSyncService:Clean">
+        <MSBuild Projects="SyncWeb\SevenGrandSyncService.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SevenGrandSyncService:Make">
+        <MSBuild Projects="SyncWeb\SevenGrandSyncService.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="Base;Employee;Maintenance;Paf;Reports;Payroll;Security;Service;TimeAttendance;LogBox;Kiosk;HRIS;ServiceMonitor;SyncClient;SyncClientDB;SyncWeb;SyncWebDll;UpdaterClient"/>
+        <CallTarget Targets="Base;Employee;Maintenance;Paf;Reports;Payroll;Security;Service;TimeAttendance;LogBox;Kiosk;HRIS;ServiceMonitor;SyncClient;SyncClientDB;SyncWeb;SyncWebDll;UpdaterClient;SevenGrandSyncService"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Base:Clean;Employee:Clean;Maintenance:Clean;Paf:Clean;Reports:Clean;Payroll:Clean;Security:Clean;Service:Clean;TimeAttendance:Clean;LogBox:Clean;Kiosk:Clean;HRIS:Clean;ServiceMonitor:Clean;SyncClient:Clean;SyncClientDB:Clean;SyncWeb:Clean;SyncWebDll:Clean;UpdaterClient:Clean"/>
+        <CallTarget Targets="Base:Clean;Employee:Clean;Maintenance:Clean;Paf:Clean;Reports:Clean;Payroll:Clean;Security:Clean;Service:Clean;TimeAttendance:Clean;LogBox:Clean;Kiosk:Clean;HRIS:Clean;ServiceMonitor:Clean;SyncClient:Clean;SyncClientDB:Clean;SyncWeb:Clean;SyncWebDll:Clean;UpdaterClient:Clean;SevenGrandSyncService:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Base:Make;Employee:Make;Maintenance:Make;Paf:Make;Reports:Make;Payroll:Make;Security:Make;Service:Make;TimeAttendance:Make;LogBox:Make;Kiosk:Make;HRIS:Make;ServiceMonitor:Make;SyncClient:Make;SyncClientDB:Make;SyncWeb:Make;SyncWebDll:Make;UpdaterClient:Make"/>
+        <CallTarget Targets="Base:Make;Employee:Make;Maintenance:Make;Paf:Make;Reports:Make;Payroll:Make;Security:Make;Service:Make;TimeAttendance:Make;LogBox:Make;Kiosk:Make;HRIS:Make;ServiceMonitor:Make;SyncClient:Make;SyncClientDB:Make;SyncWeb:Make;SyncWebDll:Make;UpdaterClient:Make;SevenGrandSyncService:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

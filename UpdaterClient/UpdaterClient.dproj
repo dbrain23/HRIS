@@ -97,7 +97,7 @@
         <DCC_DcpOutput>..\_dcp</DCC_DcpOutput>
         <DCC_DcuOutput>..\_dcu</DCC_DcuOutput>
         <DCC_BplOutput>..\_bpl</DCC_BplOutput>
-        <DCC_ExeOutput>..\</DCC_ExeOutput>
+        <DCC_ExeOutput>..\_bin</DCC_ExeOutput>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
@@ -170,9 +170,7 @@
                     <Source Name="MainSource">UpdaterClient.dpr</Source>
                 </Source>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclDBXDrivers180.bpl">Embarcadero Driver Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclDBXDriversEnt180.bpl">Embarcadero Enterprise Driver Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\DataExplorerDBXPluginEnt180.bpl">DBExpress Enterprise Data Explorer Integration</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\11.0\Bpl\DSPackDesign_DXE4.bpl">DSPack 2.3: Multimedia Package for Delphi</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k180.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp180.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>

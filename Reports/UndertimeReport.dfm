@@ -713,7 +713,7 @@ inherited fUndertimeReport: TfUndertimeReport
                 Alignment = taLeftJustify
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Checked by: HONEYLAINE O. RONQUILLO'
+                Caption = 'Checked by: '
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
@@ -729,17 +729,17 @@ inherited fUndertimeReport: TfUndertimeReport
               object QRLabel20: TQRLabel
                 Left = 419
                 Top = 57
-                Width = 152
+                Width = 46
                 Height = 14
                 Size.Values = (
                   46.302083333333330000
                   1385.755208333333000000
                   188.515625000000000000
-                  502.708333333333300000)
+                  152.135416666666700000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
-                Caption = 'Noted by: HAIDEE O. DIAGMEL, DM'
+                Caption = 'Noted by: '
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
@@ -809,23 +809,24 @@ inherited fUndertimeReport: TfUndertimeReport
               object QRLabel7: TQRLabel
                 Left = 7
                 Top = 57
-                Width = 150
+                Width = 58
                 Height = 14
                 Size.Values = (
                   46.302083333333330000
                   23.151041666666670000
                   188.515625000000000000
-                  496.093750000000000000)
+                  191.822916666666700000)
                 XLColumn = 0
                 Alignment = taLeftJustify
                 AlignToBand = False
-                Caption = 'Prepared by: JESSA A. GUDMALIN'
+                Caption = 'Prepared by:'
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
                 Font.Height = -11
                 Font.Name = 'Tahoma'
                 Font.Style = [fsBold]
+                OnPrint = QRLabel7Print
                 ParentFont = False
                 Transparent = False
                 ExportAs = exptText
@@ -846,7 +847,7 @@ inherited fUndertimeReport: TfUndertimeReport
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Recruitment Staff'
+                Caption = ''
                 Color = clWhite
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
@@ -1005,6 +1006,10 @@ inherited fUndertimeReport: TfUndertimeReport
               end
             end
           end
+        end
+        inherited pStatus: TPanel
+          Top = 124
+          ExplicitTop = 124
         end
         inherited p_ReportFooter: TPanel
           Width = 836

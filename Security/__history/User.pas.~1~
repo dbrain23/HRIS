@@ -1,0 +1,100 @@
+unit User;
+
+interface
+
+uses ADODB, Dialogs, SysUtils, Classes, StrUtils;
+
+type
+  TUser = class(TObject)
+  private
+    userPrivileges: array of string;
+    fUserIdNum: string;
+    fUsername: string;
+    fLocationCode: string;
+    fDepartmentCode: string;
+    function GetLocDeptCode: string;
+  public
+    function SetPrivileges(DataSet: TADODataSet): integer;
+    function HasPrivileges(const privilege: array of string;
+      const displayMessage: boolean = true): boolean;
+    property UserIdNum: string read fUserIdNum write fUserIdNum;
+    property Username: string read fUsername write fUsername;
+    property LocationCode: string read fLocationCode write fLocationCode;
+    property DepartmentCode: string read fDepartmentCode write fDepartmentCode;
+    property LocDeptCode: string read GetLocDeptCode;
+  end;
+
+  function SystemUser: TUser;
+
+implementation
+
+uses AppConstant, SecurityDataMod;
+
+function TUser.SetPrivileges(DataSet: TADODataSet): integer;
+var
+  i: integer;
+begin
+  DataSet.Parameters.ParamByName('@id_num').Value := fUserIdNum;
+  DataSet.Open;
+
+  SetLength(userPrivileges, DataSet.RecordCount);
+
+  i := 0;
+
+  while not DataSet.Eof do
+  begin
+    userPrivileges[i] := Trim(DataSet.FieldByName('privilege_code').AsString);
+    DataSet.Next;
+    Inc(i);
+  end;
+
+  DataSet.Close;
+
+  Result := i;
+end;
+
+function SystemUser: TUser;
+begin
+  Result := dmSecurity.User;
+end;
+
+function TUser.GetLocDeptCode: string;
+begin
+  if fDepartmentCode <> '' then
+    Result := fDepartmentCode
+  else
+    Result := fLocationCode;
+end;
+
+function TUser.HasPrivileges(const privilege: array of string;
+  const displayMessage: boolean = true): boolean;
+var
+  sl: TStringList;
+  i, cnt, privCnt: integer;
+begin
+  privCnt := 0;
+
+  cnt := Length(privilege) - 1;
+
+  for i := 0 to cnt do
+  begin
+    sl := TStringList.Create;
+    sl.Delimiter := TAppConstant.TGeneral.DELIMITER;
+    sl.DelimitedText := privilege[i];
+
+    if MatchStr(sl[0],userPrivileges) then
+      Inc(privCnt);
+
+    sl.Free;
+  end;
+
+  Result := privCnt > 0;
+
+  if (not Result) and (displayMessage) then
+  begin
+    MessageDlg('Access is denied. Please contact system administrator.',
+      mtInformation,[mbOk],0);
+  end;
+end;
+
+end.

@@ -91,7 +91,10 @@ type
     QRLabel24: TQRLabel;
     QRDBText20: TQRDBText;
     QRDBText21: TQRDBText;
+    lblPreparedName: TQRLabel;
     procedure FormCreate(Sender: TObject);
+    procedure qrMainBeforePrint(Sender: TCustomQuickRep;
+      var PrintReport: Boolean);
   private
     { Private declarations }
   public
@@ -106,13 +109,20 @@ implementation
 {$R *.dfm}
 
 uses
-  PayrollDataMod;
+  PayrollDataMod, User;
 
 procedure TfPayslips.FormCreate(Sender: TObject);
 begin
   // for whatever reason.. the dataset property is emptied during runtime
   qrMain.DataSet := dmPayroll.dstPayslips;
   inherited;
+end;
+
+procedure TfPayslips.qrMainBeforePrint(Sender: TCustomQuickRep;
+  var PrintReport: Boolean);
+begin
+  inherited;
+  lblPreparedName.Caption := SystemUser.FullName;
 end;
 
 end.
