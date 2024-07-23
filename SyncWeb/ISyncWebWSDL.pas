@@ -86,14 +86,17 @@ implementation
 
 function GetISyncWeb(UseWSDL: Boolean; Addr: string; HTTPRIO: THTTPRIO): ISyncWeb;
 const
-  defWSDL = 'http://vserver275.3essentials.com/cgi-bin/SevenGrandSyncService.dll/wsdl/ISyncWeb';
-  defURL  = 'http://vserver275.3essentials.com/cgi-bin/SevenGrandSyncService.dll/soap/ISyncWeb';
-  defSvc  = 'ISyncWebservice';
-  defPrt  = 'ISyncWebPort';
+  { Seven Grand }
+  // defWSDL = 'http://vserver275.3essentials.com/cgi-bin/SevenGrandSyncService.dll/wsdl/ISyncWeb';
+  // defURL  = 'http://vserver275.3essentials.com/cgi-bin/SevenGrandSyncService.dll/soap/ISyncWeb';
+  // defSvc  = 'ISyncWebservice';
+  // defPrt  = 'ISyncWebPort';
 
   { ASCC }
-  // defWSDL = 'http://vserver275.3essentials.com/cgi-bin/SyncWeb.exe/wsdl/ISyncWeb';
-  // defURL  = 'http://vserver275.3essentials.com/cgi-bin/SyncWeb.exe/soap/ISyncWeb';
+  defWSDL = 'http://vserver275.3essentials.com/cgi-bin/SyncWeb.exe/wsdl/ISyncWeb';
+  defURL  = 'http://vserver275.3essentials.com/cgi-bin/SyncWeb.exe/soap/ISyncWeb';
+  defSvc  = 'ISyncWebservice';
+  defPrt  = 'ISyncWebPort';
 
   //defWSDL = 'http://localhost/SyncService/cgi-bin/SyncWeb.exe/wsdl/ISyncWeb';
   //defURL  = 'http://localhost/SyncService/cgi-bin/SyncWeb.exe/soap/ISyncWeb';

@@ -150,7 +150,7 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Alano & Sons Credit Corporation'
+                Caption = 'Alano Lending Corporation'
                 Color = clWhite
                 Font.Charset = ANSI_CHARSET
                 Font.Color = clRed

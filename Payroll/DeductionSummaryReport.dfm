@@ -2,7 +2,6 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
   Caption = 'fDeductionSummaryReport'
   ClientHeight = 586
   ClientWidth = 994
-  ExplicitLeft = -78
   ExplicitWidth = 1010
   ExplicitHeight = 625
   PixelsPerInch = 96
@@ -130,7 +129,7 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Alano & Sons Credit Corporation'
+                Caption = 'Alano Lending Corporation'
                 Color = clWhite
                 Font.Charset = ANSI_CHARSET
                 Font.Color = clRed

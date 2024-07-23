@@ -224,7 +224,7 @@ inherited fPayslips: TfPayslips
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'ALANO & SONS CREDIT CORPORATION'
+                Caption = 'Alano Lending Corporation'
                 Color = clWhite
                 Font.Charset = ANSI_CHARSET
                 Font.Color = clRed

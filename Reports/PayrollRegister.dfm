@@ -83,7 +83,8 @@ inherited fPayrollRegister: TfPayrollRegister
             ExplicitHeight = 371
           end
           inherited qrMain: TQuickRep
-            Top = -122
+            Left = 8
+            Top = 48
             Width = 941
             Height = 571
             DataSet = dstRegister
@@ -101,7 +102,8 @@ inherited fPayrollRegister: TfPayrollRegister
               88.900000000000000000
               88.900000000000000000
               0.000000000000000000)
-            ExplicitTop = -122
+            ExplicitLeft = 8
+            ExplicitTop = 48
             ExplicitWidth = 941
             ExplicitHeight = 571
             object TitleBand1: TQRBand
@@ -161,7 +163,7 @@ inherited fPayrollRegister: TfPayrollRegister
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Alano & Sons Credit Corporation'
+                Caption = 'Alano Lending Corporation'
                 Color = clWhite
                 Font.Charset = ANSI_CHARSET
                 Font.Color = clRed

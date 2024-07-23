@@ -72,8 +72,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
             ExplicitWidth = 731
           end
           inherited qrMain: TQuickRep
-            Left = 11
-            Top = -62
+            Top = 18
             DataSet = dstSchedOfSalaries
             Functions.DATA = (
               '0'
@@ -88,8 +87,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               63.500000000000000000
               0.000000000000000000)
             Units = Inches
-            ExplicitLeft = 11
-            ExplicitTop = -62
+            ExplicitTop = 18
             object TitleBand1: TQRBand
               Left = 17
               Top = 24
@@ -147,7 +145,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Alano & Sons Credit Corporation'
+                Caption = 'Alano Lending Corporation'
                 Color = clWhite
                 Font.Charset = ANSI_CHARSET
                 Font.Color = clRed

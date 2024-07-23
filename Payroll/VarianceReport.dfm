@@ -103,7 +103,7 @@ inherited fVarianceReport: TfVarianceReport
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Alano & Sons Credit Corporation'
+                Caption = 'Alano Lending Corporation'
                 Color = clWhite
                 Font.Charset = ANSI_CHARSET
                 Font.Color = clRed
@@ -589,6 +589,13 @@ inherited fVarianceReport: TfVarianceReport
                 WrapStyle = BreakOnSpaces
                 FontSize = 10
               end
+            end
+          end
+        end
+        inherited p_ReportFooter: TPanel
+          inherited JvGroupBox1: TJvGroupBox
+            inherited speZoom: TcxSpinEdit
+              ExplicitHeight = 22
             end
           end
         end

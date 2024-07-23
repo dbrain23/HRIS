@@ -69,6 +69,7 @@ inherited fAttendanceReport: TfAttendanceReport
             0.000000000000000000
             0.000000000000000000
             1972.615740740741000000)
+          Caption = 'Alano Lending Corporation'
           FontSize = 14
           ExplicitWidth = 522
         end
