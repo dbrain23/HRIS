@@ -136,7 +136,7 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
                 WrapStyle = BreakOnSpaces
                 FontSize = 10
               end
-              object QRLabel4: TQRLabel
+              object CompanyLabel: TQRLabel
                 Left = 0
                 Top = 0
                 Width = 890
@@ -1722,9 +1722,6 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
             inherited bPrevious: TcxButton
               Left = 871
               ExplicitLeft = 871
-            end
-            inherited speZoom: TcxSpinEdit
-              ExplicitHeight = 22
             end
           end
         end

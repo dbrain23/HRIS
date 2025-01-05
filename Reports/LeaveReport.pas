@@ -28,7 +28,7 @@ type
     dstLeave: TADODataSet;
     TitleBand1: TQRBand;
     ReportTitle: TQRLabel;
-    QRLabel4: TQRLabel;
+    CompanyLabel: TQRLabel;
     QRExpr3: TQRExpr;
     ColumnHeaderBand: TQRBand;
     QRShape1: TQRShape;
@@ -103,10 +103,12 @@ implementation
 {$R *.dfm}
 
 uses
-  ReportsAuxData, FormUtil, ComboBoxObj, User;
+  ReportsAuxData, FormUtil, ComboBoxObj, User, DBUtil;
 
 procedure TfLeaveReport.FormCreate(Sender: TObject);
 begin
+  CompanyLabel.Caption := GetCompanyName;
+
   // for whatever reason.. the dataset property is emptied during runtime
   qrMain.DataSet := dstLeave;
 

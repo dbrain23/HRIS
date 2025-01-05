@@ -89,7 +89,7 @@ inherited fVarianceReport: TfVarianceReport
                 WrapStyle = BreakOnSpaces
                 FontSize = 10
               end
-              object QRLabel4: TQRLabel
+              object CompanyLabel: TQRLabel
                 Left = 0
                 Top = 0
                 Width = 524

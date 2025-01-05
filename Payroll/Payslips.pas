@@ -27,7 +27,7 @@ type
     QRLabel17: TQRLabel;
     QRDBText16: TQRDBText;
     QRDBText17: TQRDBText;
-    QRLabel1: TQRLabel;
+    CompanyLabel: TQRLabel;
     QRLabel2: TQRLabel;
     QRShape1: TQRShape;
     QRLabel3: TQRLabel;
@@ -109,10 +109,12 @@ implementation
 {$R *.dfm}
 
 uses
-  PayrollDataMod, User;
+  PayrollDataMod, User, DBUtil;
 
 procedure TfPayslips.FormCreate(Sender: TObject);
 begin
+  CompanyLabel.Caption := GetCompanyName;
+
   // for whatever reason.. the dataset property is emptied during runtime
   qrMain.DataSet := dmPayroll.dstPayslips;
   inherited;

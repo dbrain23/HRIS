@@ -25,7 +25,7 @@ type
   TfPersonnelMovementSummary = class(TfBasePrintForm)
     TitleBand1: TQRBand;
     ReportTitle: TQRLabel;
-    QRLabel4: TQRLabel;
+    CompanyLabel: TQRLabel;
     QRExpr3: TQRExpr;
     lblPeriod: TLabel;
     cmbPayrollPeriod: TcxComboBox;
@@ -119,7 +119,7 @@ implementation
 {$R *.dfm}
 
 uses
-  ReportsAuxData, FormUtil, ComboBoxObj, User;
+  ReportsAuxData, FormUtil, ComboBoxObj, User, DBUtil;
 
 procedure TfPersonnelMovementSummary.bGenerateClick(Sender: TObject);
 begin
@@ -142,6 +142,8 @@ end;
 
 procedure TfPersonnelMovementSummary.FormCreate(Sender: TObject);
 begin
+  CompanyLabel.Caption := GetCompanyName;
+
   // for whatever reason.. the dataset property is emptied during runtime
   qrMain.DataSet := dstPersonnelMovement;
 

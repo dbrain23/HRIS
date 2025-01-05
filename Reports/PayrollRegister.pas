@@ -25,7 +25,7 @@ type
   TfPayrollRegister = class(TfBasePrintForm)
     TitleBand1: TQRBand;
     ReportTitle: TQRLabel;
-    QRLabel4: TQRLabel;
+    CompanyLabel: TQRLabel;
     QRExpr3: TQRExpr;
     ColumnHeaderBand: TQRBand;
     QRShape1: TQRShape;
@@ -119,7 +119,7 @@ type
     QRLabel21: TQRLabel;
     QRLabel22: TQRLabel;
     QRLabel10: TQRLabel;
-    QRLabel15: TQRLabel;
+    PreparerLabel: TQRLabel;
     QRLabel17: TQRLabel;
     QRLabel18: TQRLabel;
     cbxRegular: TcxCheckBox;
@@ -199,7 +199,7 @@ implementation
 {$R *.dfm}
 
 uses
-  ReportsAuxData, FormUtil, ComboBoxObj, User;
+  ReportsAuxData, FormUtil, ComboBoxObj, User, DBUtil;
 
 procedure TfPayrollRegister.bGenerateClick(Sender: TObject);
 begin
@@ -222,6 +222,8 @@ end;
 
 procedure TfPayrollRegister.FormCreate(Sender: TObject);
 begin
+  CompanyLabel.Caption := GetCompanyName;
+
   // for whatever reason.. the dataset property is emptied during runtime
   qrMain.DataSet := dstRegister;
 

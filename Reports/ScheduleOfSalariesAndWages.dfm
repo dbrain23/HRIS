@@ -72,8 +72,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
             ExplicitWidth = 731
           end
           inherited qrMain: TQuickRep
-            Left = 11
-            Top = -62
+            Top = 26
             DataSet = dstSchedOfSalaries
             Functions.DATA = (
               '0'
@@ -88,8 +87,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
               63.500000000000000000
               0.000000000000000000)
             Units = Inches
-            ExplicitLeft = 11
-            ExplicitTop = -62
+            ExplicitTop = 26
             object TitleBand1: TQRBand
               Left = 17
               Top = 24
@@ -133,7 +131,7 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
                 WrapStyle = BreakOnSpaces
                 FontSize = 10
               end
-              object QRLabel4: TQRLabel
+              object CompanyLabel: TQRLabel
                 Left = 0
                 Top = 0
                 Width = 537
@@ -1279,9 +1277,6 @@ inherited fSchedOfSalariesAndWages: TfSchedOfSalariesAndWages
             inherited bPrevious: TcxButton
               Left = 652
               ExplicitLeft = 652
-            end
-            inherited speZoom: TcxSpinEdit
-              ExplicitHeight = 22
             end
           end
         end

@@ -13,11 +13,16 @@ inherited fBcfReport: TfBcfReport
     ExplicitHeight = 539
     inherited tsMain: TTabSheet
       Caption = 'BCF Report'
+      ExplicitWidth = 853
+      ExplicitHeight = 510
       inherited pnlMain: TPanel
         Width = 853
         Height = 510
+        ExplicitWidth = 853
+        ExplicitHeight = 510
         inherited pnlLeft: TPanel
           Width = 843
+          ExplicitWidth = 843
           object lblPeriod: TLabel [0]
             Left = 8
             Top = 12
@@ -27,9 +32,11 @@ inherited fBcfReport: TfBcfReport
           end
           inherited btnPrint: TcxButton
             Left = 730
+            ExplicitLeft = 730
           end
           inherited bGenerate: TcxButton
             Left = 611
+            ExplicitLeft = 611
           end
           object cmbPayrollPeriod: TcxComboBox
             Left = 90
@@ -44,9 +51,13 @@ inherited fBcfReport: TfBcfReport
         inherited pnlReport: TPanel
           Width = 843
           Height = 427
+          ExplicitWidth = 843
+          ExplicitHeight = 427
           inherited rvMain: TQRPreview
             Width = 843
             Height = 427
+            ExplicitWidth = 843
+            ExplicitHeight = 427
           end
           inherited qrMain: TQuickRep
             DataSet = dstBcf
@@ -106,7 +117,7 @@ inherited fBcfReport: TfBcfReport
                 WrapStyle = BreakOnSpaces
                 FontSize = 10
               end
-              object QRLabel4: TQRLabel
+              object CompanyLabel: TQRLabel
                 Left = 0
                 Top = 0
                 Width = 522
@@ -1510,22 +1521,26 @@ inherited fBcfReport: TfBcfReport
         inherited p_ReportFooter: TPanel
           Top = 472
           Width = 843
+          ExplicitTop = 472
+          ExplicitWidth = 843
           inherited JvGroupBox1: TJvGroupBox
             Width = 841
+            ExplicitWidth = 841
             inherited bFirst: TcxButton
               Left = 739
+              ExplicitLeft = 739
             end
             inherited bLast: TcxButton
               Left = 814
+              ExplicitLeft = 814
             end
             inherited bNext: TcxButton
               Left = 789
+              ExplicitLeft = 789
             end
             inherited bPrevious: TcxButton
               Left = 764
-            end
-            inherited speZoom: TcxSpinEdit
-              ExplicitHeight = 22
+              ExplicitLeft = 764
             end
           end
         end

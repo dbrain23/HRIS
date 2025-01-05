@@ -32,7 +32,7 @@ type
     TitleBand1: TQRBand;
     ReportTitle: TQRLabel;
     DateRange: TQRLabel;
-    QRLabel4: TQRLabel;
+    CompanyLabel: TQRLabel;
     ProjectLabel: TQRLabel;
     MasterDetailBand: TQRBand;
     ParametersPanel: TPanel;
@@ -75,6 +75,7 @@ type
   private
     { Private declarations }
     INITIAL_LOAD: boolean;
+    procedure SetCompanyLabel;
     procedure SetLocationLabel;
     procedure SetReportDate;
     procedure PopulateLocations;
@@ -95,7 +96,7 @@ implementation
 
 {$R *.dfm}
 
-uses AppConstant, ReportsAuxData, SecurityDataMod;
+uses AppConstant, ReportsAuxData, SecurityDataMod, DBUtil;
 
 procedure TfBaseReport.SetPrintSettings;
 begin
@@ -117,6 +118,11 @@ begin
   else
     lblPageNumber.Caption := 'Page ' + IntToStr(ReportViewer.PageNumber) + ' of ' +
                       IntToStr(ReportViewer.QRPrinter.PageCount);
+end;
+
+procedure TfBaseReport.SetCompanyLabel;
+begin
+  CompanyLabel.Caption := GetCompanyName;
 end;
 
 procedure TfBaseReport.SetLocationLabel;
@@ -141,6 +147,7 @@ begin
   dstReport.Close;
   dstReport.Open;
 
+  SetCompanyLabel;
   SetLocationLabel;
   SetReportDate;
 

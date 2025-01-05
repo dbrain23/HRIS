@@ -83,6 +83,7 @@ inherited fPayrollRegister: TfPayrollRegister
             ExplicitHeight = 371
           end
           inherited qrMain: TQuickRep
+            Left = 8
             Top = -122
             Width = 941
             Height = 571
@@ -101,6 +102,7 @@ inherited fPayrollRegister: TfPayrollRegister
               88.900000000000000000
               88.900000000000000000
               0.000000000000000000)
+            ExplicitLeft = 8
             ExplicitTop = -122
             ExplicitWidth = 941
             ExplicitHeight = 571
@@ -147,7 +149,7 @@ inherited fPayrollRegister: TfPayrollRegister
                 WrapStyle = BreakOnSpaces
                 FontSize = 10
               end
-              object QRLabel4: TQRLabel
+              object CompanyLabel: TQRLabel
                 Left = 0
                 Top = 0
                 Width = 894
@@ -2149,7 +2151,7 @@ inherited fPayrollRegister: TfPayrollRegister
                 WrapStyle = BreakOnSpaces
                 FontSize = 8
               end
-              object QRLabel15: TQRLabel
+              object PreparerLabel: TQRLabel
                 Left = 61
                 Top = 244
                 Width = 76
@@ -2995,9 +2997,6 @@ inherited fPayrollRegister: TfPayrollRegister
             inherited bPrevious: TcxButton
               Left = 878
               ExplicitLeft = 878
-            end
-            inherited speZoom: TcxSpinEdit
-              ExplicitHeight = 22
             end
           end
         end

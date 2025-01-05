@@ -9,7 +9,6 @@ procedure CloseDataSets(dm: TDataModule);
 function ExecuteSQLRtn(const sql: string): string;
 function ExecuteSQLRtnCount(const sql: string): integer;
 function GetBranchCode: string;
-function GetCompanyName: string;
 
 implementation
 
@@ -79,14 +78,6 @@ var
   sql: string;
 begin
   sql := 'select dbo.fn_get_sysconfig_value(''LOCATION_CODE'')';
-  Result := ExecuteSQLRtn(sql);
-end;
-
-function GetCompanyName: string;
-var
-  sql: string;
-begin
-  sql := 'select dbo.fn_get_sysconfig_value(''COMPANY_NAME'')';
   Result := ExecuteSQLRtn(sql);
 end;
 

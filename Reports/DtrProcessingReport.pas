@@ -25,7 +25,7 @@ type
   TfDtrProcessingReport = class(TfBasePrintForm)
     TitleBand1: TQRBand;
     ReportTitle: TQRLabel;
-    QRLabel4: TQRLabel;
+    CompanyLabel: TQRLabel;
     QRExpr3: TQRExpr;
     QRGroup1: TQRGroup;
     QRDBText3: TQRDBText;
@@ -116,7 +116,7 @@ implementation
 {$R *.dfm}
 
 uses
-  ReportsAuxData, FormUtil, ComboBoxObj, User;
+  ReportsAuxData, FormUtil, ComboBoxObj, User, DBUtil;
 
 procedure TfDtrProcessingReport.SetParams;
 begin
@@ -139,6 +139,7 @@ begin
   if (cbxRegular.Checked) or (cbxProbationary.Checked) then
   begin
     FilterReport;
+
     inherited;
   end
   else
@@ -162,6 +163,8 @@ procedure TfDtrProcessingReport.FormCreate(Sender: TObject);
 begin
   // for whatever reason.. the dataset property is emptied during runtime
   qrMain.DataSet := dstDtrProcessing;
+
+  CompanyLabel.Caption := GetCompanyName;
 
   with dmReportsAux do
   begin

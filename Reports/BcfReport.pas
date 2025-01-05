@@ -25,7 +25,7 @@ type
   TfBcfReport = class(TfBasePrintForm)
     TitleBand1: TQRBand;
     ReportTitle: TQRLabel;
-    QRLabel4: TQRLabel;
+    CompanyLabel: TQRLabel;
     QRExpr3: TQRExpr;
     SummaryBand: TQRBand;
     QRShape17: TQRShape;
@@ -116,10 +116,12 @@ implementation
 {$R *.dfm}
 
 uses
-  ReportsAuxData, FormUtil, ComboBoxObj;
+  ReportsAuxData, FormUtil, ComboBoxObj, DBUtil;
 
 procedure TfBcfReport.FormCreate(Sender: TObject);
 begin
+  CompanyLabel.Caption := GetCompanyName;
+
   // for whatever reason.. the dataset property is emptied during runtime
   qrMain.DataSet := dstBcf;
 

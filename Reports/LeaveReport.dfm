@@ -144,7 +144,7 @@ inherited fLeaveReport: TfLeaveReport
                 WrapStyle = BreakOnSpaces
                 FontSize = 10
               end
-              object QRLabel4: TQRLabel
+              object CompanyLabel: TQRLabel
                 Left = 0
                 Top = 0
                 Width = 690
@@ -1421,9 +1421,6 @@ inherited fLeaveReport: TfLeaveReport
             inherited bPrevious: TcxButton
               Left = 779
               ExplicitLeft = 779
-            end
-            inherited speZoom: TcxSpinEdit
-              ExplicitHeight = 22
             end
           end
         end

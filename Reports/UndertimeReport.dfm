@@ -134,7 +134,7 @@ inherited fUndertimeReport: TfUndertimeReport
                 WrapStyle = BreakOnSpaces
                 FontSize = 10
               end
-              object QRLabel4: TQRLabel
+              object CompanyLabel: TQRLabel
                 Left = 0
                 Top = 0
                 Width = 597
@@ -1032,9 +1032,6 @@ inherited fUndertimeReport: TfUndertimeReport
             inherited bPrevious: TcxButton
               Left = 757
               ExplicitLeft = 757
-            end
-            inherited speZoom: TcxSpinEdit
-              ExplicitHeight = 22
             end
           end
         end

@@ -29,16 +29,19 @@ inherited fAttendanceReport: TfAttendanceReport
         end
         inherited QRLabel1: TQRLabel
           Top = 2
-          Width = 19
+          Width = 28
+          Height = 17
           Size.Values = (
-            45.357142857142860000
+            64.255952380952380000
             7.559523809523810000
             7.559523809523810000
-            71.815476190476190000)
+            105.833333333333300000)
           Caption = 'Date'
-          FontSize = 10
+          Font.Height = -19
+          FontSize = 14
           ExplicitTop = 2
-          ExplicitWidth = 19
+          ExplicitWidth = 28
+          ExplicitHeight = 17
         end
       end
       inherited TitleBand1: TQRBand
@@ -62,15 +65,13 @@ inherited fAttendanceReport: TfAttendanceReport
             1970.128205128205000000)
           FontSize = 8
         end
-        inherited QRLabel4: TQRLabel
-          Width = 522
+        inherited CompanyLabel: TQRLabel
           Size.Values = (
-            64.675925925925930000
+            63.500000000000000000
             0.000000000000000000
             0.000000000000000000
-            1972.615740740741000000)
+            1971.145833333333000000)
           FontSize = 14
-          ExplicitWidth = 522
         end
         inherited ProjectLabel: TQRLabel
           Top = 59
@@ -196,17 +197,6 @@ inherited fAttendanceReport: TfAttendanceReport
           FontSize = 9
         end
       end
-    end
-  end
-  inherited ParametersPanel: TPanel
-    inherited dtpFrom: TcxDateEdit
-      ExplicitHeight = 22
-    end
-    inherited dtpUntil: TcxDateEdit
-      ExplicitHeight = 22
-    end
-    inherited cmbLocation: TcxComboBox
-      ExplicitHeight = 22
     end
   end
   inherited dstReport: TADODataSet

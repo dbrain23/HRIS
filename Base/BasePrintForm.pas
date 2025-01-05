@@ -72,6 +72,9 @@ implementation
 
 {$R *.dfm}
 
+uses
+  DBUtil;
+
 { TfBasePrintForm }
 
 procedure TfBasePrintForm.bFirstClick(Sender: TObject);

@@ -25,7 +25,7 @@ type
   TfVarianceReport = class(TfBasePrintForm)
     TitleBand1: TQRBand;
     ReportTitle: TQRLabel;
-    QRLabel4: TQRLabel;
+    CompanyLabel: TQRLabel;
     QRExpr3: TQRExpr;
     ColumnHeaderBand: TQRBand;
     QRShape1: TQRShape;
@@ -67,7 +67,7 @@ implementation
 {$R *.dfm}
 
 uses
-  PayrollDataMod;
+  PayrollDataMod, DBUtil;
 
 procedure TfVarianceReport.ceVarianceAmountPropertiesEditValueChanged(
   Sender: TObject);
@@ -79,6 +79,8 @@ end;
 
 procedure TfVarianceReport.FormCreate(Sender: TObject);
 begin
+  CompanyLabel.Caption := GetCompanyName;
+
   // for whatever reason.. the dataset property is emptied during runtime
   qrMain.DataSet := dmPayroll.dstVariance;
   SetParameters;

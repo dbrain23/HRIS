@@ -228,7 +228,7 @@ inherited fBaseReport: TfBaseReport
           WrapStyle = BreakOnSpaces
           FontSize = 8
         end
-        object QRLabel4: TQRLabel
+        object CompanyLabel: TQRLabel
           Left = 0
           Top = 0
           Width = 521

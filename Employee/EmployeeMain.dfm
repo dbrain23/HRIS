@@ -686,6 +686,22 @@ inherited fEmployeeMain: TfEmployeeMain
             TabOrder = 22
             Width = 165
           end
+          object cxDBCheckBox1: TcxDBCheckBox
+            Left = 518
+            Top = 17
+            Caption = 'Inactive'
+            DataBinding.DataField = 'is_inactive'
+            DataBinding.DataSource = dmEmployee.dscEmployee
+            Properties.DisplayChecked = '1'
+            Properties.DisplayUnchecked = '0'
+            Properties.DisplayGrayed = '0'
+            Properties.NullStyle = nssUnchecked
+            Properties.ValueChecked = '1'
+            Properties.ValueGrayed = 0
+            Properties.ValueUnchecked = '0'
+            TabOrder = 23
+            Width = 75
+          end
         end
       end
     end

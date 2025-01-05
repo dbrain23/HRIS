@@ -210,7 +210,7 @@ inherited fPayslips: TfPayslips
                 MaxBreakChars = 0
                 FontSize = 8
               end
-              object QRLabel1: TQRLabel
+              object CompanyLabel: TQRLabel
                 Left = 3
                 Top = 3
                 Width = 256
@@ -1737,9 +1737,6 @@ inherited fPayslips: TfPayslips
             inherited bPrevious: TcxButton
               Left = 577
               ExplicitLeft = 577
-            end
-            inherited speZoom: TcxSpinEdit
-              ExplicitHeight = 22
             end
           end
         end

@@ -25,7 +25,7 @@ type
   TfDeductionSummaryReport = class(TfBasePrintForm)
     TitleBand1: TQRBand;
     ReportTitle: TQRLabel;
-    QRLabel4: TQRLabel;
+    CompanyLabel: TQRLabel;
     ColumnHeaderBand: TQRBand;
     DetailBand: TQRBand;
     QRShape1: TQRShape;
@@ -66,7 +66,7 @@ implementation
 {$R *.dfm}
 
 uses
-  PayrollDataMod;
+  PayrollDataMod, DBUtil;
 
 procedure TfDeductionSummaryReport.CreateFields;
 const
@@ -175,6 +175,8 @@ end;
 
 procedure TfDeductionSummaryReport.FormCreate(Sender: TObject);
 begin
+  CompanyLabel.Caption := GetCompanyName;
+
   // for whatever reason.. the dataset property is emptied during runtime
   qrMain.DataSet := dmPayroll.dstDeductionSummary;
 

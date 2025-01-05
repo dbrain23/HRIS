@@ -194,6 +194,7 @@ begin
   end
   else
   begin
+    DataSet.FieldByName('leave_id').AsString := ExecuteSQLRtn('select dbo.fn_get_next_leave_id()');
     DataSet.FieldByName('created_date').AsDateTime := System.SysUtils.Now;
   end;
 end;

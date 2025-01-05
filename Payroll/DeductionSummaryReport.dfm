@@ -2,7 +2,6 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
   Caption = 'fDeductionSummaryReport'
   ClientHeight = 586
   ClientWidth = 994
-  ExplicitLeft = -78
   ExplicitWidth = 1010
   ExplicitHeight = 625
   PixelsPerInch = 96
@@ -116,7 +115,7 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
                 WrapStyle = BreakOnSpaces
                 FontSize = 10
               end
-              object QRLabel4: TQRLabel
+              object CompanyLabel: TQRLabel
                 Left = 0
                 Top = 0
                 Width = 890
@@ -635,9 +634,6 @@ inherited fDeductionSummaryReport: TfDeductionSummaryReport
             inherited bPrevious: TcxButton
               Left = 897
               ExplicitLeft = 897
-            end
-            inherited speZoom: TcxSpinEdit
-              ExplicitHeight = 22
             end
           end
         end
