@@ -48,6 +48,7 @@ const
   SCHED_OF_SALARIES = 201;
   PAYROLL_REGISTER = 202;
   BCF = 203;
+  PAYROLL_REGISTER_BY_DEPT = 204;
 
 implementation
 
@@ -56,7 +57,7 @@ implementation
 uses
   FormUtil, ReportsAuxData, DtrProcessingReport, PersonnelMovementSummary,
   UndertimeReport, LeaveReport, ScheduleOfSalariesAndWages, PayrollRegister,
-  BcfReport;
+  BcfReport, PayrollRegisterByDepartment;
 
 procedure TfReportsDrawer.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
@@ -86,6 +87,7 @@ begin
    SCHED_OF_SALARIES: form := TfSchedOfSalariesAndWages.Create(self);
    PAYROLL_REGISTER: form := TfPayrollRegister.Create(self);
    BCF: form := TfBcfReport.Create(self);
+   PAYROLL_REGISTER_BY_DEPT: form := TfPayrollRegisterByDepartment.Create(self);
 
   else  form := TForm.Create(self);
   end;

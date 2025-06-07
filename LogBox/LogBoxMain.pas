@@ -4,52 +4,35 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, AdvTimePickerDropDown, Vcl.ExtCtrls,
-  cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxContainer,
-  cxEdit, dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinBlueprint, dxSkinCaramel,
-  dxSkinCoffee, dxSkinDarkRoom, dxSkinDarkSide, dxSkinDevExpressDarkStyle,
-  dxSkinDevExpressStyle, dxSkinFoggy, dxSkinGlassOceans, dxSkinHighContrast,
-  dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky, dxSkinLondonLiquidSky,
-  dxSkinMcSkin, dxSkinMoneyTwins, dxSkinOffice2007Black, dxSkinOffice2007Blue,
-  dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver,
-  dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver,
-  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
-  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
-  dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine, dxSkinVS2010,
-  dxSkinWhiteprint, dxSkinXmas2008Blue, cxImage, AdvShape, JvExExtCtrls,
-  JvExtComponent, JvClock, cxTextEdit, Vcl.StdCtrls, dxGDIPlusClasses,
-  W7Classes, W7Panels, datelbl, Vcl.Grids, AdvObj, BaseGrid, AdvGrid, AdvEdit,
-  Vcl.Imaging.jpeg, JvExControls, JvGroupHeader, DirectShow9,
-  cxListBox, cxStyles, dxSkinscxPCPainter, cxCustomData, cxFilter, cxData,
-  cxDataStorage, cxNavigator, Data.DB, cxDBData, cxDBLookupComboBox,
-  cxCurrencyEdit, cxGridLevel, cxGridCustomTableView, cxGridTableView,
-  cxGridDBTableView, cxClasses, cxGridCustomView, cxGrid, DXSUtil, DSPack;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls,
+  Vcl.StdCtrls, Vcl.Grids, Vcl.Imaging.jpeg, DirectShow9,
+  Data.DB, DXSUtil, DSPack, Vcl.Mask, RzEdit, Vcl.Imaging.pngimage, RLReport,
+  RzLstBox, RzStatus;
 
 type
   TfLogBoxMain = class(TForm)
     shMain: TShape;
     pMiddle: TPanel;
     pTop: TPanel;
-    dtlMain: TDateLabel;
-    clkMain: TJvClock;
     pBottom: TPanel;
     VideoSourceFilter: TFilter;
     CaptureGraph: TFilterGraph;
     SampleGrabber: TSampleGrabber;
     VideoWindow: TVideoWindow;
     lbCompleteLog: TLabel;
-    imgSnapshot: TcxImage;
-    imgLogBox: TcxImage;
     lbVersion: TLabel;
-    edPIN: TcxTextEdit;
-    JvGroupHeader1: TJvGroupHeader;
-    Label1: TLabel;
+    edPIN: TRzEdit;
     lbError: TLabel;
     lbImageDevice: TLabel;
-    ListBox: TcxListBox;
-    ListBox2: TcxListBox;
     lblLocation: TLabel;
-    grLogMessages: TAdvStringGrid;
+    DateLabel: TLabel;
+    Label1: TLabel;
+    imgLogBox: TImage;
+    ListBox: TRzListBox;
+    ListBox2: TRzListBox;
+    LogMemo: TRLMemo;
+    imgSnapshot: TImage;
+    RzClockStatus1: TRzClockStatus;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure edPINKeyPress(Sender: TObject; var Key: Char);
@@ -131,7 +114,7 @@ end;
 
 procedure TfLogBoxMain.imgLogBoxDblClick(Sender: TObject);
 begin
-  Application.Terminate;
+   Application.Terminate;
 end;
 
 procedure TfLogBoxMain.lbCompleteLogClick(Sender: TObject);
@@ -210,16 +193,16 @@ end;
 procedure TfLogBoxMain.PostMessage;
 begin
   // insert row at the top of the grid
-  if (grLogMessages.RowCount > 1) or
-     ((grLogMessages.RowCount = 1) and (Trim(grLogMessages.Cells[0,0]) = ''))then
-    grLogMessages.InsertRows(0,1);
+  //if (LogMemo.Lines.Count > 1) or
+  //   ((LogMemo.Lines.Count = 1) and (Trim(grLogMessages.Cells[0,0]) = ''))then
+  //  LogMemo.LInes.Insert(0,1);
 
   // insert message
-  grLogMessages.Cells[0,0] :=
+  LogMemo.Lines.Insert(0,
     dmTimeAttendance.spDTRLogTime.FieldByName('post_message').AsString  + ' ' +
-    UpperCase(dmTimeAttendance.spDTRLogTime.FieldByName('employee_name').AsString);
+    UpperCase(dmTimeAttendance.spDTRLogTime.FieldByName('employee_name').AsString));
 
-  grLogMessages.SelectRows(0,1);
+  // LogMemo.SelectRows(0,1);
   dmTimeAttendance.spDTRLogTime.Close;
 end;
 
@@ -233,7 +216,7 @@ procedure TfLogBoxMain.FormCreate(Sender: TObject);
 var
   i: integer;
 begin
- dtlMain.Caption := FormatDateTime('DDD MMMM dd, yyyy', System.SysUtils.Date);
+ DateLabel.Caption := FormatDateTime('DDD MMMM dd, yyyy', System.SysUtils.Date);
 
  dmTimeAttendance := TdmTimeAttendance.Create(self);
 

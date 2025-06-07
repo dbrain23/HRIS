@@ -1,4 +1,4 @@
-unit PayrollRegister;
+unit PayrollRegisterByDepartment;
 
 interface
 
@@ -22,7 +22,7 @@ uses
   Data.DB, Data.Win.ADODB, QRCtrls, cxCheckBox;
 
 type
-  TfPayrollRegister = class(TfBasePrintForm)
+  TfPayrollRegisterByDepartment = class(TfBasePrintForm)
     TitleBand1: TQRBand;
     ReportTitle: TQRLabel;
     CompanyLabel: TQRLabel;
@@ -198,13 +198,13 @@ implementation
 uses
   ReportsAuxData, FormUtil, ComboBoxObj, User, DBUtil;
 
-procedure TfPayrollRegister.bGenerateClick(Sender: TObject);
+procedure TfPayrollRegisterByDepartment.bGenerateClick(Sender: TObject);
 begin
   FilterReport;
   inherited;
 end;
 
-procedure TfPayrollRegister.FilterReport;
+procedure TfPayrollRegisterByDepartment.FilterReport;
 var
   filterStr: string;
 begin
@@ -217,7 +217,7 @@ begin
   dstRegister.Filter := filterStr;
 end;
 
-procedure TfPayrollRegister.FormCreate(Sender: TObject);
+procedure TfPayrollRegisterByDepartment.FormCreate(Sender: TObject);
 begin
   CompanyLabel.Caption := GetCompanyName;
 
@@ -233,13 +233,13 @@ begin
   inherited;
 end;
 
-procedure TfPayrollRegister.QRLabel10Print(sender: TObject; var Value: string);
+procedure TfPayrollRegisterByDepartment.QRLabel10Print(sender: TObject; var Value: string);
 begin
   inherited;
   Value := 'Prepared by: ' + SystemUser.FullName;
 end;
 
-procedure TfPayrollRegister.SetParams;
+procedure TfPayrollRegisterByDepartment.SetParams;
 begin
   with dstRegister.Parameters do
   begin

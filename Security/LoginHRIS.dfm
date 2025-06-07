@@ -7,9 +7,11 @@ inherited fLoginHRIS: TfLoginHRIS
     StyleDisabled.LookAndFeel.SkinName = ''
     StyleFocused.LookAndFeel.SkinName = ''
     StyleHot.LookAndFeel.SkinName = ''
+    inherited Label1: TLabel
+      Color = 14671839
+      ParentColor = False
+    end
     inherited p_Top: TAdvPanel
-      ExplicitLeft = 3
-      ExplicitTop = 3
       FullHeight = 0
       inherited lblVersion: TLabel
         Left = 20
@@ -33,9 +35,6 @@ inherited fLoginHRIS: TfLoginHRIS
     end
     inherited p_Left: TAdvPanel
       FullHeight = 0
-      inherited Label4: TLabel
-        Color = 14671839
-      end
     end
   end
 end

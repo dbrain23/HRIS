@@ -2092,7 +2092,7 @@ inherited fPafPrint: TfPafPrint
                 WrapStyle = BreakOnSpaces
                 FontSize = 10
               end
-              object QRLabel4: TQRLabel
+              object CompanyLabel: TQRLabel
                 Left = 0
                 Top = 0
                 Width = 524
@@ -2106,7 +2106,7 @@ inherited fPafPrint: TfPafPrint
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = False
-                Caption = 'Alano & Sons Credit Corporation'
+                Caption = ''
                 Color = clWhite
                 Font.Charset = ANSI_CHARSET
                 Font.Color = clRed
@@ -2158,9 +2158,6 @@ inherited fPafPrint: TfPafPrint
               Left = 518
               OnClick = nil
               ExplicitLeft = 518
-            end
-            inherited speZoom: TcxSpinEdit
-              ExplicitHeight = 22
             end
           end
         end

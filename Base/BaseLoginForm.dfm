@@ -438,12 +438,13 @@ inherited fBaseLoginForm: TfBaseLoginForm
         Transparent = True
         Visible = False
       end
-      object Label4: TLabel
+      object lblCompanyName: TLabel
         Left = 12
         Top = 33
         Width = 152
         Height = 38
         Alignment = taCenter
+        AutoSize = False
         Caption = 'Alano and Sons Credit Corporation'
         Color = 10196313
         Font.Charset = ANSI_CHARSET

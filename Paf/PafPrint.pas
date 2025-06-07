@@ -102,7 +102,7 @@ type
     QRDBText23: TQRDBText;
     TitleBand1: TQRBand;
     ReportTitle: TQRLabel;
-    QRLabel4: TQRLabel;
+    CompanyLabel: TQRLabel;
     bBack: TcxButton;
     QRDBText24: TQRDBText;
     QRDBText25: TQRDBText;
@@ -138,7 +138,7 @@ implementation
 {$R *.dfm}
 
 uses
-  PafDataMod, FormUtil;
+  PafDataMod, FormUtil, DBUtil;
 
 procedure TfPafPrint.bBackClick(Sender: TObject);
 begin
@@ -159,6 +159,8 @@ end;
 procedure TfPafPrint.FormCreate(Sender: TObject);
 begin
   inherited;
+
+  CompanyLabel.Caption := GetCompanyName;
 
   // set Branch Manager signatory
   with dmPaf do

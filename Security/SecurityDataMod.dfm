@@ -8,8 +8,8 @@ object dmSecurity: TdmSecurity
     CommandTimeout = 120
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
-      'fo=False;User ID=sa;Initial Catalog=HRIS_Live;Data Source=BRYAN\' +
-      'DEVELOPMENT;Use Procedure for Prepare=1;Auto Translate=True;Pack' +
+      'fo=False;User ID=sa;Initial Catalog=HRIS_ALC;Data Source=BRYAN\s' +
+      'qlexpress02;Use Procedure for Prepare=1;Auto Translate=True;Pack' +
       'et Size=4096;Workstation ID=BRYAN-ULTRA;Use Encryption for Data=' +
       'False;Tag with column collation when possible=False;'
     LoginPrompt = False

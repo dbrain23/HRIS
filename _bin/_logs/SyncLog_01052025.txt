@@ -1,9 +1,0 @@
-01/05/2025 11:50:12 Response: Invalid connection string attribute
-01/05/2025 11:50:14 *** Sending message...
-01/05/2025 11:50:45 Response: (,). Invalid connection string attribute
-01/05/2025 13:09:14 Response: Invalid connection string attribute
-01/05/2025 13:09:16 *** Sending message...
-01/05/2025 13:09:48 Response: (,). Invalid connection string attribute
-01/05/2025 13:44:42 Response: Invalid connection string attribute
-01/05/2025 13:44:44 *** Sending message...
-01/05/2025 13:45:16 Response: (,). Invalid connection string attribute

@@ -178,11 +178,15 @@
         <DCCReference Include="ScheduleOfSalariesAndWages.pas">
             <Form>fSchedOfSalariesAndWages</Form>
         </DCCReference>
-        <DCCReference Include="PayrollRegister.pas">
-            <Form>fPayrollRegister</Form>
+        <DCCReference Include="PayrollRegisterByDepartment.pas">
+            <Form>fPayrollRegisterByDepartment</Form>
         </DCCReference>
         <DCCReference Include="BcfReport.pas">
             <Form>fBcfReport</Form>
+        </DCCReference>
+        <DCCReference Include="PayrollRegister.pas">
+            <Form>fPayrollRegister</Form>
+            <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

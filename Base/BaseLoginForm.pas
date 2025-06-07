@@ -37,7 +37,7 @@ type
     pr_Status: TAdvProgress;
     lblVersion: TLabel;
     imgLogo: TImage;
-    Label4: TLabel;
+    lblCompanyName: TLabel;
     Label5: TLabel;
     procedure btLoginClick(Sender: TObject);
     procedure btCancelClick(Sender: TObject);
@@ -70,7 +70,7 @@ const
 
 implementation
 
-uses SecurityDataMod, AppConstant, User, ApplicationUtil;
+uses SecurityDataMod, AppConstant, User, ApplicationUtil, DBUtil;
 
 {$R *.dfm}
 
@@ -170,6 +170,8 @@ begin
 
   // get version
   lblVersion.Caption := 'Version ' + GetAppVersionStr(ParamStr(0));
+
+  lblCompanyName.Caption := GetCompanyName;
 end;
 
 procedure TfBaseLoginForm.FormKeyPress(Sender: TObject; var Key: Char);
