@@ -34,7 +34,8 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
               '')
             StyleDisabled.Color = clMenu
             TabOrder = 1
-            Width = 177
+            OnClick = cmbPayrollPeriodClick
+            Width = 212
           end
           inherited bGenerate: TcxButton
             Left = 718
@@ -42,7 +43,7 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
             ExplicitLeft = 718
           end
           object cbxRegular: TcxCheckBox
-            Left = 287
+            Left = 327
             Top = 6
             Hint = 'Copy previous adjustments'
             Caption = 'Regular '
@@ -54,7 +55,7 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
             Width = 66
           end
           object cbxProbationary: TcxCheckBox
-            Left = 375
+            Left = 415
             Top = 6
             Hint = 'Copy previous adjustments'
             Caption = 'Probationary'

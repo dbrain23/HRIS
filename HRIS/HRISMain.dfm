@@ -4,8 +4,8 @@ object fHRISMain: TfHRISMain
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Human Resource Integrated System'
-  ClientHeight = 597
-  ClientWidth = 1044
+  ClientHeight = 814
+  ClientWidth = 1499
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object fHRISMain: TfHRISMain
   object pDock: TJvPanel
     Left = 0
     Top = 46
-    Width = 1044
-    Height = 532
+    Width = 1499
+    Height = 749
     HotTrackFont.Charset = DEFAULT_CHARSET
     HotTrackFont.Color = clWindowText
     HotTrackFont.Height = -11
@@ -36,11 +36,13 @@ object fHRISMain: TfHRISMain
     BorderWidth = 2
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 1044
+    ExplicitHeight = 532
   end
   object tbMain: TToolBar
     Left = 0
     Top = 0
-    Width = 1044
+    Width = 1499
     Height = 46
     AutoSize = True
     BorderWidth = 2
@@ -63,6 +65,7 @@ object fHRISMain: TfHRISMain
     ShowCaptions = True
     ShowHint = False
     TabOrder = 1
+    ExplicitWidth = 1044
     object tbEmployee: TToolButton
       Left = 0
       Top = 0
@@ -221,8 +224,8 @@ object fHRISMain: TfHRISMain
   end
   object sbMain: TJvStatusBar
     Left = 0
-    Top = 578
-    Width = 1044
+    Top = 795
+    Width = 1499
     Height = 19
     Panels = <
       item
@@ -237,6 +240,8 @@ object fHRISMain: TfHRISMain
       item
         Width = 50
       end>
+    ExplicitTop = 578
+    ExplicitWidth = 1044
   end
   object mmMain: TMainMenu
     Left = 64

@@ -19,7 +19,8 @@ uses
   dxSkinXmas2008Blue, cxControls, cxContainer, cxEdit, cxTextEdit, cxMaskEdit,
   cxSpinEdit, Vcl.StdCtrls, JvExStdCtrls, JvGroupBox, Vcl.ExtCtrls, QuickRpt,
   QRPrntr, cxButtons, Vcl.ComCtrls, JvExComCtrls, JvComCtrls, QRCtrls,
-  cxDropDownEdit, Data.DB, Data.Win.ADODB, cxCheckBox;
+  cxDropDownEdit, Data.DB, Data.Win.ADODB, cxCheckBox, dxCore, cxDateUtils,
+  cxCalendar, JvExControls, JvLabel;
 
 type
   TfDtrProcessingReport = class(TfBasePrintForm)
@@ -99,6 +100,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
     procedure UserLabelPrint(sender: TObject; var Value: string);
+    procedure cmbPayrollPeriodClick(Sender: TObject);
+    procedure dtpFromClick(Sender: TObject);
   private
     { Private declarations }
     procedure FilterReport;
@@ -144,6 +147,19 @@ begin
   end
   else
     MessageDlg('No option selected.',mtError,[mbOk],0);
+end;
+
+procedure TfDtrProcessingReport.cmbPayrollPeriodClick(Sender: TObject);
+begin
+  inherited;
+  dtpFrom.Clear;
+  dtpUntil.Clear;
+end;
+
+procedure TfDtrProcessingReport.dtpFromClick(Sender: TObject);
+begin
+  inherited;
+  cmbPayrollPeriod.ItemIndex := 0;
 end;
 
 procedure TfDtrProcessingReport.FilterReport;

@@ -1,16 +1,16 @@
 inherited fEmployeeMain: TfEmployeeMain
   Caption = 'fEmployeeMain'
   ClientHeight = 534
-  ClientWidth = 780
+  ClientWidth = 1066
   Position = poMainFormCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  ExplicitWidth = 796
+  ExplicitWidth = 1082
   ExplicitHeight = 573
   PixelsPerInch = 96
   TextHeight = 14
   inherited pMaster: TJvPanel
-    Width = 780
+    Width = 1066
     Height = 534
     BorderWidth = 1
     ExplicitWidth = 780
@@ -18,19 +18,21 @@ inherited fEmployeeMain: TfEmployeeMain
     object pcEmployee: TJvPageControl
       Left = 1
       Top = 1
-      Width = 778
+      Width = 1064
       Height = 532
       ActivePage = tsEmployeeDetails
       Align = alClient
       MultiLine = True
       TabOrder = 0
       ReduceMemoryUse = True
+      ExplicitWidth = 778
       object tsEmployeeDetails: TTabSheet
         Caption = 'Personal Details'
+        ExplicitWidth = 770
         object pDetails: TJvPanel
           Left = 0
           Top = 0
-          Width = 770
+          Width = 1056
           Height = 503
           HotTrackFont.Charset = DEFAULT_CHARSET
           HotTrackFont.Color = clWindowText
@@ -41,6 +43,9 @@ inherited fEmployeeMain: TfEmployeeMain
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
+          ExplicitLeft = 48
+          ExplicitTop = -3
+          ExplicitWidth = 770
           object JvLabel13: TJvLabel
             Left = 262
             Top = 186
@@ -662,7 +667,7 @@ inherited fEmployeeMain: TfEmployeeMain
             Width = 165
           end
           object cbxExternal: TcxDBCheckBox
-            Left = 422
+            Left = 414
             Top = 17
             Caption = 'External'
             DataBinding.DataField = 'is_external'
@@ -687,7 +692,7 @@ inherited fEmployeeMain: TfEmployeeMain
             Width = 165
           end
           object cxDBCheckBox1: TcxDBCheckBox
-            Left = 518
+            Left = 558
             Top = 17
             Caption = 'Inactive'
             DataBinding.DataField = 'is_inactive'
@@ -701,6 +706,21 @@ inherited fEmployeeMain: TfEmployeeMain
             Properties.ValueUnchecked = '0'
             TabOrder = 23
             Width = 75
+          end
+          object cxDBCheckBox2: TcxDBCheckBox
+            Left = 694
+            Top = 17
+            Caption = 'On maternity leave'
+            DataBinding.DataField = 'on_maternity_leave'
+            DataBinding.DataSource = dmEmployee.dscEmployee
+            Properties.DisplayChecked = 'true'
+            Properties.DisplayUnchecked = 'false'
+            Properties.DisplayGrayed = 'false'
+            Properties.NullStyle = nssUnchecked
+            Properties.ValueGrayed = False
+            Properties.ValueUnchecked = 'False'
+            TabOrder = 24
+            Width = 139
           end
         end
       end

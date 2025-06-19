@@ -19,7 +19,8 @@ uses
   dxSkinXmas2008Blue, cxControls, cxContainer, cxEdit, Data.DB, Data.Win.ADODB,
   cxDropDownEdit, cxTextEdit, cxMaskEdit, cxSpinEdit, Vcl.StdCtrls,
   JvExStdCtrls, JvGroupBox, Vcl.ExtCtrls, QuickRpt, QRPrntr, cxButtons,
-  Vcl.ComCtrls, JvExComCtrls, JvComCtrls, QRCtrls, cxCheckBox;
+  Vcl.ComCtrls, JvExComCtrls, JvComCtrls, QRCtrls, cxCheckBox, dxCore,
+  cxDateUtils, cxCalendar, JvExControls, JvLabel;
 
 type
   TfLeaveReport = class(TfBasePrintForm)
@@ -83,9 +84,14 @@ type
     QRShape16: TQRShape;
     QRExpr1: TQRExpr;
     QRExpr4: TQRExpr;
+    JvLabel7: TJvLabel;
+    dtpFrom: TcxDateEdit;
+    dtpUntil: TcxDateEdit;
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
     procedure QRLabel10Print(sender: TObject; var Value: string);
+    procedure dtpFromClick(Sender: TObject);
+    procedure cmbPayrollPeriodClick(Sender: TObject);
   private
     { Private declarations }
     procedure FilterReport;
@@ -118,6 +124,9 @@ begin
       'payroll_code','payroll_period');
   end;
 
+  dtpFrom.Date := Now;
+  dtpUntil.Date := Now;
+
   inherited;
 end;
 
@@ -129,10 +138,19 @@ end;
 
 procedure TfLeaveReport.SetParams;
 begin
-  with dstLeave.Parameters do
+  if cmbPayrollPeriod.ItemIndex > 0 then
   begin
-    ParamByName('@payroll_code').Value :=
-          TComboBoxObj(cmbPayrollPeriod.ItemObject).Code;
+    with dstLeave.Parameters do
+    begin
+      ParamByName('@payroll_code').Value :=
+            TComboBoxObj(cmbPayrollPeriod.ItemObject).Code;
+    end;
+  end
+  else
+  begin
+    dstLeave.Parameters.ParamByName('@payroll_code').Value := null;
+    dstLeave.Parameters.ParamByName('@date_from').Value := Trunc(dtpFrom.Date);
+    dstLeave.Parameters.ParamByName('@date_until').Value := Trunc(dtpUntil.Date);
   end;
 end;
 
@@ -145,6 +163,19 @@ begin
   end
   else
     MessageDlg('No option selected.',mtError,[mbOk],0);
+end;
+
+procedure TfLeaveReport.cmbPayrollPeriodClick(Sender: TObject);
+begin
+  inherited;
+  dtpFrom.Clear;
+  dtpUntil.Clear;
+end;
+
+procedure TfLeaveReport.dtpFromClick(Sender: TObject);
+begin
+  inherited;
+  cmbPayrollPeriod.ItemIndex := 0;
 end;
 
 procedure TfLeaveReport.FilterReport;

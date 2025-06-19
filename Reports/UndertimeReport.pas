@@ -19,7 +19,8 @@ uses
   dxSkinXmas2008Blue, cxControls, cxContainer, cxEdit, cxTextEdit, cxMaskEdit,
   cxSpinEdit, Vcl.StdCtrls, JvExStdCtrls, JvGroupBox, Vcl.ExtCtrls, QuickRpt,
   QRPrntr, cxButtons, Vcl.ComCtrls, JvExComCtrls, JvComCtrls, cxDropDownEdit,
-  Data.DB, Data.Win.ADODB, QRCtrls, cxCheckBox;
+  Data.DB, Data.Win.ADODB, QRCtrls, cxCheckBox, dxCore, cxDateUtils, cxCalendar,
+  JvExControls, JvLabel;
 
 type
   TfUndertimeReport = class(TfBasePrintForm)
@@ -67,6 +68,9 @@ type
     QRExpr1: TQRExpr;
     QRExpr4: TQRExpr;
     QRExpr5: TQRExpr;
+    JvLabel7: TJvLabel;
+    dtpFrom: TcxDateEdit;
+    dtpUntil: TcxDateEdit;
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
     procedure QRLabel7Print(sender: TObject; var Value: string);
