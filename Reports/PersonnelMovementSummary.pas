@@ -19,7 +19,8 @@ uses
   dxSkinXmas2008Blue, cxControls, cxContainer, cxEdit, cxTextEdit, cxMaskEdit,
   cxSpinEdit, Vcl.StdCtrls, JvExStdCtrls, JvGroupBox, Vcl.ExtCtrls, QuickRpt,
   QRPrntr, cxButtons, Vcl.ComCtrls, JvExComCtrls, JvComCtrls, QRCtrls,
-  cxDropDownEdit, Data.DB, Data.Win.ADODB, cxCheckBox;
+  cxDropDownEdit, Data.DB, Data.Win.ADODB, cxCheckBox, dxCore, cxDateUtils,
+  cxCalendar, JvExControls, JvLabel;
 
 type
   TfPersonnelMovementSummary = class(TfBasePrintForm)
@@ -99,9 +100,14 @@ type
     QRExpr1: TQRExpr;
     QRExpr4: TQRExpr;
     QRExpr5: TQRExpr;
+    JvLabel7: TJvLabel;
+    dtpFrom: TcxDateEdit;
+    dtpUntil: TcxDateEdit;
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
     procedure QRLabel17Print(sender: TObject; var Value: string);
+    procedure cmbPayrollPeriodClick(Sender: TObject);
+    procedure dtpFromClick(Sender: TObject);
   private
     { Private declarations }
     procedure FilterReport;
@@ -125,6 +131,19 @@ procedure TfPersonnelMovementSummary.bGenerateClick(Sender: TObject);
 begin
   FilterReport;
   inherited;
+end;
+
+procedure TfPersonnelMovementSummary.cmbPayrollPeriodClick(Sender: TObject);
+begin
+  inherited;
+  dtpFrom.Clear;
+  dtpUntil.Clear;
+end;
+
+procedure TfPersonnelMovementSummary.dtpFromClick(Sender: TObject);
+begin
+  inherited;
+  cmbPayrollPeriod.ItemIndex := 0;
 end;
 
 procedure TfPersonnelMovementSummary.FilterReport;
@@ -152,6 +171,9 @@ begin
     PopulateComboBox(dstPayrollPeriod,cmbPayrollPeriod,
       'payroll_code','payroll_period');
   end;
+
+  dtpFrom.Date := Now;
+  dtpUntil.Date := Now;
 
   inherited;
 end;

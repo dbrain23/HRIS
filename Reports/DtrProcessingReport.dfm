@@ -15,7 +15,9 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
         ExplicitWidth = 960
         inherited pnlLeft: TPanel
           Width = 950
+          Height = 68
           ExplicitWidth = 950
+          ExplicitHeight = 68
           object lblPeriod: TLabel [0]
             Left = 8
             Top = 12
@@ -23,11 +25,24 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
             Height = 14
             Caption = 'Payroll period'
           end
+          object JvLabel7: TJvLabel [1]
+            Left = 8
+            Top = 40
+            Width = 63
+            Height = 14
+            Caption = 'Date range'
+            Transparent = True
+            HotTrackFont.Charset = DEFAULT_CHARSET
+            HotTrackFont.Color = clWindowText
+            HotTrackFont.Height = -11
+            HotTrackFont.Name = 'Tahoma'
+            HotTrackFont.Style = []
+          end
           inherited btnPrint: TcxButton
             Left = 837
             ExplicitLeft = 837
           end
-          object cmbPayrollPeriod: TcxComboBox [2]
+          object cmbPayrollPeriod: TcxComboBox [3]
             Left = 90
             Top = 6
             Properties.Items.Strings = (
@@ -65,12 +80,33 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
             TabOrder = 4
             Width = 106
           end
+          object dtpFrom: TcxDateEdit
+            Left = 90
+            Top = 34
+            Properties.SaveTime = False
+            Properties.ShowTime = False
+            TabOrder = 5
+            OnClick = dtpFromClick
+            Width = 104
+          end
+          object dtpUntil: TcxDateEdit
+            Left = 198
+            Top = 34
+            Properties.SaveTime = False
+            Properties.ShowTime = False
+            TabOrder = 6
+            OnClick = dtpFromClick
+            Width = 104
+          end
         end
         inherited pnlReport: TPanel
+          Top = 73
           Width = 950
+          Height = 320
           ExplicitWidth = 950
           inherited rvMain: TQRPreview
             Width = 950
+            Height = 320
             ExplicitWidth = 950
           end
           inherited qrMain: TQuickRep
@@ -1724,6 +1760,9 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
               Left = 871
               ExplicitLeft = 871
             end
+            inherited speZoom: TcxSpinEdit
+              ExplicitHeight = 22
+            end
           end
         end
       end
@@ -1742,14 +1781,25 @@ inherited fDtrProcessingReport: TfDtrProcessingReport
         DataType = ftInteger
         Direction = pdReturnValue
         Precision = 10
-        Value = 0
       end
       item
         Name = '@payroll_code'
         Attributes = [paNullable]
         DataType = ftString
         Size = 15
-        Value = Null
+        Value = ''
+      end
+      item
+        Name = '@date_from'
+        Attributes = [paNullable]
+        DataType = ftDateTime
+        Value = 0d
+      end
+      item
+        Name = '@date_until'
+        Attributes = [paNullable]
+        DataType = ftDateTime
+        Value = 0d
       end>
     Left = 824
     Top = 416

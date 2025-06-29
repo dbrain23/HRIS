@@ -97,6 +97,9 @@ type
     QRExpr5: TQRExpr;
     QRExpr1: TQRExpr;
     QRExpr4: TQRExpr;
+    JvLabel7: TJvLabel;
+    dtpFrom: TcxDateEdit;
+    dtpUntil: TcxDateEdit;
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
     procedure UserLabelPrint(sender: TObject; var Value: string);
@@ -123,11 +126,21 @@ uses
 
 procedure TfDtrProcessingReport.SetParams;
 begin
-  with dstDtrProcessing.Parameters do
+  if cmbPayrollPeriod.ItemIndex > 0 then
   begin
-    ParamByName('@payroll_code').Value :=
-          TComboBoxObj(cmbPayrollPeriod.ItemObject).Code;
+    with dstDtrProcessing.Parameters do
+    begin
+      ParamByName('@payroll_code').Value :=
+            TComboBoxObj(cmbPayrollPeriod.ItemObject).Code;
+    end;
+  end
+  else
+  begin
+    dstDtrProcessing.Parameters.ParamByName('@payroll_code').Value := null;
+    dstDtrProcessing.Parameters.ParamByName('@date_from').Value := Trunc(dtpFrom.Date);
+    dstDtrProcessing.Parameters.ParamByName('@date_until').Value := Trunc(dtpUntil.Date);
   end;
+
 end;
 
 procedure TfDtrProcessingReport.UserLabelPrint(sender: TObject;
@@ -187,6 +200,9 @@ begin
     PopulateComboBox(dstPayrollPeriod,cmbPayrollPeriod,
       'payroll_code','payroll_period');
   end;
+
+  dtpFrom.Date := Now;
+  dtpUntil.Date := Now;
 
   inherited;
 end;

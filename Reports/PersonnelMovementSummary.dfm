@@ -15,13 +15,28 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
         ExplicitWidth = 991
         inherited pnlLeft: TPanel
           Width = 981
+          Height = 68
           ExplicitWidth = 981
+          ExplicitHeight = 68
           object lblPeriod: TLabel [0]
             Left = 8
             Top = 12
             Width = 72
             Height = 14
             Caption = 'Payroll period'
+          end
+          object JvLabel7: TJvLabel [1]
+            Left = 8
+            Top = 40
+            Width = 63
+            Height = 14
+            Caption = 'Date range'
+            Transparent = True
+            HotTrackFont.Charset = DEFAULT_CHARSET
+            HotTrackFont.Color = clWindowText
+            HotTrackFont.Height = -11
+            HotTrackFont.Name = 'Tahoma'
+            HotTrackFont.Style = []
           end
           inherited btnPrint: TcxButton
             Left = 868
@@ -38,10 +53,11 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               '')
             StyleDisabled.Color = clMenu
             TabOrder = 2
-            Width = 177
+            OnClick = cmbPayrollPeriodClick
+            Width = 212
           end
           object cbxRegular: TcxCheckBox
-            Left = 287
+            Left = 317
             Top = 6
             Hint = 'Copy previous adjustments'
             Caption = 'Regular '
@@ -53,7 +69,7 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
             Width = 66
           end
           object cbxProbationary: TcxCheckBox
-            Left = 375
+            Left = 405
             Top = 6
             Hint = 'Copy previous adjustments'
             Caption = 'Probationary'
@@ -63,12 +79,33 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
             TabOrder = 4
             Width = 106
           end
+          object dtpFrom: TcxDateEdit
+            Left = 90
+            Top = 34
+            Properties.SaveTime = False
+            Properties.ShowTime = False
+            TabOrder = 5
+            OnClick = dtpFromClick
+            Width = 104
+          end
+          object dtpUntil: TcxDateEdit
+            Left = 198
+            Top = 34
+            Properties.SaveTime = False
+            Properties.ShowTime = False
+            TabOrder = 6
+            OnClick = dtpFromClick
+            Width = 104
+          end
         end
         inherited pnlReport: TPanel
+          Top = 73
           Width = 981
+          Height = 320
           ExplicitWidth = 981
           inherited rvMain: TQRPreview
             Width = 981
+            Height = 320
             ExplicitWidth = 981
           end
           inherited qrMain: TQuickRep
@@ -1757,6 +1794,9 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
               Left = 902
               ExplicitLeft = 902
             end
+            inherited speZoom: TcxSpinEdit
+              ExplicitHeight = 22
+            end
           end
         end
       end
@@ -1775,7 +1815,6 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
         DataType = ftInteger
         Direction = pdReturnValue
         Precision = 10
-        Value = 0
       end
       item
         Name = '@payroll_code'
@@ -1783,6 +1822,18 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
         DataType = ftString
         Size = 15
         Value = ''
+      end
+      item
+        Name = '@date_from'
+        Attributes = [paNullable]
+        DataType = ftDateTime
+        Value = 0d
+      end
+      item
+        Name = '@date_until'
+        Attributes = [paNullable]
+        DataType = ftDateTime
+        Value = 0d
       end>
     Left = 824
     Top = 416

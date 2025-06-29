@@ -74,6 +74,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
     procedure QRLabel7Print(sender: TObject; var Value: string);
+    procedure cmbPayrollPeriodClick(Sender: TObject);
+    procedure dtpFromClick(Sender: TObject);
   private
     { Private declarations }
     procedure FilterReport;
@@ -104,6 +106,19 @@ begin
     MessageDlg('No option selected.',mtError,[mbOk],0);
 end;
 
+procedure TfUndertimeReport.cmbPayrollPeriodClick(Sender: TObject);
+begin
+  inherited;
+  dtpFrom.Clear;
+  dtpUntil.Clear;
+end;
+
+procedure TfUndertimeReport.dtpFromClick(Sender: TObject);
+begin
+  inherited;
+  cmbPayrollPeriod.ItemIndex := 0;
+end;
+
 procedure TfUndertimeReport.FilterReport;
 var
   filterStr: string;
@@ -129,6 +144,9 @@ begin
     PopulateComboBox(dstPayrollPeriod,cmbPayrollPeriod,
       'payroll_code','payroll_period');
   end;
+
+  dtpFrom.Date := Now;
+  dtpUntil.Date := Now;
 
   inherited;
 end;

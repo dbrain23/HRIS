@@ -53,6 +53,7 @@ inherited fUndertimeReport: TfUndertimeReport
               '')
             StyleDisabled.Color = clMenu
             TabOrder = 2
+            OnClick = cmbPayrollPeriodClick
             Width = 212
           end
           object cbxRegular: TcxCheckBox
@@ -84,6 +85,7 @@ inherited fUndertimeReport: TfUndertimeReport
             Properties.SaveTime = False
             Properties.ShowTime = False
             TabOrder = 5
+            OnClick = dtpFromClick
             Width = 104
           end
           object dtpUntil: TcxDateEdit
@@ -92,6 +94,7 @@ inherited fUndertimeReport: TfUndertimeReport
             Properties.SaveTime = False
             Properties.ShowTime = False
             TabOrder = 6
+            OnClick = dtpFromClick
             Width = 104
           end
         end
@@ -99,11 +102,14 @@ inherited fUndertimeReport: TfUndertimeReport
           Top = 73
           Width = 836
           Height = 320
+          ExplicitTop = 73
           ExplicitWidth = 836
+          ExplicitHeight = 320
           inherited rvMain: TQRPreview
             Width = 836
             Height = 320
             ExplicitWidth = 836
+            ExplicitHeight = 320
           end
           inherited qrMain: TQuickRep
             Width = 653
@@ -1085,7 +1091,6 @@ inherited fUndertimeReport: TfUndertimeReport
         DataType = ftInteger
         Direction = pdReturnValue
         Precision = 10
-        Value = 0
       end
       item
         Name = '@payroll_code'
@@ -1093,6 +1098,18 @@ inherited fUndertimeReport: TfUndertimeReport
         DataType = ftString
         Size = 15
         Value = ''
+      end
+      item
+        Name = '@date_from'
+        Attributes = [paNullable]
+        DataType = ftDateTime
+        Value = 0d
+      end
+      item
+        Name = '@date_until'
+        Attributes = [paNullable]
+        DataType = ftDateTime
+        Value = 0d
       end>
     Left = 453
     Top = 408
