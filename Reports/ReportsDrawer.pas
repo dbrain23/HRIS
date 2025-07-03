@@ -44,6 +44,7 @@ const
   PERSONNEL_MOVEMENT = 102;
   UNDERTIME = 103;
   LEAVE = 104;
+  LATE = 105;
 
   SCHED_OF_SALARIES = 201;
   PAYROLL_REGISTER = 202;
@@ -57,7 +58,7 @@ implementation
 uses
   FormUtil, ReportsAuxData, DtrProcessingReport, PersonnelMovementSummary,
   UndertimeReport, LeaveReport, ScheduleOfSalariesAndWages, PayrollRegister,
-  BcfReport, PayrollRegisterByDepartment;
+  BcfReport, PayrollRegisterByDepartment, LateReport;
 
 procedure TfReportsDrawer.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
@@ -84,6 +85,7 @@ begin
    PERSONNEL_MOVEMENT: form := TfPersonnelMovementSummary.Create(self);
    UNDERTIME: form := TfUndertimeReport.Create(self);
    LEAVE: form := TfLeaveReport.Create(self);
+   LATE: form := TfLateReport.Create(self);
    SCHED_OF_SALARIES: form := TfSchedOfSalariesAndWages.Create(self);
    PAYROLL_REGISTER: form := TfPayrollRegister.Create(self);
    BCF: form := TfBcfReport.Create(self);

@@ -6,6 +6,7 @@ object dmSecurity: TdmSecurity
   Width = 572
   object acSecurity: TADOConnection
     CommandTimeout = 120
+    Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
       'fo=False;User ID=sa;Initial Catalog=HRIS_ALC;Data Source=BRYAN\s' +

@@ -104,6 +104,7 @@ contains
   ScheduleOfSalariesAndWages in 'ScheduleOfSalariesAndWages.pas' {fSchedOfSalariesAndWages},
   PayrollRegisterByDepartment in 'PayrollRegisterByDepartment.pas' {fPayrollRegisterByDepartment},
   BcfReport in 'BcfReport.pas' {fBcfReport},
-  PayrollRegister in 'PayrollRegister.pas' {fPayrollRegister};
+  PayrollRegister in 'PayrollRegister.pas' {fPayrollRegister},
+  LateReport in 'LateReport.pas' {fLateReport};
 
 end.

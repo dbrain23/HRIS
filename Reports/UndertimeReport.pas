@@ -159,11 +159,21 @@ end;
 
 procedure TfUndertimeReport.SetParams;
 begin
-  with dstUndertime.Parameters do
+  if cmbPayrollPeriod.ItemIndex > 0 then
   begin
-    ParamByName('@payroll_code').Value :=
-          TComboBoxObj(cmbPayrollPeriod.ItemObject).Code;
+    with dstUndertime.Parameters do
+    begin
+      ParamByName('@payroll_code').Value :=
+            TComboBoxObj(cmbPayrollPeriod.ItemObject).Code;
+    end;
+  end
+  else
+  begin
+    dstUndertime.Parameters.ParamByName('@payroll_code').Value := null;
+    dstUndertime.Parameters.ParamByName('@date_from').Value := Trunc(dtpFrom.Date);
+    dstUndertime.Parameters.ParamByName('@date_until').Value := Trunc(dtpUntil.Date);
   end;
+
 end;
 
 end.

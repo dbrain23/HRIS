@@ -111,13 +111,14 @@ inherited fLeaveReport: TfLeaveReport
           Top = 73
           Width = 858
           Height = 328
+          ExplicitTop = 73
           ExplicitWidth = 858
-          ExplicitHeight = 356
+          ExplicitHeight = 328
           inherited rvMain: TQRPreview
             Width = 858
             Height = 328
             ExplicitWidth = 858
-            ExplicitHeight = 356
+            ExplicitHeight = 328
           end
           inherited qrMain: TQuickRep
             Width = 739
@@ -1477,6 +1478,7 @@ inherited fLeaveReport: TfLeaveReport
         DataType = ftInteger
         Direction = pdReturnValue
         Precision = 10
+        Value = Null
       end
       item
         Name = '@payroll_code'
