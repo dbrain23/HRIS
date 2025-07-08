@@ -175,9 +175,10 @@ BEGIN
 	    on e.id_num = r.id_num
 	  join location l (nolock)
 	    on l.location_code = e.location_code
-  order by l.location_name,
+  order by employee_name,
            r.dtr_date,
-		   employee_name
+		   l.location_name
+		   
 
 	drop table #dtr
 	drop table #dtr_saturday
