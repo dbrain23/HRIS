@@ -102,11 +102,14 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
           Top = 73
           Width = 981
           Height = 320
+          ExplicitTop = 73
           ExplicitWidth = 981
+          ExplicitHeight = 320
           inherited rvMain: TQRPreview
             Width = 981
             Height = 320
             ExplicitWidth = 981
+            ExplicitHeight = 320
           end
           inherited qrMain: TQuickRep
             Width = 739
@@ -1808,6 +1811,7 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
     Filtered = True
     LockType = ltReadOnly
     CommandText = 'rpt_pr_personnel_movement_summary;1'
+    CommandTimeout = 300
     CommandType = cmdStoredProc
     Parameters = <
       item
@@ -1815,6 +1819,7 @@ inherited fPersonnelMovementSummary: TfPersonnelMovementSummary
         DataType = ftInteger
         Direction = pdReturnValue
         Precision = 10
+        Value = Null
       end
       item
         Name = '@payroll_code'

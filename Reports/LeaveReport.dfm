@@ -1460,6 +1460,9 @@ inherited fLeaveReport: TfLeaveReport
               Left = 779
               ExplicitLeft = 779
             end
+            inherited speZoom: TcxSpinEdit
+              ExplicitHeight = 22
+            end
           end
         end
       end
@@ -1471,6 +1474,7 @@ inherited fLeaveReport: TfLeaveReport
     Filtered = True
     LockType = ltReadOnly
     CommandText = 'rpt_pr_leave_report;1'
+    CommandTimeout = 300
     CommandType = cmdStoredProc
     Parameters = <
       item

@@ -1073,6 +1073,9 @@ inherited fUndertimeReport: TfUndertimeReport
               Left = 757
               ExplicitLeft = 757
             end
+            inherited speZoom: TcxSpinEdit
+              ExplicitHeight = 22
+            end
           end
         end
       end
@@ -1084,6 +1087,7 @@ inherited fUndertimeReport: TfUndertimeReport
     Filtered = True
     LockType = ltReadOnly
     CommandText = 'rpt_pr_undertime_report;1'
+    CommandTimeout = 300
     CommandType = cmdStoredProc
     Parameters = <
       item

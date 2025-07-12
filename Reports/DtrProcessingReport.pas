@@ -97,13 +97,9 @@ type
     QRExpr5: TQRExpr;
     QRExpr1: TQRExpr;
     QRExpr4: TQRExpr;
-    JvLabel7: TJvLabel;
-    dtpFrom: TcxDateEdit;
-    dtpUntil: TcxDateEdit;
     procedure FormCreate(Sender: TObject);
     procedure bGenerateClick(Sender: TObject);
     procedure UserLabelPrint(sender: TObject; var Value: string);
-    procedure cmbPayrollPeriodClick(Sender: TObject);
     procedure dtpFromClick(Sender: TObject);
   private
     { Private declarations }
@@ -126,21 +122,11 @@ uses
 
 procedure TfDtrProcessingReport.SetParams;
 begin
-  if cmbPayrollPeriod.ItemIndex > 0 then
+  with dstDtrProcessing.Parameters do
   begin
-    with dstDtrProcessing.Parameters do
-    begin
-      ParamByName('@payroll_code').Value :=
-            TComboBoxObj(cmbPayrollPeriod.ItemObject).Code;
-    end;
-  end
-  else
-  begin
-    dstDtrProcessing.Parameters.ParamByName('@payroll_code').Value := null;
-    dstDtrProcessing.Parameters.ParamByName('@date_from').Value := Trunc(dtpFrom.Date);
-    dstDtrProcessing.Parameters.ParamByName('@date_until').Value := Trunc(dtpUntil.Date);
+    ParamByName('@payroll_code').Value :=
+          TComboBoxObj(cmbPayrollPeriod.ItemObject).Code;
   end;
-
 end;
 
 procedure TfDtrProcessingReport.UserLabelPrint(sender: TObject;
@@ -160,13 +146,6 @@ begin
   end
   else
     MessageDlg('No option selected.',mtError,[mbOk],0);
-end;
-
-procedure TfDtrProcessingReport.cmbPayrollPeriodClick(Sender: TObject);
-begin
-  inherited;
-  dtpFrom.Clear;
-  dtpUntil.Clear;
 end;
 
 procedure TfDtrProcessingReport.dtpFromClick(Sender: TObject);
@@ -200,9 +179,6 @@ begin
     PopulateComboBox(dstPayrollPeriod,cmbPayrollPeriod,
       'payroll_code','payroll_period');
   end;
-
-  dtpFrom.Date := Now;
-  dtpUntil.Date := Now;
 
   inherited;
 end;

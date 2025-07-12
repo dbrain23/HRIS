@@ -9,11 +9,17 @@ inherited fLateReport: TfLateReport
   inherited pcMain: TJvPageControl
     Width = 950
     Height = 751
+    ExplicitWidth = 950
+    ExplicitHeight = 751
     inherited tsMain: TTabSheet
       Caption = 'Late report'
+      ExplicitWidth = 942
+      ExplicitHeight = 722
       inherited pnlMain: TPanel
         Width = 942
         Height = 722
+        ExplicitWidth = 942
+        ExplicitHeight = 722
         inherited pnlLeft: TPanel
           Width = 932
           Height = 68
@@ -41,9 +47,11 @@ inherited fLateReport: TfLateReport
           end
           inherited btnPrint: TcxButton
             Left = 819
+            ExplicitLeft = 819
           end
           inherited bGenerate: TcxButton
             Left = 700
+            ExplicitLeft = 700
           end
           object cmbPayrollPeriod: TcxComboBox
             Left = 90
@@ -78,12 +86,16 @@ inherited fLateReport: TfLateReport
           Top = 73
           Width = 932
           Height = 611
+          ExplicitTop = 73
+          ExplicitWidth = 932
+          ExplicitHeight = 611
           inherited rvMain: TQRPreview
             Width = 932
             Height = 611
+            ExplicitWidth = 932
+            ExplicitHeight = 611
           end
           inherited qrMain: TQuickRep
-            Width = 572
             DataSet = dstLate
             Functions.DATA = (
               '0'
@@ -97,11 +109,10 @@ inherited fLateReport: TfLateReport
               88.900000000000000000
               88.900000000000000000
               0.000000000000000000)
-            ExplicitWidth = 572
             object ColumnHeaderBand: TQRBand
               Left = 24
               Top = 88
-              Width = 525
+              Width = 524
               Height = 20
               AlignToBottom = False
               Color = clWhite
@@ -110,7 +121,7 @@ inherited fLateReport: TfLateReport
               ForceNewPage = False
               Size.Values = (
                 75.595238095238100000
-                1984.375000000000000000)
+                1980.595238095238000000)
               PreCaluculateBandHeight = True
               KeepOnOnePage = False
               BandType = rbColumnHeader
@@ -282,7 +293,7 @@ inherited fLateReport: TfLateReport
               AlignWithMargins = True
               Left = 24
               Top = 24
-              Width = 525
+              Width = 524
               Height = 64
               AlignToBottom = False
               Color = clWhite
@@ -291,7 +302,7 @@ inherited fLateReport: TfLateReport
               ForceNewPage = False
               Size.Values = (
                 241.904761904761900000
-                1984.375000000000000000)
+                1980.595238095238000000)
               PreCaluculateBandHeight = False
               KeepOnOnePage = False
               BandType = rbTitle
@@ -381,7 +392,7 @@ inherited fLateReport: TfLateReport
             object DetailBand1: TQRBand
               Left = 24
               Top = 108
-              Width = 525
+              Width = 524
               Height = 15
               AlignToBottom = False
               Color = clWhite
@@ -390,7 +401,7 @@ inherited fLateReport: TfLateReport
               ForceNewPage = False
               Size.Values = (
                 56.696428571428570000
-                1984.375000000000000000)
+                1980.595238095238000000)
               PreCaluculateBandHeight = False
               KeepOnOnePage = False
               BandType = rbDetail
@@ -517,7 +528,7 @@ inherited fLateReport: TfLateReport
             object PageFooterBand1: TQRBand
               Left = 24
               Top = 123
-              Width = 525
+              Width = 524
               Height = 19
               AlignToBottom = False
               Color = clWhite
@@ -526,7 +537,7 @@ inherited fLateReport: TfLateReport
               ForceNewPage = False
               Size.Values = (
                 71.815476190476190000
-                1984.375000000000000000)
+                1980.595238095238000000)
               PreCaluculateBandHeight = False
               KeepOnOnePage = False
               BandType = rbPageFooter
@@ -607,19 +618,26 @@ inherited fLateReport: TfLateReport
         inherited p_ReportFooter: TPanel
           Top = 684
           Width = 932
+          ExplicitTop = 684
+          ExplicitWidth = 932
           inherited JvGroupBox1: TJvGroupBox
             Width = 930
+            ExplicitWidth = 930
             inherited bFirst: TcxButton
               Left = 828
+              ExplicitLeft = 828
             end
             inherited bLast: TcxButton
               Left = 903
+              ExplicitLeft = 903
             end
             inherited bNext: TcxButton
               Left = 878
+              ExplicitLeft = 878
             end
             inherited bPrevious: TcxButton
               Left = 853
+              ExplicitLeft = 853
             end
             inherited speZoom: TcxSpinEdit
               ExplicitHeight = 22
@@ -635,6 +653,7 @@ inherited fLateReport: TfLateReport
     Filtered = True
     LockType = ltReadOnly
     CommandText = 'rpt_pr_late_report;1'
+    CommandTimeout = 1000
     CommandType = cmdStoredProc
     Parameters = <
       item

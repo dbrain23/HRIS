@@ -5,7 +5,7 @@
         <FrameworkType>VCL</FrameworkType>
         <MainSource>HRIS.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
@@ -111,8 +111,9 @@
         <DCC_DebugInformation>false</DCC_DebugInformation>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_Release>10</VerInfo_Release>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
-        <VerInfo_Build>59</VerInfo_Build>
+        <VerInfo_Build>61</VerInfo_Build>
         <Icon_MainIcon>..\_images\HRIS.ico</Icon_MainIcon>
         <DCC_ExeOutput>..\_bin</DCC_ExeOutput>
         <DCC_BplOutput>..\_bpl</DCC_BplOutput>
@@ -120,7 +121,7 @@
         <DCC_DcpOutput>..\_dcp</DCC_DcpOutput>
         <DCC_DcuOutput>..\_dcu</DCC_DcuOutput>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=Alano and Sons Credit Corporation;FileDescription=;FileVersion=3.0.9.59;InternalName=Human Resource Integrated System;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=3.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=Alano and Sons Credit Corporation;FileDescription=;FileVersion=3.0.10.61;InternalName=Human Resource Integrated System;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=3.0.0.0;Comments=</VerInfo_Keys>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">

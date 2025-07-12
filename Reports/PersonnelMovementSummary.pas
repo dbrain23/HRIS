@@ -187,10 +187,19 @@ end;
 
 procedure TfPersonnelMovementSummary.SetParams;
 begin
-  with dstPersonnelMovement.Parameters do
+  if cmbPayrollPeriod.ItemIndex > 0 then
   begin
-    ParamByName('@payroll_code').Value :=
-          TComboBoxObj(cmbPayrollPeriod.ItemObject).Code;
+    with dstPersonnelMovement.Parameters do
+    begin
+      ParamByName('@payroll_code').Value :=
+            TComboBoxObj(cmbPayrollPeriod.ItemObject).Code;
+    end;
+  end
+  else
+  begin
+    dstPersonnelMovement.Parameters.ParamByName('@payroll_code').Value := null;
+    dstPersonnelMovement.Parameters.ParamByName('@date_from').Value := Trunc(dtpFrom.Date);
+    dstPersonnelMovement.Parameters.ParamByName('@date_until').Value := Trunc(dtpUntil.Date);
   end;
 end;
 
