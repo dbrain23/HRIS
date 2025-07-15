@@ -13,7 +13,7 @@ inherited fEmployeeMain: TfEmployeeMain
     Width = 1066
     Height = 534
     BorderWidth = 1
-    ExplicitWidth = 780
+    ExplicitWidth = 1066
     ExplicitHeight = 534
     object pcEmployee: TJvPageControl
       Left = 1
@@ -25,10 +25,8 @@ inherited fEmployeeMain: TfEmployeeMain
       MultiLine = True
       TabOrder = 0
       ReduceMemoryUse = True
-      ExplicitWidth = 778
       object tsEmployeeDetails: TTabSheet
         Caption = 'Personal Details'
-        ExplicitWidth = 770
         object pDetails: TJvPanel
           Left = 0
           Top = 0
@@ -43,9 +41,6 @@ inherited fEmployeeMain: TfEmployeeMain
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 0
-          ExplicitLeft = 48
-          ExplicitTop = -3
-          ExplicitWidth = 770
           object JvLabel13: TJvLabel
             Left = 262
             Top = 186
@@ -706,21 +701,6 @@ inherited fEmployeeMain: TfEmployeeMain
             Properties.ValueUnchecked = '0'
             TabOrder = 23
             Width = 75
-          end
-          object cxDBCheckBox2: TcxDBCheckBox
-            Left = 694
-            Top = 17
-            Caption = 'On maternity leave'
-            DataBinding.DataField = 'on_maternity_leave'
-            DataBinding.DataSource = dmEmployee.dscEmployee
-            Properties.DisplayChecked = 'true'
-            Properties.DisplayUnchecked = 'false'
-            Properties.DisplayGrayed = 'false'
-            Properties.NullStyle = nssUnchecked
-            Properties.ValueGrayed = False
-            Properties.ValueUnchecked = 'False'
-            TabOrder = 24
-            Width = 139
           end
         end
       end

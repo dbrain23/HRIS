@@ -84,7 +84,6 @@ type
     JvLabel4: TJvLabel;
     cxDBTextEdit1: TcxDBTextEdit;
     cxDBCheckBox1: TcxDBCheckBox;
-    cxDBCheckBox2: TcxDBCheckBox;
     procedure FormShow(Sender: TObject);
     procedure bSaveClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
