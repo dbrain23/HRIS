@@ -81,6 +81,23 @@ inherited fLateReport: TfLateReport
             OnClick = dtpFromClick
             Width = 104
           end
+          object rgAllowance: TcxRadioGroup
+            Left = 308
+            Top = 6
+            Caption = 'Allowance'
+            Properties.Columns = 2
+            Properties.Items = <
+              item
+                Caption = '1 minute'
+              end
+              item
+                Caption = '10 minutes'
+              end>
+            ItemIndex = 0
+            TabOrder = 5
+            Height = 49
+            Width = 189
+          end
         end
         inherited pnlReport: TPanel
           Top = 73
@@ -661,7 +678,6 @@ inherited fLateReport: TfLateReport
         DataType = ftInteger
         Direction = pdReturnValue
         Precision = 10
-        Value = 0
       end
       item
         Name = '@payroll_code'
@@ -681,6 +697,13 @@ inherited fLateReport: TfLateReport
         Attributes = [paNullable]
         DataType = ftDateTime
         Value = 0d
+      end
+      item
+        Name = '@allowance'
+        Attributes = [paNullable]
+        DataType = ftSmallint
+        Precision = 5
+        Value = 0
       end>
     Left = 485
     Top = 336

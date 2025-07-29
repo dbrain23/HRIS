@@ -4,7 +4,8 @@
 ALTER PROCEDURE [dbo].[rpt_pr_late_report]
 	@payroll_code char(15),
 	@date_from datetime,
-	@date_until datetime
+	@date_until datetime,
+	@allowance smallint = 11.00
 AS
 BEGIN
 		declare @login_am time(0),
@@ -56,7 +57,7 @@ BEGIN
 		where dtr_date 
 		between @date_from_new and @date_until_new
 			and u.timestatus_code = 'APP'
-			  
+	  
 		-- get late AM
 		select la.time_in_am,
 			   la.id_num,
@@ -67,13 +68,15 @@ BEGIN
 	        on u.dtr_date = la.dtr_date
 		   and u.id_num = la.id_num
 		   and u.am_pm = 'A'
-		 where (datediff(ss,@login_am,la.time_in_am) / 60.00) >= 1.00
+		 where (datediff(ss,isnull(u.time_until,@login_am),la.time_in_am) / 60.00) >= (case when u.time_until is null then @allowance else 1.00 end)
 		   and la.time_in_am < @logout_am
 		   and DATEPART(DW, la.dtr_date) <> 7
-		   and coalesce(u.time_from,la.time_in_am) > @login_am
+		   --and coalesce(u.time_from,la.time_in_am) > @login_am
 	  group by la.id_num,
 	           la.dtr_date,
 			   la.time_in_am
+
+		--select * from #lateam
 
 		-- get late PM
 		select lp.time_in_pm,
@@ -85,10 +88,10 @@ BEGIN
 	   	    on u.dtr_date = lp.dtr_date
 		   and u.id_num = lp.id_num
 		   and u.am_pm = 'P'
-		 where (datediff(ss,@login_pm,lp.time_in_pm) / 60.00) >= 1.00
+		 where (datediff(ss,isnull(u.time_until,@login_pm),lp.time_in_pm) / 60.00) >= (case when u.time_until is null then @allowance else 1.00 end)
 	   	   and lp.time_in_pm > @logout_am
 		   and DATEPART(DW, lp.dtr_date) <> 7
-		   and coalesce(u.time_from,lp.time_in_pm) > @login_pm
+		   --and coalesce(u.time_from,lp.time_in_pm) > @login_pm
 	  group by lp.id_num,
 	           lp.dtr_date,
 			   lp.time_in_pm
@@ -103,7 +106,7 @@ BEGIN
 		on u.dtr_date = ls.dtr_date
 	   and u.id_num = ls.id_num
 	   and u.am_pm = 'A'
-	 where (datediff(ss,'08:00', ls.time_in_am) / 60.00) >= 1.00
+	 where (datediff(ss,isnull(u.time_until,'08:00'), ls.time_in_am) / 60.00) >= (case when u.time_until is null then @allowance else 1.00 end)
 	   and ls.time_in_am < '12:00'
 		-- and DATEPART(DW, ls.dtr_date) = 7
 	   and coalesce(u.time_from,ls.time_in_am) > '08:00'
@@ -173,7 +176,7 @@ BEGIN
 	  from @report r
 	  join #employees e (nolock)
 	    on e.id_num = r.id_num
-	  join location l (nolock)
+	  join [location] l (nolock)
 	    on l.location_code = e.location_code
   order by employee_name,
            r.dtr_date,

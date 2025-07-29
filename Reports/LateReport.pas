@@ -20,7 +20,7 @@ uses
   cxTextEdit, cxMaskEdit, cxSpinEdit, Vcl.StdCtrls, JvExStdCtrls, JvGroupBox,
   Vcl.ExtCtrls, QuickRpt, QRPrntr, cxButtons, Vcl.ComCtrls, JvExComCtrls,
   JvComCtrls, QRCtrls, dxCore, cxDateUtils, cxDropDownEdit, cxCalendar,
-  JvExControls, JvLabel;
+  JvExControls, JvLabel, cxGroupBox, cxRadioGroup;
 
 type
   TfLateReport = class(TfBasePrintForm)
@@ -52,6 +52,7 @@ type
     QRDBText2: TQRDBText;
     QRDBText3: TQRDBText;
     QRDBText4: TQRDBText;
+    rgAllowance: TcxRadioGroup;
     procedure FormCreate(Sender: TObject);
     procedure cmbPayrollPeriodClick(Sender: TObject);
     procedure dtpFromClick(Sender: TObject);
@@ -103,6 +104,8 @@ begin
 end;
 
 procedure TfLateReport.SetParams;
+var
+  allowance: integer;
 begin
   if cmbPayrollPeriod.ItemIndex > 0 then
   begin
@@ -118,6 +121,11 @@ begin
     dstLate.Parameters.ParamByName('@date_from').Value := Trunc(dtpFrom.Date);
     dstLate.Parameters.ParamByName('@date_until').Value := Trunc(dtpUntil.Date);
   end;
+
+  if rgAllowance.ItemIndex = 0 then allowance := 1
+  else allowance := 11;
+
+  dstLate.Parameters.ParamByName('@allowance').Value := allowance;
 end;
 
 end.
