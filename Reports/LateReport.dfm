@@ -1,13 +1,13 @@
 inherited fLateReport: TfLateReport
   Caption = 'fLateReport'
   ClientHeight = 751
-  ClientWidth = 950
-  ExplicitWidth = 966
+  ClientWidth = 899
+  ExplicitWidth = 915
   ExplicitHeight = 790
   PixelsPerInch = 96
   TextHeight = 14
   inherited pcMain: TJvPageControl
-    Width = 950
+    Width = 899
     Height = 751
     ExplicitWidth = 950
     ExplicitHeight = 751
@@ -16,12 +16,12 @@ inherited fLateReport: TfLateReport
       ExplicitWidth = 942
       ExplicitHeight = 722
       inherited pnlMain: TPanel
-        Width = 942
+        Width = 891
         Height = 722
         ExplicitWidth = 942
         ExplicitHeight = 722
         inherited pnlLeft: TPanel
-          Width = 932
+          Width = 881
           Height = 68
           ExplicitWidth = 932
           ExplicitHeight = 68
@@ -45,13 +45,26 @@ inherited fLateReport: TfLateReport
             HotTrackFont.Name = 'Tahoma'
             HotTrackFont.Style = []
           end
+          object Label2: TLabel [2]
+            Left = 312
+            Top = 12
+            Width = 73
+            Height = 14
+            Caption = 'Branch/Dept.'
+          end
           inherited btnPrint: TcxButton
-            Left = 819
-            ExplicitLeft = 819
+            Left = 761
+            Top = 36
+            Width = 113
+            TabOrder = 6
+            ExplicitLeft = 812
+            ExplicitTop = 36
+            ExplicitWidth = 113
           end
           inherited bGenerate: TcxButton
-            Left = 700
-            ExplicitLeft = 700
+            Left = 761
+            TabOrder = 5
+            ExplicitLeft = 812
           end
           object cmbPayrollPeriod: TcxComboBox
             Left = 90
@@ -59,7 +72,7 @@ inherited fLateReport: TfLateReport
             Properties.Items.Strings = (
               '')
             StyleDisabled.Color = clMenu
-            TabOrder = 2
+            TabOrder = 0
             OnClick = cmbPayrollPeriodClick
             Width = 212
           end
@@ -68,7 +81,7 @@ inherited fLateReport: TfLateReport
             Top = 34
             Properties.SaveTime = False
             Properties.ShowTime = False
-            TabOrder = 3
+            TabOrder = 1
             OnClick = dtpFromClick
             Width = 104
           end
@@ -77,14 +90,13 @@ inherited fLateReport: TfLateReport
             Top = 34
             Properties.SaveTime = False
             Properties.ShowTime = False
-            TabOrder = 4
+            TabOrder = 2
             OnClick = dtpFromClick
             Width = 104
           end
           object rgAllowance: TcxRadioGroup
-            Left = 308
-            Top = 6
-            Caption = 'Allowance'
+            Left = 386
+            Top = 34
             Properties.Columns = 2
             Properties.Items = <
               item
@@ -94,20 +106,30 @@ inherited fLateReport: TfLateReport
                 Caption = '10 minutes'
               end>
             ItemIndex = 0
-            TabOrder = 5
-            Height = 49
-            Width = 189
+            Style.BorderStyle = ebsNone
+            TabOrder = 4
+            Height = 28
+            Width = 178
+          end
+          object cmbResourceTypes: TcxComboBox
+            Left = 391
+            Top = 6
+            Properties.Items.Strings = (
+              '')
+            StyleDisabled.Color = clMenu
+            TabOrder = 3
+            Width = 266
           end
         end
         inherited pnlReport: TPanel
           Top = 73
-          Width = 932
+          Width = 881
           Height = 611
           ExplicitTop = 73
           ExplicitWidth = 932
           ExplicitHeight = 611
           inherited rvMain: TQRPreview
-            Width = 932
+            Width = 881
             Height = 611
             ExplicitWidth = 932
             ExplicitHeight = 611
@@ -634,26 +656,26 @@ inherited fLateReport: TfLateReport
         end
         inherited p_ReportFooter: TPanel
           Top = 684
-          Width = 932
+          Width = 881
           ExplicitTop = 684
           ExplicitWidth = 932
           inherited JvGroupBox1: TJvGroupBox
-            Width = 930
+            Width = 879
             ExplicitWidth = 930
             inherited bFirst: TcxButton
-              Left = 828
+              Left = 777
               ExplicitLeft = 828
             end
             inherited bLast: TcxButton
-              Left = 903
+              Left = 852
               ExplicitLeft = 903
             end
             inherited bNext: TcxButton
-              Left = 878
+              Left = 827
               ExplicitLeft = 878
             end
             inherited bPrevious: TcxButton
-              Left = 853
+              Left = 802
               ExplicitLeft = 853
             end
             inherited speZoom: TcxSpinEdit
@@ -704,8 +726,47 @@ inherited fLateReport: TfLateReport
         DataType = ftSmallint
         Precision = 5
         Value = 0
+      end
+      item
+        Name = '@location_code'
+        Attributes = [paNullable]
+        DataType = ftString
+        Size = 3
+        Value = ''
+      end
+      item
+        Name = '@department_code'
+        Attributes = [paNullable]
+        DataType = ftString
+        Size = 3
+        Value = ''
       end>
     Left = 485
     Top = 336
+  end
+  object dstResourceTypes: TADODataSet
+    AutoCalcFields = False
+    Connection = dmSecurity.acSecurity
+    CursorType = ctStatic
+    LockType = ltReadOnly
+    CommandText = 'hris_dd_get_resource_types;1'
+    CommandType = cmdStoredProc
+    Parameters = <
+      item
+        Name = '@RETURN_VALUE'
+        DataType = ftInteger
+        Direction = pdReturnValue
+        Precision = 10
+        Value = Null
+      end
+      item
+        Name = '@filter_position'
+        Attributes = [paNullable]
+        DataType = ftInteger
+        Precision = 10
+        Value = 0
+      end>
+    Left = 808
+    Top = 168
   end
 end

@@ -1,0 +1,3 @@
+08/13/2025 21:52:50 Response: Invalid connection string attribute
+08/13/2025 21:52:55 *** Sending message...
+08/13/2025 21:53:27 Response: (,). Invalid connection string attribute

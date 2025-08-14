@@ -5,7 +5,9 @@ ALTER PROCEDURE [dbo].[rpt_pr_late_report]
 	@payroll_code char(15),
 	@date_from datetime,
 	@date_until datetime,
-	@allowance smallint = 11.00
+	@allowance smallint = 11.00,
+	@location_code char(3),
+	@department_code char(3)
 AS
 BEGIN
 		declare @login_am time(0),
@@ -164,7 +166,9 @@ BEGIN
 	-- employee details
 	select *
 	  into #employees
-	  from dbo.paf_fn_active_employees(@date_from_new,@date_until_new)
+	  from dbo.paf_fn_active_employees(@date_from_new,@date_until_new) e
+	 where (isnull(@location_code,'') = '' or e.location_code = @location_code)
+	   and (isnull(@department_code,'') = '' or e.department_code = @department_code)
 
 	-- return
 	select (convert(varchar(10),@date_from_new,101) + ' - ' + convert(varchar(10),@date_until_new,101)) date_period,

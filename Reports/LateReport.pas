@@ -53,11 +53,15 @@ type
     QRDBText3: TQRDBText;
     QRDBText4: TQRDBText;
     rgAllowance: TcxRadioGroup;
+    cmbResourceTypes: TcxComboBox;
+    Label2: TLabel;
+    dstResourceTypes: TADODataSet;
     procedure FormCreate(Sender: TObject);
     procedure cmbPayrollPeriodClick(Sender: TObject);
     procedure dtpFromClick(Sender: TObject);
   private
     { Private declarations }
+    procedure GetResourceTypesParams(var locationCode, departmentCode, positionTypeCode: string);
   public
     { Public declarations }
   protected
@@ -67,7 +71,7 @@ type
 implementation
 
 uses
-  ReportsAuxData, FormUtil, ComboBoxObj, User, DBUtil;
+  ReportsAuxData, FormUtil, ComboBoxObj, User, DBUtil, AppConstant;
 
 {$R *.dfm}
 
@@ -101,11 +105,43 @@ begin
   dtpUntil.Date := Now;
 
   inherited;
+  FormUtil.PopulateComboBox(dstResourceTypes,cmbResourceTypes,
+    'resource_type','code','name',false);
+
+  cmbResourceTypes.ItemIndex := -1;
+end;
+
+procedure TfLateReport.GetResourceTypesParams(var locationCode, departmentCode,
+  positionTypeCode: string);
+var
+  comboObj: TComboBoxTypeObj;
+begin
+  if cmbResourceTypes.ItemIndex > -1 then
+  begin
+    comboObj := (cmbResourceTypes.ItemObject as TComboBoxTypeObj);
+
+    if not Assigned(comboObj) then
+    begin
+      locationCode := '';
+      departmentCode := '';
+      positionTypeCode := '';
+    end
+    else
+    begin
+      if SameText(comboObj.TypeCode,TAppConstant.TResourceType.DEPARTMENT)  then
+        departmentCode := comboObj.Code
+      else if SameText(comboObj.TypeCode,TAppConstant.TResourceType.LOCATION)  then
+        locationCode := comboObj.Code
+      else if SameText(comboObj.TypeCode,TAppConstant.TResourceType.POSITIONTYPE)  then
+        positionTypeCode := comboObj.Code;
+    end;
+  end;
 end;
 
 procedure TfLateReport.SetParams;
 var
   allowance: integer;
+  locationCode, departmentCode, positionTypeCode: string;
 begin
   if cmbPayrollPeriod.ItemIndex > 0 then
   begin
@@ -126,6 +162,12 @@ begin
   else allowance := 11;
 
   dstLate.Parameters.ParamByName('@allowance').Value := allowance;
+
+
+  GetResourceTypesParams(locationCode, departmentCode, positionTypeCode);
+
+  dstLate.Parameters.ParamByName('@location_code').Value := locationCode;
+  dstLate.Parameters.ParamByName('@department_code').Value := departmentCode;
 end;
 
 end.
