@@ -78,9 +78,14 @@ begin
   dmPayroll := TdmPayroll.Create(self);
 
   // generate payroll code
-  ExecuteSQL('exec dbo.pr_generate_payroll_code');
+  try
+    try
+      ExecuteSQL('exec dbo.pr_generate_payroll_code');
+    except
 
-  PopulateComboBox(dmPayroll.dstPayrollPeriod,cmbPayrollPeriod,
+    end;
+  finally
+    PopulateComboBox(dmPayroll.dstPayrollPeriod,cmbPayrollPeriod,
     'payroll_code','payroll_period');
 
   PopulateComboBox(dmPayroll.dstResourceTypes,cmbResourceTypes,
@@ -88,6 +93,8 @@ begin
 
   PopulateComboBox(dmPayroll.dstEmployees,cmbEmployee,
     'id_num','employee_name');
+  end;
+
 end;
 
 procedure TfPayrollDrawer.FormShow(Sender: TObject);
